@@ -20,8 +20,8 @@ This function was prepared to produce the material for "[Media of Langue](http:/
 
 The Alignment function exists for interlanguage (e.p. English-French), while the Normalize function and Morphological function exist for a single language (e.p. Japanese).
 There is room for improvement in these functions at present, and we welcome contributors who can improve them together.
-You can also easily create the data abot new language and new inter-language that have not yet been introduced to “Media of Langue" by duplicating and modifying these functions.
-
+You can also easily create the data abot new languages or new pairs of languages that have not yet been introduced to ”Lexical Translation Counter” by duplicating and modifying these functions.
+This means that you can introduce new languages or new pairs of languages to "Media of Langue."
 
 
 
@@ -30,7 +30,6 @@ You can also easily create the data abot new language and new inter-language tha
 
 
 Media of Langue is a new dictionary that draws about “meaning" at the interface of multiple languages, from the accumulation of "this word was translated into that word" only.
-<!--floatsの単語間のつながりのデータはcount functionが更新されるタイミングや、データが更新されるタイミングでことによって徐々に書き換えられていきます。-->
 To view Media of Langue, go to http://www.media-of-langue.org.
 
 ## Contributing
