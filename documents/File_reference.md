@@ -8,7 +8,7 @@
 - {la}_morphological.py
 - corpus_{la1}_{la2}.csv
 - wordlist_{la}_{pos_tag}.csv
-- relations_{la1}_{la2}_{pos_tag}.csv
+- relations_{la1}\_{la2}\_{pos_tag}.csv
 
 la1 and la2 are language codes, and their order should be alphabetical
 There are four pos_tags: adj, noun, verb, and adverb.
