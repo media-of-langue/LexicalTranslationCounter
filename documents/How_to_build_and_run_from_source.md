@@ -64,4 +64,4 @@ python3 count_fuction.py 0 en fr
 If you are interrupted by an error on the way, run with the first argument being the value in /root/src/data/output/passed_id.txt plus one.
 
 ### Check the outputs
-You can upload your relations and check the results by uploading your local data from the side menu of[media of langue](http://media-of-langue.org/)
+You can upload your relations and check the results by uploading your local data from the side menu of [media of langue](http://media-of-langue.org/)
