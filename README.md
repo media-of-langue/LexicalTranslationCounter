@@ -1,21 +1,21 @@
-# Count function for "Media of Langue"
+# Lexical Translation Counter
 
 ## The Repository
 
-This repository provides ”Count Function” to produce the material for "[Media of Langue](http://www.media-of-langue.org)".
+This repository provides ”Lexical Translation Counter” to produce the material for "[Media of Langue](http://www.media-of-langue.org)".
 
-This function counts and writes down ’That word was translated into this word’ from the accumulation of translation activities between any two languages.
+”Lexical Translation Counter” is a function that counts and writes down the fact ’That word was translated into this word.’
 
 In other words, this function has the following inputs and outputs:
 
 - **Input**：bilingual corpus and wordlist
 - **Output**：Table that stores the number of times a word (language 1) is translated into a word (language 2)
 
-
+This function was prepared to produce the material for "[Media of Langue](http://www.media-of-langue.org)," but this universal task is assumed to be used for various applications.
 
 ## Construction
 
-Count function works by calling the following three functions.
+”Lexical Translation Counter” works by calling the following three functions.
 
 - **Alignment function**：Function to figure out which words correspond to which words in a translated sentence pair
 - **Normalize function**：Functions to link multiple expressions and conjugations of a word to a single representative word
@@ -29,9 +29,10 @@ You can also easily create the data abot new language and new inter-language tha
 
 
 ## Media of Langue
-![Image 2022-10-14 at 17 32](https://user-images.githubusercontent.com/52962800/195801348-232aecdd-b21f-4654-839c-12da43712806.jpg)
+![MoL_meaning_2d](https://github.com/media-of-langue/LexicalTranslationCounter/assets/44542920/92a7e06c-0ced-44c3-923b-e3149aa4f827)
 
-Media of Langue is a map of several spaces drawn by the myriad of translations that take place.
+
+Media of Langue is a new dictionary that draws about “meaning" at the interface of multiple languages, from the accumulation of "this word was translated into that word" only.
 <!--floatsの単語間のつながりのデータはcount functionが更新されるタイミングや、データが更新されるタイミングでことによって徐々に書き換えられていきます。-->
 To view Media of Langue, go to http://www.media-of-langue.org.
 
