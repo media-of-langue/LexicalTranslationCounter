@@ -65,8 +65,6 @@ If you are interested in fixing issues and contributing directly to the code bas
 - [Update or Add Database](documents/Update_or_Add_data.md)
 - [How to test](documents/How_to_test.md)
 - [File reference](documents/File_reference.md)
-- Submitting pull requests
-- Finding an issue to work on
 
 ## Feedback
 
