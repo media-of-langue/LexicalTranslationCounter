@@ -50,8 +50,8 @@ The results of this test will also be included in the pull request and used by r
 
 To enable us to quickly review and accept your pull requests, always create one pull request per issue and link the issue in the pull request. Never merge multiple requests in one unless they have the same root cause.  Avoid pure formatting changes to code that has not been modified otherwise.
 
-## Merge main branch and floats
+## Merge main branch
 
-We or the other contributor check your accuracy of your pull requests and merge them to main branch and floats.
+We or the other contributor check your accuracy of your pull requests and merge them to main.
 
-Then, you can feel the change on the web site, floats.org.
+Then, you can feel the change on the web site, [media of langue](http://media-of-langue.org/) after few days.
