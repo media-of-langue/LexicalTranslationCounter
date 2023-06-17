@@ -1,9 +1,6 @@
 # Lexical Translation Counter
 
 ## The Repository
-
-This repository provides ”Lexical Translation Counter” to produce the material for "[Media of Langue](http://www.media-of-langue.org)".
-
 ”Lexical Translation Counter” is a function that counts and writes down the fact ’That word was translated into this word.’
 
 In other words, this function has the following inputs and outputs:
