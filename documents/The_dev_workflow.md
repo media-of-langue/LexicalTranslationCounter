@@ -32,7 +32,7 @@ Enter container.
 ```
 docker-compose exec cnt_func bash
 ```
-## 言語や言語間の関係をアップデートしたり追加する
+## Update or add languages and interlanguage relations
 Check carefully as notes for each language and language-to-language when executing may be found in the language code folder of the document.
 
 Update the functions or add the data.
