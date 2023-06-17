@@ -1,7 +1,7 @@
 # Lexical Translation Counter
 
 ## The Repository
-”Lexical Translation Counter” is a function that counts and writes down the fact ***"That word was translated into this word.***"
+**Lexical Translation Counter** is a function that counts and writes down the fact ***"That word was translated into this word.***"
 
 In other words, this function has the following inputs and outputs:
 
