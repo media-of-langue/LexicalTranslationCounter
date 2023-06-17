@@ -79,6 +79,6 @@ See ”How to build and run from source” in the documents directory for detail
 
 ## Acknowledgements
 We use the following libraries and datasets. We gratefully respect and acknowledge these projects.
-- [Used NLP library List](documents/Used NLP library List.md)
-- [Used Data-set List](documents/Used Data-set List.md)
+- [Used NLP library List](documents/Acknowledgements/Used_nlp_library_list.md)
+- [Used Data-set List](documents/Acknowledgements/Used_dataset_list.md)
 
