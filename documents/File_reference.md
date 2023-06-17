@@ -66,10 +66,7 @@ return tokenized, mrph
 
 ## corpus
 A corpus exists for each interlanguage.
-
-Floats are constructed by counting the number of times a word is translated in this corpus.
-
-A list of corpus sources can be found at [aboutページ](http://localhost:5011/manual).
+A list of corpus sources can be found at [Used dataset list](./Acknowledgements/Used_dataset_list.md).
 ### columns
 
 The corpus is composed of the following columns
@@ -85,7 +82,7 @@ The corpus is composed of the following columns
 ## wordlist
 A wordlist exists for each part of speech for each language.
 
-These are the output of the normalize function and indicate the words that may appear in the floats and their notation.
+These are the output of the normalize function and indicate the words that may appear.
 
 ### columns
 

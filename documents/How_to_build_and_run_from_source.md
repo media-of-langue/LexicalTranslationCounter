@@ -11,14 +11,14 @@ You'll need the following tools:
 ### Getting the sourcees
 First, fork the repository.
 ```
-git clone https://github.com/<<<your-github-account>>>/floats_count_function.git
+git clone https://github.com/<<<your-github-account>>>/LexicalTranslationCounter.git
 ```
 
 If you want to pull new changes to your fork, execute the command below.
 ```
-cd floats_count_function
+cd LexicalTranslationCounter
 git checkout main
-git pull https://github.com/floats01/count_function.git main
+git pull https://github.com/media-of-langue/LexicalTranslationCounter.git main
 ```
 
 ### Build

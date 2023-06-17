@@ -31,10 +31,12 @@ This function exists in '/root/src/normalizer/' for each language.
 ### Input and Output
 Returns the word that normalize input word and the id of the word on the pos_tag.
 ```
-la_normalize(word: String, pos_tag_code: String, cur: Object, test=False)
-output: Integer, String
+{la}_normalizer(word, pos_tag, wordlist, test=False)
+retuern id, word_normalized
+```
+```
 ex)
-en_normalize("played", "v", cur)
+en_normalizer("played", "v", wordlist)
 output: 36, play
 ```
 
@@ -72,10 +74,13 @@ This function is located in '/root/src/alignment/' for each language.
 ### Input and Output
 Returns the result of alignment.
 ```
-alignment(corpus_row
-output: list,cur: Object): list
+alignment(corpus_row,wordlist,test=false)
+
+return [[{pos_code},{word_la1_id},{word_la1},{word_la2_id},{word_la2}], ]
+```
+```
 ex)
-alignment([0,"you are beautiful","あなたは美しい",[],False])
+alignment([0,"you are beautiful","あなたは美しい",[],False],wordlist)
 output: [["n",30,"you",12,"あなた"],["a",1,"beautiful",2,"美しい"]]
 ```
 
@@ -118,8 +123,11 @@ Returns the word list and pos tag list of the input sentence.
 input: sentence
 output: word list, pos tag list
 ```
-la_morphological(sentence: String)
-output: list,list
+{la}_morphological.py(sentence)
+
+return tokenized, mrph
+```
+```
 ex)
 en_morphological("you are beautiful")
 output: ["you","are","beautiful"],["n","v","a"]
@@ -144,7 +152,8 @@ ex) python3 morphological_test.py en fr
 ```
 word_la1:pos_tag_la1 word_la1:pos_tag_la1 word_la1:pos_tag_la1 word_la1:pos_tag_la1
 word_la2:pos_tag_la2 word_la2:pos_tag_la2 word_la2:pos_tag_la2 word_la2:pos_tag_la2
-
+```
+```
 ex)
 Resumption:n of:N/A the:N/A session:n 
 Reprise:n de:N/A la:N/A session:n 

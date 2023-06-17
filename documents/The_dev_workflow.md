@@ -3,14 +3,14 @@
 ## Getting the sourcees
 First, fork the repository.
 ```
-git clone https://github.com/<<<your-github-account>>>/floats_count_function.git
+git clone https://github.com/<<<your-github-account>>>/LexicalTranslationCounter.git
 ```
 
 If you want to pull new changes to your fork, execute the command below.
 ```
-cd floats_count_function
+cd LexicalTranslationCounter
 git checkout main
-git pull https://github.com/floats01/count_function.git main
+git pull https://github.com/media-of-langue/LexicalTranslationCounter.git main
 ```
 
 ## Build
@@ -20,7 +20,7 @@ Build development container using docker.
 
 la1 and la2 are language codes, and their order should be determined alphabetically.
 ```
-cd floats_count_function
+cd LexicalTranslationCounter
 cp .env.example .env
 cd exec_envs/basis
 docker-compose build --build-arg "LA1={la1}" --build-arg "LA2={la2}" && docker compose up -d
