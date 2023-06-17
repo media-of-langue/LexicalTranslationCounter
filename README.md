@@ -77,3 +77,8 @@ Of course, it can be executed in any environment, including local, by following 
 
 See ”How to build and run from source” in the documents directory for details.
 
+## Acknowledgements
+We use the following libraries and datasets. We gratefully respect and acknowledge these projects.
+- [Used NLP library List](documents/Used NLP library List.md)
+- [Used Data-set List](documents/Used Data-set List.md)
+
