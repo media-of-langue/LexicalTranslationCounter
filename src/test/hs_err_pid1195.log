@@ -1,0 +1,185 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000ffff82d9aac0, pid=1195, tid=1195
+#
+# JRE version: OpenJDK Runtime Environment (11.0.18+10) (build 11.0.18+10-post-Debian-1deb10u1)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.18+10-post-Debian-1deb10u1, mixed mode, tiered, compressed oops, g1 gc, linux-aarch64)
+# Problematic frame:
+# C  [_jpype.cpython-39-aarch64-linux-gnu.so+0x3eac0]  JPClass::invoke(JPJavaFrame&, _jobject*, _jclass*, _jmethodID*, jvalue*)+0x80
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.debian.org/openjdk-11
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+
+Host: AArch64, 6 cores, 7G, Debian GNU/Linux 10 (buster)
+Time: Tue Mar 21 14:50:21 2023 JST elapsed time: 9.785409 seconds (0d 0h 0m 9s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000aaaad309f800):  JavaThread "main" [_thread_in_native, id=1195, stack(0x0000ffffeb33f000,0x0000ffffeb53f000)]
+
+Stack: [0x0000ffffeb33f000,0x0000ffffeb53f000],  sp=0x0000ffffeb53d010,  free space=2040k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.cpython-39-aarch64-linux-gnu.so+0x3eac0]  JPClass::invoke(JPJavaFrame&, _jobject*, _jclass*, _jmethodID*, jvalue*)+0x80
+C  [_jpype.cpython-39-aarch64-linux-gnu.so+0x5b284]  JPMethod::invoke(JPJavaFrame&, JPMethodMatch&, JPPyObjectVector&, bool)+0x194
+C  [_jpype.cpython-39-aarch64-linux-gnu.so+0x5d588]  JPMethodDispatch::invoke(JPJavaFrame&, JPPyObjectVector&, bool)+0x70
+C  [_jpype.cpython-39-aarch64-linux-gnu.so+0x742c0]  PyJPMethod_call+0xb0
+C  [libpython3.9.so.1.0+0x14b14c]  _PyObject_MakeTpCall+0x7c
+C  [libpython3.9.so.1.0+0x1b2258]  _PyEval_EvalFrameDefault+0x3da8
+C  [libpython3.9.so.1.0+0x1adb60]
+C  [libpython3.9.so.1.0+0x14bb70]  _PyFunction_Vectorcall+0x230
+C  [libpython3.9.so.1.0+0x1aeb2c]  _PyEval_EvalFrameDefault+0x67c
+C  [libpython3.9.so.1.0+0x14ba50]  _PyFunction_Vectorcall+0x110
+C  [libpython3.9.so.1.0+0x1aecd0]  _PyEval_EvalFrameDefault+0x820
+C  [libpython3.9.so.1.0+0x1adb60]
+C  [libpython3.9.so.1.0+0x14baf0]  _PyFunction_Vectorcall+0x1b0
+C  [libpython3.9.so.1.0+0x1aecd0]  _PyEval_EvalFrameDefault+0x820
+C  [libpython3.9.so.1.0+0x1adb60]
+C  [libpython3.9.so.1.0+0x14bb70]  _PyFunction_Vectorcall+0x230
+C  [libpython3.9.so.1.0+0x1afb80]  _PyEval_EvalFrameDefault+0x16d0
+C  [libpython3.9.so.1.0+0x1ac9e0]  _PyEval_EvalCodeWithName+0x1c0
+C  [libpython3.9.so.1.0+0x1ac7f8]  PyEval_EvalCodeEx+0x40
+C  [libpython3.9.so.1.0+0x1ac7ac]  PyEval_EvalCode+0x2c
+C  [libpython3.9.so.1.0+0x235988]
+C  [libpython3.9.so.1.0+0x2358cc]
+C  [libpython3.9.so.1.0+0x2357f8]
+C  [libpython3.9.so.1.0+0x235430]  PyRun_SimpleFileExFlags+0x188
+C  [libpython3.9.so.1.0+0x23ce84]  Py_RunMain+0x1f4
+C  [libpython3.9.so.1.0+0x23cb44]  Py_BytesMain+0x24
+C  [libc.so.6+0x20da4]  __libc_start_main+0xe4
+
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Register to memory mapping:
+
+R0=0x0000000000000000
+R1=0x0000ffff9d583000
+R2=0x0000000000000000
+R3=0x0000aaaad2b993c0
+R4=0x0000ffff60c52628
+R5=0x0000ffffeb53ce78
+R6=0x0000000000000001
+R7=0x0000aaaad309f800
+R8=0x0000ffff9d583000
+R9=0x0000ffffeb53cab8
+R10=0x0000aaaacf2a0770
+R11=0x0000aaaacf29ecd8
+R12=0x0000ffff60c52628
+R13=0x0000ffffeb53cbc0
+R14=0x0000ffff9d556c10
+R15=0x0000000000000000
+R16=0x0000ffff82e0ced0
+R17=0x0000ffff82db1fa0
+R18=0x0000000000000000
+R19=0x0000000000000000
+R20=0x0000ffffeb53d220
+R21=0x0000aaaad2c56e58
+R22=0x0000ffffeb53d070
+R23=0x0000ffffeb53d218
+R24=0x0000000000000000
+R25=0x0000aaaad41cbe68
+R26=0x0000aaaad4369b60
+R27=0x0000ffffeb53d220
+R28=0x8000000000000001
+R29=0x0000ffffeb53d010
+R30=0x0000ffff82d9aabc
+
+
+Registers:
+R0 =0x0 is NULL
+R1 =0x0000ffff9d583000 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+R2 =0x0 is NULL
+R3 =0x0000aaaad2b993c0 points into unknown readable memory: 0x0000003c00000000 | 00 00 00 00 3c 00 00 00
+R4 ={method} {0x0000ffff60c52628} 'findClassForObject' '(Ljava/lang/Object;)J' in 'org/jpype/manager/TypeManager'
+R5 =0x0000ffffeb53ce78 is pointing into the stack for thread: 0x0000aaaad309f800
+R6 =0x0000000000000001 is an unknown value
+R7 =0x0000aaaad309f800 is a thread
+R8 =0x0000ffff9d583000 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+R9 =0x0000ffffeb53cab8 is pointing into the stack for thread: 0x0000aaaad309f800
+R10=0x0000aaaacf2a0770 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+R11=0x0000aaaacf29ecd8 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+R12={method} {0x0000ffff60c52628} 'findClassForObject' '(Ljava/lang/Object;)J' in 'org/jpype/manager/TypeManager'
+R13=0x0000ffffeb53cbc0 is pointing into the stack for thread: 0x0000aaaad309f800
+R14=0x0000ffff9d556c10: _PyRuntime+0x0000000000000158 in /usr/local/bin/../lib/libpython3.9.so.1.0 at 0x0000ffff9d1b7000
+R15=0x0 is NULL
+R16=0x0000ffff82e0ced0: <offset 0x00000000000b0ed0> in /usr/local/lib/python3.9/_jpype.cpython-39-aarch64-linux-gnu.so at 0x0000ffff82d5c000
+R17=0x0000ffff82db1fa0: _ZN11JPJavaFrameD1Ev+0x0000000000000000 in /usr/local/lib/python3.9/_jpype.cpython-39-aarch64-linux-gnu.so at 0x0000ffff82d5c000
+R18=0x0 is NULL
+R19=0x0 is NULL
+R20=0x0000ffffeb53d220 is pointing into the stack for thread: 0x0000aaaad309f800
+R21=0x0000aaaad2c56e58 points into unknown readable memory: 0x00000000db965e30 | 30 5e 96 db 00 00 00 00
+R22=0x0000ffffeb53d070 is pointing into the stack for thread: 0x0000aaaad309f800
+R23=0x0000ffffeb53d218 is pointing into the stack for thread: 0x0000aaaad309f800
+R24=0x0 is NULL
+R25=0x0000aaaad41cbe68 points into unknown readable memory: 0x0000ffff60eaa820 | 20 a8 ea 60 ff ff 00 00
+R26=0x0000aaaad4369b60 points into unknown readable memory: 0x0000aaaad2c56e50 | 50 6e c5 d2 aa aa 00 00
+R27=0x0000ffffeb53d220 is pointing into the stack for thread: 0x0000aaaad309f800
+R28=0x8000000000000001 is an unknown value
+R29=0x0000ffffeb53d010 is pointing into the stack for thread: 0x0000aaaad309f800
+R30=0x0000ffff82d9aabc: _ZN7JPClass6invokeER11JPJavaFrameP8_jobjectP7_jclassP10_jmethodIDP6jvalue+0x000000000000007c in /usr/local/lib/python3.9/_jpype.cpython-39-aarch64-linux-gnu.so at 0x0000ffff82d5c000
+
+Top of Stack: (sp=0x0000ffffeb53d010)
+0x0000ffffeb53d010:   0000ffffeb53d0b0 0000ffff82db7284
+0x0000ffffeb53d020:   0000aaaad41cc8a0 0000aaaad41cbf30
+0x0000ffffeb53d030:   0000ffffeb53d218 0000ffffeb53d238
+0x0000ffffeb53d040:   0000ffffeb53d190 0000000000000001
+0x0000ffffeb53d050:   0000aaaad49bb730 0000000000000018
+0x0000ffffeb53d060:   0000ffffeb53d218 0000ffffeb53d238
+0x0000ffffeb53d070:   0000aaaacf2a0770 0000ffffeb53d238
+0x0000ffffeb53d080:   0000ffffeb53d190 0000000000000001
+0x0000ffffeb53d090:   0000ffffeb53d0b0 0000ffff82db7240
+0x0000ffffeb53d0a0:   0000aaaad41cc8a0 0000ffff82d9cf68
+0x0000ffffeb53d0b0:   0000ffffeb53d140 0000ffff82db9588
+0x0000ffffeb53d0c0:   0000ffffeb53d190 0000000000000001
+0x0000ffffeb53d0d0:   0000ffffeb53d218 0000ffffeb53d220
+0x0000ffffeb53d0e0:   0000ffffeb53d238 0000aaaad41cc970
+0x0000ffffeb53d0f0:   0000000000000001 0000fffeb3a62ca0
+0x0000ffffeb53d100:   0000aaaad49ec8c0 0000fffeb3a62ca0
+0x0000ffffeb53d110:   0000ffff00000000 0000000000000000
+0x0000ffffeb53d120:   0000ffffeb53d220 0000aaaad4369b60
+0x0000ffffeb53d130:   0000aaaad4369b78 0000aaaad4369b78
+0x0000ffffeb53d140:   0000ffffeb53d1c0 0000ffff82dd02c0
+0x0000ffffeb53d150:   0000ffffeb53d238 0000ffffeb53d218
+0x0000ffffeb53d160:   0000ffffeb53d220 0000ffff82dde000
+0x0000ffffeb53d170:   0000aaaad305b350 0000ffff15640610
+0x0000ffffeb53d180:   0000ffffeb53d220 0000ffff82dde000
+0x0000ffffeb53d190:   7ffb723ae9ea3dc0 0000aaaad41cc8a0
+0x0000ffffeb53d1a0:   0000aaaad5257a10 0000aaaad5257a70
+0x0000ffffeb53d1b0:   0000aaaad5257a70 0001000000000003
+0x0000ffffeb53d1c0:   0000ffffeb53d260 0000ffff9d30214c
+0x0000ffffeb53d1d0:   0000aaaacf2a0770 0000ffff15640610
+0x0000ffffeb53d1e0:   0000fffeb3a62ca0 0000ffff82dd0210
+0x0000ffffeb53d1f0:   0000000000000000 0000aaaad49ec8c8
+0x0000ffffeb53d200:   0000ffffeb53d220 0000ffff82dd9a20 
+
+Instructions: (pc=0x0000ffff82d9aac0)
+0x0000ffff82d9a9c0:   c0 03 5f d6 e0 01 00 b5 93 06 00 f9 bf 6a 33 38
+0x0000ffff82d9a9d0:   f3 53 41 a9 f5 5b 42 a9 fd 7b c4 a8 c0 03 5f d6
+0x0000ffff82d9a9e0:   02 00 80 d2 e1 e3 00 91 e0 03 14 aa 35 d7 ff 97
+0x0000ffff82d9a9f0:   f5 03 00 aa 95 02 00 f9 e0 1f 40 f9 80 0a 00 f9
+0x0000ffff82d9aa00:   e2 03 13 aa e1 03 16 aa e0 03 15 aa 6d cd ff 97
+0x0000ffff82d9aa10:   95 02 40 f9 f3 1f 40 f9 93 06 00 f9 bf 6a 33 38
+0x0000ffff82d9aa20:   f3 53 41 a9 f5 5b 42 a9 fd 7b c4 a8 c0 03 5f d6
+0x0000ffff82d9aa30:   00 02 00 90 00 60 09 91 de d0 ff 97 1f 20 03 d5
+0x0000ffff82d9aa40:   fd 7b b6 a9 fd 03 00 91 f5 5b 02 a9 f6 83 01 91
+0x0000ffff82d9aa50:   f5 03 02 aa f3 53 01 a9 f3 03 00 aa f4 03 01 aa
+0x0000ffff82d9aa60:   e0 03 16 aa f7 63 03 a9 f7 03 08 aa f8 03 03 aa
+0x0000ffff82d9aa70:   f9 6b 04 a9 f9 03 04 aa fa 03 05 aa 25 ce ff 97
+0x0000ffff82d9aa80:   b5 04 00 b4 d8 03 00 b4 e4 03 1a aa e3 03 19 aa
+0x0000ffff82d9aa90:   e2 03 18 aa e1 03 15 aa e0 03 14 aa cd d1 ff 97
+0x0000ffff82d9aaa0:   f5 03 00 aa e0 03 16 aa aa d7 ff 97 b5 00 00 b4
+0x0000ffff82d9aab0:   e1 03 15 aa e0 03 14 aa 86 ce ff 97 f3 03 00 aa
+0x0000ffff82d9aac0:   64 02 40 f9 e2 03 15 aa e1 03 14 aa e0 03 13 aa
+0x0000ffff82d9aad0:   e8 03 17 aa 03 00 80 52 84 1c 40 f9 80 00 3f d6
+0x0000ffff82d9aae0:   e0 03 17 aa f3 53 41 a9 f5 5b 42 a9 f7 63 43 a9
+0x0000ffff82d9aaf0:   f9 6b 44 a9 fd 7b ca a8 

@@ -1,0 +1,3207 @@
+0,strictly,False
+1,severely,False
+2,rigidly,False
+3,hard,False
+4,sternly,False
+5,stringently,False
+6,with severity,False
+7,simply,False
+8,whole,False
+9,entirely,False
+10,wholly,False
+11,all,False
+12,altogether,False
+13,completely,False
+14,totally,False
+15,absolutely,False
+16,utterly,False
+17,definitely,False
+18,firmly,False
+19,dead,False
+20,perfectly,False
+21,far and away,False
+22,out and away,False
+23,by far,False
+24,unwaveringly,False
+25,steadfastly,False
+26,firm,False
+27,tremendously,False
+28,badly,False
+29,seriously,False
+30,deeply,False
+31,awfully,False
+32,bitterly,False
+33,horribly,False
+34,damn,False
+35,abominably,False
+36,darn,False
+37,deadly,False
+38,precious,False
+39,frightfully,False
+40,fearfully,False
+41,gravely,False
+42,bad,False
+43,right,False
+44,powerful,False
+45,mighty,False
+46,mightily,False
+47,acutely,False
+48,fast,False
+49,tight,False
+50,tightly,False
+51,repeatedly,False
+52,frequently,False
+53,sincerely,False
+54,exceedingly,False
+55,intensely,False
+56,extremely,False
+57,greatly,False
+58,oftentimes,False
+59,oft,False
+60,often,False
+61,ofttimes,False
+62,much,False
+63,a great deal,False
+64,time and time again,False
+65,really,False
+66,thoroughly,False
+67,intently,False
+68,exhaustively,False
+69,carefully,False
+70,attentively,False
+71,cautiously,False
+72,soundly,False
+73,heartily,False
+74,plainly,False
+75,steadily,False
+76,stiffly,False
+77,bolt,False
+78,closely,False
+79,close,False
+80,all over,False
+81,everyplace,False
+82,everywhere,False
+83,stickily,False
+84,viscidly,False
+85,eagerly,False
+86,earnestly,False
+87,studiously,False
+88,enthusiastically,False
+89,merely,False
+90,only,False
+91,solely,False
+92,just,False
+93,but,False
+94,alone,False
+95,exclusively,False
+96,ordinary,False
+97,common,False
+98,usual,False
+99,easily,False
+100,easy,False
+101,briefly,False
+102,however,False
+103,purely,False
+104,gross,False
+105,in general,False
+106,indeed,False
+107,sheer,False
+108,truly,False
+109,without exception,False
+110,as a whole,False
+111,at all,False
+112,in the least,False
+113,the least bit,False
+114,necessarily,False
+115,always,False
+116,not at all,False
+117,exactly,False
+118,true to life,False
+119,true-to-life,False
+120,bodily,False
+121,to the full,False
+122,full,False
+123,fully,False
+124,in full,False
+125,feeling refreshed,False
+126,as if,False
+127,quite,False
+128,as though,False
+129,so to speak,False
+130,plumb,False
+131,clean,False
+132,plum,False
+133,well,False
+134,downright,False
+135,to the letter,False
+136,to perfection,False
+137,just right,False
+138,generally,False
+139,universally,False
+140,mostly,False
+141,more often than not,False
+142,by and large,False
+143,broadly,False
+144,broadly speaking,False
+145,loosely,False
+146,general,False
+147,chock,False
+148,solid,False
+149,to the utmost,False
+150,integrally,False
+151,en bloc,False
+152,stark,False
+153,out-and-out,False
+154,all are all,False
+155,10000,False
+156,myriad,False
+157,ten thousand,False
+158,round-up,False
+159,wholesale arrest,False
+160,catching the whole herd with one throw,False
+161,in the main,False
+162,as long as,False
+163,as much as possible,False
+164,all altogether,False
+165,together,False
+166,in addition,False
+167,besides,False
+168,additionally,False
+169,furthermore,False
+170,moreover,False
+171,withal,False
+172,far,False
+173,in any case,False
+174,likewise,False
+175,also,False
+176,too,False
+177,as well,False
+178,all told,False
+179,in all,False
+180,quite a,False
+181,in short,False
+182,after all,False
+183,in a word,False
+184,last,False
+185,in conclusion,False
+186,lastly,False
+187,finally,False
+188,tout ensemble,False
+189,on the whole,False
+190,all in all,False
+191,put differently,False
+192,in other words,False
+193,in detail,False
+194,with great care,False
+195,again and again,False
+196,all the way,False
+198,good,False
+199,unconditional,False
+200,obligatory,False
+202,obligate,False
+204,decidedly,False
+205,positively,False
+206,unquestionably,False
+207,in spades,False
+208,by all odds,False
+209,emphatically,False
+210,still,False
+211,sure enough,False
+212,real,False
+213,very,False
+214,rattling,False
+215,genuinely,False
+216,so,False
+217,clearly,False
+218,conclusively,False
+219,once and for all,False
+220,certainly,False
+221,of course,False
+222,surely,False
+223,assuredly,False
+224,yassuh,False
+225,effortlessly,False
+226,suddenly,False
+227,without fail,False
+228,invariably,False
+229,constantly,False
+230,inevitably,False
+231,sure as shooting,False
+232,for certain,False
+233,sure,False
+234,explicitly,False
+235,expressly,False
+236,specifically,False
+237,concretely,False
+238,strongly,False
+239,fastly,False
+240,solidly,False
+242,latched onto,False
+243,locked onto,False
+244,patiently,False
+245,quietly,False
+246,fixedly,False
+247,quiet,False
+248,motionlessly,False
+249,properly,False
+250,precisely,False
+251,in good order,False
+252,the right way,False
+253,decent,False
+254,decently,False
+255,right on the mark,False
+256,famously,False
+257,splendidly,False
+258,magnificently,False
+259,excellently,False
+260,commendable,False
+261,satisfactorily,False
+262,to a t,False
+263,impeccably,False
+264,literally,False
+266,far off,False
+267,in the distance,False
+268,long ago,False
+269,afar,False
+270,way,False
+271,right smart,False
+272,far away,False
+273,at a distance,False
+274,distance,False
+275,considerably,False
+276,substantially,False
+277,terribly,False
+278,overly,False
+279,determinedly,False
+280,unfalteringly,False
+281,unshakably,False
+282,resolutely,False
+283,decisively,False
+284,steady,False
+285,dare,False
+286,purposely,False
+287,daringly,False
+288,deliberately,False
+289,intentionally,False
+290,violently,False
+291,madly,False
+292,like mad,False
+293,like thunder,False
+294,like the devil,False
+295,like hell,False
+296,like crazy,False
+297,like sin,False
+298,furiously,False
+299,frelling,False
+300,formidably,False
+301,dreadfully,False
+302,monstrously,False
+303,grotesquely,False
+304,hideously,False
+305,horridly,False
+306,amiss with,False
+307,poorly,False
+308,imperfectly,False
+309,amiss,False
+310,ineptly,False
+311,fecklessly,False
+312,aggressively,False
+313,sharply,False
+314,wildly,False
+315,very much,False
+316,alarmingly,False
+317,vastly,False
+318,immensely,False
+319,solemnly,False
+320,in earnest,False
+321,soberly,False
+322,staidly,False
+323,keenly,False
+324,heavily,False
+325,profoundly,False
+326,deep,False
+327,at length,False
+328,cleverly,False
+329,artfully,False
+330,thick,False
+331,low,False
+332,darkly,False
+333,desperately,False
+334,desperation,False
+335,scald,False
+336,famous,False
+337,admirable,False
+338,heavy,False
+339,big,False
+340,large,False
+341,great,False
+342,important,False
+343,authoritative,False
+344,eminent,False
+345,high,False
+346,awful,False
+347,damnably,False
+348,damned,False
+349,cursedly,False
+350,strangely,False
+351,oddly,False
+352,queerly,False
+353,very badly,False
+354,sublimely,False
+355,so much,False
+356,persistently,False
+357,vigorously,False
+358,unsparingly,False
+359,scathingly,False
+360,nauseatingly,False
+361,grimly,False
+362,curse at,False
+363,outrageously,False
+364,precious to,False
+365,dear to,False
+366,bashfully,False
+367,timidly,False
+368,shyly,False
+369,nervously,False
+370,gingerly,False
+371,irrepressibly aroused,False
+372,stimulated,False
+373,majestically,False
+374,authoritatively,False
+375,magisterially,False
+376,crucially,False
+377,correctly,False
+378,accurately,False
+379,rightly,False
+380,no doubt,False
+381,undoubtedly,False
+382,evidently,False
+383,immediately,False
+384,soon,False
+385,upright,False
+386,presently,False
+387,shortly,False
+388,before long,False
+389,forthwith,False
+390,straightaway,False
+391,now,False
+392,instantly,False
+393,directly,False
+394,scarce,False
+395,scarcely,False
+396,barely,False
+397,hardly,False
+398,just now,False
+399,moderately,False
+400,reasonably,False
+401,insufficiently,False
+402,negligently,False
+403,heedlessly,False
+404,nonchalantly,False
+405,carelessly,False
+406,even,False
+407,pretty,False
+408,jolly,False
+409,fairly,False
+410,passably,False
+411,somewhat,False
+412,middling,False
+413,correct in,False
+414,naturally,False
+415,natural for to do,False
+416,rather,False
+417,kinda,False
+418,kind of,False
+419,sort of,False
+420,quite an,False
+421,powerfully,False
+422,piercingly,False
+423,shrilly,False
+424,sapiently,False
+425,astutely,False
+426,sagaciously,False
+427,shrewdly,False
+428,sharp,False
+429,more,False
+430,a lot,False
+431,lots,False
+432,a good deal,False
+433,to a greater extent,False
+434,quickly,False
+435,early,False
+436,chop-chop,False
+437,rapidly,False
+438,speedily,False
+439,apace,False
+440,quick,False
+441,promptly,False
+442,quick to do,False
+443,incisively,False
+444,shrewd,False
+445,time and again,False
+446,over and over again,False
+447,over and over,False
+448,continually,False
+449,once or twice,False
+450,successively,False
+451,pleasantly warm,False
+452,nice and warm,False
+453,forever,False
+454,incessantly,False
+455,perpetually,False
+456,evenly,False
+457,once more,False
+458,again,False
+459,once again,False
+460,over again,False
+461,several times,False
+462,occasionally,False
+463,now and then,False
+464,at times,False
+465,now and again,False
+466,once in a while,False
+467,from time to time,False
+468,on occasion,False
+469,very often,False
+470,each time,False
+471,e'er,False
+472,ever,False
+473,sometimes,False
+474,hourly,False
+475,quite often,False
+476,in a heartfelt way,False
+477,dearly,False
+478,heart and soul,False
+479,body and soul,False
+480,cordially,False
+481,warmly,False
+482,by any means,False
+483,for anything,False
+484,humbly,False
+485,would n't do for anything,False
+486,had enough,False
+487,flatly refusing,False
+488,urgently,False
+489,vividly,False
+490,actually,False
+491,super,False
+492,passing,False
+493,highly,False
+494,staggeringly,False
+495,hugely,False
+496,enormously,False
+497,very many,False
+498,ten million,False
+499,10000000,False
+500,exceptionally,False
+501,outstandingly,False
+502,unco,False
+503,unusually,False
+504,remarkably,False
+505,particularly,False
+506,endlessly,False
+507,without end,False
+508,sorely,False
+509,most,False
+510,best,False
+511,farthest,False
+512,unreasonable,False
+513,excessive,False
+514,inordinate,False
+515,undue,False
+516,helter-skelter,False
+517,chaotic,False
+518,disorderly,False
+519,jumbled,False
+520,what kind,False
+521,how,False
+522,person of importance,False
+523,a someone,False
+524,cardinally,False
+525,insistently,False
+526,doggedly,False
+527,stubbornly,False
+528,eminently,False
+529,supremely,False
+530,superlatively,False
+531,ad summum,False
+532,tiptop,False
+533,crazy,False
+534,obdurately,False
+535,mulishly,False
+536,cussedly,False
+537,obstinately,False
+538,pig-headedly,False
+539,a lot of,False
+540,oita,False
+541,oita‐ken,False
+542,oita prefecture,False
+543,to a large extent,False
+544,to a great extent,False
+545,hana,False
+546,advantageously,False
+547,intimately,False
+548,ok,False
+549,alright,False
+550,lately,False
+551,already,False
+552,any number of times,False
+553,perhaps,False
+554,probably,False
+555,maybe,False
+556,great deal,False
+557,presumptively,False
+558,presumably,False
+559,likely,False
+560,belike,False
+561,in all likelihood,False
+562,in all probability,False
+563,conceivably,False
+564,majority,False
+565,bulk,False
+566,abundant,False
+567,plenty,False
+568,enough,False
+569,abundantly,False
+570,extravagantly,False
+571,copiously,False
+572,profusely,False
+573,richly,False
+574,vitally,False
+575,as was expected,False
+576,yes,False
+577,thusly,False
+578,thus,False
+579,as a matter of fact,False
+580,in truth,False
+581,in fact,False
+582,in point of fact,False
+583,equally,False
+584,uniformly,False
+585,from start to finish,False
+586,every inch,False
+587,successfully,False
+588,nicely,False
+589,anywhere,False
+590,in all respects,False
+591,indiscriminately,False
+592,through and through,False
+593,wholeheartedly,False
+594,with undivided attention,False
+595,engrossed,False
+596,captive,False
+597,intent,False
+598,wrapped,False
+599,absorbed,False
+600,enwrapped,False
+601,concentrated,False
+602,unreasonably,False
+603,unnecessarily,False
+604,warily,False
+605,measuredly,False
+606,discreetly,False
+607,with scrupulous care,False
+608,elaborately,False
+609,in an elaborate way,False
+610,intricately,False
+611,sedulously,False
+612,genially,False
+613,kindlily,False
+614,kindly,False
+615,fast asleep,False
+618,energetically,False
+619,strenuously,False
+620,cheerfully,False
+621,sunnily,False
+622,cheerily,False
+623,pleasantly,False
+624,neatly,False
+625,as much as i want,False
+626,distinctly,False
+627,understandably,False
+628,intelligibly,False
+629,clear,False
+630,variously,False
+631,indisputably,False
+632,overtly,False
+633,unambiguously,False
+634,unequivocally,False
+635,tangibly,False
+636,frankly,False
+637,flat,False
+638,straight,False
+639,apparently,False
+640,confessedly,False
+641,admittedly,False
+642,true,False
+643,avowedly,False
+644,provably,False
+645,incontrovertibly,False
+646,demonstrably,False
+647,gradually,False
+648,slowly,False
+649,little by little,False
+650,bit by bit,False
+651,step by step,False
+652,tardily,False
+653,slow,False
+654,gently,False
+655,on,False
+656,away,False
+657,methodically,False
+658,snugly,False
+659,flush,False
+660,in the post,False
+661,minutely,False
+662,knowingly,False
+663,all at once,False
+664,nearby,False
+665,near,False
+666,in the proximity,False
+667,throughout,False
+668,surrender,False
+669,resignation,False
+670,here and there,False
+671,around there,False
+672,somewhere,False
+673,approximately,False
+674,any way,False
+675,people,False
+676,wherever,False
+677,anyplace,False
+678,relentlessly,False
+679,unrelentingly,False
+680,thickly,False
+681,viscously,False
+682,gooily,False
+683,syrupily,False
+684,assiduously,False
+685,diligently,False
+686,now late,False
+687,impatiently,False
+688,thirstily,False
+689,expectantly,False
+690,independently,False
+691,ardently,False
+692,unfeignedly,False
+693,direct,False
+695,meticulously,False
+696,no more than,False
+697,little,False
+698,snappingly,False
+699,with a snap,False
+700,chisel,False
+701,nothing else than,False
+702,nothing but,False
+703,nothing other than,False
+704,mere,False
+705,saturation,False
+706,only a,False
+707,since,False
+708,end,False
+709,finish,False
+710,place to stop,False
+711,goes no far than,False
+712,uniqueness,False
+713,singularity,False
+714,bang,False
+715,on the button,False
+716,bit,False
+717,a trifle,False
+718,a bit,False
+719,a little,False
+720,for a while,False
+721,awhile,False
+722,unintentionally,False
+723,unconsciously,False
+724,by mistake,False
+725,accidentally,False
+726,being straight,False
+727,in person,False
+728,nearly,False
+729,just managing,False
+730,with great difficulty,False
+731,fair to,False
+732,because,False
+733,nevertheless,False
+734,and yet,False
+735,whereas,False
+736,while,False
+737,on the other hand,False
+738,instead,False
+740,unmarried,False
+741,away from home,False
+742,unaided,False
+743,single,False
+744,by oneself,False
+745,voluntarily,False
+746,spontaneously,False
+747,automatically,False
+748,unassisted,False
+749,individually,False
+750,separately,False
+751,singly,False
+752,single-handed,False
+753,unbacked,False
+754,usually,False
+755,ordinarily,False
+756,commonly,False
+757,unremarkably,False
+758,normally,False
+759,medium,False
+760,through,False
+761,normal,False
+762,natural to,False
+763,readily,False
+764,lightly,False
+765,sufficiently,False
+766,skilfully,False
+767,skillfully,False
+768,freely,False
+769,adrift,False
+770,without more bones,False
+771,brassily,False
+772,fast and loose,False
+773,forwardly,False
+774,obtrusively,False
+775,offhandedly,False
+776,cavalierly,False
+777,offhand,False
+778,feel free to,False
+779,smoothly,False
+780,swimmingly,False
+781,comfortably,False
+782,soft,False
+783,and how,False
+784,natch,False
+785,d'accord,False
+786,fo sho,False
+787,ofc,False
+788,easy for,False
+789,easy to do,False
+790,roughly,False
+791,in round numbers,False
+792,more or less,False
+793,close to,False
+794,some,False
+795,just about,False
+796,or so,False
+797,about,False
+798,around,False
+799,brief,False
+800,temporarily,False
+801,how much,False
+802,to what extent,False
+803,in what way,False
+804,cleanly,False
+805,popularly,False
+806,mainly,False
+807,outline,False
+808,schema,False
+809,scheme,False
+810,summary,False
+811,sum-up,False
+812,abstract,False
+813,synopsis,False
+814,overall,False
+815,precis,False
+816,as a rule,False
+817,for the most part,False
+818,largely,False
+819,what do you know about that,False
+820,no kidding,False
+821,no way,False
+822,go on with you,False
+823,to be sure,False
+824,without doubt,False
+825,oh dear,False
+826,wow,False
+827,oh my word,False
+828,jee,False
+829,o,False
+830,oh,False
+831,such,False
+832,it 's no wonder,False
+833,no,False
+834,i see,False
+835,isee,False
+836,justly,False
+837,aright,False
+838,natural,False
+839,like that,False
+840,manifestly,False
+841,patently,False
+842,plain,False
+843,obviously,False
+844,legally,False
+845,rightfully,False
+846,justifiably,False
+847,lawfully,False
+848,legitimately,False
+849,licitly,False
+850,faithfully,False
+851,reliably,False
+852,dependably,False
+853,conscientiously,False
+854,religiously,False
+855,scrupulously,False
+856,all around,False
+857,anyway,False
+858,anyhow,False
+859,at any rate,False
+860,at best,False
+861,at most,False
+862,anyways,False
+863,in any event,False
+864,integral,False
+865,one body,False
+866,one‐piece,False
+867,at least,False
+868,at the least,False
+869,leastways,False
+870,leastwise,False
+871,spot,False
+872,never,False
+873,by no means,False
+874,not by a blame sight,False
+875,not by a long sight,False
+876,by nature,False
+877,from the very beginning,False
+878,at heart,False
+879,more and more,False
+880,anew,False
+881,what is more,False
+883,to boot,False
+884,for a moment,False
+885,on any account,False
+886,unavoidably,False
+887,needfully,False
+888,against one 's will,False
+889,reluctantly,False
+890,everytime,False
+891,habitually,False
+892,every time,False
+893,everyday,False
+894,habitual,False
+895,day and night,False
+896,day or night,False
+897,throughout the year,False
+898,all year round,False
+899,from morning till night,False
+900,anytime,False
+901,any time,False
+902,all the time,False
+903,at all times,False
+904,whenever,False
+905,at any time,False
+906,continuously,False
+907,forever and ever,False
+908,eternally,False
+909,everlastingly,False
+910,evermore,False
+911,indefinitely,False
+912,honestly,False
+913,punctually,False
+914,accurate,False
+915,exact,False
+916,punctual,False
+917,neat,False
+918,flop,False
+919,satisfyingly,False
+920,gratifyingly,False
+921,to one 's heart 's content,False
+922,in plenty,False
+923,full of,False
+924,brimming with,False
+925,perfect,False
+926,amply,False
+927,adequately,False
+928,awash with,False
+929,one by one,False
+930,severally,False
+931,on an individual basis,False
+932,lily,False
+933,feeling relieved,False
+934,lightsomely,False
+935,light-heartedly,False
+936,seems,False
+937,polus,False
+938,climax,False
+939,maximum,False
+940,pole,False
+941,extreme,False
+942,aya,False
+943,astrigent,False
+944,nothing,False
+945,comparatively,False
+946,appreciably,False
+947,as if to say,False
+948,as much as to say,False
+949,so to speak so to speak,False
+950,as it were,False
+951,as we say,False
+952,ably,False
+953,masterly,False
+954,like an expert,False
+955,aptly,False
+956,deliciously,False
+957,competently,False
+958,capably,False
+959,smartly,False
+960,lusciously,False
+961,favorably,False
+962,best regards,False
+963,suitably,False
+964,being skilled in,False
+965,ahead,False
+966,hereafter,False
+967,futurity,False
+968,future,False
+969,time to come,False
+970,okay,False
+971,okey,False
+972,all right,False
+973,personally,False
+974,generally speaking,False
+975,at large,False
+976,main points,False
+977,widely,False
+978,extensively,False
+979,the most part,False
+980,wide,False
+981,far and near,False
+982,far and wide,False
+983,in a broad way,False
+984,custom,False
+985,customarily,False
+986,common custom,False
+987,almost,False
+988,most part,False
+989,primarily,False
+990,chiefly,False
+991,principally,False
+992,loudly,False
+993,apart,False
+994,in pieces,False
+995,slovenly,False
+996,to the best of ability,False
+997,to the best of one 's ability,False
+998,at the most,False
+999,as far as possible,False
+1000,diverseness,False
+1001,multifariousness,False
+1002,variety,False
+1003,diversity,False
+1004,in the first place,False
+1005,as well as,False
+1006,how many minutes,False
+1007,length,False
+1008,if possible,False
+1009,extent,False
+1010,bound,False
+1011,boundary,False
+1012,limit,False
+1013,demarcation line,False
+1014,demarcation,False
+1015,limitation,False
+1016,both,False
+1017,along with,False
+1018,alike,False
+1019,mutually,False
+1020,reciprocally,False
+1021,together with,False
+1022,as x,False
+1023,then y,False
+1024,in company,False
+1025,pair,False
+1026,collectively,False
+1027,conjointly,False
+1028,jointly,False
+1029,as one,False
+1030,increasingly,False
+1031,progressively,False
+1032,into the bargain,False
+1033,in the bargain,False
+1034,outside,False
+1035,twice,False
+1036,besides this,False
+1037,cum,False
+1038,and,False
+1039,in addition to,False
+1040,at the same time,False
+1041,even at the best of times,False
+1042,under normal circumstances,False
+1043,as it is,False
+1044,yet,False
+1045,above,False
+1046,top,False
+1047,upper part,False
+1048,head,False
+1049,lord,False
+1050,shogun,False
+1051,first volume,False
+1052,over,False
+1053,up,False
+1054,after,False
+1055,aboard a ship,False
+1056,superior,False
+1058,supra-,False
+1059,thereto,False
+1060,to that,False
+1061,to it,False
+1062,side,False
+1063,edge,False
+1064,para,False
+1065,as yet,False
+1066,hitherto,False
+1067,over and above,False
+1068,not only,False
+1069,before and after,False
+1070,subsequently,False
+1071,still more,False
+1072,less,False
+1073,simultaneously,False
+1074,meanwhile,False
+1075,concurrently,False
+1076,thereunto,False
+1077,somehow,False
+1078,at all events,False
+1079,either way,False
+1080,as you know,False
+1081,for you see,False
+1082,whatever the case may be,False
+1083,in either case,False
+1084,whichever the case may be,False
+1085,identically,False
+1086,in the same way,False
+1087,similarly,False
+1088,same,False
+1089,very much like,False
+1090,much as,False
+1091,far above that,False
+1092,not either,False
+1093,excessively,False
+1094,to a fault,False
+1095,overmuch,False
+1096,too much,False
+1097,too for,False
+1098,all together,False
+1099,in the end,False
+1100,eventually,False
+1101,ultimately,False
+1102,at long last,False
+1103,at last,False
+1104,in the long run,False
+1105,etc,False
+1106,and so on,False
+1107,etcetera,False
+1108,and so forth,False
+1109,by all means,False
+1110,at any cost,False
+1111,cravingly,False
+1112,needs,False
+1113,after all is said and done,False
+1114,to say the least,False
+1115,afterwards,False
+1116,as a result,False
+1117,above all,False
+1118,if we put this another way,False
+1119,otherwise,False
+1120,namely,False
+1121,in brief,False
+1122,plugging,False
+1123,very narrow,False
+1124,with particular attention,False
+1125,poor,False
+1126,one-by-one,False
+1127,twice and three times,False
+1128,over a great distance,False
+1129,consecutively,False
+1130,right along,False
+1131,all along,False
+1132,forever and a day,False
+1133,from afar,False
+1134,bother,False
+1135,all the way from,False
+1136,fine,False
+1137,very well,False
+1138,you 're great,False
+1139,well done,False
+1140,i 'm proud of you,False
+1141,unreservedly,False
+1142,crisply,False
+1143,affirmatively,False
+1144,actively,False
+1145,certainly and without no doubt,False
+1146,as it has been,False
+1147,until this day,False
+1149,even now,False
+1150,composedly,False
+1151,cool,False
+1152,leisurely,False
+1153,peacefully,False
+1154,tranquilly,False
+1155,calmly,False
+1156,stolidness,False
+1157,stoicism,False
+1158,stolidity,False
+1159,hush,False
+1160,quieten,False
+1161,quiesce,False
+1162,quiet down,False
+1163,pipe down,False
+1164,as usual,False
+1165,shake,False
+1166,didder,False
+1167,shudder,False
+1168,shiver,False
+1169,jar,False
+1170,jolt,False
+1171,tremble,False
+1172,quake,False
+1173,quiver,False
+1174,palpitate,False
+1175,therefore,False
+1176,for this reason,False
+1177,accordingly,False
+1178,consequently,False
+1179,to that degree,False
+1180,not that much,False
+1181,that much,False
+1182,in this way,False
+1183,like this,False
+1184,that sort of,False
+1185,that kind of,False
+1186,hence,False
+1187,for that reason,False
+1188,this much,False
+1189,then,False
+1190,thereupon,False
+1191,in an orderly manner,False
+1192,tidily,False
+1193,boldly,False
+1194,brightly,False
+1195,doubtless,False
+1196,doubtlessly,False
+1197,right and wrong,False
+1198,appropriateness,False
+1199,course,False
+1200,of necessity,False
+1201,beyond doubt,False
+1202,here you are,False
+1203,even so,False
+1206,will,False
+1207,unmistakably,False
+1208,abruptly,False
+1209,sudden,False
+1210,all of a sudden,False
+1211,short,False
+1212,of a sudden,False
+1213,on the spur of the moment,False
+1214,in a flash,False
+1215,outright,False
+1216,instantaneously,False
+1217,dot,False
+1218,bursting out,False
+1219,breaking out,False
+1220,roaring,False
+1221,whooping,False
+1222,hurriedly,False
+1223,in haste,False
+1224,hastily,False
+1225,by chance,False
+1226,unexpectedly,False
+1227,circumstantially,False
+1228,incidentally,False
+1229,haply,False
+1230,by luck,False
+1231,unexpected,False
+1232,unannounced,False
+1233,abrupt,False
+1234,at once,False
+1235,in a moment,False
+1236,straight off,False
+1237,right away,False
+1238,like a shot,False
+1239,unawares,False
+1240,against expectation,False
+1241,contrary to expectation,False
+1242,without warning,False
+1243,without notice,False
+1244,out of the blue,False
+1245,in a fit of passion,False
+1246,in a flare,False
+1247,casually,False
+1248,continuance,False
+1249,incessantness,False
+1250,without hesitation,False
+1251,one after the other,False
+1252,unchanged,False
+1253,unchangeably,False
+1254,uneventfully,False
+1255,surely or clearly,False
+1256,specially,False
+1257,by design,False
+1258,advisedly,False
+1259,designedly,False
+1260,by choice,False
+1261,on purpose,False
+1263,ad hoc,False
+1264,especially,False
+1265,peculiarly,False
+1266,notably,False
+1267,stock-still,False
+1268,without movement,False
+1269,without the slightest movement,False
+1270,silently,False
+1271,safely,False
+1272,softly,False
+1273,secretly,False
+1274,on the qt,False
+1275,in secret,False
+1276,stealthily,False
+1277,tamely,False
+1278,meekly,False
+1279,off-the-record,False
+1280,confidentially,False
+1281,privately,False
+1282,covertly,False
+1283,in camera,False
+1284,in private,False
+1285,off the record,False
+1286,appropriately,False
+1287,politely,False
+1288,regularly,False
+1289,unerringly,False
+1290,gracefully,False
+1291,plausibly,False
+1292,tactfully,False
+1293,tastefully,False
+1294,respectfully,False
+1295,tastily,False
+1296,fantastically,False
+1297,brilliantly,False
+1298,wonderfully,False
+1299,honorably,False
+1300,uprightly,False
+1301,royally,False
+1302,superbly,False
+1303,marvelously,False
+1304,toppingly,False
+1305,terrifically,False
+1306,wondrous,False
+1307,marvellously,False
+1308,wondrously,False
+1309,resplendently,False
+1310,gorgeously,False
+1311,flawlessly,False
+1312,prominently,False
+1313,conspicuously,False
+1314,really well,False
+1315,admirably,False
+1316,ancient times,False
+1317,a long time ago,False
+1318,once,False
+1319,past,False
+1320,past times,False
+1321,yesteryear,False
+1322,lang syne,False
+1323,long since,False
+1324,once upon a time,False
+1325,long,False
+1326,previous,False
+1327,of a former age,False
+1328,not a little,False
+1329,virtually,False
+1330,unduly,False
+1331,walking briskly,False
+1332,decisive,False
+1333,resolute,False
+1334,determined,False
+1335,adamantly,False
+1336,without more ado,False
+1337,drastically,False
+1339,fiercely,False
+1340,consciously,False
+1341,rashly,False
+1342,frantically,False
+1343,for one 's life,False
+1344,lion stunning,False
+1345,being irresistible,False
+1346,being furiously vigorous,False
+1347,being intensely forceful,False
+1348,hopefully,False
+1349,inadequately,False
+1350,scantily,False
+1351,incompletely,False
+1352,ill,False
+1353,a fish out of water,False
+1354,inappropriately,False
+1355,inadequate for,False
+1356,inadvertently,False
+1357,improperly,False
+1358,unsuitably,False
+1359,awry,False
+1360,harshly,False
+1361,swiftly,False
+1362,viciously,False
+1363,brutally,False
+1364,savagely,False
+1365,at random,False
+1366,great deal of,False
+1367,many mountains of,False
+1368,mountains,False
+1369,expansively,False
+1370,mournfully,False
+1371,pensively,False
+1372,weightily,False
+1373,in an honest way,False
+1374,in large quantities,False
+1375,later,False
+1376,by and by,False
+1377,wisely,False
+1378,shiftily,False
+1379,craftily,False
+1380,in darkness,False
+1381,gloomily,False
+1382,ambiguously,False
+1383,obscurely,False
+1384,furtively,False
+1385,on the sly,False
+1386,unofficially,False
+1387,on the side,False
+1388,very hard,False
+1389,with utmost effort,False
+1390,with all one 's might,False
+1391,as hard as one can,False
+1392,for dear life,False
+1393,recklessly,False
+1394,single-minded,False
+1395,with intense concentration,False
+1396,rushing headlong into,False
+1397,celebrated for,False
+1398,crucial to,False
+1399,important for,False
+1400,distinguished for,False
+1401,dear,False
+1402,miraculously,False
+1403,mysteriously,False
+1404,curiously,False
+1405,cryptically,False
+1406,enigmatically,False
+1407,funnily,False
+1408,persistence,False
+1409,single-mindedness,False
+1410,sticking to one point,False
+1411,focusing on one thing,False
+1412,generously,False
+1413,liberally,False
+1414,munificently,False
+1415,without mercy,False
+1416,being obsessed with a steep face,False
+1417,illegally,False
+1418,absurdly,False
+1419,hesitantly,False
+1420,fidgety,False
+1421,restlessly,False
+1422,squirming,False
+1423,wriggling,False
+1424,haltingly,False
+1425,nervous that,False
+1426,in a chafe,False
+1427,very cautious,False
+1428,extremely careful,False
+1429,without apology,False
+1430,confidently,False
+1431,haughtily,False
+1432,insolently,False
+1433,perchance,False
+1434,supposedly,False
+1435,certain,False
+1436,seemingly,False
+1437,someway,False
+1438,in some way,False
+1439,someways,False
+1440,in some manner,False
+1441,immediate,False
+1442,prompt,False
+1443,headlong,False
+1444,pronto,False
+1445,without delay,False
+1446,at the present time,False
+1447,today,False
+1448,nowadays,False
+1449,on the spot,False
+1450,momently,False
+1451,momentarily,False
+1452,right beside,False
+1453,as soon as possible,False
+1454,without a moment 's delay,False
+1455,handed-down order,False
+1456,issued instruction,False
+1457,word of command,False
+1458,face-to-face,False
+1459,nearly a day,False
+1460,in a few days,False
+1461,in a short time,False
+1462,someday,False
+1463,sometime,False
+1464,in the near future,False
+1465,erect,False
+1466,square,False
+1467,currently,False
+1468,at present,False
+1469,right now,False
+1470,practically,False
+1471,in practice,False
+1472,after a little while,False
+1473,little later,False
+1474,straight away,False
+1475,bluntly,False
+1476,curtly,False
+1477,coldly,False
+1478,no matter how much,False
+1479,not long after,False
+1480,nigh,False
+1481,this time,False
+1482,subordinate,False
+1483,junior,False
+1484,apropos,False
+1485,even if,False
+1486,by the bye,False
+1487,by the way,False
+1488,recently,False
+1489,at this late hour,False
+1491,at this stage,False
+1492,at this time,False
+1493,the other day,False
+1494,a few days ago,False
+1495,not long ago,False
+1496,huh,False
+1497,my,False
+1498,a moment ago,False
+1499,first-hand,False
+1500,at first hand,False
+1501,firsthand,False
+1502,erectly,False
+1503,straight-backed,False
+1504,squarely,False
+1505,shy of,False
+1506,narrowly,False
+1507,only just,False
+1508,with difficulty,False
+1509,at the last moment,False
+1510,on the verge,False
+1511,slightly,False
+1512,mildly,False
+1513,openly,False
+1514,tenuously,False
+1515,unlikely,False
+1516,not likely to do,False
+1517,first,False
+1518,first of all,False
+1519,to start with,False
+1520,just before,False
+1521,modestly,False
+1522,unobtrusively,False
+1523,although,False
+1524,accountable for,False
+1525,thoughtlessly,False
+1526,neglectfully,False
+1527,as if nothing happened,False
+1528,unceremoniously,False
+1529,dryly,False
+1530,in a casual manner,False
+1531,carelessness,False
+1532,sloppiness,False
+1533,hand‐clap,False
+1534,beating time with the hand,False
+1535,jauntily,False
+1536,idly,False
+1537,loungingly,False
+1538,lazily,False
+1539,eben,False
+1540,fair,False
+1541,evenhandedly,False
+1542,impartially,False
+1543,so-and-so,False
+1544,so so,False
+1545,soso,False
+1546,number,False
+1547,partially,False
+1548,partly,False
+1549,part,False
+1550,faint,False
+1551,originally,False
+1552,essentially,False
+1553,proper,False
+1554,per se,False
+1555,as such,False
+1556,intrinsically,False
+1557,in and of itself,False
+1558,logically,False
+1559,fundamentally,False
+1560,basically,False
+1561,earlier,False
+1562,to begin with,False
+1563,in the beginning,False
+1564,by itself,False
+1565,fluently,False
+1566,pat,False
+1568,sooner,False
+1569,preferably,False
+1570,on the contrary,False
+1571,to the contrary,False
+1572,contrarily,False
+1573,contrariwise,False
+1574,perversely,False
+1575,all the more,False
+1576,position,False
+1577,grade,False
+1578,crown,False
+1579,station,False
+1580,post,False
+1581,as,False
+1582,rank,False
+1583,place,False
+1584,any,False
+1585,with power,False
+1586,with strength,False
+1588,without shilly-shallying,False
+1589,straight to the point,False
+1590,getting to the heart of the matter,False
+1591,calculatingly,False
+1592,longer,False
+1593,much more,False
+1594,even more,False
+1595,as soon as,False
+1596,ahead of time,False
+1597,too soon,False
+1598,early on,False
+1599,snatchingly,False
+1600,in a rush,False
+1601,perplexedly,False
+1602,hurry-scurry,False
+1603,in a panic,False
+1604,in a fluster,False
+1605,presto,False
+1606,rapid,False
+1607,unhesitatingly,False
+1608,spry,False
+1609,solidly built,False
+1610,astute in,False
+1611,manifold,False
+1612,without interruption,False
+1613,one after another,False
+1614,in turn,False
+1615,infinitely,False
+1616,ceaselessly,False
+1617,unendingly,False
+1618,one at a time,False
+1619,next,False
+1620,eternity,False
+1621,for good,False
+1622,permanently,False
+1623,as long as one likes,False
+1624,unceasingly,False
+1625,year after year,False
+1626,flatly,False
+1627,afresh,False
+1629,second time,False
+1630,re -,False
+1631,re,False
+1632,another time,False
+1633,formally,False
+1634,in some cases,False
+1635,rarely,False
+1636,seldom,False
+1637,every now and then,False
+1638,every so often,False
+1639,infrequently,False
+1640,from beginning to end,False
+1643,on the occasion of,False
+1644,at all such times,False
+1645,each time it happens,False
+1646,in one case,False
+1647,one time,False
+1648,before,False
+1649,once before,False
+1650,zeng,False
+1651,formerly,False
+1652,erstwhile,False
+1653,at one time,False
+1654,erst,False
+1655,either,False
+1656,per hour,False
+1657,passionately,False
+1658,fierily,False
+1659,fervidly,False
+1660,fervently,False
+1661,warm,False
+1662,reverently,False
+1663,reverentially,False
+1664,crawlingly,False
+1665,bowing down,False
+1666,shabbily,False
+1667,begorra,False
+1668,begorah,False
+1669,bedad,False
+1670,altitude,False
+1671,to a high degree,False
+1672,significantly,False
+1673,markedly,False
+1674,abnormally,False
+1675,noticeably,False
+1676,fabulously,False
+1677,incredibly,False
+1678,particular,False
+1679,special,False
+1680,in particular,False
+1681,most importantly,False
+1683,most especially,False
+1684,for a long time,False
+1685,ad infinitum,False
+1686,painfully,False
+1687,calamitous to,False
+1688,couple,False
+1689,center piece,False
+1690,randomly,False
+1691,mussily,False
+1692,things like,False
+1693,something like,False
+1694,someone like,False
+1695,such a thing as,False
+1696,that,False
+1697,to think that,False
+1698,what,False
+1699,why,False
+1700,by what means,False
+1701,how do i,False
+1702,for what reason,False
+1703,for what purpose,False
+1704,what for,False
+1705,incorrigibly,False
+1706,stoutly,False
+1707,whole nine yards,False
+1708,maximally,False
+1709,first-rate,False
+1710,only too,False
+1711,all too,False
+1712,most of all,False
+1713,crazy of,False
+1714,big on,False
+1715,horrible,False
+1716,frightful,False
+1717,ugly,False
+1718,atrocious,False
+1719,horrifying,False
+1720,direful,False
+1721,horrendous,False
+1722,frightening,False
+1723,dreadful,False
+1724,profitably,False
+1725,conveniently,False
+1726,handily,False
+1727,auspiciously,False
+1728,propitiously,False
+1729,ok with,False
+1730,present,False
+1731,previously,False
+1732,antecedently,False
+1733,beforehand,False
+1734,in advance,False
+1735,meantime,False
+1736,in the meantime,False
+1737,late,False
+1738,latterly,False
+1739,of late,False
+1740,these days,False
+1741,too late,False
+1742,while ago,False
+1743,a short while ago,False
+1744,as early as,False
+1745,possibly,False
+1746,alternatively,False
+1747,peradventure,False
+1748,feasibly,False
+1749,almost certainly,False
+1750,most likely,False
+1751,mayhap,False
+1752,almost all,False
+1753,lid,False
+1754,by some chance,False
+1755,might be,False
+1756,may,False
+1757,purportedly,False
+1758,credibly,False
+1759,for sure,False
+1760,possible,False
+1761,potential,False
+1762,probable,False
+1763,likely to do,False
+1764,abundant in,False
+1765,plentifully,False
+1766,luxuriously,False
+1767,in great numbers,False
+1768,in accordance with,False
+1769,thence,False
+1770,for example,False
+1771,eg,False
+1772,for instance,False
+1773,far from it,False
+1774,every bit,False
+1775,in concert,False
+1776,abolition,False
+1777,successful in,False
+1778,fortunately,False
+1779,to a tee,False
+1780,someplace,False
+1781,nowhere,False
+1782,irrationally,False
+1783,without authority,False
+1784,without reason,False
+1785,arbitrarily,False
+1786,with all one 's heart,False
+1787,single-mindedly,False
+1788,with one 's heart and soul,False
+1789,in all sincerity,False
+1790,with one 's whole heart,False
+1791,whole-hearted devotion,False
+1792,indiscreetly,False
+1793,uselessly,False
+1794,in vain,False
+1795,vainly,False
+1796,gratuitously,False
+1797,alert to,False
+1798,exquisitely,False
+1799,fussily,False
+1800,busily,False
+1801,amicably,False
+1802,please,False
+1803,excitedly,False
+1804,mirthfully,False
+1805,jubilantly,False
+1806,gayly,False
+1807,blithely,False
+1808,happily,False
+1809,merrily,False
+1810,joyfully,False
+1811,gleefully,False
+1812,joyously,False
+1813,gaily,False
+1814,uproariously,False
+1815,hilariously,False
+1816,agreeably,False
+1817,enjoyably,False
+1818,pleasurably,False
+1819,fondly,False
+1820,engagingly,False
+1821,winsomely,False
+1822,perspicuously,False
+1823,lucidly,False
+1824,limpidly,False
+1825,pellucidly,False
+1826,in many ways,False
+1827,publicly,False
+1828,officially,False
+1829,publically,False
+1830,in public,False
+1831,sententious,False
+1832,pithy,False
+1833,crude,False
+1834,blunt,False
+1835,well-defined,False
+1836,decipherable,False
+1837,fact,False
+1838,undisguised,False
+1839,without concealment,False
+1840,without reserve,False
+1841,appears to be,False
+1842,thank you,False
+1843,thanks,False
+1844,apparent to,False
+1845,by degrees,False
+1846,dots,False
+1847,spots,False
+1848,pimples,False
+1849,day by day,False
+1850,at ease,False
+1851,at leisure,False
+1852,belatedly,False
+1853,sluggishly,False
+1854,hesitatingly,False
+1855,snivel,False
+1856,snuffle,False
+1857,drag one 's feet,False
+1858,procrastinate,False
+1859,shillyshally,False
+1860,drag one 's heels,False
+1861,stall,False
+1862,dillydally,False
+1863,dilly-dally,False
+1864,by small degrees,False
+1865,by inches,False
+1866,in stages,False
+1867,piecemeal,False
+1868,loose,False
+1869,sporadically,False
+1870,dapple,False
+1871,patch,False
+1872,speckle,False
+1873,maculation,False
+1874,fleck,False
+1875,point,False
+1876,piece by piece,False
+1877,lovingly,False
+1878,sweetly,False
+1879,sweet,False
+1880,graciously,False
+1881,blandly,False
+1882,blissfully,False
+1883,there,False
+1884,aside,False
+1885,forth,False
+1886,off,False
+1887,earlier than,False
+1888,beyond,False
+1889,cosily,False
+1890,cozily,False
+1891,finely,False
+1892,delicately,False
+1893,small,False
+1894,simultaneity,False
+1895,beside,False
+1896,by the side of,False
+1897,neighborhood,False
+1898,back and forth,False
+1899,front and back,False
+1900,before and behind,False
+1901,s,False
+1902,sagittal,False
+1903,all through,False
+1904,without a break,False
+1905,the whole time,False
+1906,in places,False
+1907,scattered about,False
+1908,here in kashiko,False
+1909,in some respects,False
+1910,abbreviation,False
+1911,time,False
+1912,occasion,False
+1913,inside and outside,False
+1914,the inside and outside,False
+1915,internal and external,False
+1916,dark,False
+1917,dismal,False
+1918,sorry,False
+1919,dingy,False
+1920,gloomy,False
+1921,disconsolate,False
+1922,dreary,False
+1923,drear,False
+1924,blue,False
+1925,for the moment,False
+1926,for the time being,False
+1927,foremost,False
+1928,first off,False
+1929,firstly,False
+1930,where,False
+1931,inexorably,False
+1932,densely,False
+1933,without blundering,False
+1934,with one 's utmost effort,False
+1935,slowly approaching,False
+1937,bit-by-bit,False
+1938,uneasily,False
+1939,apprehensively,False
+1940,anxiously,False
+1941,vaguely,False
+1942,dimly,False
+1943,indistinctly,False
+1944,mistily,False
+1946,with a click,False
+1947,with a crack,False
+1948,with a slam,False
+1949,with a flap,False
+1950,with a thud,False
+1951,with a crash,False
+1952,with a swish,False
+1953,with a rustle,False
+1954,except,False
+1955,twist,False
+1956,convolution,False
+1957,all that,False
+1958,from thenceforth,False
+1959,from the time when,False
+1960,sinsyne,False
+1961,syne,False
+1962,only that,False
+1963,since then,False
+1964,since that time,False
+1965,thenceforth,False
+1966,ago,False
+1967,back,False
+1968,backward,False
+1969,since when,False
+1970,from when,False
+1971,how long,False
+1972,from what time,False
+1973,with a bang,False
+1974,marginally,False
+1975,a bit of,False
+1976,a hint of,False
+1977,an iota of,False
+1978,very little,False
+1979,for some time,False
+1980,for a period,False
+1981,innocently,False
+1982,unknowingly,False
+1983,unwittingly,False
+1984,incorrectly,False
+1985,erroneously,False
+1986,mistakenly,False
+1987,wrongly,False
+1988,wrong,False
+1989,right half of a character,False
+1990,right-hand radical of a character,False
+1991,coincidentally,False
+1993,in imminent danger of,False
+1994,eight or nine parts,False
+1995,just the same,False
+1996,all the same,False
+1997,notwithstanding,False
+1998,nonetheless,False
+1999,just because,False
+2000,while it may be true that,False
+2001,not necessarily,False
+2002,at the same time as,False
+2004,then again,False
+2005,but then,False
+2006,another side,False
+2007,other side,False
+2008,exchange,False
+2009,interchange,False
+2010,do n't do so,False
+2011,more than that,False
+2012,themselves,False
+2013,self,False
+2014,ego,False
+2015,oneself,False
+2016,with one accord,False
+2017,unanimously,False
+2018,separate,False
+2019,several,False
+2020,distinct,False
+2021,discrete,False
+2022,apiece,False
+2023,separateness,False
+2024,severalty,False
+2025,discreteness,False
+2026,distinctness,False
+2027,respectively,False
+2028,for each one,False
+2029,from each one,False
+2030,each,False
+2031,to each one,False
+2032,dividedly,False
+2033,divided,False
+2034,for each,False
+2035,normal circumstances,False
+2036,like others,False
+2037,as much as else,False
+2039,colloquially,False
+2040,informally,False
+2041,conversationally,False
+2042,through somebody,False
+2043,lief,False
+2044,fain,False
+2045,gladly,False
+2046,willingly,False
+2047,with acquiescence,False
+2048,obedient,False
+2049,submissive,False
+2050,tame,False
+2051,slavish,False
+2052,nimbly,False
+2053,love,False
+2054,like,False
+2055,care,False
+2056,wish,False
+2057,care for,False
+2058,enjoy,False
+2059,efficiently,False
+2060,expeditiously,False
+2061,with address,False
+2062,being able to do as one pleases,False
+2063,doing at will,False
+2064,free,False
+2065,right and left,False
+2066,as one pleases,False
+2067,ad lib,False
+2068,involuntarily,False
+2069,wilfully,False
+2070,willfully,False
+2071,familiarly,False
+2072,reserve and consideration,False
+2073,shamelessly,False
+2074,noisily,False
+2075,casually and carelessly,False
+2076,feel free to ~,False
+2077,dry,False
+2078,fleetly,False
+2079,without a hitch,False
+2080,kindsa,False
+2081,to a greater or lesser extent,False
+2082,number of,False
+2083,fire gate,False
+2084,hearth,False
+2085,moderate,False
+2086,round,False
+2087,go around,False
+2088,provisionally,False
+2089,tentatively,False
+2090,expediently,False
+2091,inadvisably,False
+2092,in a short period,False
+2093,short period,False
+2094,one morning,False
+2095,transitorily,False
+2096,ad interim,False
+2097,pro tempore,False
+2098,ikra,False
+2099,salmon roe,False
+2100,how far,False
+2101,whoa,False
+2102,selectively,False
+2103,in toto,False
+2104,as a general rule,False
+2105,in essence,False
+2106,in theory,False
+2107,in principle,False
+2108,unconditionally,False
+2109,massively,False
+2110,just in case,False
+2111,making sure,False
+2112,just to be sure,False
+2113,for caution 's sake,False
+2114,what the hell,False
+2115,nope,False
+2116,nyet,False
+2117,routinely,False
+2118,but still,False
+2119,of some kind,False
+2120,of some sort,False
+2121,what minute,False
+2122,leaving that aside,False
+2124,however that may be,False
+2125,be that the case,False
+2126,do so,False
+2127,do as you please,False
+2128,very high,False
+2129,high up,False
+2130,at the highest,False
+2131,in outline,False
+2132,till doomsday,False
+2133,for any price,False
+2134,for all the world,False
+2135,for love or money,False
+2136,unwillingly,False
+2137,no no,False
+2138,opposite,False
+2139,inconceivably,False
+2140,native,False
+2141,by birth,False
+2142,from the start,False
+2143,natively,False
+2144,newly,False
+2145,freshly,False
+2146,even in the slightest degree,False
+2147,under any circumstances,False
+2148,one degree,False
+2149,one tone,False
+2150,out of necessity,False
+2151,with no other option,False
+2152,perforce,False
+2153,forcibly,False
+2154,compelling,False
+2155,grudgingly,False
+2156,helplessly,False
+2157,as always,False
+2158,daytime and nighttime,False
+2159,day in and day out,False
+2160,around-the-clock,False
+2161,for 24 hours,False
+2162,round the clock,False
+2163,around the clock,False
+2164,without sleep and rest,False
+2165,no sleep or rest,False
+2166,working day and night,False
+2167,all the year over,False
+2168,night and day,False
+2169,when,False
+2170,i,False
+2171,perennially,False
+2172,interminably,False
+2173,orderly,False
+2174,accurate in,False
+2175,exact in,False
+2176,in scores,False
+2177,on easy street,False
+2178,in succession,False
+2179,in order,False
+2181,every,False
+2182,at intervals of,False
+2183,individual,False
+2184,light‐heartedly,False
+2185,relatively,False
+2186,comparably,False
+2187,proportion,False
+2188,rate,False
+2189,fraction,False
+2190,ratio,False
+2191,in proportion,False
+2192,adept at,False
+2193,briskly,False
+2194,refreshingly,False
+2195,with a feeling of relief,False
+2196,off one 's shoulder,False
+2197,favourably,False
+2198,as luck would have it,False
+2199,luckily,False
+2200,fortuitously,False
+2201,kindest regards,False
+2202,forward,False
+2203,forrader,False
+2204,onward,False
+2205,forwards,False
+2206,onwards,False
+2207,in front,False
+2208,aborn,False
+2209,less than,False
+2210,up to,False
+2211,below,False
+2212,under,False
+2213,downward,False
+2214,downwards,False
+2215,the following,False
+2216,thereafter,False
+2217,after this,False
+2218,on and after,False
+2219,from now on,False
+2220,henceforth,False
+2221,henceforward,False
+2222,some day,False
+2223,at some future time,False
+2224,sanction,False
+2225,approve,False
+2226,reed,False
+2227,right on,False
+2228,beneficial,False
+2229,convenient,False
+2230,serious,False
+2231,ripe,False
+2232,after a fashion,False
+2233,looking good,False
+2234,okey-doke,False
+2235,capeesh,False
+2236,ya heard,False
+2237,undastanz me,False
+2238,capiche,False
+2239,gotcha,False
+2240,getcha,False
+2241,i got it,False
+2242,well then,False
+2244,in one 's own words,False
+2245,by mutual consent,False
+2246,relative,False
+2247,myself,False
+2248,roughly speaking,False
+2250,accustomed,False
+2251,wonted,False
+2252,customary,False
+2253,nine parts,False
+2254,nine percent,False
+2255,pretty much,False
+2256,aloud,False
+2257,loud,False
+2258,flamboyantly,False
+2259,apartment house,False
+2260,apartment,False
+2261,apart from,False
+2262,other than,False
+2263,except for,False
+2264,aside from,False
+2265,save for,False
+2266,multifariously,False
+2267,diversely,False
+2269,drag out,False
+2270,drag,False
+2271,drag on,False
+2272,exert oneself to the utmost,False
+2273,assorted,False
+2274,various,False
+2275,divers,False
+2276,diverse,False
+2277,versatile,False
+2278,at first,False
+2279,similarly well,False
+2280,with,False
+2281,along with the,False
+2282,in a similar vein,False
+2283,in the same manner,False
+2284,equal to,False
+2285,phase,False
+2286,reciprocal,False
+2287,in the presence of other people,False
+2288,double,False
+2289,two times,False
+2290,parallel,False
+2291,abreast,False
+2292,as one likes,False
+2294,remaining,False
+2295,keeping,False
+2296,leaving,False
+2297,directly above,False
+2298,right over,False
+2299,supra,False
+2300,atop,False
+2301,higher,False
+2302,prefer ～ over ～,False
+2303,more than,False
+2304,the above,False
+2305,extra,False
+2307,complementary,False
+2308,so far,False
+2309,erenow,False
+2310,not to mention,False
+2311,order,False
+2312,secondly,False
+2313,following,False
+2314,monostromatic,False
+2315,even more so,False
+2316,a fortiori,False
+2317,still less,False
+2318,to say nothing of,False
+2319,not yet,False
+2320,without knowing why,False
+2321,in spite of oneself,False
+2322,for some reason,False
+2323,aimlessly,False
+2324,settingaside,False
+2325,in all cases,False
+2326,exactly the same,False
+2327,as ever,False
+2328,surplus,False
+2329,excess,False
+2330,spare,False
+2331,supernumerary,False
+2332,redundant,False
+2333,superfluous,False
+2334,supererogatory,False
+2335,gratuitous,False
+2336,uncalled-for,False
+2337,rest,False
+2338,in agreement,False
+2339,in unison,False
+2340,by common consent,False
+2341,in accord,False
+2342,nemine contradicente,False
+2343,nem con,False
+2344,in a body,False
+2345,en masse,False
+2346,all alike,False
+2347,early and evening,False
+2348,sooner or later,False
+2349,later on,False
+2350,afterward,False
+2351,in time,False
+2352,by all costs,False
+2353,by all possible means,False
+2354,after that,False
+2355,aback,False
+2356,in the future,False
+2357,behind,False
+2358,rear,False
+2359,pursuer,False
+2360,as a sequel to,False
+2361,resultantly,False
+2362,welfare,False
+2363,benefit,False
+2364,or,False
+2365,else,False
+2366,if not so,False
+2367,that is to say,False
+2368,videlicet,False
+2369,viz,False
+2370,to wit,False
+2371,id est,False
+2372,ie,False
+2373,that is,False
+2374,resume,False
+2375,epitome,False
+2377,from so far away,False
+2378,without limit,False
+2379,carat,False
+2380,sprightly,False
+2382,philosophically,False
+2383,in good spirits,False
+2384,in stride,False
+2385,dispassionately,False
+2386,without incident,False
+2387,with composure,False
+2388,with an air of composure,False
+2389,calm,False
+2390,composed,False
+2391,as is one 's habit,False
+2392,as normal,False
+2393,tickle pink,False
+2394,beatify,False
+2395,exalt,False
+2396,thrill,False
+2397,exhilarate,False
+2398,inebriate,False
+2399,throb,False
+2400,shuddering,False
+2401,shivering,False
+2402,trembling,False
+2403,being horrified,False
+2404,being disgusted,False
+2405,thrilled,False
+2406,valve,False
+2407,wherefore,False
+2408,not so,False
+2409,not particularly,False
+2410,as much,False
+2411,to that extent,False
+2412,therefrom,False
+2413,thereof,False
+2414,and so,False
+2415,and then,False
+2416,at that moment,False
+2417,hereupon,False
+2418,therewith,False
+2419,so immediately,False
+2420,audaciously,False
+2421,impudently,False
+2422,unashamedly,False
+2423,unabashedly,False
+2424,barefacedly,False
+2425,bravely,False
+2426,thickly face,False
+2427,as bold as brass,False
+2428,bright,False
+2429,force,False
+2430,unanticipated,False
+2431,unforeseen,False
+2432,unlooked-for,False
+2433,in a hurry,False
+2434,in a big hurry,False
+2435,impetuously,False
+2436,fidget,False
+2437,restlessness,False
+2438,fidgetiness,False
+2439,pop,False
+2440,surprisingly,False
+2441,they did not expect him,False
+2442,in passing,False
+2443,en passant,False
+2444,in this connection,False
+2445,at a breath,False
+2446,at a time,False
+2447,without waiting around,False
+2449,without leave,False
+2450,no advance,False
+2451,without permission,False
+2452,with calmness,False
+2453,indirectly,False
+2454,without a doubt,False
+2455,by spells,False
+2456,alternately,False
+2457,without accident,False
+2458,among other things,False
+2459,portion,False
+2460,accessory,False
+2461,best of all,False
+2462,weirdly,False
+2463,in silence,False
+2464,surreptitiously,False
+2465,slyly,False
+2466,clandestinely,False
+2467,secretively,False
+2468,underhandedly,False
+2469,acting brazenly unaffected,False
+2470,docilely,False
+2471,obediently,False
+2472,confidentiality,False
+2473,inside out,False
+2474,inside,False
+2475,on a regular basis,False
+2476,systematically,False
+2477,with regularity,False
+2478,infallibly,False
+2479,elegantly,False
+2480,daintily,False
+2481,manfully,False
+2482,manly,False
+2483,convincingly,False
+2484,as if it were true,False
+2485,deferentially,False
+2486,wonderfully beautiful,False
+2487,ornately,False
+2488,without a flaw,False
+2489,perceptibly,False
+2490,observably,False
+2491,smash,False
+2492,smashingly,False
+2493,moment,False
+2494,some time ago,False
+2495,transient,False
+2496,on one occasion,False
+2497,one day,False
+2498,long time,False
+2499,lengthily,False
+2500,previous in doing,False
+2501,in no small numbers,False
+2502,unfairly,False
+2503,wrongfully,False
+2505,imperfect,False
+2506,twisted with,False
+2507,distorted,False
+2508,twisted,False
+2510,tortuose,False
+2512,random,False
+2513,blindly,False
+2514,reckless,False
+2515,haphazard,False
+2516,blind,False
+2517,regrettably,False
+2518,grievously,False
+2519,deplorably,False
+2520,joylessly,False
+2521,lamentably,False
+2522,alas,False
+2523,to my great regret,False
+2524,tragically,False
+2525,sagely,False
+2526,blankly,False
+2527,faintly,False
+2528,stupidly,False
+2529,dreamily,False
+2530,blockhead,False
+2531,implicitly,False
+2532,tangentially,False
+2533,allegorically,False
+2534,allusively,False
+2535,tacitly,False
+2536,sneakily,False
+2537,for good measure,False
+2538,earnest,False
+2539,solemn,False
+2540,sincere,False
+2541,by force,False
+2542,with all one 's strength,False
+2543,with might and main,False
+2544,without considering the consequences,False
+2545,comically,False
+2546,hesitant about,False
+2547,making a fuss over trifles,False
+2548,restively,False
+2549,agitated,False
+2550,saunter,False
+2551,stroll,False
+2552,mess about,False
+2553,lurk,False
+2554,tarry,False
+2555,mill around,False
+2556,mill about,False
+2557,loaf,False
+2558,lollygag,False
+2559,hang around,False
+2560,easily accomplished,False
+2561,weave,False
+2562,wind,False
+2563,wander,False
+2564,meander,False
+2565,thread,False
+2566,arrogantly,False
+2567,first meeting,False
+2568,glance,False
+2569,outwardly,False
+2570,prompt in,False
+2571,prompt to do,False
+2572,headlong rush,False
+2573,rushing recklessly,False
+2574,reverse,False
+2575,rampant,False
+2576,insatiable,False
+2577,untiring,False
+2578,persistent,False
+2579,tap,False
+2580,present day,False
+2581,at this hour,False
+2582,up‐date,False
+2583,present time,False
+2584,before one 's eyes,False
+2585,in one 's presence,False
+2586,up close,False
+2587,from one minute to the next,False
+2588,from hour to hour,False
+2589,moment by moment,False
+2590,with each passing moment,False
+2591,every moment,False
+2592,hour by hour,False
+2593,sands of time,False
+2594,just for a while,False
+2595,directly horizontal,False
+2596,asap,False
+2598,even a little early,False
+2599,lose no time,False
+2600,vis-a-vis,False
+2601,directly opposite,False
+2602,just in front,False
+2603,straight ahead,False
+2604,end on,False
+2605,at an early date,False
+2606,anywhen,False
+2607,first day of month,False
+2608,all day,False
+2609,the day,False
+2610,a day,False
+2611,at the moment,False
+2612,flat out,False
+2613,bluffly,False
+2614,roundly,False
+2615,brusquely,False
+2616,in a chilly manner,False
+2617,in cold blood,False
+2618,geometrically,False
+2619,other day,False
+2620,junior to,False
+2621,befitting,False
+2622,appropriate,False
+2623,suitable,False
+2624,worthy,False
+2625,desirable,False
+2626,suited,False
+2627,meet,False
+2628,fitting,False
+2629,seemly,False
+2630,comme il faut,False
+2631,adequate to,False
+2632,at the time,False
+2633,in those days,False
+2634,moment before,False
+2635,about this time,False
+2636,in case,False
+2637,in case of,False
+2638,at that time,False
+2639,this very minute,False
+2640,forthrightly,False
+2641,forthright,False
+2642,to a person 's face,False
+2643,cautious in,False
+2644,tottering,False
+2645,tottery,False
+2646,on the point,False
+2648,short notice,False
+2649,on the verge of,False
+2650,on the brink of,False
+2651,thin,False
+2652,ostensibly,False
+2653,improbable,False
+2654,introduction,False
+2655,right before,False
+2656,predecessor,False
+2657,immediately before,False
+2658,foolishly,False
+2659,neglectfulness,False
+2660,rudely,False
+2661,laconically,False
+2662,drily,False
+2663,dog-tired,False
+2664,exhausted,False
+2665,washed-out,False
+2666,fagged,False
+2667,spent,False
+2668,worn out,False
+2669,worn-out,False
+2670,fatigued,False
+2671,played out,False
+2672,ragged,False
+2673,in a relaxed manner,False
+2674,rumbling,False
+2675,grumbling,False
+2676,growling,False
+2677,purring,False
+2678,correspond,False
+2679,equate,False
+2680,half,False
+2681,half-way,False
+2682,the middle,False
+2683,in some,False
+2684,civil to,False
+2685,in good taste,False
+2686,front,False
+2687,former,False
+2688,first time,False
+2689,without faltering,False
+2690,with fluency,False
+2691,more well,False
+2692,even well,False
+2693,conversely,False
+2694,backwards,False
+2695,the other way around,False
+2696,maliciously,False
+2697,vice versa,False
+2698,counter,False
+2699,in any way,False
+2700,whatsoever,False
+2701,anything,False
+2702,whatever,False
+2703,in confusion,False
+2704,in bewilderment,False
+2705,in a dither,False
+2706,all shook up,False
+2707,slapstick,False
+2708,in rapid succession,False
+2709,successive order,False
+2710,second,False
+2711,tirelessly,False
+2712,untiringly,False
+2713,insatiably,False
+2714,unsatiably,False
+2715,year by year,False
+2716,annually,False
+2717,considering his age,False
+2718,years,False
+2719,each year,False
+2720,every year,False
+2721,yearly,False
+2722,monotonously,False
+2723,lightheaded,False
+2724,empty-headed,False
+2725,silly,False
+2726,giddy,False
+2727,airheaded,False
+2728,featherbrained,False
+2729,dizzy,False
+2730,light-headed,False
+2731,few,False
+2732,slight,False
+2733,remaining all the time,False
+2735,category,False
+2736,not later than,False
+2737,by,False
+2738,ancient,False
+2739,anciently,False
+2740,traditionally,False
+2741,since ancient times,False
+2742,old,False
+2743,a few years ago,False
+2744,few years ago,False
+2745,last year,False
+2746,former years,False
+2747,comfortably warm,False
+2748,steaming hot,False
+2749,piping hot,False
+2750,glowing,False
+2751,exceptional,False
+2752,unusual,False
+2753,characteristic of,False
+2754,inter alia,False
+2755,bright and early,False
+2756,early in life,False
+2757,since a long time ago,False
+2758,cruelly,False
+2759,irregularly,False
+2763,the likes of,False
+2764,how about,False
+2765,nature,False
+2766,why ?,False
+2767,what for ?,False
+2768,bent on,False
+2769,beneficial to,False
+2770,before it happens,False
+2771,frontward,False
+2772,frontwards,False
+2773,before happens,False
+2774,before sth happens,False
+2775,advance,False
+2776,dilatory in,False
+2777,alternative,False
+2778,by some possibility,False
+2779,emergency,False
+2780,the worst,False
+2781,10000 to 1,False
+2782,if by any chance,False
+2783,in the unlikely event that,False
+2784,be the very,False
+2785,capable of,False
+2786,in groups,False
+2787,in a crowd,False
+2788,in droves,False
+2789,in a stream,False
+2790,without good reason,False
+2791,without cause,False
+2792,without due cause,False
+2793,single‐mindedly,False
+2794,to no purpose,False
+2795,fruitlessly,False
+2796,mischievously,False
+2797,inefficaciously,False
+2798,ineffectively,False
+2799,very beautiful,False
+2800,het up about,False
+2801,friendly,False
+2802,welcoming,False
+2803,amicable,False
+2804,favorable,False
+2805,well-disposed,False
+2806,good-time,False
+2807,convivial,False
+2808,take,False
+2809,receive,False
+2810,have,False
+2811,excuse me,False
+2812,but～,False
+2813,if you will,False
+2814,with pleasure,False
+2815,raucously,False
+2816,admiringly,False
+2817,with fascination,False
+2818,with adoration,False
+2819,with enchantment,False
+2820,longingly,False
+2821,outward,False
+2822,ostensible,False
+2823,sincerity,False
+2824,nakedly,False
+2825,with open mind,False
+2826,with no preconceived notions,False
+2827,open-mind,False
+2828,daily,False
+2829,increasing daily,False
+2830,increasing day by day,False
+2831,unhurriedly,False
+2832,slithery,False
+2833,over there,False
+2834,that place,False
+2835,yonder,False
+2836,la-bas,False
+2837,along,False
+2838,forrard,False
+2839,forrad,False
+2840,destination,False
+2841,opposite direction,False
+2842,opposite side,False
+2843,coming,False
+2844,far than,False
+2845,petite,False
+2846,aboard,False
+2847,alongside,False
+2848,duration,False
+2849,succession,False
+2850,sequence,False
+2851,chance,False
+2852,opportunity,False
+2853,sorry for,False
+2854,disconsolate about,False
+2855,what place,False
+2856,abstractedly,False
+2857,imperceptibly,False
+2858,unnoticeably,False
+2859,subtly,False
+2860,vacantly,False
+2861,dully,False
+2863,succinctly,False
+2864,compactly,False
+2865,absentmindedly,False
+2866,with a whack,False
+2867,absently,False
+2868,inattentively,False
+2869,heaps,False
+2870,with a flop,False
+2871,with a plop,False
+2872,with a clash,False
+2873,plump,False
+2874,from that time,False
+2875,ever since,False
+2877,rearwards,False
+2878,rearward,False
+2879,underdevelopment,False
+2880,backward in,False
+2881,how long ?,False
+2882,till when ?,False
+2883,little while,False
+2884,for a minute,False
+2885,for the present,False
+2886,unbelievably,False
+2887,sillily,False
+2888,bad of,False
+2889,fraudulently,False
+2890,unjust of,False
+2891,at that very moment,False
+2892,just at the moment,False
+2893,hazardously,False
+2894,perilously,False
+2895,dangerously,False
+2896,even though,False
+2897,quite right,False
+2898,correct,False
+2899,because of,False
+2900,on account of,False
+2901,amenable to,False
+2902,efficiency,False
+2903,efficient,False
+2904,agilely,False
+2905,for nothing,False
+2906,vertically and horizontally,False
+2907,crisscross,False
+2908,length and breadth,False
+2909,every angle,False
+2910,all you want,False
+2911,as much as you want,False
+2912,instinctively,False
+2913,naughtily,False
+2914,self-indulgently,False
+2915,brazenly,False
+2916,coolly,False
+2917,smooth,False
+2918,clamorously,False
+2919,waiwai,False
+2921,be that as it may,False
+2922,across,False
+2923,fresh,False
+2924,new,False
+2925,forcefully,False
+2926,by main force,False
+2927,irresistibly,False
+2928,impossibly,False
+2929,hopelessly,False
+2931,at what time,False
+2932,how soon,False
+2933,what time,False
+2934,which hour,False
+2935,at what moment,False
+2936,seriatim,False
+2937,in sequence,False
+2940,necessary for to do,False
+2941,omnis,False
+2942,just a little,False
+2945,at a brisk pace,False
+2946,in front of,False
+2947,inside of,False
+2948,just under,False
+2949,short of,False
+2950,a little less than,False
+2951,just short of,False
+2952,up to the point,False
+2953,stage,False
+2954,under eyes,False
+2955,under one 's eyes,False
+2956,below one 's eyes,False
+2957,beneath,False
+2958,underneath,False
+2959,to a lower place,False
+2960,at a lower place,False
+2961,downstairs,False
+2962,down the stairs,False
+2963,on a lower floor,False
+2964,some other year,False
+2965,convenient to,False
+2966,earnest about,False
+2967,out loud,False
+2968,fussy about,False
+2969,at the outset,False
+2970,beginning,False
+2971,start,False
+2972,offset,False
+2973,outset,False
+2974,kickoff,False
+2975,starting time,False
+2976,get-go,False
+2977,showtime,False
+2978,commencement,False
+2979,synchronizing,False
+2980,juxtaposition,False
+2981,up to now,False
+2982,until now,False
+2983,up to the present,False
+2984,till now,False
+2985,pending,False
+2986,something,False
+2987,some kind of,False
+2988,as before,False
+2989,as it was originally,False
+2990,soon or later,False
+2991,later date,False
+2992,in back,False
+2993,in the rear,False
+2994,posterior,False
+2997,apathetically,False
+2998,in a subdued manner,False
+2999,calm and collected,False
+3000,having enough and to spare,False
+3001,pulsation,False
+3002,beat,False
+3003,pulse,False
+3004,heartbeat,False
+3005,shudderingly,False
+3006,feeling sick,False
+3007,feeling queasy,False
+3008,feeling nauseated,False
+3010,go that far,False
+3012,along with that,False
+3013,cheekily,False
+3014,brashly,False
+3015,nervily,False
+3016,wide open,False
+3017,large and bright,False
+3018,to one 's surprise,False
+3019,finishing writing,False
+3020,work,False
+3021,etc at a stroke,False
+3022,knocking something off without a break,False
+3023,by turns,False
+3024,in rotation,False
+3025,first and foremost,False
+3026,secret,False
+3027,upside down,False
+3028,back troweling,False
+3029,wrong-side-out,False
+3030,inside-out,False
+3031,in,False
+3032,inward,False
+3033,inwards,False
+3034,courteously,False
+3035,like a man,False
+3036,so that it can be detected,False
+3037,visually,False
+3038,visibly,False
+3039,snap,False
+3040,instant,False
+3041,long time no see,False
+3042,long time no hear,False
+3045,long while,False
+3047,aimless,False
+3048,rambling,False
+3049,desultory,False
+3050,casual,False
+3051,straightforwardly,False
+3052,straight line,False
+3053,reckless of to do,False
+3054,hit-or-miss,False
+3055,unplanned,False
+3056,blind to,False
+3057,catastrophically,False
+3058,miserably,False
+3059,solitarily,False
+3060,sadly,False
+3061,weakly,False
+3062,idiotically,False
+3063,ludicrously,False
+3064,ridiculously,False
+3065,laughably,False
+3066,preposterously,False
+3067,grave,False
+3068,stern,False
+3070,one look,False
+3071,glint,False
+3072,peek,False
+3073,persistent in,False
+3074,from under one 's very nose,False
+3076,facing,False
+3077,to one 's face,False
+3078,from moment to moment,False
+3079,kokkoku,False
+3080,positively at the end,False
+3081,ruthlessly,False
+3082,few days ago,False
+3083,becoming to,False
+3084,adapted for,False
+3085,on the occasion,False
+3086,if,False
+3087,careful in,False
+3088,very soon,False
+3089,amorously,False
+3090,sportingly,False
+3091,grunt,False
+3092,grumble,False
+3093,complaint,False
+3094,mutter,False
+3095,in the middle,False
+3096,halfway,False
+3097,half way,False
+3098,middle road,False
+3099,attentive to,False
+3100,for the first time,False
+3101,protest,False
+3102,contrariety,False
+3103,insanely,False
+3104,in disorder,False
+3105,stuck,False
+3106,greedily,False
+3107,pa,False
+3108,per annum,False
+3109,per year,False
+3110,unwisely,False
+3111,foolish of,False
+3112,absurd of,False
+3113,for many years,False
+3114,steaming-hot,False
+3115,more than others,False
+3116,unusual for to do,False
+3117,early morning,False
+3118,early in the morning,False
+3119,since the old days,False
+3120,since many years ago,False
+3121,cold-bloodedly,False
+3122,by twos and threes,False
+3123,ganging up,False
+3124,joining forces,False
+3125,with loud footsteps,False
+3126,sound of many footsteps,False
+3127,prodigally,False
+3128,wastefully,False
+3129,elaborated,False
+3130,elaborate,False
+3131,detailed,False
+3132,unostentatious,False
+3133,unpretending,False
+3134,unpretentious,False
+3135,advantageous to,False
+3136,favorable to,False
+3137,yearningly,False
+3138,aboveboard,False
+3139,candidly,False
+3140,day after day,False
+3141,every day,False
+3142,date,False
+3143,take your time,False
+3144,other way,False
+3145,get into,False
+3146,in a daze,False
+3147,vague,False
+3148,concisely,False
+3149,in an absent sort of way,False
+3150,fatness,False
+3151,blubber,False
+3152,fat,False
+3153,avoirdupois,False
+3154,clap on,False
+3155,slam on,False
+3156,slap on,False
+3157,splashing,False
+3158,under development,False
+3159,in progress,False
+3160,partial to,False
+3161,noisomely,False
+3162,competent as,False
+3164,proudly,False
+3165,dignified,False
+3166,grand,False
+3167,distinguished,False
+3168,imposing,False
+3169,magisterial,False
+3170,straightforward,False
+3171,impressive,False
+3172,majestic,False
+3173,at arm 's length,False
+3174,uproar,False
+3175,brouhaha,False
+3176,hubbub,False
+3177,katzenjammer,False
+3178,overwhelmingly,False
+3179,overpoweringly,False
+3180,willy-nilly,False
+3181,philosophical about,False
+3182,how fast,False
+3183,choosy about,False
+3184,thus far,False
+3185,socially,False
+3186,snipe,False
+3187,assail,False
+3188,assault,False
+3189,attack,False
+3190,lash out,False
+3191,knock,False
+3192,strike hard,False
+3193,beat up,False
+3194,secret from,False
+3195,secret about,False
+3196,inversion,False
+3197,eversion,False
+3198,everting,False
+3199,inverted,False
+3200,upside-down,False
+3201,carefree with,False
+3202,in an outspoken manner,False
+3203,with complete honesty,False
+3204,sorrowfully,False
+3205,in low spirits,False
+3206,dejectedly,False
+3207,sharp with,False
+3208,harsh with,False
+3209,scintillate,False
+3210,sparkle,False
+3211,coruscate,False
+3212,twinkle,False
+3213,winkle,False
+3214,wink,False
+3215,flash,False
+3216,blink,False
+3217,spark,False
+3218,shining,False
+3219,shiny,False
+3220,lustrous,False
+3221,burnished,False
+3222,mercilessly,False
+3223,at the meeting,False
+3224,eventhough,False
+3225,in course of,False
+3226,in the height,False
+3227,center,False
+3228,centre,False
+3229,midpoint,False
+3230,avariciously,False
+3231,covetously,False
+3232,gluttonously,False
+3233,ravenously,False
+3234,hungrily,False
+3235,voraciously,False
+3236,straight with,False
+3237,round with,False
+3238,absent-mindedly,False
+3239,vagueness,False
+3240,slimy,False
+3241,unpleasantly,False
+3242,distastefully,False
+3243,triumphantly,False
+3244,proud,False
+3245,triumphant,False
+3246,boastful,False
+3247,self-satisfied,False
+3248,very proud,False
+3249,pompously,False
+3250,wild uproar,False
+3251,pandemonium,False
+3252,clamor of voices,False
+3253,tumult,False
+3254,remorsefully,False
+3255,ruefully,False
+3256,contritely,False
+3257,feebly,False
+3258,downheartedly,False
+3259,dispiritedly,False
+3260,despondently,False
+3261,glitter,False
+3262,coruscation,False
+3263,munching,False
+3264,devouring,False
+3265,gobbling up,False
+3266,honest of,False
+3267,elation,False
+3268,high spirits,False
+3269,lightness,False
+3270,glisten,False
+3271,in no time,False

@@ -1,0 +1,470 @@
+sentece_la1:For a surcharge, guests may use a shuttle from the airport to the hotel (available on request) and a ferry terminal shuttle.
+sentece_la2:住客可付费乘坐(按要求提供)从机场到酒店的班车和渡轮码头接驳班车。 参阅更多 服务
+old align
+guests - 住客  use - 乘坐  shuttle - 班车  airport - 机场  hotel - 酒店  shuttle - 班车  
+
+sentece_la1:Dresdens' nightlife is vibrant and colourful. Not without reason is Dresden called the capital of student clubs .
+sentece_la2:德累斯顿夜生活是丰富多彩和激动人心的,所以,德累斯顿被称为是学生俱乐部的首府。
+old align
+is - 是  called - 称为  capital - 首府  student - 学生  clubs - 俱乐部  
+
+sentece_la1:Important details of P1poops
+sentece_la2:Barb-Tonny重要详情
+old align
+
+
+sentece_la1:Developer /App (â‚¬8-130 EUR)
+sentece_la2:Developer /App (€8-130 EUR)
+old align
+
+
+sentece_la1:Do you like me?
+sentece_la2:你们男人敢吗?
+old align
+
+
+sentece_la1:burning through chemistries.
+sentece_la2:burning燃烧 through通过 chemistries化学品 .
+old align
+
+
+sentece_la1:Standards Track [Page 115] RFC 2616 HTTP/1.1 June 1999 imaging, scientific data analysis and those using end-to-end authentication, all depend on receiving an entity body that is bit for bit identical to the original entity-body.
+sentece_la2:比如,医学图象应用,科学数据分析和端到端认证都依赖于接收到与原实体正文一比特都不差的实体正文。
+old align
+Standards - 图象  depend on - 依赖于  receiving - 接收  identical - 不差  entity-body - 实体实体  
+
+sentece_la1:Number of Tests
+sentece_la2:购买数量:
+old align
+Number - 数量  
+
+sentece_la1:“Yes my husband, I will be ready.
+sentece_la2:“呵呵,这个我还真不信 。 ”
+old align
+be ready - 真不信  
+
+sentece_la1:Add your favorites places to rue Marcel porte Grenoble .
+sentece_la2:收藏你最爱的地方于 rue Marcel porte Grenoble 。
+old align
+Add - 收藏  places - 地方  
+
+sentece_la1:In addition, our standard CMOS and BiCMOS family of logic products are available in over 500 configurations to meet your design needs.
+sentece_la2:另外,我们的标准CMOS和BiCMOS系列逻辑产品采用500多种配置,可满足您的设计需求。
+old align
+products - 产品  meet - 满足  
+
+sentece_la1:I can think and write faster
+sentece_la2:我可以想得更快,写得更快
+old align
+think - 想  write - 写  
+
+sentece_la1:The requested URL /css/fancybox_overlay.png was not found on this server.
+sentece_la2:请求的 URL : / upload/css/baidu.aspx
+old align
+
+
+sentece_la1:Cnservers LLC Website IP address
+sentece_la2:网站的IP地址
+old align
+IP address - IP地址  
+
+sentece_la1:At the place where it happened, you can touch a bronze relief for good luck.
+sentece_la2:在他坠河的地方您可以触摸一尊铜雕,以便带来好运气。
+old align
+place , - 地方  happened - 坠  touch - 触摸  bronze relief - 铜雕  
+
+sentece_la1:And in hell he lift up his eyes, being in torments, and seeth Abraham afar off...And he cried and said, Father Abraham, have mercy on me, and send Lazarus, that he may dip the tip of his finger in water, and cool my tongue; for I am tormented in this flame (Luke 16:23-24).
+sentece_la2:他在阴间受痛苦,举目远远地望见亚伯拉罕 . . . 就喊着说:我祖亚伯拉罕哪,可怜我罢! 打发拉撒路来,用指头尖蘸点水,凉凉我的舌头;因为我在这火焰里,极其痛苦  ( 路加福音 16:23-24 ) 。
+old align
+being - 在受  seeth - 望见  cried - 喊  said - 说  Father - 祖  have mercy - 可怜  send - 打发  dip - 蘸  water - 水  cool - 凉凉  tongue - 舌头  flame - 火焰  
+
+sentece_la1:Relative vulnerability of coastal deltas as indicated by estimates of the population potentially displaced by current sea-level trends to 2050 (extreme >1 million; high 1 million to 50,000; medium 50,000 to 5,000) [B6.3 ].
+sentece_la2:海岸三角洲的相对脆弱性,如按到2050年海平面趋势可能造成的迁移人口估算所示(大于100万人为极端脆弱;100万到50,000人为高度脆弱;50,000到5,000人为中等脆弱 ) [ B6.3 ] 。
+old align
+vulnerability - 脆弱性  indicated - 所示  population - 人口  displaced - 迁移  trends - 趋势  high medium - 高度  
+
+sentece_la1:File:Nokia N900.JPG - Wikipedia
+sentece_la2:File:Penglai.jpg - 维基百科,自由的百科全书
+old align
+
+
+sentece_la1:With locking hole (OSHA compliant) (Rechargeable battery manufacturing processes)
+sentece_la2:带锁孔(适用OSHA标准 ) ( 二次电池制造工序用)
+old align
+locking hole - 锁孔  compliant - 标准用  battery - 电池  processes - 工序  
+
+sentece_la1:I mean, he's a grownup. H-H-He can have visitors any time he wants. It's not like I have to know about it, right?"
+sentece_la2:难道首帅不行 ? ” “不是不行,是那丫的根本就承受不了俺强大的欲望,所以,俺只好放弃他了 。 ”
+old align
+grownup - 首帅  visitors - 丫  wants - 欲望  know about - 承受放弃  
+
+sentece_la1:And if you bring them in for internships in your companies,
+sentece_la2:And if you bring带来 them in for internships实习 in your companies公司 ,
+old align
+
+
+sentece_la1:Selection of aluminum doors and windows curtain wall misunderstanding you know?
+sentece_la2:选择铝门窗幕墙的误区你知道吗?
+old align
+aluminum doors - 铝门窗  misunderstanding - 误区  know - 知道  
+
+sentece_la1:What makes a wedding a dream wedding?
+sentece_la2:如何让婚礼成为梦幻婚礼?
+old align
+makes - 让  dream - 梦幻  wedding - 婚礼  
+
+sentece_la1:Finally, we calculate the interest using the applicable rates (also from the tier tables ):
+sentece_la2:最后,我们使用适用的利率(也来自等级表格 )来计算利息:
+old align
+calculate - 计算  interest - 利息  using - 使用  rates - 利率  also - 也  tables - 表格  
+
+sentece_la1:Sagallia will be sure to appreciate this gesture and be immeasurably grateful to you!
+sentece_la2:Sagallia一定会很欣赏您的行动并且会很感激您!
+old align
+appreciate - 欣赏  be - 会  
+
+sentece_la1:Why did he do that?"
+sentece_la2:「别这样嘛!
+old align
+
+
+sentece_la1:It is a very important painting, he says, a "painting about painting" that heralds a reinvention in Rembrandt's technique in the 1650s.
+sentece_la2:这是一幅非常重要的作品 , " 他说 , " 这幅划时代的油画"标志着17世纪50年代伦勃朗绘画技艺成功实现脱胎换骨。
+old align
+is - 是  very - 非常  important - 重要  painting - 作品  says - 说  painting - 油画  technique - 技艺  
+
+sentece_la1:Two of the most significant challenges facing the refining industry today are staying ahead of the increased requirementsÂ for process safety compliance and ensuring a reliable and continuous electrical supply while still keeping operating costs down.
+sentece_la2:在维持低运营成本的同时,继续在日益严格的生产安全符合性方面保持领先优势,并确保电气供应的可靠性和不间断性, 是当今炼油领域面临两大挑战。
+old align
+significant - 大  refining - 炼油  industry - 领域  staying - 维持保持  requirementsÂ - 优势  ensuring - 确保  operating - 运营  costs - 成本  
+
+sentece_la1:All units come with a living room, a seating area with a sofa, a TV, a fully equipped kitchen and a private bathroom with bath or shower.
+sentece_la2:所有公寓均设有起居室、带沙发的休息区、电视、设备齐全的厨房以及一间带浴缸或淋浴的私人浴室,配备了洗碗机、烤箱以及水壶。
+old align
+units - 公寓  room - 起居室  area - 休息区  TV - 电视  kitchen - 厨房  bathroom - 浴室  bath shower - 浴缸烤箱水壶  
+
+sentece_la1:1, hoods manufactured with flame retardant cotton, aluminum foil surface coating to resist heat radiation, high temperature radiation to prevent the fire escape's head injury.
+sentece_la2:1、 头罩采用阻燃棉布制造,表面涂复铝箔膜,以抵御热辐射,防止火场中高温辐射对逃生者头部的伤害。
+old align
+hoods - 头罩  manufactured with - 采用  cotton - 棉布  aluminum - 铝箔  surface - 膜  resist - 抵御  high temperature - 高温  prevent - 防止  fire escape 's - 火场逃生者  head - 头部  
+
+sentece_la1:详细搜索 MC33903P Datasheet(数据表) 11 Page - Freescale Semiconductor, Inc
+sentece_la2:MCZ33903C5EKR2 Datasheet(数据表) 5 Page - Freescale Semiconductor, Inc
+old align
+数据表 - 数据表  
+
+sentece_la1:ailaigucom.dsgmall.com - System Error Discuz!
+sentece_la2:granplaw.com - System Error Discuz! System Error
+old align
+
+
+sentece_la1:Their notability for Wikipedia is independent of the validity of their claims.
+sentece_la2:这些地区的关注度与相应主张的有效性是无关的。
+old align
+notability - 关注度  is - 是  validity - 有效性  claims - 主张  
+
+sentece_la1:In response Jesus said to it, "Let no one eat fruit from you ever again." And His disciples heard it. 15
+sentece_la2:耶稣 对树说 : " 永远再没有人吃你的果子了 ! " 他的门徒也听见了。 15
+old align
+fruit - 果子  again - 再  disciples - 门徒  heard - 听见  
+
+sentece_la1:The "Add two successes and two failures" adjusted Wald test statistic described in Agresti and Coull (1998).
+sentece_la2:Agresti 和 Coull (1998) 中所述的"添加两次成功和两次失败"调整的 Wald 检验统计量。
+old align
+adjusted - 调整  
+
+sentece_la1:Hydrogen is extremely flammable. So much so that it was used as fuel for the Space Shuttle rocket!
+sentece_la2:Cool Fact 因为氢气极其易燃,所以它曾被用做航天飞机运载火箭的燃料。
+old align
+Hydrogen - 氢气  used as - 用做  fuel - 燃料  Space - 航天飞机  
+
+sentece_la1:The remote rocky hills of the Priorat are the birthplace of intense, mineral filled, reds that many collectors consider to be Spain's most elite wines.
+sentece_la2:该贝利奥拉特远程岩石山丘是激烈的,矿物填充的发源地,红色,很多藏家认为是西班牙最优秀的葡萄酒。
+old align
+are - 是  birthplace - 发源地  intense - 激烈  filled - 填充  collectors - 藏家  consider to - 认为  be - 是  elite - 优秀  wines - 葡萄酒  
+
+sentece_la1:HBM is committed to working with its supply chain partners to increase transparency regarding the origin and traceability of minerals contained in products.
+sentece_la2:HBM致力于与其供应链合作伙伴合作,提高产品所含矿物的起源和可追溯性的透明度。
+old align
+working - 合作  supply chain - 供应链  partners - 合作伙伴  increase - 提高  transparency - 透明度  origin - 起源  minerals - 矿物  contained - 含  products - 产品  
+
+sentece_la1:Without doubt solar energy is one of the most promising candidates, as the sun each day radiates 20,000 times the amount of energy that the entire world population consumes.
+sentece_la2:毋庸置疑太阳能就是最有前景的候选能源之一,太阳每天辐射的能源是世界人口能源消费的20倍。
+old align
+solar energy - 太阳能  most - 最  promising candidates - 前景候选  radiates - 辐射  energy - 能源  world - 世界  population - 人口  
+
+sentece_la1:Used Trucks Soosan For Sale - Agriaffaires USA By continuing to visit this site, you accept the use of cookies in order to provide services and offers that match your interests, and to generate navigation statistics.
+sentece_la2:专业服务 - 企业_Agriaffaires最新发布的供求信息 若继续浏览本网站,则表示您接受cookie的使用,并以此为您提供适合您的服务和帮助,完成网站浏览统计。
+old align
+continuing - 继续  visit - 浏览  site - 网站  accept - 接受  provide - 提供  match - 适合  generate - 完成  
+
+sentece_la1:Ranked #12 of 108 To help you get around Minato, here's the name and address of this business in the local language
+sentece_la2:为了让您可以更轻松地游览波西塔诺,以下是此产业的当地语言版本名称和地址
+old align
+help - 让  get around - 游览  's - 是  name - 名称  address - 地址  business - 产业  language - 语言  
+
+sentece_la1:46 And why call you me, Lord, Lord; and do not the things which I say?
+sentece_la2:46 你们为什么称呼我主阿,主阿,却不遵我的话行呢?
+old align
+not - 不  say - 行  
+
+sentece_la1:Categories could help to some extent, although they're not an ideal tool and maintaining them can become complex (see below).
+sentece_la2:分类(类别)对此可能有一定的好处,尽管分类并不是一种理想的手段,而且它们的维护工作可能变得繁琐复杂(参见下文 ) 。
+old align
+Categories - 分类类别分类  tool - 手段  maintaining - 维护  become - 变得  complex - 复杂  see - 参见  
+
+sentece_la1:Skills: Facebook Marketing , Social Media Marketing , Social Networking , YouTube
+sentece_la2:技能: Facebook营销 , 社交媒体营销 , 社交网络 , YouTube
+old align
+Skills - 技能  Social - 社交  Media - 媒体  Social - 社交  Networking - 网络  
+
+sentece_la1:You can turn off smart password entry to reduce the chance that someone might guess your smartphone password or smart card password based on the smart password filter that your smartphone applies to password fields.
+sentece_la2:您可以关闭智能密码条目,以便降低他人猜出智能手机密码或智能卡密码的风险,智能手机密码或智能卡密码均基于智能手机应用于密码字段的智能密码过滤器。
+old align
+turn off - 关闭  password - 密码  entry - 条目  reduce - 降低  chance - 风险  guess - 出  smartphone - 智能手机  password - 密码  password - 密码  password - 密码  filter - 过滤器  smartphone - 智能手机  fields - 字段  
+
+sentece_la1:DIT Majestic Beach Resort
+sentece_la2:DIT雄伟海滩度假酒店
+old align
+Resort - 酒店  
+
+sentece_la1:Ruthenium BLACK 500-R (salt)
+sentece_la2:Ruthenium BLACK 500 R (盐状)
+old align
+salt - 盐状  
+
+sentece_la1:Help entrepreneurs from the traditional business transformation of the Internet business, to provide support for the enterprise to open up the Internet space.Hadley enterprises under the administration...
+sentece_la2:帮助传创业者由传统商务方式转型互联网商务,为企业开拓互联网空间提供支持保障。
+old align
+entrepreneurs - 创业者  business - 商务  transformation - 转型  Internet - 互联网  business - 商务  provide - 提供  enterprise - 企业  open up - 开拓  Internet - 互联网  space.Hadley - 空间。  
+
+sentece_la1:Overall, with our bottom-up, high-conviction, long-term investment approach we look to invest in companies with good management teams, where we feel conviction that they can make the right strategic choices.
+sentece_la2:总的来说,秉持自下而上、高信念、长期投资的理念,我们希望投资于拥有良好管理团队的企业,我们深信其能够做出正确的战略选择。
+old align
+high-conviction - 高信念  approach - 理念  look - 希望  invest - 投资  companies - 企业  good - 良好  teams - 团队  make - 做出  
+
+sentece_la1:Elena, years: 36
+sentece_la2:Konovceva, 年: 36
+old align
+
+
+sentece_la1:Beds have Egyptian cotton sheets and premium bedding.
+sentece_la2:床上配有埃及棉床单和高档床上用品。
+old align
+Beds - 床上  have - 配有  cotton - 棉  sheets bedding - 床单  
+
+sentece_la1:The EUROGATE roadshow in Asia has further boosted the awareness level of Wilhelmshaven among the key target groups. Through personal contact with our target groups, we were able to once again intensify the dialogue that began in 2011 with the first roadshow and has been conducted continuously ever since,  says JÃ¶rn Kamrad, Director of Sales at EUROGATE.
+sentece_la2:本次"EUROGATE中国路演进一步提升了威廉港在中国目标客户群中的知名度。 通过与客户的紧密接触,我们进一步加强了自2011年第一次路演以来跟客户的交流与沟通 , " EUROGATE的销售总监Jörn Kamrad(于安·柯曼达)先生说。
+old align
+roadshow - 路演  further - 进一步  boosted - 提升了  awareness level - 知名度  target groups - 客户群  personal - 紧密  target groups - 客户  once again - 进一步  intensify - 加强  roadshow - 路演  says - 说  Director - 总监  
+
+sentece_la1:Find cheap tickets to Bosnia and Herzegovina from Singapore.
+sentece_la2:找到新加坡 樟宜机场至波斯尼亚和黑塞哥维那的特价机票。
+old align
+cheap tickets - 特价机票  
+
+sentece_la1:Cambodian Senate elections, 2012
+sentece_la2:柬埔寨参议院
+old align
+Senate - 参议院  
+
+sentece_la1:Working hours of NICKY-PINK
+sentece_la2:AgathaParker的工作时间
+old align
+Working - 工作  hours - 时间  
+
+sentece_la1:BlackBerry Torch 9810 - How to: Storage space and media cards How to: Storage space and media cards
+sentece_la2:BlackBerry Curve 9370 9360 9350 - 存储空间和媒体卡 存储空间和媒体卡
+old align
+Storage space - 存储空间  media - 媒体  cards - 卡  Storage space - 存储空间  media - 媒体  cards - 卡  
+
+sentece_la1:Q: Cambodia's Supreme Court has disbanded the country's main opposition party.
+sentece_la2:问:柬埔寨最高法院宣布解散了该国主要反对党。
+old align
+Q - 问  has - 宣布  disbanded - 解散  opposition party - 反对党  
+
+sentece_la1:0.1 km to Picasso Museum (Show map ) Crsof255Br - Charming Apartment In Borne - Wi-Fi apartment provides a comfortable stay in Barcelona.
+sentece_la2:离毕加索博物馆 0.1公里 (显示地图 ) Crsof255Br - Charming Apartment In Borne - Wi-Fi公寓在巴塞罗那提供住宿的地方。
+old align
+Museum - 博物馆  apartment - 公寓  provides a comfortable - 提供  stay - 住宿  
+
+sentece_la1:Please check entered address and try again or go to homepage
+sentece_la2:请检查填写的域名是否正确,然后重试!
+old align
+check - 检查  entered - 填写  address - 域名  try again - 重试  
+
+sentece_la1:G Inno Hostel & Pub Lounge Hongdae @ 0.2 miles Hostel
+sentece_la2:G Inno Hostel & Pub Lounge Hongdae @ 0.2 km 旅馆
+old align
+Hostel - 旅馆  
+
+sentece_la1:See all 433 hotels in Dominican Republic
+sentece_la2:查看亨德森维尔的所有 11 家酒店
+old align
+See - 查看  hotels - 酒店  
+
+sentece_la1:They must not have been caught sleeping with a man, unless: they were in the Army, and it was necessary, and they had not had anal intercourse, and they were of the same rank.
+sentece_la2:来了。 楚流光见他不是茅山派的人,多半是被勿用利用的人,便不忍心伤他,撤了
+old align
+man - 人  necessary intercourse - 利用  
+
+sentece_la1:Revolve Style No.
+sentece_la2:Revolve 样式编号 AKIK-WD168
+old align
+
+
+sentece_la1:Visual Effects Virtual Reality
+sentece_la2:最佳视觉效果计算工具
+old align
+Visual Effects - 视觉效果  Reality - 工具  
+
+sentece_la1:There is no passage that required running water.
+sentece_la2:要是没有可信的东西,信心无从产生。
+old align
+passage water - 信心  
+
+sentece_la1:Built around a Jacaranda tree, the modern yet simplistic Bamboo Cottage offers 2 bedrooms, a lounge area and a full bathroom with bath and shower.
+sentece_la2:现代化而简约的Bamboo Cottage别墅围绕着蓝花楹树而建,提供2间卧室、休息区以及配有浴缸和淋浴的完整浴室。
+old align
+Built around - 围绕着建  tree - 楹树  offers - 提供  bedrooms - 卧室  lounge area - 休息区  full - 完整  bathroom - 浴室  bath - 浴缸  shower - 淋浴  
+
+sentece_la1:( 1 review ) Riga, Latvia
+sentece_la2:( 1条评论 ) Riga, Latvia
+old align
+review - 评论  
+
+sentece_la1:So Joab returned from pursuing Abner. And when he had gathered all the people together, there were missing of David's servants nineteen men and Asahel.
+sentece_la2:约押追赶押尼珥回来,集合所有人的时候,发现在大卫的臣仆中,除了亚撒黑以外,还少了十九个人。
+old align
+returned - 回来  pursuing - 追赶  Abner - 押尼珥  gathered - 集合  all the people - 所有人  David - 大卫  servants - 臣仆  men - 人  
+
+sentece_la1:We hope to welcome you back in the future.
+sentece_la2:我们希望这可以协助您计划旅行。
+old align
+hope - 希望  welcome - 协助  
+
+sentece_la1:It is something that happens to you that you learn to accept and to receive, to join with and to participate in.
+sentece_la2:它是发生在你身上的事,你要学习去接受和去接收,去结合和去参与。
+old align
+is - 是  something - 事  happens - 发生  learn - 学习  accept receive - 接受  join with - 结合  participate in - 参与  
+
+sentece_la1:Monsieur Darzac shook his head and said he was sure of the chambermaid's fidelity, and that she was a thoroughly honest and devoted servant.
+sentece_la2:女孩正是他儿子的女友,忘记了她是自己最讨厌的千金娃娃,眼里充满了狂烈的
+old align
+Monsieur Darzac - 女孩  chambermaid servant - 女友娃娃  was - 是  thoroughly devoted - 充满狂烈  
+
+sentece_la1:In Ubajara you'll find the cozy Pousada Gruta.
+sentece_la2:你会发现在房间里水壶。
+old align
+Ubajara - 房间里  find - 发现  cozy Pousada Gruta - 水壶  
+
+sentece_la1:The hotel also provides car rentals and ticket assistance services.
+sentece_la2:酒店提供汽车租赁服务及订票服务。
+old align
+hotel - 酒店  provides - 提供  car - 汽车  ticket - 订票  
+
+sentece_la1:Enter your travel dates to view the best hotel deals for your Ambon accommodation needs.
+sentece_la2:请输入您的旅行日期,查找珀斯的酒店预订优惠促销。
+old align
+view - 查找  hotel - 酒店  
+
+sentece_la1:Notwithstanding this, you agree that Baglady Productions shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+sentece_la2:尽管有上述规定,您同意一键仍被允许请求任何辖区内的禁制令救济(或同等类型的紧急法定救济 ) 。
+old align
+Baglady Productions - 一键  still - 仍  allowed to - 允许  remedies - 救济  type - 类型  urgent legal - 紧急法定  relief - 救济  jurisdiction - 辖区  
+
+sentece_la1:COPYRIGHT All content included on this site, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of Dual Innovation or its content suppliers and protected by international copyright laws.
+sentece_la2:Ø 版权 本网站上的所有内容诸如文字、图表、标识、按钮图标、图像、声音文件片段、数字下载、数据编辑和软件都是本网站提供者的财产,受中国和国际版权法的保护。
+old align
+COPYRIGHT - Ø版权  content - 内容  site - 网站  text - 文字  logos - 图表  images - 图像  digital data - 数字数据  compilations - 编辑  software - 软件  is - 是  property - 财产  suppliers - 提供者  protected - 保护  copyright laws - 版权法  
+
+sentece_la1:The LC connector is established because of its small size and its very reliable connecting quality.
+sentece_la2:LC 产品组合 LC 连接器发展成熟,尺寸小巧,连接质量非常可靠。
+old align
+size - 尺寸  very - 非常  connecting - 连接  quality - 质量  
+
+sentece_la1:Your present location:Home >> inquiry
+sentece_la2:您现在的位置:首页 >> 在线留言
+old align
+
+
+sentece_la1:In this case, using the URLconf we set up in Tutorial 3 , this reverse() call will return a string like
+sentece_la2:在本例中,使用在 教程第 3 部分 中设定的 URLconf, reverse ( ) 调用将返回一个这样的字符串:
+old align
+this case - 本例  using - 使用  set up - 设定  Tutorial - 教程  return - 返回  string - 字符串  
+
+sentece_la1:Bensafrim 2017: Best of Bensafrim, Portugal Tourism - TripAdvisor
+sentece_la2:2017年葡萄牙卡沃埃罗的旅游景点、旅游指南、行程 - TripAdvisor
+old align
+
+
+sentece_la1:Deploy new mechanisms and earn cash so you can to increase investment and speed up progress.
+sentece_la2:发展出新的方法、赚取现金、扩大你的投资并加速成长。
+old align
+mechanisms - 方法  earn - 赚取  cash - 现金  increase - 扩大  speed - 加速  
+
+sentece_la1:The hotel offers access to a vast array of services, including 24-hour front desk, luggage storage, room service, restaurant, newspapers.
+sentece_la2:酒店的特色服务有24小时前台, 无障碍设施, 行李存放服务, 客房服务, 会议设施。
+old align
+hotel - 酒店  including - 有  desk - 前台设施  luggage - 行李  room - 客房  newspapers - 会议  
+
+sentece_la1:What is this world?
+sentece_la2:这世界是怎么样?
+old align
+is - 是  world - 世界  
+
+sentece_la1:In mid-October, you will see a parade of planets
+sentece_la2:在十月中旬,你会看到行星游行
+old align
+see - 看到  planets - 行星  
+
+sentece_la1:The quarrel was settled on Feb. 17, 1546, but the strain had been very great and Luther died the next day.
+sentece_la2:这场争吵是定居于1546年2月17日,但带来的压力已经很大,路德于第二天死亡。
+old align
+settled - 定居  strain - 压力  very great - 很大  died - 死亡  
+
+sentece_la1:Author: Xingquan Zeng, et al.
+sentece_la2:Zhipeng Liu, Lichao Ma, et al.
+old align
+
+
+sentece_la1:How To Stream Movies: Offender (2012) Online
+sentece_la2:用户评论:音乐魔方(2012)
+old align
+Movies - 音乐  Offender - 魔方  
+
+sentece_la1:Search availabilityFuramaxpress Hotel Lujiazui Shanghai
+sentece_la2:搜索可用性Furamaxpress Hotel Lujiazui Shanghai
+old align
+
+
+sentece_la1:10 All Your works shall praise You, O LORD, And Your saints shall bless You.
+sentece_la2:10 永恒主阿,你一切所造的都要称谢你;你坚贞之民要祝颂你。
+old align
+praise - 称谢  
+
+sentece_la1:The cell production sites in Malaysia and Germany and the module production line in Germany are the core of manufacturing.
+sentece_la2:位于马来西亚和德国的电池生产基地,以及位于德国的太阳能组件生产线是生产的核心。
+old align
+cell - 电池  sites - 基地  module - 组件  production line - 生产线  are - 是  core - 核心  
+
+sentece_la1:A single SVNIndexXSLT directive in your repository's Location block of httpd.conf will instruct mod_dav_svn to generate XML output when displaying a directory listing, and to reference the XSLT stylesheet of your choice:
+sentece_la2:在仓库的 httpd.conf 的 Location 配置块里, 如果增加一个配置指令 SVNIndexXSLT , mod_dav_svn 在显示目录列表时, 将生成一个 XML 输出, 并引用到用户所选择的 XSLT 样式表:
+old align
+directive - 配置指令  repository - 仓库  listing - 列表  reference - 引用  stylesheet - 样式表  
+
+sentece_la1:All apartments in Guayaquil
+sentece_la2:瓜亚基尔的所有公寓
+old align
+apartments - 公寓  
+
+sentece_la1:Horst Claus Recktenwald Prize in Economics, 2004.
+sentece_la2:1 2016年诺贝尔经济学奖简介
+old align
+
+
+sentece_la1:Hemmet 255 villas
+sentece_la2:Hemmet 255家别墅
+old align
+villas - 别墅  
+

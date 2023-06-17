@@ -1,0 +1,430 @@
+sentece_la1:And everyone will not care that it is not you.
+sentece_la2:鼻・口のところはあらかじめ少し切っておくといいですね。
+old align
+everyone - 鼻口あらかじめ  
+
+sentece_la1:And everyone will not care that it is not you.
+sentece_la2:アドレス置いとくので、消されないうちにメールくれたら嬉しいです。
+old align
+is - 消さ  
+
+sentece_la1:Sponsored link This advertisement is displayed when there is no update for a certain period of time.
+sentece_la2:スポンサードリンク この広告は一定期間更新がない場合に表示されます。
+old align
+link - リンク  advertisement - 広告  displayed - 表示さ  update - 更新  period time - 期間  
+
+sentece_la1:Also, it will always be hidden when becoming a premium user .
+sentece_la2:また、 プレミアムユーザー になると常に非表示になります。
+old align
+Also - また  user - ユーザー  
+
+sentece_la1:It will return to non-display when content update is done.
+sentece_la2:コンテンツの更新が行われると非表示に戻ります。
+old align
+return - 戻り  content - コンテンツ  update - 更新  done - 行わ  
+
+sentece_la1:Sponsored link This advertisement is displayed when there is no update for a certain period of time.
+sentece_la2:スポンサードリンク この広告は一定期間更新がない場合に表示されます。
+old align
+link - リンク  advertisement - 広告  displayed - 表示さ  update - 更新  period time - 期間  
+
+sentece_la1:Also, it will always be hidden when becoming a premium user .
+sentece_la2:また、 プレミアムユーザー になると常に非表示になります。
+old align
+Also - また  user - ユーザー  
+
+sentece_la1:It will return to non-display when content update is done.
+sentece_la2:コンテンツの更新が行われると非表示に戻ります。
+old align
+return - 戻り  content - コンテンツ  update - 更新  done - 行わ  
+
+sentece_la1:When you’re dealing with a large corporation, it’s easy to get a perception of being “stable”.
+sentece_la2:大企業と付き合っていると 、 「 安定」している認識になってしまいがちです。
+old align
+dealing - 付き合って  large corporation - 大企業  easy to stable - しまいがちです  get - なって  perception - 認識  
+
+sentece_la1:The parts of the house should be of a general specification that you can buy at a home improvement store.
+sentece_la2:初歩レベルの内容ですが、忘れないようにメモして . . .
+old align
+parts - 内容  specification - レベル  
+
+sentece_la1:2018.11.30 About six months ago, I started using my iPhone and voice input to write blog posts.
+sentece_la2:最近、音声入力でブログ記事を書いています。
+old align
+voice - 音声  input - 入力  write - 書いて  blog - ブログ  
+
+sentece_la1:It’s important to be clear on the objective of "this is where I hope to get it.
+sentece_la2:「ここが得られれば良い」という目的がはっきりしておくことが大切です。
+old align
+important clear I it - 良い大切です  objective - 目的  get - 得  
+
+sentece_la1:Therefore, it’s important to “get bored” with the game.
+sentece_la2:ですから 、 「 飽きさせる」ことが重要です。
+old align
+important - 重要です  bored - 飽き  
+
+sentece_la1:Perhaps I will be on that side of the spectrum.
+sentece_la2:もしかしたら私もそちら側の人間になってしまうでしょう。
+old align
+Perhaps - もしかしたら  that side - そちら側  
+
+sentece_la1:I have a hobby of streaming live games on YouTube, and the k...
+sentece_la2:以前 、 「 私はソフトバンク関連のサービスはpaypayを少し使っている程度なので、とりあえず出来る範囲の対策をしたと言える . . .
+old align
+hobby - ソフトバンク  games - サービス  
+
+sentece_la1:In fact, it’s safe to assume that the peak of the game will be over in two to three years.
+sentece_la2:むしろ2〜3年で絶頂期は終わってしまうと考えても良いでしょう。
+old align
+safe - 良い  assume - 考えて  peak of - 絶頂期  three years - 3年  
+
+sentece_la1:I found a solution to this problem, so here’s a note Confirmation Environment jQuery 1.7.2 code First, let’s take a quick look at the code.
+sentece_la2:確認環境 jQuery 1.7.2 コード まずはコードをさらっと紹介します。
+old align
+Confirmation - 確認  Environment - 環境  code - コード  code - コード  
+
+sentece_la1:To put it crudely, it’s like greasing a car.
+sentece_la2:ワックス洗車 乱暴な言い方をすると、油を塗っているようなもの。
+old align
+it car - 洗車  ’ - する  
+
+sentece_la1:When we stop, we’ll specify a variable that we’ve decided on with a clearInterval.
+sentece_la2:止める時は、決めた変数をclearIntervalで指定する。
+old align
+stop - 止める  specify - 指定する  
+
+sentece_la1:So it’s important not to take your child’s behavior seriously at every step of the way.
+sentece_la2:ですから子供の行動にいちいち真に受けないことが大切です。
+old align
+important - 大切です  child - 子供  behavior - 行動  
+
+sentece_la1:You should be sincere and care about any person from Kids don’t even see that aspect of the situation.
+sentece_la2:子供には、そういった面の事情すら見えていないのです。
+old align
+Kids - 子供  see - 見えて  situation - 事情  
+
+sentece_la1:My thoughts on folk medicine When it comes to folk remedies, I believe that there are places where people’s beliefs are more or less included.
+sentece_la2:私の民間療法の考え 民間療法というと、人の思い込みの部分が多少なり含む所があると考えています。
+old align
+thoughts - 考え  folk - 民間  medicine - 療法  remedies - 療法込み  believe - 考えて  places - 所  people - 人  beliefs - 思い  more - 多少  
+
+sentece_la1:Sometimes there are some amazingly stupid kids who say they’ll unchannel you if you don’t listen to them.
+sentece_la2:時々、言うことを聞かないとチャンネル解除するぞという、びっくりする位頭の悪い子供もいます。
+old align
+Sometimes - 時々  stupid - 悪い  kids - 子供  unchannel - チャンネル解除する  
+
+sentece_la1:However, different game titles have different levels of popularity.
+sentece_la2:ただし、ゲームタイトルによって人気度は異なります。
+old align
+game - ゲーム  popularity - 人気度  
+
+sentece_la1:I can’t help but notice the appearance of vitiligo vulgaris, so I think it’s possible to consider it as a sun protection I am.
+sentece_la2:どうしても尋常性白斑は見た目が気になりますので、日焼け対策として考えても、アリだと思います。
+old align
+appearance vitiligo vulgaris - 白斑  consider - 考えて  sun - 日焼けアリ  protection - 対策  
+
+sentece_la1:Don’t stick to one gameplay title. I'm a video game player as a hobby.
+sentece_la2:YouTubeのゲーム実況チャンネルでプレゼント企画をやって見えた事 私は、個人的な趣味としてゲーム実況をYouTubeにアップしています。
+old align
+gameplay - ゲーム  title - 企画  game - ゲーム  hobby - 趣味  
+
+sentece_la1:Don’t stick to one gameplay title. I’m a video game player as a hobby.
+sentece_la2:YouTubeのゲーム実況チャンネルでプレゼント企画をやって見えた事 私は、個人的な趣味としてゲーム実況をYouTubeにアップしています。
+old align
+gameplay - ゲーム  title - 企画  game - ゲーム  hobby - 趣味  
+
+sentece_la1:Why don’t I just stick to one game?
+sentece_la2:なぜ1つのゲームに固執してはいけないのか ゲーム実況は、自分が楽しくプレイできることが大前提です。
+old align
+Why - なぜ  stick - 固執して楽しく  game - ゲーム  
+
+sentece_la1:It’s going to be tough on the children born in the future.
+sentece_la2:Amazonで商品を買う時に気をつけている事 最近Amazonには安心感がなくなっています。
+old align
+children - 商品  born - 買う  the future - 最近  
+
+sentece_la1:When building a house, it's better to install more electrica...
+sentece_la2:家を建てる際コンセントの場所は多めにつけておく方がいいらしい 友達が家を建てたので遊びに行きました。
+old align
+building - 建てる  house - 家  install - 行き  electrica - コンセント  
+
+sentece_la1:For example, why don’t we put more examples of construction?
+sentece_la2:例えば、施工事例もっと載せませんか?とか、ネットでこういう話題を見つけました、とか。
+old align
+put - 載せ  examples - 話題  construction - 施工  
+
+sentece_la1:In this article, we will describe how to automate the process.
+sentece_la2:今回は、自動化の方法を記載します。
+old align
+this article - 今回  describe - 記載し  
+
+sentece_la1:You may feel young, but your body can’t keep up with it.
+sentece_la2:気持ちは若くても身体がそれについてこれない。
+old align
+young - 若くて  body - 身体  keep - ついて  
+
+sentece_la1:Just do it. Well, you just have to try and do it.
+sentece_la2:やればいいじゃん まぁやってみればいいだけなんですけどね。
+old align
+do it - やれば  do - やって  
+
+sentece_la1:However, there are companies that are 10% more troublesome.
+sentece_la2:9割が常識のある会社の方たちばかりなのですが、1割面倒な会社さんが存在します。
+old align
+companies - 会社  10 % - 9割1割  troublesome - 面倒な  
+
+sentece_la1:When I write this blog, these days I write exclusively with “voice input”.
+sentece_la2:私がどのように音声入力でブログ記事を書いているのかをご紹介したいと思います。
+old align
+write - 書いて  blog - ブログ  voice - 音声  
+
+sentece_la1:It means that one of my longtime clients has left my company.
+sentece_la2:長年のお客様が1社離れて行ったという事なのですが。
+old align
+one my company - 1社  longtime clients - 長年お客様  left - 離れて  
+
+sentece_la1:The process of “throwing out” is more boring and difficult than you might think.
+sentece_la2:思っている以上に「捨てる」という作業はつまらなく、そして大変です。
+old align
+The process - 作業  of think - 思ってに  throwing out - 捨てる  boring difficult - つまらなく  
+
+sentece_la1:Even if you’re only good at gaming, if you can’t negotiate a contract, you’re not going to make it.
+sentece_la2:ゲームの腕だけあっても、契約交渉ができなければ、ダメでしょう。
+old align
+gaming - ゲーム  negotiate contract - 契約交渉  
+
+sentece_la1:It’s rudimentary, but I’ll make a note of it so I don’t forget it.
+sentece_la2:初歩レベルの内容ですが、忘れないようにメモしておこうと思います。
+old align
+rudimentary - 忘れない  make note - メモして  forget - 思い  
+
+sentece_la1:PHP CSRF measures I knew the term "CSRF measures" itself, but I didn't underst...
+sentece_la2:PHPのCSRF対策 CSRF対策という言葉自体は知っていたのですが、今まで上手く分かっていませんでした。
+old align
+knew - 知って  term itself - 言葉自体  measures - 対策  
+
+sentece_la1:When you have a problem, you can just search the daily report that you have accumulated, so it’s very easy to use.
+sentece_la2:困った時は溜め込んだ日報を検索すればいいから非常に楽です。
+old align
+, search - は検索すれば  daily report - 日報  accumulated - 溜め  easy - 楽です  
+
+sentece_la1:It doesn’t work on the text editor side.
+sentece_la2:テキストエディタ側ではうんともスンとも言いません。
+old align
+editor side - エディタ側  
+
+sentece_la1:3.You will be asked where you want to save the file, so set it as follows.
+sentece_la2:保存先を聞いてきますので、以下のように設定します。
+old align
+asked - 聞いて  file - 先  set it - 設定し  
+
+sentece_la1:There was a flea market in front of the local train station today, with nearly 100 stalls, food and drinks.
+sentece_la2:どんな出来事があったか 今日地元駅前でフリーマーケットのイベントがありました。
+old align
+was today - 今日  market - イベント  train - 駅前  
+
+sentece_la1:I don’t want to become any other disease, and I don’t want to give up that vitiligo will be cured one day. Yes.
+sentece_la2:それ以外の病気にならないよう、そして「尋常性白斑」もいつか治る事を諦めずに行動したいですね。
+old align
+disease - 病気  want give - 諦め  vitiligo - 白斑  
+
+sentece_la1:Among official documents, the most important ones that should not be lost later on are family registers and so on.
+sentece_la2:公文書のなかでも、後々に紙の上の情報が消滅しては困るものの筆頭が戸籍簿等だろうが、法務局ではピグマの使用を認めている。
+old align
+official documents - 公文書  lost - 消滅して  family - 戸籍  registers and - 簿等  
+
+sentece_la1:So I can’t say it’s absolutely perfect, but I’m assuming it’s generally OK.
+sentece_la2:だから絶対完璧とは言えませんが概ね大丈夫だろうという事で。
+old align
+say - 言え  absolutely - 絶対概ね  perfect - 完璧  
+
+sentece_la1:(If you know how to make it work, please let me know.
+sentece_la2:(上手く動かす方法が分かる方は教えてくださいw)最低限のコマンドを使う分には問題ないと思います。
+old align
+make - 動かす  let me - 教えて思い  
+
+sentece_la1:Regular Expressions Enter the following in the search word section.
+sentece_la2:ソフトによっては、正規表現のチェックが入っていない場合がありますので、必ずチェックが入っていることを確認してください。
+old align
+Regular - 正規  Expressions word - 表現  Enter - は確認してください  search - ソフト  
+
+sentece_la1:Shaving your body hair is still a pain in the ass, isn’t it?
+sentece_la2:体毛を剃るのは、やっぱり面倒なんですよね。
+old align
+Shaving - 剃る  body hair - 体毛  
+
+sentece_la1:What? It’s easier to understand if you communicate the information in an organized manner, and eventually you’ll have to tell them over the phone.
+sentece_la2:情報を整頓しつつ伝えればわかりやすくなるし、結局電話でも伝えなければいけなくなるといった手間が減るかもしれませんよ。
+old align
+information - 情報  eventually - 結局  phone - 電話  
+
+sentece_la1:It will be written as it is. If the writing is best for those things, it may create a synergistic effect.
+sentece_la2:そういったものに最適な文章であれば、相乗効果が生まれるかも知れません。
+old align
+writing - 文章  create - 生まれる  effect - 効果  
+
+sentece_la1:Six months later, I’m writing my thoughts, and I’m personally writing a blog post with voice input for all of you.
+sentece_la2:文賢という文章校正Webサービスを実際に使ってみた感想 私は最近ブログの記事を音声入力で書いています。
+old align
+’ - いう  thoughts - 感想記事  writing - 書いて  blog - ブログ  voice - 音声  
+
+sentece_la1:It’s probably easiest to simply say that you don’t need it and you don’t need it.
+sentece_la2:いらない、必要ないので、とシンプルに言うのが一番わかり易いでしょう。
+old align
+probably - 一番  easiest - わかり易い  say that - 言う  
+
+sentece_la1:There are a lot of web compilers out there, like Glup, WebPack, or even Grunt in the old days, and I’m sure there are many more.
+sentece_la2:Glup、 WebPack、さらに昔だとGruntなど、たくさんあると思います。
+old align
+even - さらに  
+
+sentece_la1:Even though I’m a basic digital person, I don’t know when a money-related disaster will come my way.
+sentece_la2:基本デジタル人間の自分でも、お金に関する災難はいつやってくるかわからないですし、そういう時に備えて証拠になるものは取っておくといいと思いました。
+old align
+person - 人間  know - 思い  disaster - 災難  come - やってくる  
+
+sentece_la1:So it’s a hassle, but it’s better to shave by hand every time.
+sentece_la2:だから面倒ですが、毎回手作業で剃る方がいいでしょう。
+old align
+shave - 剃る  hand - 手  every time - 毎回  
+
+sentece_la1:Here’s what the disease looks like This is an unflattering picture, but this is what it looks like.
+sentece_la2:病気はこんな感じ お見苦しい画像になりますが、こんな感じです。
+old align
+disease - 病気  unflattering - 見苦しい  picture - 画像  
+
+sentece_la1:To do this, it’s important to be aware of the materials you’re using.
+sentece_la2:そのためには、使っている素材を意識することが大切です。
+old align
+important - 大切です  materials - 素材  you using - 使って  
+
+sentece_la1:My experience and what I feel is the right thing for me to say, no matter what anyone else says, and the right thing to say. It should be.
+sentece_la2:自信を持てばいい 自分の体験談、感じた事は、誰がなんと言おうと自分の中の正解であり、言い切って良いことのはずです。 だから言い切りましょう。
+old align
+experience - 体験  say - 言おう  anyone - 誰  
+
+sentece_la1:But for a very small portion of the information, there is some information that you want to keep on paper for a long time.
+sentece_la2:私も情報の大半はデジタルデータでいいと考えています。 ただごく一部については「紙で長期間残したい」という情報があったりします。
+old align
+very - ごく  small portion - 大半  information - 情報  information - 情報  want - 考えて  paper - 紙  long time - 長期間  
+
+sentece_la1:If you have a dream, it’s good luck to find out what it suggests from the dream.
+sentece_la2:夢を見た時はその夢から何を暗示しているのか調べるのが吉 2018.9.16 疲れているときは、変な夢を見るのかもしれません。
+old align
+good - 変な  suggests - 暗示して  dream - 夢夢  
+
+sentece_la1:Label outgoing and incoming emails Label your outgoing and incoming emails.
+sentece_la2:送信受信メールにラベルをつける 送信メールと受信メールにラベルを付けます。
+old align
+outgoing incoming - 送信受信  emails - メールつける  outgoing - 送信  incoming - 受信  emails - メールメール  
+
+sentece_la1:After purchase, you only need to ask the cashier if you want to use “Rakuten” at the register.
+sentece_la2:購入後、レジにて「楽券」を使いたいんですけどと、声を掛けるだけです。
+old align
+After purchase - 購入後  cashier - 券  Rakuten - 楽  register - レジ  
+
+sentece_la1:If you duplicate, translate, or publish the article, the date is set to the same as the date of publication.
+sentece_la2:これがあとあと面倒になるので、手動で日本語記事と同じ日付にすることをおすすめします。
+old align
+duplicate - 手動すすめし  translate - 日本語  the article - 記事  date date - 日付  same - 同じ  
+
+sentece_la1:So the younger generation, which is even younger than us, will have to survive for almost 10 years This is not the case.
+sentece_la2:年齢がそこそこ上であるにもかかわらず、苦しいわけです。 となると私達よりもさらに若い世代はさらに苦しい時代を10年近く生き抜いていかなければならないのです。
+old align
+generation - 世代  even - そこそこ上さらに  younger - 若い  survive - 生き  10 years - 10年近く  
+
+sentece_la1:I’ve published it for now, and if I see signs of a buzz, I’ll reiterate the details of the writing.
+sentece_la2:とりあえず公開してしまって、もしもバズる兆候が見えたときに、改めて文章の細かいところまで見直していけばいいのです。
+old align
+ve - とりあえず  published it - 公開して  if see - もしも見えた  signs - 兆候  buzz - バズ  reiterate - 見直して  writing - 文章  
+
+sentece_la1:Because they can lower prices by having their own components to their own specifications.
+sentece_la2:住宅メーカーが独自の仕様にする理由は以下が考えられます。
+old align
+lower - する  their own - 独自の  components - 仕様  specifications - メーカー  
+
+sentece_la1:I have the impression that many people in the painting industry are like that. people to ask for a discount for not being familiar with computers.
+sentece_la2:塗装業界にはそういう方が多い印象があります。
+old align
+the many - 多い  impression - 印象  painting - 塗装  industry - 業界  
+
+sentece_la1:At the very least, it’s a hard time for your own children to live through hard times for the rest of their lives.
+sentece_la2:少なくともに苦しい時代に自分の子供が大変な思いをして一生生きていくということがかわいそうでならないと思ってしまいます。
+old align
+At very least - 少なくとも  ’ - して  time - 時代  children - 子供  live - 生きて  hard - 大変な  the lives - 一生  
+
+sentece_la1:Consider blocking them. Finally, a real fan is a real fan.
+sentece_la2:最後に、本当のファンとは YouTubeの配信者は、プチ芸能人と捉えることができるのではないでしょうか。
+old align
+fan - ファン  
+
+sentece_la1:I’m going to create a category called “Shortening Time” and write an article about my shortening work. I would like to.
+sentece_la2:これから「時短」というカテゴリーを作り、私が行っている時短作業について記事を書いていきたいと思います。
+old align
+’ - いう  create - 作り  category - カテゴリー  Time - 時短  write - 書いて  article - 記事  shortening work - 時短作業  like - 思い  
+
+sentece_la1:By writing down the things I learned, I can look back and realize how much I have grown.
+sentece_la2:そうした学んだ事をメモしておくことで、自分は「これだけ成長したんだな」と振り返り、実感できるものになりえると思います。
+old align
+things - 事  learned - 学んだ  look - 振り返り  grown - 成長した  
+
+sentece_la1:Classic Editor required, no Gutenberg support. At the time of writing, the Classic Editor plugin is required, and Gutenberg is not supported.
+sentece_la2:Classic Editor必須、Gutenberg非対応 執筆時点で、Classic Editorプラグイン必須、Gutenberg非対応となっています。
+old align
+support - 非対応  time - 時点  writing - 執筆  plugin - プラグイン  
+
+sentece_la1:I’m dented again when I learn of these results. When you get to a certain age, you start to think about the end of your life.
+sentece_la2:こういう結果を知ってまた凹むのですがw 年齢もある程度経過してくると、自分の人生の最期について考え出します。
+old align
+dented - 凹むくる  learn - 知って  results - 結果  age - 年齢  think - 考え  end - 最期  life - 人生  
+
+sentece_la1:I think. When I was just starting to get vitiligo, my dermatologist told me that I should shine sunlight on it, and I did it.
+sentece_la2:尋常性白斑になりたての頃、皮膚科の先生に「太陽光を当てた方が」いいと言われてやった結果、前より広がってしまう事がありました。
+old align
+vitiligo - 白斑  dermatologist - 皮膚先生  sunlight - 太陽光  
+
+sentece_la1:Like it’s easy to put in, but hard to put back in.
+sentece_la2:入れるのは簡単だけど、戻すのは大変みたいな。
+old align
+easy - 簡単だ  put - 入れる  
+
+sentece_la1:I think it’s important to make sure that when we buy new items, we throw them away.
+sentece_la2:新しく購入したら必ず捨てるようにしていくことが大切ですね。 洋服をパターン化した 洋服をパターン化していくようにしました。
+old align
+important to - 大切です  buy , them - 購入したらを  new - 新しく  throw - 捨てる  
+
+sentece_la1:It suddenly stops working due to various related software upgrades.
+sentece_la2:様々な関係ソフトのバージョンアップによって突然動かなくなる。
+old align
+suddenly - 突然  various - 様々な  software - ソフト  upgrades - バージョン  
+
+sentece_la1:Tamagoya Corporate Philosophy “Tips for Business Failure The “natural” way of thinking about management and pricing is not done.
+sentece_la2:経営や価格の考え方の「当たり前」ができていない。
+old align
+Business - 価格  natural - 当たり前  way thinking - 考え方  management - 経営  
+
+sentece_la1:This is because you have to watch the video and separate the scenes you want and the scenes you don’t want.
+sentece_la2:動画を見て、欲しいシーン、いらないシーンを分ける作業があるからです。
+old align
+watch - 見て  video - 動画  separate - 分ける  scenes scenes - シーンシーン  
+
+sentece_la1:If the house is built by a home builder, it’s built to its own specifications (size) from that home builder.
+sentece_la2:住宅メーカーで建築した家だと独自仕様(サイズ)になっているため、その住宅メーカーから買うしかなくなります。
+old align
+the built - 建築した  house - 家  home - 住宅  builder - メーカー  its own - 独自  specifications - 仕様  size - サイズ  home - 住宅  builder - メーカー  
+
+sentece_la1:Sometimes that’s the case as I write this article now.
+sentece_la2:今この記事を書いている時点でそうだったりします。
+old align
+write - 書いて  article - 記事  
+
+sentece_la1:There are many ways to be rigorous, but here are some ways to do it.
+sentece_la2:厳密性を考えるといろいろな方法があると思いますが、以下のような方法があったりします。
+old align
+many - いろいろな  ways - 方法  be - 考える  rigorous - 厳密性  here - 以下  ways - 方法  
+
+sentece_la1:I did. It’s a little more expensive, but they wire it up nicely and I’m so used to doing my own computer.
+sentece_la2:多少費用はかさみますが、きれいに配線してくれるし、自作PCをやると、そんなになれているわけでもないので、妙に疲れるんですよね。
+old align
+wire it up - 配線して  
+

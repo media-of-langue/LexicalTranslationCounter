@@ -1,0 +1,4 @@
+germalemma
+django-environ
+pandas
+treetaggerwrapper

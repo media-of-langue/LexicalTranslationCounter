@@ -1,0 +1,3 @@
+pyknp
+pandas
+django-environ

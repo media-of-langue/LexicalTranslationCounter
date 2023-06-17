@@ -1,0 +1,4 @@
+nltk
+pyknp
+pandas
+django-environ

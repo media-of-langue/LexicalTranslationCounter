@@ -1,0 +1,282 @@
+For:N/A a:N/A surcharge:n ,:N/A guests:n may:N/A use:v a:N/A shuttle:n from:N/A the:N/A airport:n to:N/A the:N/A hotel:n (:N/A available:a on:N/A request:n ):N/A and:N/A a:N/A ferry:a terminal:a shuttle:n .:N/A 
+住客:n 可:v 付费:v 乘坐:v (:N/A 按:N/A 要求:v 提供:v ):N/A 从:N/A 机场:n 到:v 酒店的:a 班车:n 和:N/A 渡轮:n 码头:n 接驳:v 班车:n 。:N/A  :N/A 参阅:v 更:r 多:N/A  :N/A 服务:n 
+
+Dresdens:n ':N/A nightlife:n is:v vibrant:a and:N/A colourful:a .:N/A Not:r without:N/A reason:n is:v Dresden:n called:v the:N/A capital:n of:N/A student:n clubs:n .:N/A 
+德累斯顿:N/A 夜生活:N/A 是:v 丰富多彩:N/A 和:N/A 激动人心的:a ,:N/A 所以:N/A ,:N/A 德累斯顿:N/A 被:N/A 称为:v 是:v 学生:n 俱乐部的:a 首府:n 。:N/A 
+
+Important:n details:n of:N/A P1poops:n 
+Barb:N/A -:N/A Tonny:N/A 重要:a 详情:a 
+
+Developer:n /App:n (:N/A â‚¬8-130:a EUR:n ):N/A 
+Developer:N/A  :N/A /:N/A App:N/A  :N/A (:N/A €:N/A 8:N/A -:N/A 130:N/A  :N/A EUR:N/A ):N/A 
+
+Do:v you:N/A like:N/A me:N/A ?:N/A 
+你们:N/A 男人:n 敢:v 吗:N/A ?:N/A 
+
+burning:v through:N/A chemistries:n .:N/A 
+burning:N/A 燃烧:v  :N/A through:N/A 通过:N/A  :N/A chemistries:N/A 化学品:n  :N/A .:N/A 
+
+Standards:n Track:n [:n Page:n 115:N/A ]:n RFC:n 2616:N/A HTTP/1.1:n June:n 1999:N/A imaging:n ,:N/A scientific:a data:n analysis:n and:N/A those:N/A using:v end-to-end:a authentication:n ,:N/A all:N/A depend:v on:N/A receiving:v an:N/A entity:n body:n that:N/A is:v bit:r for:N/A bit:r identical:a to:N/A the:N/A original:a entity-body:n .:N/A 
+比如:v ,:N/A 医学:n 图象:n 应用:v ,:N/A 科学:n 数据分析:N/A 和:N/A 端:v 到:v 端:v 认证:v 都:r 依赖于:v 接收:v 到:v 与:N/A 原:n 实体:n 正文:N/A 一:N/A 比特:N/A 都:r 不差的:a 实体:n 正文:N/A 。:N/A 
+
+Number:n of:N/A Tests:n 
+购买:v 数量:n ::N/A 
+
+“:a Yes:n my:N/A husband:n ,:N/A I:N/A will:N/A be:v ready:a .:N/A 
+“:N/A 呵呵:v ,:N/A 这个:N/A 我:N/A 还:r 真:r 不信:v  :N/A 。:N/A  :N/A ”:N/A 
+
+Add:v your:N/A favorites:n places:n to:N/A rue:v Marcel:n porte:n Grenoble:n .:N/A 
+收藏:v 你:N/A 最爱的:a 地方:n 于:N/A  :N/A rue:N/A  :N/A Marcel:N/A  :N/A porte:N/A  :N/A Grenoble:N/A  :N/A 。:N/A 
+
+In:N/A addition:n ,:N/A our:N/A standard:a CMOS:n and:N/A BiCMOS:n family:n of:N/A logic:a products:n are:v available:a in:N/A over:N/A 500:N/A configurations:n to:N/A meet:v your:N/A design:n needs:n .:N/A 
+另外:N/A ,:N/A 我们的:a 标准:n CMOS:N/A 和:N/A BiCMOS:N/A 系列:N/A 逻辑:n 产品:n 采用:v 500:N/A 多种:N/A 配置:v ,:N/A 可:v 满足:v 您的:a 设计:n 需求:v 。:N/A 
+
+I:N/A can:N/A think:v and:N/A write:v faster:a 
+我:N/A 可以:N/A 想:v 得:N/A 更快:r ,:N/A 写:v 得:N/A 更快:r 
+
+The:N/A requested:a URL:n /css/fancybox_overlay.png:n was:v not:r found:v on:N/A this:N/A server:n .:N/A 
+请求的:a  :N/A URL:N/A  :N/A ::N/A  :N/A /:N/A  :N/A upload:N/A /:N/A css:N/A /:N/A baidu:N/A .:N/A aspx:N/A 
+
+Cnservers:n LLC:n Website:n IP:n address:n 
+网站的:a IP地址:n 
+
+At:N/A the:N/A place:n where:r it:N/A happened:v ,:N/A you:N/A can:N/A touch:v a:N/A bronze:n relief:n for:N/A good:a luck:n .:N/A 
+在:N/A 他:N/A 坠:v 河的:a 地方:n 您:N/A 可以:N/A 触摸:v 一尊:N/A 铜雕:n ,:N/A 以便:N/A 带来:v 好运气:N/A 。:N/A 
+
+And:N/A in:N/A hell:n he:N/A lift:v up:N/A his:N/A eyes:n ,:N/A being:v in:N/A torments:n ,:N/A and:N/A seeth:v Abraham:n afar:v off:N/A ...:N/A And:N/A he:N/A cried:v and:N/A said:v ,:N/A Father:n Abraham:n ,:N/A have:v mercy:v on:N/A me:N/A ,:N/A and:N/A send:v Lazarus:n ,:N/A that:N/A he:N/A may:N/A dip:v the:N/A tip:n of:N/A his:N/A finger:n in:N/A water:n ,:N/A and:N/A cool:a my:N/A tongue:n ;:N/A for:N/A I:N/A am:v tormented:v in:N/A this:N/A flame:n (:N/A Luke:n 16:23-24:N/A ):N/A .:N/A 
+他:N/A 在:N/A 阴间:n 受:v 痛苦:n ,:N/A 举目:n 远远地:N/A 望见:v 亚伯拉罕:N/A  :N/A .:N/A  :N/A .:N/A  :N/A .:N/A  :N/A 就:r 喊:v 着:N/A 说:v ::N/A 我:N/A 祖:n 亚伯拉罕:N/A 哪:N/A ,:N/A 可怜:v 我:N/A 罢:v !:N/A  :N/A 打发:v 拉撒:N/A 路:n 来:v ,:N/A 用:N/A 指头:n 尖:a 蘸:v 点:N/A 水:n ,:N/A 凉凉:a 我的:a 舌头:n ;:N/A 因为:N/A 我:N/A 在:N/A 这:N/A 火焰:n 里:N/A ,:N/A 极其:r 痛苦:n  :N/A  :N/A (:N/A  :N/A 路加福音:N/A  :N/A 16:N/A ::N/A 23:N/A -:N/A 24:N/A  :N/A ):N/A  :N/A 。:N/A 
+
+Relative:a vulnerability:n of:N/A coastal:a deltas:n as:N/A indicated:v by:N/A estimates:n of:N/A the:N/A population:n potentially:r displaced:v by:N/A current:a sea-level:a trends:n to:N/A 2050:N/A (:N/A extreme:a >:N/A 1:N/A million:N/A ;:N/A high:a 1:N/A million:N/A to:N/A 50,000:N/A ;:N/A medium:n 50,000:N/A to:N/A 5,000:N/A ):N/A [:n B6.3:n ]:n .:N/A 
+海岸:N/A 三角洲的:a 相对:r 脆弱性:n ,:N/A 如:v 按:N/A 到:v 2050:N/A 年:N/A 海平面:n 趋势:n 可能:v 造成的:a 迁移:v 人口:n 估算:v 所示:v (:N/A 大于:r 100:N/A 万:N/A 人为:n 极端:n 脆弱:a ;:N/A 100:N/A 万:N/A 到:v 50:N/A ,:N/A 000:N/A 人为:n 高度:n 脆弱:a ;:N/A 50:N/A ,:N/A 000:N/A 到:v 5:N/A ,:N/A 000:N/A 人为:n 中等:N/A 脆弱:a  :N/A ):N/A  :N/A [:N/A  :N/A B6:N/A .3:N/A  :N/A ]:N/A  :N/A 。:N/A 
+
+File:n ::N/A Nokia:n N900.JPG:n -:N/A Wikipedia:n 
+File:N/A ::N/A Penglai:N/A .:N/A jpg:N/A  :N/A -:N/A  :N/A 维基百科:N/A ,:N/A 自由的:a 百科全书:N/A 
+
+With:N/A locking:a hole:n (:N/A OSHA:n compliant:n ):N/A (:N/A Rechargeable:a battery:n manufacturing:n processes:n ):N/A 
+带:v 锁孔:n (:N/A 适用:v OSHA:N/A 标准:n  :N/A ):N/A  :N/A (:N/A  :N/A 二次:N/A 电池:n 制造:v 工序:n 用:N/A ):N/A 
+
+I:N/A mean:v ,:N/A he:N/A 's:v a:N/A grownup:n .:N/A H-H-He:n can:N/A have:v visitors:n any:N/A time:n he:N/A wants:v .:N/A It:N/A 's:v not:r like:N/A I:N/A have:v to:N/A know:v about:N/A it:N/A ,:N/A right:r ?:N/A '':N/A 
+难道:r 首帅:n 不行:v  :N/A ?:N/A  :N/A ”:N/A  :N/A “:N/A 不是:N/A 不行:v ,:N/A 是:v 那:N/A 丫的:a 根本:a 就:r 承受:v 不了:v 俺:N/A 强大的:a 欲望:v ,:N/A 所以:N/A ,:N/A 俺:N/A 只好:r 放弃:v 他:N/A 了:N/A  :N/A 。:N/A  :N/A ”:N/A 
+
+And:N/A if:N/A you:N/A bring:v them:N/A in:N/A for:N/A internships:n in:N/A your:N/A companies:n ,:N/A 
+And:N/A  :N/A if:N/A  :N/A you:N/A  :N/A bring:N/A 带来:v  :N/A them:N/A  :N/A in:N/A  :N/A for:N/A  :N/A internships:N/A 实习:v  :N/A in:N/A  :N/A your:N/A  :N/A companies:N/A 公司:n  :N/A ,:N/A 
+
+Selection:n of:N/A aluminum:n doors:n and:N/A windows:n curtain:v wall:a misunderstanding:n you:N/A know:v ?:N/A 
+选择:v 铝门窗:n 幕墙的:a 误区:n 你:N/A 知道:v 吗:N/A ?:N/A 
+
+What:N/A makes:v a:N/A wedding:v a:N/A dream:n wedding:n ?:N/A 
+如何:N/A 让:v 婚礼:n 成为:v 梦幻:n 婚礼:n ?:N/A 
+
+Finally:r ,:N/A we:N/A calculate:v the:N/A interest:n using:v the:N/A applicable:a rates:n (:N/A also:r from:N/A the:N/A tier:n tables:n ):N/A ::N/A 
+最后:N/A ,:N/A 我们:N/A 使用:v 适用的:a 利率:n (:N/A 也:r 来自:v 等级:N/A 表格:n  :N/A ):N/A 来:v 计算:v 利息:n ::N/A 
+
+Sagallia:n will:N/A be:v sure:a to:N/A appreciate:v this:N/A gesture:n and:N/A be:v immeasurably:r grateful:a to:N/A you:N/A !:N/A 
+Sagallia:N/A 一定:r 会:v 很:r 欣赏:v 您的:a 行动:n 并且:N/A 会:v 很:r 感激:v 您:N/A !:N/A 
+
+Why:r did:v he:N/A do:v that:N/A ?:N/A '':N/A 
+「:N/A 别:N/A 这样:N/A 嘛:N/A !:N/A 
+
+It:N/A is:v a:N/A very:r important:a painting:n ,:N/A he:N/A says:v ,:N/A a:N/A ``:N/A painting:n about:N/A painting:v '':N/A that:N/A heralds:v a:N/A reinvention:n in:N/A Rembrandt:n 's:N/A technique:n in:N/A the:N/A 1650s:N/A .:N/A 
+这:N/A 是:v 一幅:r 非常:r 重要的:a 作品:n  :N/A ,:N/A  :N/A ":N/A  :N/A 他:N/A 说:v  :N/A ,:N/A  :N/A ":N/A  :N/A 这:N/A 幅:n 划时代的:a 油画:n ":N/A 标志:n 着:N/A 17:N/A 世纪:n 50:N/A 年代:N/A 伦勃朗:N/A 绘画:n 技艺:n 成功:a 实现:v 脱胎换骨:N/A 。:N/A 
+
+Two:N/A of:N/A the:N/A most:r significant:a challenges:n facing:v the:N/A refining:n industry:n today:n are:v staying:v ahead:r of:N/A the:N/A increased:v requirementsÂ:n for:N/A process:n safety:n compliance:n and:N/A ensuring:v a:N/A reliable:a and:N/A continuous:a electrical:a supply:n while:N/A still:r keeping:v operating:v costs:n down:r .:N/A 
+在:N/A 维持:v 低:a 运营:n 成本的:a 同时:N/A ,:N/A 继续:v 在:N/A 日益:n 严格的:a 生产:n 安全:n 符合:v 性:n 方面:n 保持:v 领先:n 优势:n ,:N/A 并:N/A 确保:v 电气:n 供应的:a 可靠性:n 和:N/A 不:r 间断性:N/A ,:N/A  :N/A 是:v 当今:N/A 炼油:n 领域:n 面临:v 两:N/A 大:a 挑战:n 。:N/A 
+
+All:N/A units:n come:v with:N/A a:N/A living:n room:n ,:N/A a:N/A seating:a area:n with:N/A a:N/A sofa:n ,:N/A a:N/A TV:n ,:N/A a:N/A fully:r equipped:v kitchen:n and:N/A a:N/A private:a bathroom:n with:N/A bath:n or:N/A shower:n .:N/A 
+所有:N/A 公寓:n 均:r 设有:v 起居室:n 、:N/A 带:v 沙发的:a 休息区:n 、:N/A 电视:n 、:N/A 设备齐全的:a 厨房:n 以及:N/A 一间:N/A 带:v 浴缸:n 或:N/A 淋浴的:a 私人:n 浴室:n ,:N/A 配备:v 了:N/A 洗碗机:N/A 、:N/A 烤箱:n 以及:N/A 水壶:n 。:N/A 
+
+1:N/A ,:N/A hoods:n manufactured:v with:N/A flame:n retardant:a cotton:n ,:N/A aluminum:n foil:n surface:n coating:v to:N/A resist:v heat:n radiation:n ,:N/A high:a temperature:n radiation:n to:N/A prevent:v the:N/A fire:n escape:n 's:N/A head:n injury:n .:N/A 
+1:N/A 、:N/A  :N/A 头罩:n 采用:v 阻燃:v 棉布:n 制造:v ,:N/A 表面:n 涂复:N/A 铝箔:n 膜:n ,:N/A 以:N/A 抵御:v 热辐射:N/A ,:N/A 防止:v 火场:n 中:N/A 高温:n 辐射:v 对:N/A 逃生者:v 头部的:a 伤害:a 。:N/A 
+
+详细搜索:a MC33903P:n Datasheet:n (:N/A 数据表:n ):N/A 11:N/A Page:n -:N/A Freescale:n Semiconductor:n ,:N/A Inc:n 
+MCZ33903C5EKR2:N/A  :N/A Datasheet:N/A (:N/A 数据表:n ):N/A  :N/A 5:N/A  :N/A Page:N/A  :N/A -:N/A  :N/A Freescale:N/A  :N/A Semiconductor:N/A ,:N/A  :N/A Inc:N/A 
+
+ailaigucom.dsgmall.com:N/A -:N/A System:n Error:n Discuz:n !:N/A 
+granplaw:N/A .:N/A com:N/A  :N/A -:N/A  :N/A System:N/A  :N/A Error:N/A  :N/A Discuz:N/A !:N/A  :N/A System:N/A  :N/A Error:N/A 
+
+Their:N/A notability:n for:N/A Wikipedia:n is:v independent:a of:N/A the:N/A validity:n of:N/A their:N/A claims:n .:N/A 
+这些:N/A 地区的:a 关注度:n 与:N/A 相应:v 主张的:a 有效性:n 是:v 无关的:a 。:N/A 
+
+In:N/A response:n Jesus:n said:v to:N/A it:N/A ,:N/A ``:N/A Let:v no:N/A one:N/A eat:n fruit:n from:N/A you:N/A ever:r again:r .:N/A '':N/A And:N/A His:N/A disciples:n heard:v it:N/A .:N/A 15:N/A 
+耶稣:N/A  :N/A 对:N/A 树说:n  :N/A ::N/A  :N/A ":N/A  :N/A 永远:r 再:r 没有:v 人:n 吃:v 你的:a 果子:n 了:N/A  :N/A !:N/A  :N/A ":N/A  :N/A 他的:a 门徒:n 也:r 听见:v 了:N/A 。:N/A  :N/A 15:N/A 
+
+The:N/A ``:N/A Add:n two:N/A successes:n and:N/A two:N/A failures:n '':N/A adjusted:v Wald:n test:n statistic:a described:n in:N/A Agresti:n and:N/A Coull:n (:N/A 1998:N/A ):N/A .:N/A 
+Agresti:N/A  :N/A 和:N/A  :N/A Coull:N/A  :N/A (:N/A 1998:N/A ):N/A  :N/A 中:N/A 所述的:a ":N/A 添加:v 两次:N/A 成功:a 和:N/A 两次:N/A 失败:v ":N/A 调整的:a  :N/A Wald:N/A  :N/A 检验:n 统计:v 量:n 。:N/A 
+
+Hydrogen:n is:v extremely:r flammable:a .:N/A So:r much:a so:N/A that:N/A it:N/A was:v used:v as:N/A fuel:n for:N/A the:N/A Space:n Shuttle:n rocket:n !:N/A 
+Cool:N/A  :N/A Fact:N/A  :N/A 因为:N/A 氢气:n 极其:r 易燃:N/A ,:N/A 所以:N/A 它:N/A 曾:r 被:N/A 用做:v 航天飞机:n 运载火箭的:a 燃料:n 。:N/A 
+
+The:N/A remote:a rocky:a hills:n of:N/A the:N/A Priorat:n are:v the:N/A birthplace:n of:N/A intense:a ,:N/A mineral:a filled:v ,:N/A reds:v that:N/A many:a collectors:n consider:v to:N/A be:v Spain:n 's:N/A most:a elite:a wines:n .:N/A 
+该:N/A 贝:N/A 利奥:N/A 拉特:N/A 远程:n 岩石:n 山丘:N/A 是:v 激烈的:a ,:N/A 矿物:n 填充的:a 发源地:n ,:N/A 红色:n ,:N/A 很多:N/A 藏家:n 认为:v 是:v 西班牙:N/A 最:r 优秀的:a 葡萄酒:n 。:N/A 
+
+HBM:n is:v committed:v to:N/A working:v with:N/A its:N/A supply:n chain:n partners:n to:N/A increase:v transparency:n regarding:v the:N/A origin:n and:N/A traceability:n of:N/A minerals:n contained:v in:N/A products:n .:N/A 
+HBM:N/A 致力于:n 与其:N/A 供应链:n 合作伙伴:n 合作:n ,:N/A 提高:v 产品:n 所:N/A 含:v 矿物的:a 起源:n 和:N/A 可追溯:N/A 性的:a 透明度:n 。:N/A 
+
+Without:N/A doubt:n solar:a energy:n is:v one:N/A of:N/A the:N/A most:r promising:a candidates:n ,:N/A as:N/A the:N/A sun:a each:N/A day:n radiates:v 20,000:N/A times:n the:N/A amount:n of:N/A energy:n that:N/A the:N/A entire:a world:n population:n consumes:n .:N/A 
+毋庸置疑:N/A 太阳能:n 就是:r 最:r 有:v 前景的:a 候选:v 能源:n 之一:N/A ,:N/A 太阳:N/A 每天:N/A 辐射的:a 能源:n 是:v 世界:n 人口:n 能源:n 消费的:a 20:N/A 倍:N/A 。:N/A 
+
+Used:v Trucks:n Soosan:n For:N/A Sale:n -:N/A Agriaffaires:n USA:n By:N/A continuing:v to:N/A visit:v this:N/A site:n ,:N/A you:N/A accept:v the:N/A use:n of:N/A cookies:n in:N/A order:n to:N/A provide:v services:n and:N/A offers:v that:N/A match:v your:N/A interests:n ,:N/A and:N/A to:N/A generate:v navigation:n statistics:n .:N/A 
+专业:n 服务:n  :N/A -:N/A  :N/A 企业:n _:N/A Agriaffaires:N/A 最新:r 发布的:a 供求信息:N/A  :N/A 若:N/A 继续:v 浏览:v 本:N/A 网站:n ,:N/A 则:r 表示:v 您:N/A 接受:v cookie的:a 使用:v ,:N/A 并:N/A 以此:N/A 为:N/A 您:N/A 提供:v 适合:v 您的:a 服务:n 和:N/A 帮助:v ,:N/A 完成:v 网站:n 浏览:v 统计:v 。:N/A 
+
+Ranked:v #:N/A 12:N/A of:N/A 108:N/A To:N/A help:v you:N/A get:v around:N/A Minato:n ,:N/A here:r 's:v the:N/A name:n and:N/A address:n of:N/A this:N/A business:n in:N/A the:N/A local:a language:n 
+为了:N/A 让:v 您:N/A 可以:N/A 更:r 轻松:a 地:N/A 游览:n 波西:N/A 塔诺:N/A ,:N/A 以下:N/A 是:v 此:N/A 产业的:a 当地:N/A 语言:n 版本:n 名称:n 和:N/A 地址:n 
+
+46:N/A And:N/A why:r call:n you:N/A me:N/A ,:N/A Lord:n ,:N/A Lord:n ;:N/A and:N/A do:v not:r the:N/A things:n which:N/A I:N/A say:v ?:N/A 
+46:N/A  :N/A 你们:N/A 为什么:N/A 称呼:v 我:N/A 主:n 阿:N/A ,:N/A 主:n 阿:N/A ,:N/A 却:r 不:r 遵:v 我:N/A 的话:N/A 行:v 呢:N/A ?:N/A 
+
+Categories:n could:N/A help:v to:N/A some:N/A extent:n ,:N/A although:N/A they:N/A 're:v not:r an:N/A ideal:a tool:n and:N/A maintaining:v them:N/A can:N/A become:v complex:a (:N/A see:v below:N/A ):N/A .:N/A 
+分类:n (:N/A 类别:n ):N/A 对此:r 可能:v 有:v 一定的:a 好处:r ,:N/A 尽管:N/A 分类:n 并:N/A 不是:N/A 一种:N/A 理想的:a 手段:n ,:N/A 而且:N/A 它们的:a 维护:v 工作:n 可能:v 变得:v 繁琐:a 复杂:a (:N/A 参见:v 下文:n  :N/A ):N/A  :N/A 。:N/A 
+
+Skills:n ::N/A Facebook:n Marketing:n ,:N/A Social:n Media:n Marketing:n ,:N/A Social:n Networking:n ,:N/A YouTube:n 
+技能:n ::N/A  :N/A Facebook:N/A 营销:n  :N/A ,:N/A  :N/A 社交:n 媒体:n 营销:n  :N/A ,:N/A  :N/A 社交:n 网络:n  :N/A ,:N/A  :N/A YouTube:N/A 
+
+You:N/A can:N/A turn:v off:N/A smart:a password:n entry:n to:N/A reduce:v the:N/A chance:n that:N/A someone:n might:N/A guess:v your:N/A smartphone:n password:n or:N/A smart:a card:n password:n based:v on:N/A the:N/A smart:a password:n filter:n that:N/A your:N/A smartphone:n applies:n to:N/A password:v fields:n .:N/A 
+您:N/A 可以:N/A 关闭:v 智能:n 密码:n 条目:n ,:N/A 以便:N/A 降低:v 他人:N/A 猜:v 出:v 智能手机:n 密码:n 或:N/A 智能卡:N/A 密码的:a 风险:n ,:N/A 智能手机:n 密码:n 或:N/A 智能卡:N/A 密码:n 均:r 基于:N/A 智能手机:n 应用:v 于:N/A 密码:n 字段的:a 智能:n 密码:n 过滤器:n 。:N/A 
+
+DIT:n Majestic:n Beach:n Resort:n 
+DIT:N/A 雄伟:a 海滩:N/A 度假:v 酒店:n 
+
+Ruthenium:a BLACK:n 500-R:n (:N/A salt:n ):N/A 
+Ruthenium:N/A  :N/A BLACK:N/A  :N/A 500:N/A  :N/A R:N/A  :N/A (:N/A 盐状:n ):N/A 
+
+Help:n entrepreneurs:n from:N/A the:N/A traditional:a business:n transformation:n of:N/A the:N/A Internet:n business:n ,:N/A to:N/A provide:v support:n for:N/A the:N/A enterprise:n to:N/A open:v up:N/A the:N/A Internet:n space.Hadley:n enterprises:n under:N/A the:N/A administration:n ...:N/A 
+帮助:v 传:n 创业者:n 由:N/A 传统:n 商务:n 方式:n 转型:n 互联网:n 商务:n ,:N/A 为:N/A 企业:n 开拓:v 互联网:n 空间:n 提供:v 支持:v 保障:v 。:N/A 
+
+Overall:a ,:N/A with:N/A our:N/A bottom-up:n ,:N/A high-conviction:n ,:N/A long-term:a investment:n approach:n we:N/A look:v to:N/A invest:v in:N/A companies:n with:N/A good:a management:n teams:n ,:N/A where:r we:N/A feel:v conviction:n that:N/A they:N/A can:N/A make:v the:N/A right:a strategic:a choices:n .:N/A 
+总的来说:N/A ,:N/A 秉持:v 自下而上:N/A 、:N/A 高:a 信念:n 、:N/A 长期投资的:a 理念:n ,:N/A 我们:N/A 希望:v 投资:n 于:N/A 拥有:v 良好:a 管理:n 团队的:a 企业:n ,:N/A 我们:N/A 深信:N/A 其:N/A 能够:v 做出:v 正确的:a 战略:n 选择:v 。:N/A 
+
+Elena:n ,:N/A years:n ::N/A 36:N/A 
+Konovceva:N/A ,:N/A  :N/A 年:N/A ::N/A  :N/A 36:N/A 
+
+Beds:n have:v Egyptian:a cotton:n sheets:n and:N/A premium:a bedding:n .:N/A 
+床上:n 配有:v 埃及:N/A 棉:n 床单:n 和:N/A 高档:N/A 床上用品:n 。:N/A 
+
+The:N/A EUROGATE:n roadshow:n in:N/A Asia:n has:v further:r boosted:v the:N/A awareness:a level:n of:N/A Wilhelmshaven:n among:N/A the:N/A key:a target:n groups:n .:N/A Through:N/A personal:a contact:n with:N/A our:N/A target:n groups:n ,:N/A we:N/A were:v able:a to:N/A once:r again:r intensify:v the:N/A dialogue:n that:N/A began:v in:N/A 2011:N/A with:N/A the:N/A first:a roadshow:n and:N/A has:v been:v conducted:v continuously:r ever:r since:N/A ,:N/A says:v JÃ¶rn:n Kamrad:n ,:N/A Director:n of:N/A Sales:n at:N/A EUROGATE:n .:N/A 
+本次:N/A ":N/A EUROGATE:N/A 中国:N/A 路演:n 进一步:r 提升:v 了:N/A 威廉港:N/A 在:N/A 中国:N/A 目标:n 客户群:n 中的:a 知名度:n 。:N/A  :N/A 通过:N/A 与:N/A 客户的:a 紧密:a 接触:v ,:N/A 我们:N/A 进一步:r 加强:v 了:N/A 自:N/A 2011:N/A 年:N/A 第一次:N/A 路演:n 以来:N/A 跟:N/A 客户的:a 交流:n 与:N/A 沟通:v  :N/A ,:N/A  :N/A ":N/A  :N/A EUROGATE的:a 销售:n 总监:n J:N/A ö:N/A rn:N/A  :N/A Kamrad:N/A (:N/A 于:N/A 安:N/A ·:N/A 柯曼达:N/A ):N/A 先生:n 说:v 。:N/A 
+
+Find:n cheap:a tickets:n to:N/A Bosnia:n and:N/A Herzegovina:n from:N/A Singapore:n .:N/A 
+找到:v 新加坡:N/A  :N/A 樟宜:n 机场:n 至:N/A 波斯尼亚:N/A 和:N/A 黑塞哥维那的:a 特价机票:n 。:N/A 
+
+Cambodian:a Senate:n elections:n ,:N/A 2012:N/A 
+柬埔寨:N/A 参议院:n 
+
+Working:v hours:n of:N/A NICKY-PINK:n 
+AgathaParker的:a 工作:n 时间:n 
+
+BlackBerry:n Torch:n 9810:N/A -:N/A How:r to:N/A ::N/A Storage:n space:n and:N/A media:n cards:n How:r to:N/A ::N/A Storage:n space:n and:N/A media:n cards:n 
+BlackBerry:N/A  :N/A Curve:N/A  :N/A 9370:N/A  :N/A 9360:N/A  :N/A 9350:N/A  :N/A -:N/A  :N/A 存储空间:n 和:N/A 媒体:n 卡:n  :N/A 存储空间:n 和:N/A 媒体:n 卡:n 
+
+Q:n ::N/A Cambodia:n 's:N/A Supreme:n Court:n has:v disbanded:v the:N/A country:n 's:N/A main:a opposition:n party:n .:N/A 
+问:n ::N/A 柬埔寨:N/A 最高法院:N/A 宣布:v 解散:v 了:N/A 该国:N/A 主要:N/A 反对党:n 。:N/A 
+
+0.1:N/A km:n to:N/A Picasso:n Museum:n (:N/A Show:n map:r ):N/A Crsof255Br:n -:N/A Charming:v Apartment:n In:N/A Borne:n -:N/A Wi-Fi:a apartment:n provides:v a:N/A comfortable:a stay:n in:N/A Barcelona:n .:N/A 
+离:v 毕加索:N/A 博物馆:n  :N/A 0.1:N/A 公里:N/A  :N/A (:N/A 显示:v 地图:n  :N/A ):N/A  :N/A Crsof255Br:N/A  :N/A -:N/A  :N/A Charming:N/A  :N/A Apartment:N/A  :N/A In:N/A  :N/A Borne:N/A  :N/A -:N/A  :N/A Wi:N/A -:N/A Fi:N/A 公寓:n 在:N/A 巴塞罗那:N/A 提供:v 住宿的:a 地方:n 。:N/A 
+
+Please:n check:v entered:v address:n and:N/A try:v again:r or:N/A go:v to:N/A homepage:v 
+请:v 检查:n 填写的:a 域名:n 是否:v 正确:r ,:N/A 然后:N/A 重试:n !:N/A 
+
+G:n Inno:n Hostel:n &:N/A Pub:n Lounge:n Hongdae:n @:v 0.2:N/A miles:n Hostel:n 
+G:N/A  :N/A Inno:N/A  :N/A Hostel:N/A  :N/A &:N/A  :N/A Pub:N/A  :N/A Lounge:N/A  :N/A Hongdae:N/A  :N/A @:N/A  :N/A 0.2:N/A  :N/A km:N/A  :N/A 旅馆:n 
+
+See:v all:N/A 433:N/A hotels:n in:N/A Dominican:n Republic:n 
+查看:v 亨德森:N/A 维尔的:a 所有:N/A  :N/A 11:N/A  :N/A 家:N/A 酒店:n 
+
+They:N/A must:N/A not:r have:v been:v caught:v sleeping:v with:N/A a:N/A man:n ,:N/A unless:N/A ::N/A they:N/A were:v in:N/A the:N/A Army:n ,:N/A and:N/A it:N/A was:v necessary:a ,:N/A and:N/A they:N/A had:v not:r had:v anal:a intercourse:n ,:N/A and:N/A they:N/A were:v of:N/A the:N/A same:a rank:n .:N/A 
+来:v 了:N/A 。:N/A  :N/A 楚:N/A 流光:n 见:v 他:N/A 不是:N/A 茅山:N/A 派的:a 人:n ,:N/A 多半:N/A 是:v 被:N/A 勿:r 用:N/A 利用的:a 人:n ,:N/A 便:r 不忍心:N/A 伤:v 他:N/A ,:N/A 撤:v 了:N/A 
+
+Revolve:n Style:n No:n .:N/A 
+Revolve:N/A  :N/A 样式:n 编号:n  :N/A AKIK:N/A -:N/A WD168:N/A 
+
+Visual:a Effects:n Virtual:n Reality:n 
+最佳:N/A 视觉效果:n 计算:v 工具:n 
+
+There:N/A is:v no:N/A passage:n that:N/A required:v running:a water:n .:N/A 
+要是:N/A 没有:v 可信的:a 东西:N/A ,:N/A 信心:n 无从:v 产生:n 。:N/A 
+
+Built:v around:N/A a:N/A Jacaranda:n tree:n ,:N/A the:N/A modern:a yet:r simplistic:a Bamboo:n Cottage:n offers:v 2:N/A bedrooms:n ,:N/A a:N/A lounge:n area:n and:N/A a:N/A full:a bathroom:n with:N/A bath:n and:N/A shower:n .:N/A 
+现代化:n 而:N/A 简约的:a Bamboo:N/A  :N/A Cottage:N/A 别墅:n 围绕:v 着:N/A 蓝花:n 楹树:n 而:N/A 建:v ,:N/A 提供:v 2:N/A 间:N/A 卧室:n 、:N/A 休息区:n 以及:N/A 配有:v 浴缸:n 和:N/A 淋浴的:a 完整:a 浴室:n 。:N/A 
+
+(:N/A 1:N/A review:n ):N/A Riga:n ,:N/A Latvia:n 
+(:N/A  :N/A 1:N/A 条:n 评论:n  :N/A ):N/A  :N/A Riga:N/A ,:N/A  :N/A Latvia:N/A 
+
+So:r Joab:n returned:v from:N/A pursuing:v Abner:n .:N/A And:N/A when:r he:N/A had:v gathered:v all:N/A the:N/A people:n together:r ,:N/A there:N/A were:v missing:v of:N/A David:n 's:N/A servants:n nineteen:a men:n and:N/A Asahel:n .:N/A 
+约:r 押:v 追赶:v 押尼珥:n 回来:v ,:N/A 集合:v 所有人的:a 时候:n ,:N/A 发现:v 在:N/A 大卫的:a 臣仆:n 中:N/A ,:N/A 除了:N/A 亚撒黑:N/A 以外:N/A ,:N/A 还:r 少:a 了:N/A 十九个:N/A 人:n 。:N/A 
+
+We:N/A hope:v to:N/A welcome:v you:N/A back:r in:N/A the:N/A future:n .:N/A 
+我们:N/A 希望:v 这:N/A 可以:N/A 协助:v 您:N/A 计划:n 旅行:n 。:N/A 
+
+It:N/A is:v something:n that:N/A happens:v to:N/A you:N/A that:N/A you:N/A learn:v to:N/A accept:v and:N/A to:N/A receive:v ,:N/A to:N/A join:v with:N/A and:N/A to:N/A participate:v in:N/A .:N/A 
+它:N/A 是:v 发生:v 在:N/A 你:N/A 身上的:a 事:n ,:N/A 你:N/A 要:v 学习:v 去:v 接受:v 和:N/A 去:v 接收:v ,:N/A 去:v 结合:v 和:N/A 去:v 参与:v 。:N/A 
+
+Monsieur:n Darzac:n shook:v his:N/A head:n and:N/A said:v he:N/A was:v sure:a of:N/A the:N/A chambermaid:n 's:N/A fidelity:n ,:N/A and:N/A that:N/A she:N/A was:v a:N/A thoroughly:a honest:n and:N/A devoted:v servant:n .:N/A 
+女孩:n 正是:r 他:N/A 儿子的:a 女友:n ,:N/A 忘记:v 了:N/A 她:N/A 是:v 自己:N/A 最:r 讨厌的:a 千金:n 娃娃:n ,:N/A 眼里:N/A 充满:a 了:N/A 狂烈的:a 
+
+In:N/A Ubajara:n you:N/A 'll:N/A find:v the:N/A cozy:n Pousada:n Gruta:n .:N/A 
+你:N/A 会:v 发现:v 在:N/A 房间:n 里:N/A 水壶:n 。:N/A 
+
+The:N/A hotel:n also:r provides:v car:n rentals:n and:N/A ticket:n assistance:n services:n .:N/A 
+酒店:n 提供:v 汽车:n 租赁:v 服务:n 及:N/A 订票:n 服务:n 。:N/A 
+
+Enter:r your:N/A travel:n dates:n to:N/A view:v the:N/A best:a hotel:n deals:n for:N/A your:N/A Ambon:n accommodation:n needs:n .:N/A 
+请:v 输入您的:a 旅行:n 日期:N/A ,:N/A 查找:v 珀斯的:a 酒店:n 预订:v 优惠:n 促销:v 。:N/A 
+
+Notwithstanding:v this:N/A ,:N/A you:N/A agree:v that:N/A Baglady:n Productions:n shall:N/A still:r be:v allowed:v to:N/A apply:v for:N/A injunctive:a remedies:n (:N/A or:N/A an:N/A equivalent:a type:n of:N/A urgent:a legal:a relief:n ):N/A in:N/A any:N/A jurisdiction:n .:N/A 
+尽管:N/A 有:v 上述:N/A 规定:n ,:N/A 您:N/A 同意:r 一键:n 仍:r 被:N/A 允许:v 请求:v 任何:N/A 辖区:n 内的:a 禁制令:n 救济:n (:N/A 或:N/A 同等:N/A 类型的:a 紧急:a 法定:n 救济:n  :N/A ):N/A  :N/A 。:N/A 
+
+COPYRIGHT:n All:n content:n included:v on:N/A this:N/A site:n ,:N/A such:a as:N/A text:n ,:N/A graphics:n ,:N/A logos:n ,:N/A button:n icons:n ,:N/A images:n ,:N/A audio:a clips:n ,:N/A digital:a downloads:n ,:N/A data:n compilations:n ,:N/A and:N/A software:n ,:N/A is:v the:N/A property:n of:N/A Dual:n Innovation:n or:N/A its:N/A content:a suppliers:n and:N/A protected:v by:N/A international:a copyright:n laws:n .:N/A 
+Ø:N/A  :N/A 版权:n  :N/A 本:N/A 网站:n 上的:a 所有:N/A 内容:n 诸如:N/A 文字:n 、:N/A 图表:n 、:N/A 标识:n 、:N/A 按钮图标:n 、:N/A 图像:n 、:N/A 声音文件:n 片段:N/A 、:N/A 数字:n 下载:v 、:N/A 数据:n 编辑:n 和:N/A 软件:n 都:r 是:v 本:N/A 网站:n 提供者的:a 财产:n ,:N/A 受:v 中国:N/A 和:N/A 国际:n 版权法的:a 保护:v 。:N/A 
+
+The:N/A LC:n connector:n is:v established:v because:N/A of:N/A its:N/A small:a size:n and:N/A its:N/A very:r reliable:a connecting:v quality:n .:N/A 
+LC:N/A  :N/A 产品组合:n  :N/A LC:N/A  :N/A 连接器:N/A 发展:n 成熟:a ,:N/A 尺寸:n 小巧:n ,:N/A 连接:v 质量:n 非常:r 可靠:v 。:N/A 
+
+Your:N/A present:a location:n ::N/A Home:n >:n >:n inquiry:n 
+您:N/A 现在的:a 位置:v ::N/A 首页:N/A  :N/A >:N/A >:N/A  :N/A 在线:N/A 留言:v 
+
+In:N/A this:N/A case:n ,:N/A using:v the:N/A URLconf:n we:N/A set:v up:N/A in:N/A Tutorial:n 3:N/A ,:N/A this:N/A reverse:n (:N/A ):N/A call:n will:N/A return:v a:N/A string:n like:N/A 
+在:N/A 本例:n 中:N/A ,:N/A 使用:v 在:N/A  :N/A 教程:n 第:N/A  :N/A 3:N/A  :N/A 部分:n  :N/A 中:N/A 设定的:a  :N/A URLconf:N/A ,:N/A  :N/A reverse:N/A  :N/A (:N/A  :N/A ):N/A  :N/A 调用:n 将:r 返回:v 一个:N/A 这样的:a 字符串:n ::N/A 
+
+Bensafrim:a 2017:N/A ::N/A Best:a of:N/A Bensafrim:n ,:N/A Portugal:n Tourism:n -:N/A TripAdvisor:n 
+2017:N/A 年:N/A 葡萄牙:N/A 卡沃:N/A 埃罗的:a 旅游景点:n 、:N/A 旅游指南:N/A 、:N/A 行程:n  :N/A -:N/A  :N/A TripAdvisor:N/A 
+
+Deploy:n new:a mechanisms:n and:N/A earn:v cash:n so:N/A you:N/A can:N/A to:N/A increase:v investment:n and:N/A speed:v up:N/A progress:n .:N/A 
+发展:n 出新的:a 方法:n 、:N/A 赚取:v 现金:n 、:N/A 扩大:v 你的:a 投资:n 并:N/A 加速:v 成长:v 。:N/A 
+
+The:N/A hotel:n offers:v access:n to:N/A a:N/A vast:a array:n of:N/A services:n ,:N/A including:v 24-hour:a front:n desk:n ,:N/A luggage:n storage:n ,:N/A room:n service:n ,:N/A restaurant:n ,:N/A newspapers:n .:N/A 
+酒店的:a 特色:n 服务:n 有:v 24:N/A 小时:n 前台:n ,:N/A  :N/A 无障碍:N/A 设施:n ,:N/A  :N/A 行李:n 存放:v 服务:n ,:N/A  :N/A 客房:n 服务:n ,:N/A  :N/A 会议:n 设施:n 。:N/A 
+
+What:N/A is:v this:N/A world:n ?:N/A 
+这:N/A 世界:n 是:v 怎么样:N/A ?:N/A 
+
+In:N/A mid-October:n ,:N/A you:N/A will:N/A see:v a:N/A parade:n of:N/A planets:n 
+在:N/A 十月:N/A 中旬:N/A ,:N/A 你:N/A 会:v 看到:v 行星:n 游行:v 
+
+The:N/A quarrel:n was:v settled:v on:N/A Feb.:n 17:N/A ,:N/A 1546:N/A ,:N/A but:N/A the:N/A strain:n had:v been:v very:r great:a and:N/A Luther:n died:v the:N/A next:a day:n .:N/A 
+这场:N/A 争吵:v 是:v 定居:v 于:N/A 1546:N/A 年:N/A 2:N/A 月:N/A 17:N/A 日:N/A ,:N/A 但:N/A 带来的:a 压力:n 已经:r 很大:a ,:N/A 路德:N/A 于:N/A 第二天:N/A 死亡:v 。:N/A 
+
+Author:n ::N/A Xingquan:a Zeng:n ,:N/A et:r al:n .:N/A 
+Zhipeng:N/A  :N/A Liu:N/A ,:N/A  :N/A Lichao:N/A  :N/A Ma:N/A ,:N/A  :N/A et:N/A  :N/A al:N/A .:N/A 
+
+How:r To:N/A Stream:v Movies:n ::N/A Offender:n (:N/A 2012:N/A ):N/A Online:n 
+用户:n 评论:n ::N/A 音乐:n 魔方:n (:N/A 2012:N/A ):N/A 
+
+Search:n availabilityFuramaxpress:a Hotel:n Lujiazui:n Shanghai:n 
+搜索:v 可用性:n Furamaxpress:N/A  :N/A Hotel:N/A  :N/A Lujiazui:N/A  :N/A Shanghai:N/A 
+
+10:N/A All:N/A Your:N/A works:n shall:N/A praise:v You:N/A ,:N/A O:n LORD:n ,:N/A And:N/A Your:N/A saints:n shall:N/A bless:v You:N/A .:N/A 
+10:N/A  :N/A 永恒:N/A 主:n 阿:N/A ,:N/A 你:N/A 一切:N/A 所造的:a 都:r 要:v 称谢:v 你:N/A ;:N/A 你:N/A 坚贞:a 之:N/A 民要:N/A 祝颂:N/A 你:N/A 。:N/A 
+
+The:N/A cell:n production:n sites:n in:N/A Malaysia:n and:N/A Germany:n and:N/A the:N/A module:n production:n line:n in:N/A Germany:n are:v the:N/A core:n of:N/A manufacturing:n .:N/A 
+位于:v 马来西亚:N/A 和:N/A 德国的:a 电池:n 生产:n 基地:n ,:N/A 以及:N/A 位于:v 德国的:a 太阳能:n 组件:n 生产线:n 是:v 生产的:a 核心:n 。:N/A 
+
+A:N/A single:a SVNIndexXSLT:n directive:n in:N/A your:N/A repository:n 's:N/A Location:n block:n of:N/A httpd.conf:n will:N/A instruct:v mod_dav_svn:n to:N/A generate:v XML:n output:n when:r displaying:v a:N/A directory:n listing:n ,:N/A and:N/A to:N/A reference:v the:N/A XSLT:n stylesheet:n of:N/A your:N/A choice:n ::N/A 
+在:N/A 仓库的:a  :N/A httpd:N/A .:N/A conf:N/A  的:a  :N/A Location:N/A  :N/A 配置:v 块里:N/A ,:N/A  :N/A 如果:N/A 增加:v 一个:N/A 配置:v 指令:n  :N/A SVNIndexXSLT:N/A  :N/A ,:N/A  :N/A mod:N/A _:N/A dav:N/A _:N/A svn:N/A  :N/A 在:N/A 显示目录:n 列表:n 时:n ,:N/A  :N/A 将:r 生成:v 一个:N/A  :N/A XML:N/A  :N/A 输出:v ,:N/A  :N/A 并:N/A 引用:v 到:v 用户:n 所:N/A 选择的:a  :N/A XSLT:N/A  :N/A 样式表:n ::N/A 
+
+All:N/A apartments:n in:N/A Guayaquil:n 
+瓜亚基尔的:a 所有:N/A 公寓:n 
+
+Horst:n Claus:n Recktenwald:n Prize:n in:N/A Economics:n ,:N/A 2004:N/A .:N/A 
+1:N/A  :N/A 2016:N/A 年:N/A 诺贝尔经济学奖:N/A 简介:v 
+
+Hemmet:N/A 255:N/A villas:n 
+Hemmet:N/A  :N/A 255:N/A 家:N/A 别墅:n 
+

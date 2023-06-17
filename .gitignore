@@ -1,0 +1,40 @@
+### macOS ###
+# General
+.DS_Store
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# pyenv
+.python-version
+
+# # pipenv
+# Pipfile.lock
+
+# # poetry
+# poetry.lock
+
+# Environments
+.env
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+src/data/output/*
+src/data/input/*
+
+src/local_test/*
+src/model/awesome_model_with_co/*
+src/model/awesome_model_without_co/*
+
+
+### JupyterNotebooks ###
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+*.zip

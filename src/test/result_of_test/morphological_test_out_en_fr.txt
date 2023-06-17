@@ -1,0 +1,192 @@
+Resumption:n of:N/A the:N/A session:n 
+Reprise:n de:N/A la:N/A session:n 
+
+I:N/A declare:v resumed:v the:N/A session:n of:N/A the:N/A European:n Parliament:n adjourned:v on:N/A Friday:n 17:N/A December:n 1999:N/A ,:N/A and:N/A I:N/A would:N/A like:v once:r again:r to:N/A wish:v you:N/A a:N/A happy:a new:a year:n in:N/A the:N/A hope:n that:N/A you:N/A enjoyed:v a:N/A pleasant:a festive:a period:n .:N/A 
+Je:n déclare:v reprise:n la:N/A session:n du:N/A Parlement:n européen:a qui:n avait:N/A été:N/A interrompue:v le:N/A vendredi:n 17:N/A décembre:n dernier:a et:r je:n vous:n renouvelle:v tous:a mes:N/A vux:n en:N/A espérant:v que:r vous:n avez:N/A passé:v de:N/A bonnes:a vacances:n .:N/A 
+
+Although:N/A ,:N/A as:N/A you:N/A will:N/A have:v seen:v ,:N/A the:N/A dreaded:a 'millennium:n bug:n ':N/A failed:v to:N/A materialise:v ,:N/A still:r the:N/A people:n in:N/A a:N/A number:n of:N/A countries:n suffered:v a:N/A series:n of:N/A natural:a disasters:n that:N/A truly:v were:v dreadful:a .:N/A 
+Comme:r vous:n avez:N/A pu:v le:n constater:v ,:N/A le:N/A grand:a ":N/A bogue:n de:N/A l':N/A an:n 2000:N/A ":N/A ne:r s':n est:N/A pas:r produit:v .:N/A En:N/A revanche:n ,:N/A les:N/A citoyens:n d':N/A un:N/A certain:a nombre:n de:N/A nos:N/A pays:n ont:N/A été:N/A victimes:v de:N/A catastrophes:n naturelles:a qui:n ont:N/A vraiment:r été:N/A terribles:a .:N/A 
+
+You:N/A have:v requested:v a:N/A debate:n on:N/A this:N/A subject:n in:N/A the:N/A course:n of:N/A the:N/A next:a few:a days:n ,:N/A during:N/A this:N/A part-session:n .:N/A 
+Vous:n avez:N/A souhaité:v un:N/A débat:n à:N/A ce:N/A sujet:n dans:N/A les:N/A prochains:a jours:n ,:N/A au:N/A cours:n de:N/A cette:N/A période:n de:N/A session:n .:N/A 
+
+In:N/A the:N/A meantime:n ,:N/A I:N/A should:N/A like:v to:N/A observe:v a:N/A minute:n ':N/A s:a silence:n ,:N/A as:N/A a:N/A number:n of:N/A Members:n have:v requested:v ,:N/A on:N/A behalf:n of:N/A all:N/A the:N/A victims:n concerned:v ,:N/A particularly:r those:N/A of:N/A the:N/A terrible:a storms:n ,:N/A in:N/A the:N/A various:a countries:n of:N/A the:N/A European:n Union:n .:N/A 
+En:N/A attendant:v ,:N/A je:n souhaiterais:v ,:N/A comme:r un:N/A certain:a nombre:n de:N/A collègues:n me:n l':n ont:N/A demandé:v ,:N/A que:r nous:n observions:v une:N/A minute:n de:N/A silence:n pour:N/A toutes:a les:N/A victimes:n ,:N/A des:N/A tempêtes:n notamment:r ,:N/A dans:N/A les:N/A différents:a pays:n de:N/A l':N/A Union:n européenne:a qui:n ont:N/A été:N/A touchés:v .:N/A 
+
+Please:n rise:n ,:N/A then:r ,:N/A for:N/A this:N/A minute:n ':N/A s:a silence:n .:N/A 
+Je:n vous:n invite:v à:N/A vous:n lever:v pour:N/A cette:N/A minute:n de:N/A silence:n .:N/A 
+
+(:N/A The:N/A House:n rose:v and:N/A observed:v a:N/A minute:n ':N/A s:a silence:n ):N/A 
+(:N/A Le:N/A Parlement:n ,:N/A debout:r ,:N/A observe:v une:N/A minute:n de:N/A silence:n ):N/A 
+
+Madam:n President:n ,:N/A on:N/A a:N/A point:n of:N/A order:n .:N/A 
+Madame:n la:N/A Présidente:n ,:N/A c':n est:N/A une:N/A motion:n de:N/A procédure:n .:N/A 
+
+You:N/A will:N/A be:v aware:a from:N/A the:N/A press:n and:N/A television:n that:N/A there:N/A have:v been:v a:N/A number:n of:N/A bomb:n explosions:n and:N/A killings:n in:N/A Sri:n Lanka:n .:N/A 
+Vous:n avez:N/A probablement:r appris:v par:N/A la:N/A presse:n et:r par:N/A la:N/A télévision:n que:r plusieurs:N/A attentats:n à:N/A la:N/A bombe:n et:r crimes:n ont:N/A été:N/A perpétrés:v au:N/A Sri:n Lanka:n .:N/A 
+
+One:N/A of:N/A the:N/A people:n assassinated:v very:r recently:r in:N/A Sri:n Lanka:n was:v Mr:n Kumar:n Ponnambalam:n ,:N/A who:N/A had:v visited:v the:N/A European:n Parliament:n just:r a:N/A few:a months:n ago:r .:N/A 
+L':N/A une:n des:N/A personnes:n qui:n vient:v d':N/A être:N/A assassinée:v au:N/A Sri:n Lanka:n est:N/A M.:n Kumar:n Ponnambalam:n ,:N/A qui:n avait:N/A rendu:v visite:n au:N/A Parlement:n européen:a il:n y:n a:v quelques:N/A mois:n à:N/A peine:n .:N/A 
+
+Would:N/A it:N/A be:v appropriate:a for:N/A you:N/A ,:N/A Madam:n President:n ,:N/A to:N/A write:v a:N/A letter:n to:N/A the:N/A Sri:n Lankan:n President:n expressing:v Parliament:n 's:N/A regret:n at:N/A his:N/A and:N/A the:N/A other:a violent:a deaths:n in:N/A Sri:n Lanka:n and:N/A urging:v her:N/A to:N/A do:v everything:n she:N/A possibly:r can:N/A to:N/A seek:v a:N/A peaceful:a reconciliation:n to:N/A a:N/A very:r difficult:a situation:n ?:N/A 
+Ne:r pensez:v -vous:n pas:r ,:N/A Madame:n la:N/A Présidente:n ,:N/A qu':r il:n conviendrait:v d':N/A écrire:v une:N/A lettre:n au:N/A président:n du:N/A Sri:n Lanka:n pour:N/A lui:n communiquer:v que:r le:N/A Parlement:n déplore:v les:N/A morts:n violentes:a ,:N/A dont:n celle:n de:N/A M.:n Ponnambalam:n ,:N/A et:r pour:N/A l':n inviter:v instamment:r à:N/A faire:v tout:a ce:n qui:n est:v en:N/A son:N/A pouvoir:n pour:N/A chercher:v une:N/A réconciliation:n pacifique:a et:r mettre:v un:N/A terme:n à:N/A cette:N/A situation:n particulièrement:r difficile:a .:N/A 
+
+Yes:N/A ,:N/A Mr:n Evans:n ,:N/A I:N/A feel:v an:N/A initiative:n of:N/A the:N/A type:n you:N/A have:v just:r suggested:v would:N/A be:v entirely:r appropriate:a .:N/A 
+Oui:r ,:N/A Monsieur:n Evans:n ,:N/A je:n pense:v qu':r une:N/A initiative:n dans:N/A le:N/A sens:n que:n vous:n venez:v de:N/A suggérer:v serait:N/A tout:r à:N/A fait:n appropriée:a .:N/A 
+
+If:N/A the:N/A House:n agrees:v ,:N/A I:N/A shall:N/A do:v as:N/A Mr:n Evans:n has:v suggested:v .:N/A 
+Si:r l':N/A Assemblée:n en:n est:N/A d':N/A accord:n ,:N/A je:n ferai:v comme:r M.:n Evans:n l':n a:N/A suggéré:v .:N/A 
+
+Madam:n President:n ,:N/A on:N/A a:N/A point:n of:N/A order:n .:N/A 
+Madame:n la:N/A Présidente:n ,:N/A c':n est:N/A une:N/A motion:n de:N/A procédure:n .:N/A 
+
+I:N/A would:N/A like:v your:N/A advice:n about:N/A Rule:n 143:N/A concerning:v inadmissibility:n .:N/A 
+Je:n voudrais:v vous:n demander:v un:N/A conseil:n au:N/A sujet:n de:N/A l':N/A article:n 143:N/A ,:N/A qui:n concerne:v l':N/A irrecevabilité:n .:N/A 
+
+My:N/A question:n relates:v to:N/A something:n that:N/A will:N/A come:v up:N/A on:N/A Thursday:n and:N/A which:N/A I:N/A will:N/A then:r raise:v again:r .:N/A 
+Ma:N/A question:n porte:v sur:N/A un:N/A sujet:n qui:n est:N/A à:N/A l':N/A ordre:n du:N/A jour:n du:N/A jeudi:n et:r que:n je:n soulèverai:v donc:r une:N/A nouvelle:a fois:n .:N/A 
+
+The:N/A Cunha:n report:n on:N/A multiannual:a guidance:n programmes:n comes:v before:r Parliament:a on:N/A Thursday:n and:N/A contains:v a:N/A proposal:n in:N/A paragraph:n 6:N/A that:N/A a:N/A form:n of:N/A quota:a penalties:n should:N/A be:v introduced:v for:N/A countries:n which:N/A fail:v to:N/A meet:v their:N/A fleet:n reduction:n targets:n annually:r .:N/A 
+Le:N/A paragraphe:n 6:N/A du:N/A rapport:n Cunha:n sur:N/A les:N/A programmes:n d':N/A orientation:n pluriannuels:a ,:N/A qui:n sera:N/A soumis:v au:N/A Parlement:n ce:N/A jeudi:n ,:N/A propose:v d':N/A introduire:v des:N/A sanctions:n applicables:a aux:N/A pays:n qui:n ne:r respectent:v pas:r les:N/A objectifs:n annuels:a de:N/A réduction:n de:N/A leur:N/A flotte:n .:N/A 
+
+It:N/A says:v that:N/A this:N/A should:N/A be:v done:v despite:N/A the:N/A principle:n of:N/A relative:a stability:n .:N/A 
+Il:n précise:v que:r cela:n devrait:v être:N/A fait:v malgré:N/A le:N/A principe:n de:N/A stabilité:n relative:a .:N/A 
+
+I:N/A believe:v that:N/A the:N/A principle:n of:N/A relative:a stability:n is:v a:N/A fundamental:a legal:a principle:n of:N/A the:N/A common:a fisheries:n policy:n and:N/A a:N/A proposal:n to:N/A subvert:v it:N/A would:N/A be:v legally:r inadmissible:a .:N/A 
+À:N/A mon:N/A sens:n ,:N/A le:N/A principe:n de:N/A stabilité:n relative:a est:N/A un:N/A principe:n juridique:a fondamental:a de:N/A la:N/A politique:n commune:a de:N/A la:N/A pêche:n et:r toute:N/A proposition:n le:n bouleversant:v serait:N/A juridiquement:r irrecevable:a .:N/A 
+
+I:N/A want:v to:N/A know:v whether:N/A one:N/A can:N/A raise:v an:N/A objection:n of:N/A that:N/A kind:n to:N/A what:N/A is:v merely:r a:N/A report:n ,:N/A not:r a:N/A legislative:a proposal:n ,:N/A and:N/A whether:N/A that:N/A is:v something:n I:N/A can:N/A competently:r do:v on:N/A Thursday:n .:N/A 
+Je:n voudrais:v savoir:v si:r l':n on:n peut:v avancer:v une:N/A objection:n de:N/A ce:N/A type:n à:N/A ce:n qui:n n':r est:N/A qu':r un:N/A rapport:n ,:N/A pas:r une:N/A proposition:n législative:a ,:N/A et:r si:r je:n suis:N/A habilité:v à:N/A le:n faire:v ce:N/A jeudi:n .:N/A 
+
+That:N/A is:v precisely:r the:N/A time:n when:r you:N/A may:N/A ,:N/A if:N/A you:N/A wish:v ,:N/A raise:v this:N/A question:n ,:N/A i.e:n .:N/A on:N/A Thursday:n prior:r to:N/A the:N/A start:n of:N/A the:N/A presentation:n of:N/A the:N/A report:n .:N/A 
+C':n est:N/A exactement:r à:N/A ce:N/A moment:n -là:n que:n vous:n pourrez:v ,:N/A en:N/A effet:n ,:N/A si:r vous:n le:n souhaitez:v ,:N/A soulever:v cette:N/A question:n ,:N/A c':r est:r -:r à:r -:r dire:r jeudi:n avant:N/A le:N/A début:n de:N/A la:N/A présentation:n du:N/A rapport:n .:N/A 
+
+Madam:n President:n ,:N/A coinciding:v with:N/A this:N/A year:n ':N/A s:n first:r part-session:n of:N/A the:N/A European:n Parliament:n ,:N/A a:N/A date:n has:v been:v set:v ,:N/A unfortunately:r for:N/A next:a Thursday:n ,:N/A in:N/A Texas:n in:N/A America:n ,:N/A for:N/A the:N/A execution:n of:N/A a:N/A young:a 34:N/A year-old:a man:n who:N/A has:v been:v sentenced:v to:N/A death:n .:N/A We:N/A shall:N/A call:v him:N/A Mr:n Hicks:n .:N/A 
+Madame:n la:N/A Présidente:n ,:N/A alors:r que:r se:n déroule:v la:N/A première:a session:n de:N/A l':N/A année:n du:N/A Parlement:n européen:a ,:N/A l':N/A exécution:n d':N/A un:N/A condamné:n à:N/A mort:n au:N/A Texas:n aux:N/A États-Unis:n ,:N/A un:N/A jeune:a homme:n de:N/A 34:N/A ans:n appelé:v Hicks:n ,:N/A a:N/A été:N/A fixée:v ,:N/A malheureusement:r ,:N/A à:N/A jeudi:n prochain:a .:N/A 
+
+At:N/A the:N/A request:n of:N/A a:N/A French:a Member:n ,:N/A Mr:n Zimeray:n ,:N/A a:N/A petition:n has:v already:r been:v presented:v ,:N/A which:N/A many:a people:n signed:v ,:N/A including:v myself:N/A .:N/A 
+À:N/A la:N/A demande:n d':N/A un:N/A député:n français:a ,:N/A Monsieur:n Zimeray:n ,:N/A une:N/A pétition:n a:N/A déjà:r été:N/A introduite:v ;:N/A elle:n a:N/A récolté:v de:N/A nombreuses:a signatures:n dont:n la:N/A mienne:n .:N/A 
+
+However:r ,:N/A I:N/A would:N/A ask:v you:N/A ,:N/A in:N/A accordance:n with:N/A the:N/A line:n which:N/A is:v now:r constantly:r followed:v by:N/A the:N/A European:n Parliament:n and:N/A by:N/A the:N/A whole:n of:N/A the:N/A European:n Community:n ,:N/A to:N/A make:v representations:n ,:N/A using:v the:N/A weight:n of:N/A your:N/A prestigious:a office:n and:N/A the:N/A institution:n you:N/A represent:v ,:N/A to:N/A the:N/A President:n and:N/A to:N/A the:N/A Governor:n of:N/A Texas:n ,:N/A Mr:n Bush:n ,:N/A who:N/A has:v the:N/A power:n to:N/A order:n a:N/A stay:n of:N/A execution:n and:N/A to:N/A reprieve:v the:N/A condemned:a person:n .:N/A 
+Cependant:r ,:N/A je:n vous:n demande:v ,:N/A conformément:r à:N/A l':N/A orientation:n désormais:r constamment:r exprimée:v par:N/A le:N/A Parlement:n européen:a et:r toute:a la:N/A Communauté:n européenne:a ,:N/A d':N/A intervenir:v auprès:r du:N/A président:n et:r du:N/A gouverneur:n du:N/A Texas:n ,:N/A Monsieur:n Bush:n ,:N/A en:N/A faisant:N/A jouer:v le:N/A prestige:n de:N/A votre:N/A mandat:n et:r de:N/A l':N/A Institution:n que:n vous:n représentez:v ,:N/A car:r c':n est:N/A Monsieur:n Bush:n qui:n a:v le:N/A pouvoir:n de:N/A suspendre:v la:N/A condamnation:n à:N/A mort:n et:r de:N/A gracier:v le:N/A condamné:n .:N/A 
+
+This:N/A is:v all:N/A in:N/A accordance:n with:N/A the:N/A principles:n that:N/A we:N/A have:v always:r upheld:v .:N/A 
+Et:r tout:a ceci:n dans:N/A le:N/A respect:n des:N/A principes:n que:n nous:n avons:N/A toujours:r soutenus:v .:N/A 
+
+Thank:n you:N/A ,:N/A Mr:n Segni:n ,:N/A I:N/A shall:N/A do:v so:r gladly:r .:N/A 
+Merci:n ,:N/A Monsieur:n Segni:n ,:N/A je:n le:n ferai:v bien:r volontiers:r .:N/A 
+
+Indeed:r ,:N/A it:N/A is:v quite:r in:N/A keeping:v with:N/A the:N/A positions:n this:N/A House:n has:v always:r adopted:v .:N/A 
+C':n est:N/A en:N/A effet:n tout:r à:N/A fait:n dans:N/A la:N/A ligne:n des:N/A positions:n que:n notre:N/A Parlement:n a:N/A toujours:r adoptées:v .:N/A 
+
+Madam:n President:n ,:N/A I:N/A should:N/A like:v to:N/A draw:v your:N/A attention:n to:N/A a:N/A case:n in:N/A which:N/A this:N/A Parliament:n has:v consistently:r shown:v an:N/A interest:n .:N/A 
+Madame:n la:N/A Présidente:n ,:N/A je:n voudrais:v attirer:v votre:N/A attention:n sur:N/A un:N/A cas:n dont:n s':n est:N/A régulièrement:r occupé:v le:N/A Parlement:n .:N/A 
+
+It:N/A is:v the:N/A case:n of:N/A Alexander:n Nikitin:n .:N/A 
+Il:n s':n agit:v du:N/A cas:n d':N/A Alexandre:n Nikitin:n .:N/A 
+
+All:N/A of:N/A us:N/A here:r are:v pleased:a that:N/A the:N/A courts:n have:v acquitted:v him:N/A and:N/A made:v it:N/A clear:a that:N/A in:N/A Russia:n ,:N/A too:r ,:N/A access:n to:N/A environmental:a information:n is:v a:N/A constitutional:a right:n .:N/A 
+Nous:n nous:n réjouissons:v tous:a ,:N/A dans:N/A cette:N/A enceinte:n ,:N/A que:r le:N/A tribunal:n ait:N/A prononcé:v sa:N/A libération:n et:r ait:N/A clairement:r établi:v qu':r en:N/A Russie:n aussi:r ,:N/A l':N/A accès:n aux:N/A informations:n environnementales:a était:N/A un:N/A droit:n constitutionnel:a .:N/A 
+
+Now:r ,:N/A however:r ,:N/A he:N/A is:v to:N/A go:v before:N/A the:N/A courts:n once:r more:r because:N/A the:N/A public:a prosecutor:n is:v appealing:v .:N/A 
+Cependant:r ,:N/A il:n se:n fait:v qu':r il:n semblerait:v être:N/A à:N/A nouveau:a mis:v en:N/A accusation:n ,:N/A le:N/A ministère:n public:a ayant:N/A interjeté:v appel:n .:N/A 
+
+We:N/A know:v ,:N/A and:N/A we:N/A have:v stated:v as:N/A much:a in:N/A very:r many:a resolutions:n indeed:r ,:N/A including:v specifically:r during:N/A the:N/A last:a plenary:a part-session:n of:N/A last:a year:n ,:N/A that:N/A this:N/A is:v not:r solely:r a:N/A legal:a case:n and:N/A that:N/A it:N/A is:v wrong:a for:N/A Alexander:n Nikitin:n to:N/A be:v accused:v of:N/A criminal:a activity:n and:N/A treason:n because:N/A of:N/A our:N/A involvement:n as:N/A the:N/A beneficiaries:n of:N/A his:N/A findings:n .:N/A 
+Nous:n savons:v ,:N/A et:r nous:n l':n avons:N/A d':N/A ailleurs:r établi:v dans:N/A de:N/A très:r nombreuses:a résolutions:n -:N/A y:n compris:a lors:r de:N/A la:N/A dernière:a période:n de:N/A session:n de:N/A l':N/A année:n dernière:a -:N/A ,:N/A que:r ce:N/A cas:n n':r est:N/A pas:r seulement:r de:N/A nature:n juridique:a et:r qu':r il:n est:N/A faux:a d':N/A accuser:v Alexandre:n Nikitin:n d':N/A activité:n criminelle:a et:r de:N/A trahison:n car:r nous:n sommes:N/A concernés:v par:N/A ses:N/A résultats:n et:r nous:n en:n profitons:v .:N/A 
+
+These:N/A findings:n form:v the:N/A basis:n of:N/A the:N/A European:n programmes:n to:N/A protect:v the:N/A Barents:n Sea:n ,:N/A and:N/A that:N/A is:v why:r I:N/A would:N/A ask:v you:N/A to:N/A examine:v a:N/A draft:n letter:n setting:v out:N/A the:N/A most:r important:a facts:n and:N/A to:N/A make:v Parliament:n 's:N/A position:n ,:N/A as:N/A expressed:v in:N/A the:N/A resolutions:n which:N/A it:N/A has:v adopted:v ,:N/A clear:a as:r far:r as:N/A Russia:n is:v concerned:v .:N/A 
+Ces:N/A résultats:n forment:v la:N/A base:n des:N/A programmes:n européens:a de:N/A protection:n de:N/A la:N/A mer:n de:N/A Barents:n et:r c':n est:v pourquoi:r je:n vous:n prie:v d':N/A examiner:v un:N/A projet:n de:N/A lettre:n vous:n dépeignant:v les:N/A faits:n essentiels:a de:N/A cette:N/A affaire:n et:r de:N/A communiquer:v à:N/A la:N/A Russie:n la:N/A position:n qui:n découle:v des:N/A décisions:n du:N/A Parlement:n .:N/A 
+
+Yes:N/A ,:N/A Mrs:n Schroedter:n ,:N/A I:N/A shall:N/A be:v pleased:v to:N/A look:v into:N/A the:N/A facts:n of:N/A this:N/A case:n when:r I:N/A have:v received:v your:N/A letter:n .:N/A 
+Oui:r ,:N/A Madame:n Schroedter:n ,:N/A j':n examinerai:v bien:r volontiers:r les:N/A faits:n relatifs:a à:N/A cette:N/A question:n lorsque:r j':n aurai:N/A reçu:v votre:N/A lettre:n .:N/A 
+
+Madam:n President:n ,:N/A I:N/A would:N/A firstly:r like:N/A to:N/A compliment:v you:N/A on:N/A the:N/A fact:n that:N/A you:N/A have:v kept:v your:N/A word:n and:N/A that:N/A ,:N/A during:N/A this:N/A first:a part-session:n of:N/A the:N/A new:a year:n ,:N/A the:N/A number:n of:N/A television:n channels:n in:N/A our:N/A offices:n has:v indeed:r increased:v considerably:r .:N/A 
+Madame:n la:N/A Présidente:n ,:N/A je:n voudrais:v tout:r d':N/A abord:r vous:n féliciter:v pour:N/A avoir:N/A tenu:v parole:n car:r en:N/A effet:n ,:N/A en:N/A cette:N/A première:a période:n de:N/A session:n ,:N/A en:N/A cette:N/A nouvelle:a année:n ,:N/A le:N/A nombre:n de:N/A chaînes:n de:N/A télévision:n a:N/A réellement:r été:N/A augmenté:v de:N/A manière:n significative:a dans:N/A nos:N/A locaux:n .:N/A 
+
+But:N/A ,:N/A Madam:n President:n ,:N/A my:N/A personal:a request:n has:v not:r been:v met:v .:N/A 
+Toutefois:r ,:N/A Madame:n la:N/A Présidente:n ,:N/A ce:n que:n j':n avais:N/A demandé:v n':r a:N/A pas:r été:N/A réalisé:v .:N/A 
+
+Although:N/A there:N/A are:v now:r two:N/A Finnish:a channels:n and:N/A one:N/A Portuguese:n one:N/A ,:N/A there:N/A is:v still:r no:N/A Dutch:a channel:n ,:N/A which:N/A is:v what:N/A I:N/A had:v requested:v because:r Dutch:a people:n here:r like:N/A to:N/A be:v able:a to:N/A follow:v the:N/A news:n too:r when:r we:N/A are:v sent:v to:N/A this:N/A place:n of:N/A exile:n every:N/A month:n .:N/A 
+Il:n y:n a:v bien:r deux:N/A chaînes:n finnoises:a et:r une:N/A chaîne:n portugaise:a ,:N/A mais:r il:n n':r y:n a:v toujours:r aucune:N/A chaîne:n néerlandaise:a .:N/A Pourtant:r je:n vous:n avais:N/A demandé:v une:N/A chaîne:n néerlandaise:a ,:N/A car:r les:N/A Néerlandais:n aussi:r désirent:v pouvoir:v suivre:v les:N/A actualités:n chaque:N/A mois:n lorsqu':r ils:n sont:N/A envoyés:v en:N/A cette:N/A terre:n d':N/A exil:n .:N/A 
+
+I:N/A would:N/A therefore:v once:r more:a ask:n you:N/A to:N/A ensure:v that:N/A we:N/A get:v a:N/A Dutch:a channel:n as:N/A well:r .:N/A 
+Je:n vous:n demande:v donc:r à:N/A nouveau:a de:N/A faire:v le:N/A nécessaire:n pour:N/A que:r nous:n puissions:v disposer:v d':N/A une:N/A chaîne:n néerlandaise:a .:N/A 
+
+Mrs:n Plooij-van:n Gorsel:n ,:N/A I:N/A can:N/A tell:v you:N/A that:N/A this:N/A matter:n is:v on:N/A the:N/A agenda:n for:N/A the:N/A Quaestors:n ':N/A meeting:n on:N/A Wednesday:n .:N/A 
+Madame:n Plooij:n -:n van:n Gorsel:n ,:N/A je:n peux:v vous:n dire:v que:r cette:N/A question:n est:N/A à:N/A l':N/A ordre:n du:N/A jour:n de:N/A la:N/A réunion:n des:N/A questeurs:n de:N/A mercredi:n .:N/A 
+
+It:N/A will:N/A ,:N/A I:N/A hope:v ,:N/A be:v examined:v in:N/A a:N/A positive:a light:n .:N/A 
+Elle:n sera:N/A ,:N/A je:n l':n espère:v ,:N/A examinée:v dans:N/A un:N/A esprit:n positif:a .:N/A 
+
+Madam:n President:n ,:N/A can:N/A you:N/A tell:v me:N/A why:r this:N/A Parliament:n does:v not:r adhere:v to:N/A the:N/A health:n and:N/A safety:n legislation:n that:N/A it:N/A actually:r passes:v ?:N/A 
+Madame:n la:N/A Présidente:n ,:N/A comment:r se:n fait:v -il:n que:r le:N/A Parlement:n ne:r se:n conforme:v pas:r à:N/A la:N/A réglementation:n en:N/A matière:n de:N/A santé:n et:r de:N/A sécurité:n qu':n il:n vote:v ?:N/A 
+
+Why:r has:v no:N/A air:n quality:n test:n been:v done:v on:N/A this:N/A particular:a building:n since:N/A we:N/A were:v elected:v ?:N/A 
+Comment:r se:n fait:v -il:n qu':r aucun:N/A test:n de:N/A qualité:n de:N/A l':N/A air:n n':r ait:N/A été:N/A réalisé:v dans:N/A ce:N/A bâtiment:n depuis:N/A notre:N/A élection:n ?:N/A 
+
+Why:r has:v there:r been:v no:N/A Health:n and:N/A Safety:n Committee:n meeting:n since:N/A 1998:N/A ?:N/A 
+Comment:r se:n fait:v -il:n que:r le:N/A comité:n de:N/A santé:n et:r d':N/A hygiène:n ne:r se:n soit:N/A plus:r réuni:v depuis:N/A 1998:N/A ?:N/A 
+
+Why:r has:v there:r been:v no:N/A fire:n drill:n ,:N/A either:r in:N/A the:N/A Brussels:n Parliament:n buildings:n or:N/A the:N/A Strasbourg:n Parliament:n buildings:n ?:N/A 
+Comment:r se:n fait:v -il:n que:r nous:n n':r ayons:N/A jamais:r fait:v d':N/A exercice:n d':N/A évacuation:n dans:N/A les:N/A bâtiments:n du:N/A Parlement:n de:N/A Bruxelles:n et:r de:N/A Strasbourg:n ?:N/A 
+
+Why:r are:v there:r no:N/A fire:n instructions:n ?:N/A 
+Comment:r se:n fait:v -il:n qu':r il:n n':r y:n ait:v pas:r de:N/A consignes:n en:N/A cas:n d':N/A incendie:n ?:N/A 
+
+Why:r have:v the:N/A staircases:n not:r been:v improved:v since:N/A my:N/A accident:n ?:N/A 
+Comment:r se:n fait:v -il:n que:r les:N/A escaliers:n n':r aient:N/A pas:r été:N/A améliorés:v depuis:N/A mon:N/A accident:n ?:N/A 
+
+Why:r are:v no-smoking:a areas:n not:r enforced:v ?:N/A 
+Comment:r se:n fait:v -il:n que:r l':n on:n ne:r respecte:v pas:r les:N/A zones:n non:r fumeurs:n ?:N/A 
+
+It:N/A seems:v absolutely:r disgraceful:a that:N/A we:N/A pass:v legislation:n and:N/A do:v not:r adhere:r to:N/A it:N/A ourselves:N/A .:N/A 
+Nous:n votons:v des:N/A réglementations:n et:r nous:n ne:r nous:n y:n conformons:v même:r pas:r .:N/A C':n est:N/A scandaleux:a .:N/A 
+
+Mrs:n Lynne:n ,:N/A you:N/A are:v quite:r right:a and:N/A I:N/A shall:N/A check:v whether:N/A this:N/A has:v actually:r not:r been:v done:v .:N/A 
+Madame:n Lynne:n ,:N/A vous:n avez:v parfaitement:r raison:n et:r je:n vais:v vérifier:v si:r tout:a cela:n n:r ':r a:N/A effectivement:r pas:r été:N/A fait:v .:N/A 
+
+I:N/A shall:N/A also:r refer:v the:N/A matter:n to:N/A the:N/A College:n of:N/A Quaestors:n ,:N/A and:N/A I:N/A am:v certain:a that:N/A they:N/A will:N/A be:v keen:a to:N/A ensure:v that:N/A we:N/A comply:v with:N/A the:N/A regulations:n we:N/A ourselves:v vote:n on:N/A .:N/A 
+Je:n vais:v soumettre:v également:r le:N/A problème:n au:N/A Collège:n des:N/A questeurs:n et:r je:n suis:N/A certaine:a que:r nos:N/A questeurs:n auront:v à:N/A cur:n de:N/A faire:v en:N/A sorte:n que:r nous:n respections:v la:N/A réglementation:n qu:n ':n en:N/A effet:n nous:n votons:v .:N/A 
+
+Madam:n President:n ,:N/A Mrs:n Díez:n González:n and:N/A I:N/A had:v tabled:v questions:n on:N/A certain:a opinions:n of:N/A the:N/A Vice-President:n ,:N/A Mrs:n de:N/A Palacio:n ,:N/A which:N/A appeared:v in:N/A a:N/A Spanish:a newspaper:n .:N/A 
+Madame:n la:N/A Présidente:n ,:N/A Mme:n Díez:n González:n et:r moi:n -:n même:n avions:N/A présenté:v quelques:N/A questions:n sur:N/A certaines:N/A opinions:n exprimées:v par:N/A la:N/A vice-présidente:n ,:N/A Mme:n de:N/A Palacio:n ,:N/A et:r publiées:v dans:N/A un:N/A journal:n espagnol:a .:N/A 
+
+The:N/A competent:n services:n have:v not:r included:v them:N/A in:N/A the:N/A agenda:n on:N/A the:N/A grounds:n that:N/A they:N/A had:v been:v answered:v in:N/A a:N/A previous:a part-session:n .:N/A 
+Les:N/A services:n compétents:a ne:r les:n ont:N/A pas:r inclues:v à:N/A l':N/A ordre:n du:N/A jour:n ,:N/A avançant:v que:r des:N/A réponses:n avaient:N/A déjà:r été:N/A apportées:v lors:r d':N/A une:N/A précédente:a session:n .:N/A 
+
+I:N/A would:N/A ask:v that:N/A they:N/A reconsider:v ,:N/A since:N/A this:N/A is:v not:r the:N/A case:n .:N/A 
+Je:n demande:v que:r cette:N/A décision:n soit:N/A reconsidérée:v car:r ce:n n':r est:N/A pas:r le:N/A cas:n .:N/A 
+
+The:N/A questions:n answered:v previously:r referred:v to:N/A Mrs:n de:N/A Palacio:n ':N/A s:n intervention:n ,:N/A on:N/A another:N/A occasion:n ,:N/A and:N/A not:r to:N/A these:N/A comments:n which:N/A appeared:v in:N/A the:N/A ABC:n newspaper:n on:N/A 18:N/A November:n .:N/A 
+Les:N/A questions:n auxquelles:n on:n a:N/A répondu:v précédemment:r se:n rapportaient:v à:N/A l':N/A intervention:n de:N/A Mme:n de:N/A Palacio:n dans:N/A un:N/A dossier:n précis:a ,:N/A et:r non:r aux:N/A déclarations:n parues:v dans:N/A le:N/A journal:n ABC:n du:N/A 18:N/A novembre:n dernier:a .:N/A 
+
+Mr:n Berenguer:n Fuster:n ,:N/A we:N/A shall:N/A check:v all:N/A this:N/A .:N/A 
+Cher:a collègue:n nous:n allons:v vérifier:v tout:a cela:n .:N/A 
+
+I:N/A admit:v that:N/A ,:N/A at:N/A present:a ,:N/A the:N/A matter:n seems:v to:N/A be:v somewhat:r confused:a .:N/A 
+Je:n vous:n avouerai:v que:r ,:N/A pour:N/A le:N/A moment:n ,:N/A les:N/A choses:n me:n semblent:v un:N/A petit:a peu:r confuses:a .:N/A 
+
+We:N/A shall:N/A therefore:v look:n into:N/A it:N/A properly:r to:N/A ensure:v that:N/A everything:n is:v as:N/A it:N/A should:N/A be:v .:N/A 
+Donc:r ,:N/A nous:n allons:v revoir:v cela:n très:r sérieusement:r pour:N/A que:r tout:n soit:N/A bien:r en:N/A ordre:n .:N/A 
+
+Madam:n President:n ,:N/A I:N/A should:N/A like:v to:N/A know:v if:N/A there:N/A will:N/A be:v a:N/A clear:a message:n going:v out:N/A from:N/A Parliament:n this:N/A week:n about:N/A our:N/A discontent:n over:N/A today:n 's:N/A decision:n refusing:n to:N/A renew:v the:N/A arms:n embargo:v on:N/A Indonesia:n ,:N/A considering:v that:N/A the:N/A vast:a majority:n in:N/A this:N/A Parliament:n have:v endorsed:v the:N/A arms:n embargo:v in:N/A Indonesia:n in:N/A the:N/A past:n ?:N/A 
+Madame:n la:N/A Présidente:n ,:N/A je:n voudrais:v savoir:v si:r cette:N/A semaine:n ,:N/A le:N/A Parlement:n va:v envoyer:v un:N/A message:n clair:a exprimant:v son:N/A mécontentement:n quant:r à:N/A la:N/A décision:n prise:v aujourd'hui:r de:N/A refuser:v de:N/A renouveler:v l':N/A embargo:n sur:N/A les:N/A armes:n à:N/A destination:n de:N/A l':N/A Indonésie:n ,:N/A alors:r que:r par:N/A le:N/A passé:n ,:N/A le:N/A Parlement:n a:N/A souscrit:v à:N/A une:N/A très:r large:a majorité:n à:N/A l':N/A embargo:n sur:N/A les:N/A armes:n à:N/A destination:n de:N/A l':N/A Indonésie:n .:N/A 
+
+Today:n 's:N/A decision:n not:r to:N/A renew:v the:N/A embargo:n is:v extremely:r dangerous:a considering:v the:N/A situation:n there:r .:N/A 
+La:N/A décision:n d':N/A aujourd'hui:r de:N/A ne:r pas:r renouveler:v l':N/A embargo:n est:N/A extrêmement:r dangereuse:a ,:N/A compte:n tenu:v de:N/A la:N/A situation:n sur:N/A place:n .:N/A 
+
+So:r Parliament:n should:N/A send:v a:N/A message:n ,:N/A since:N/A that:N/A is:v the:N/A wish:n of:N/A the:N/A vast:a majority:n .:N/A 
+Le:N/A Parlement:n devrait:v dès:N/A lors:r envoyer:v un:N/A message:n en:N/A ce:N/A sens:n ,:N/A étant:v donné:v qu':r une:N/A grande:a majorité:n des:N/A députés:n le:n souhaite:v .:N/A 
+
+It:N/A is:v irresponsible:a of:N/A EU:n Member:n States:n to:N/A refuse:v to:N/A renew:v the:N/A embargo:n .:N/A 
+En:N/A refusant:v de:N/A prolonger:v l':N/A embargo:n ,:N/A les:N/A États:n membres:a font:v preuve:n d':N/A irresponsabilité:n .:N/A 
+
+As:N/A people:n have:v said:v ,:N/A the:N/A situation:n there:N/A is:v extremely:r volatile:a .:N/A 
+D':N/A aucuns:n l':n ont:N/A dit:v ,:N/A la:N/A situation:n en:N/A Indonésie:n est:N/A extrêmement:r explosive:a .:N/A 
+
+There:N/A is:v ,:N/A in:N/A fact:n ,:N/A a:N/A risk:n of:N/A a:N/A military:a coup:n in:N/A the:N/A future:n .:N/A 
+Il:n y:n a:v en:N/A réalité:n un:N/A risque:n de:N/A coup:n d':N/A État:n .:N/A 
+
+We:N/A do:v not:r know:v what:N/A is:v happening:v .:N/A 
+Nous:n ne:r savons:v pas:r ce:n qui:n se:n passe:v .:N/A 
+
