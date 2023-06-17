@@ -2,7 +2,7 @@
 
 This document describes how to add languages.
 
-If the language you wish to add already exists, please follow [Add language pair](Add_language_pair.md)to describe the relationship between the languages.
+If the language you wish to add already exists, please follow [Add language pair](Add_language_pair.md) to describe the relationship between the languages.
 
 ## Check it works
 
