@@ -1,8 +1,8 @@
 # Add language pair
 
-You can add relations between 2 languages which exit in floats.
+You can add relations between 2 languages which exit.
 
-This document describe the way to add language pair
+This document describe the way to add language pair.
 
 If there isn't language you want to add, please follow [Add language](Add_language.md) to add languages.
 
@@ -13,7 +13,7 @@ Please refer to [How_to_build_and_run_from_source](How_to_build_and_run_from_sou
 ## Add shellscripts for building docker container
 Create an inter-language folder in the shell_scripts directory with the language codes connected, and create install.sh and requirements.txt in it. These will be executed at build time.
 
-If there are libraries that cannot be installed during this language-specific docker build or information that needs to be communicated to the next developer, create a folder in the documens folder with a name that connects the language codes between the languages and create a Readme file there
+If there are libraries that cannot be installed during this language-specific docker build or information that needs to be communicated to the next developer, create a folder in the documens folder with a name that connects the language codes between the languages and create a Readme file there.
 
 ## Add corpus data and relations table
 
