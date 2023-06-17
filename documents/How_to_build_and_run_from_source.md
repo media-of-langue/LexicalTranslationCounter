@@ -51,7 +51,7 @@ See [File Reference](File_reference.md) for file contents.
 - wordlist_{la}_{pos_tag}.csv
 
 Execute count function.
-The results are stored in /root/src/data/input/.
+The results are stored in /root/src/data/output/.
 ```
 cd /root/src/
 python3 count_fuction.py 0 {la1} {la2}
@@ -61,7 +61,7 @@ ex:
 python3 count_fuction.py 0 en fr
 ```
 
-If you are interrupted by an error on the way, run with the first argument being the number of corpora already processed or the value in /root/src/data/output/passed_id.txt plus one.
+If you are interrupted by an error on the way, run with the first argument being the value in /root/src/data/output/passed_id.txt plus one.
 
 ### Check the outputs
 You can upload your relations and check the results by uploading your local data from the side menu of[media of langue](http://media-of-langue.org/)
