@@ -46,7 +46,7 @@ To view Media of Langue, go to http://www.media-of-langue.org.
   - These functions exist for each language, so improving them involves improving the behavior across all the language-pair the language involves. We are willing to use existing tools.
 
 - Review PullRequest
-  - We would appreciate a review of the accuracy of the proposed improvements to "Count function". Since the managers are familiar to few languages, this help would be a great contribution to the evaluation of their accuracy.
+  - We would appreciate a review of the accuracy of the proposed improvements to "Lexical Translation Counter". Since the managers are familiar to few languages, this help would be a great contribution to the evaluation of their accuracy.
 
 - Suggestions for databases
   - You can suggest a more appropriate bilingual corpus for a given language pair, or a more appropriate word list for a given language or part of speech.
