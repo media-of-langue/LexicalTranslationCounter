@@ -37,7 +37,7 @@ docker-compose build --build-arg "LA1=en" --build-arg "LA2=ja" && docker compose
 ### Enter Container
 Enter container.
 ```
-docker-compose exec cnt_func bash
+docker-compose exec ltc bash
 ```
 
 ### Run count_function
