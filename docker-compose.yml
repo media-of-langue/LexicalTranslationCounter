@@ -1,7 +1,8 @@
 version: '3'
 services:
-    cnt_func:
-        container_name: cnt_func
+    lexicaltranslationcounter:
+        image: ltc
+        container_name: ltc
         command:
             - /bin/bash
         build:
