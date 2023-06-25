@@ -25,7 +25,7 @@ git clone https://github.com/<your-github-account>/LexicalTranslationCounter.git
 Once you have the project locally, you can make changes. Here's how:
 
 1. Navigate to the local clone of your forked repository.
-2. Create a new branch for your changes with the command `git checkout -b <branch-name>`.
+2. Create a new branch for your changes with the command `git checkout -b <branch-name>`. (feature/(ハイフン区切り文章)_#issue番号 (e.g. feature/fix-corpus_#3))
 3. Make your changes in this branch.
 4. When you're ready, commit your changes with the command `git commit -m "<commit message>"`.
 
