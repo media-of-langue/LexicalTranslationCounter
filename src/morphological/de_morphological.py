@@ -1,5 +1,7 @@
 import spacy
+
 nlp = spacy.load("de_dep_news_trf")
+
 
 def de_morphological(sentence):
     doc = nlp(sentence)
@@ -23,6 +25,17 @@ def de_morphological(sentence):
             mrph_append("v")
         else:
             mrph_append("")
+    return tokenized, mrph
+
+
+def de_morphological_batch(sentences):
+    tokenized = []
+    mrph = []
+    for sentence in sentences:
+        tokenized_sentence, mrph_sentence = de_morphological(sentence)
+        tokenized.append(tokenized_sentence)
+        mrph.append(mrph_sentence)
+
     return tokenized, mrph
 
 
