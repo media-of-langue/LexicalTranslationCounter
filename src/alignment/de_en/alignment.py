@@ -94,6 +94,7 @@ def awesome_alignment_postprocessing(
     pos_src,
     pos_trg,
     sent_src,
+    sent_tgt,
 ):
     align_subwords = torch.nonzero(softmax_inter, as_tuple=False)
     index_pair_list = []

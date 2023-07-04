@@ -264,7 +264,7 @@ try:
                         output_corpus_row_num,
                     )
 
-        if i % (batch_size * 1) == 0:
+        if (i // batch_size) % 1000 == 0:
             for pos_tag in part_of_speach_tag_rev.values():
                 with open(
                     f"./data/output/relations_{langs}_{pos_tag}_totyu.csv", "w"
