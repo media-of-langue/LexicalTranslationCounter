@@ -24,3 +24,5 @@ services:
             - TERM=${TERM}
         extra_hosts:
             - "host.docker.internal:host-gateway"
+        volumes:
+            - ./src/data/output/:/root/src/data/output/
