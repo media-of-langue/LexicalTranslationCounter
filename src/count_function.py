@@ -36,8 +36,8 @@ class CsvRowReader:
             line = f.readline()
             if line == "":
                 break
-            if len(self.offset_list) >= 200:
-                break
+            # if len(self.offset_list) >= 201:
+            #     break
         self.offset_list.pop()  # remove offset at end of file
         self.num_rows = len(self.offset_list)
 
@@ -135,7 +135,7 @@ if start_id != 0:
                     rows[5],
                     rows[6],
                 ]
-                if max_id > int(rows[0]):
+                if max_id < int(rows[0]):
                     max_id = int(rows[0])
             relations_id[pos_tag] = max_id + 1
     output_corpus_row_num = len(
@@ -234,6 +234,7 @@ def count_function_batch(
 
 try:
     batch_size = 10
+    totyu_interval = 1000
 
     for i in range(start_id, input_reader.num_rows, batch_size):
         corpus_rows = []
@@ -264,7 +265,7 @@ try:
                         output_corpus_row_num,
                     )
 
-        if (i // batch_size) % 1000 == 0:
+        if (i // batch_size) % totyu_interval == totyu_interval - 1:
             for pos_tag in part_of_speach_tag_rev.values():
                 with open(
                     f"./data/output/relations_{langs}_{pos_tag}_totyu.csv", "w"
@@ -284,7 +285,7 @@ try:
                             ]
                         )
             with open(f"./data/output/passed_id.txt", "w") as f:
-                f.write(str(i))
+                f.write(str(i + batch_size - 1))
 except Exception as e:
     print(traceback.format_exc())
 finally:
