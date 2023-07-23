@@ -116,7 +116,7 @@ if start_id != 0:
                     rows[5],
                     rows[6],
                 ]
-                if max_id > int(rows[0]):
+                if max_id < int(rows[0]):
                     max_id = int(rows[0])
             relations_id[pos_tag] = max_id + 1
     output_corpus_row_num = len([None for l in open(f"./data/output/corpus_{langs}.csv", "r")])
