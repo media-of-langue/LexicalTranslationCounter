@@ -24,9 +24,7 @@ def fr_normalizer(word, pos_tag, wordlist, test=False):
     if word in except_dict:
         word_normalized = except_dict[word]
     else:
-        print(pos_tag_rev[pos_tag])
         word_normalized = lemmatizer.lemmatize(word, pos_tag)
-        print(word_normalized)
     if test:
         return word_normalized
     tmp_key = "fr_" + pos_tag_rev[pos_tag]

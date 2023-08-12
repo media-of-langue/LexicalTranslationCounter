@@ -148,9 +148,6 @@ def ja_normalizer(word, pos_tag, wordlist, test=False):
             ):
                 id = max(wordlist[tmp_key].values()) + 1
                 wordlist[tmp_key][word_normalized] = id
-                print("add word list")
-                print(word_normalized)
-                print(id)
             else:
                 id = None
         else:

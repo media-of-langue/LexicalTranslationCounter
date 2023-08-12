@@ -44,7 +44,7 @@ class CsvRowReader:
         return next(self.reader)
 
 
-input_reader = CsvRowReader(f"./data/input/corpus_{langs}.csv")
+input_reader = CsvRowReader(f"./data/input/corpus_{langs}_test.csv")
 
 # check if output directory exists
 if not os.path.isdir("./data/output"):
@@ -87,7 +87,6 @@ for pos_tag in part_of_speach_tag_rev.values():
             flag_la2 = True
             max_id_la2=max_id_la2 + 1
             wordlists_add[la2 + "_" + pos_tag][normalizer_la2(key,part_of_speach_tag_code[pos_tag],"",test=True)] = max_id_la2
-    print("wordlist_add",wordlists_add)
     wordlists[la1 + "_" + pos_tag].update(wordlists_add[la1 + "_" + pos_tag])
     wordlists[la2 + "_" + pos_tag].update(wordlists_add[la2 + "_" + pos_tag])
     if flag_la1:
@@ -116,9 +115,10 @@ if start_id != 0:
                     rows[5],
                     rows[6],
                 ]
-                if max_id > int(rows[0]):
+                if max_id < int(rows[0]):
                     max_id = int(rows[0])
             relations_id[pos_tag] = max_id + 1
+    print(relations_id)
     output_corpus_row_num = len([None for l in open(f"./data/output/corpus_{langs}.csv", "r")])
 else:
     output_file = open(f"./data/output/corpus_{langs}.csv", "w")
@@ -169,7 +169,7 @@ def count_function(i, corpus_row, relations, relations_id, wordlists,output_corp
 try:
     for i in range(start_id, input_reader.num_rows):
         count_function(i,input_reader.read_row(i),relations,relations_id,wordlists,output_corpus_row_num)
-        if i % 100000 == 0:
+        if i % 5 == 0:
             for pos_tag in part_of_speach_tag_rev.values():
                 with open(f'./data/output/relations_{langs}_{pos_tag}_totyu.csv', 'w') as f:
                     writer = csv.writer(f)
