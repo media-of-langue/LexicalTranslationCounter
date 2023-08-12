@@ -12,13 +12,13 @@ def ko_morphological(sentence):
     for token in doc:
         tokenized_append(token[0])
         tag = token[1]
-        if tag in ["VA"]:
+        if tag in ["VA","XSA"]:
             mrph_append("a")
-        elif tag in ["NNG"]:
+        elif tag in ["NNG","NNP","XSN","NF"]:
             mrph_append("n")
-        elif tag in ["MAG", "MAC"]:
+        elif tag in ["MAG", "MAC","MAJ"]:
             mrph_append("r")
-        elif tag in ["VV", "VCP", "VCN"]:
+        elif tag in ["VV", "VCP", "VCN","XSV"]:
             mrph_append("v")
         else:
             mrph_append("")

@@ -1,1096 +1,500 @@
 sentece_la1:I am also very grateful for SuSE (a major Linux distributor) in distributing their Linux CD to me, because I am a developer/maintainer. LF: Will you stop maintaining xlock soon ?
 sentece_la2: 저는 SuSe(리눅스 배포사중의 하나)의 리눅스 CD를 저에게 준 것에 대해 감사히 여기고 있습니다. 저는 개발자이자 관리자이니까요. LF: 조만간에 xlock을 관리하는 것을 그만두실건가요
-old align
-<<<<<<< HEAD
-very grateful - 대해 감사히  SuSE - SuSe  Linux - 리눅스  distributor - 배포사중의  distributing - 여기고  xlock - xlock을  
-=======
-
 new align
 distributing stop - 그만두 시  soon - 조만간 을  
->>>>>>> main
 
 sentece_la1:Compare View We have 2 hostels in Detroit with an average rating of 9.0 based on 169 reviews 2 of 2 properties available in Detroit
 sentece_la2: 보기 We have 2 호스텔 in Detroit 169 후기를 기반으로 한 9.0 의 평균 평점 Detroit에 있는 숙박시설 총 2곳 중 2 곳에서 예약 가능
-old align
-<<<<<<< HEAD
-hostels - 호스텔 숙박시설  rating reviews - 평점  properties - 2곳 곳에서  
-=======
-
 new align
 rating - 평점  properties - 곳  
->>>>>>> main
 
 sentece_la1:LA5744MP Datasheet(Arkusz danych) 2 Page - Sanyo Semicon Device
 sentece_la2: LA5757TP 데이터시트(Datasheet) 2 Page - Sanyo Semicon Device
-old align
-<<<<<<< HEAD
-LA5744MP - LA5757TP  danych - 데이터시트  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:MC33077D Datasheet(PDF) - ON Semiconductor
 sentece_la2: OP227GY 데이터시트(PDF) - Analog Devices
-old align
-<<<<<<< HEAD
-MC33077D - OP227GY  Datasheet - 데이터시트  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:See the rugged landscape of the iconic Kakadu National Park from the air and on the ground â€“ all inÂ one day .
 sentece_la2: 하루 안에 육지와 상공을 오가며 카카두 국립 공원(Kakadu National Park)의 험준한 경치를 감상하세요.
-old align
-<<<<<<< HEAD
-landscape and - 육지와 경치를  one day - 하루  
-=======
-
 new align
 landscape - 육지  one day - 하루  
->>>>>>> main
 
 sentece_la1:3 years ago 02:28 Xvideos Restaurant , Hungarian , Nude , Public
 sentece_la2: 3 년 전 02:28 Xvideos 레스토랑 , 헝가리인 , 누드 , 공개
-old align
-<<<<<<< HEAD
-years - 년  Xvideos - Xvideos  Restaurant - 레스토랑  Hungarian - 헝가리인  Nude - 누드  Public - 공개  
-=======
-
 new align
 Public - 공개  
->>>>>>> main
 
 sentece_la1:20:1 God spoke all these words, saying,
 sentece_la2: 20:1 하나님이 이 모든 말씀으로 일러 가라사대
-old align
-<<<<<<< HEAD
-God spoke - 하나님이  
-=======
-
 new align
 words - 말씀  
->>>>>>> main
 
 sentece_la1:After Apache has obtained a list of the variants for a given resource, either from a type-map file or from the filenames in the directory, it invokes one of two methods to decide on the 'best' variant to return, if any.
 sentece_la2: 아파치가 type-map 파일이나 디렉토리에 있는 파일명들로 주어진 자원에 대한 변형 목록을 얻게되면 '최적의' 변형을 결정하기위해 두 방법중 하나를 사용한다.
-old align
-<<<<<<< HEAD
-After Apache has - 아파치가  list - 목록을  variants - 변형  invokes decide - 결정하기위해 사용한다  of methods - 방법중  to variant - 변형을  
-=======
-
 new align
 obtained - 얻  list - 목록  invokes - 위하 사용  methods - 방법  variant - 변형  
->>>>>>> main
 
 sentece_la1:3 years ago 06:00 Pornicom nurse sperm
 sentece_la2: 3 년 전 06:00 Pornicom 간호사 정자
-old align
-<<<<<<< HEAD
-years - 년  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Drury Inn & Suites Joplin 3601 Rangeline Road, Joplin, United States, 64804, show map
 sentece_la2: Drury Inn & Suites Joplin 3601 Rangeline Road, 조플린, 미국, 64804, 지도 보기
-old align
-<<<<<<< HEAD
-States - 미국  
-=======
-
 new align
 show map - 지도 보 기  
->>>>>>> main
 
 sentece_la1:TOEFL® iBT complete We help you obtain the highest possible score through intensive courses designed for your needs.
 sentece_la2: 우리는 학생의 필요에 맞춘 집중 코스를 통해 가능한 최고의 점수를 얻을 수 있도록 도와줍니다.
-old align
-<<<<<<< HEAD
-obtain - 얻을  score - 점수를  courses - 학생의  
-=======
-
 new align
 TOEFL® iBT help - 는 코스  obtain - 얻  score - 점수  courses - 학생  needs - 필요  
->>>>>>> main
 
 sentece_la1:Hot Black Gays In the Gym
 sentece_la2: 체육관에서 뜨거운 검정 게이
-old align
-<<<<<<< HEAD
-Black - 검정  Gays Gym - 체육관에서 게이  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Noam Brand | June 21, 2018 Verified Download (What's this?)
 sentece_la2: Noam Brand | 6월 21, 2018 다운로드 확인 (이것은 무엇입니까?)
-old align
-<<<<<<< HEAD
-| - |  June - 6월  Verified - 다운로드  Download - 확인  's - 무엇입니까  
-=======
-
 new align
 Download - 확인  
->>>>>>> main
 
 sentece_la1:2 years ago 03:57 BravoTube big tits , cougar , outdoor , shower
 sentece_la2: 2 년 전 03:57 BravoTube 큰가슴 , 영계 좋아하는 아줌마 , 야외 , 샤워
-old align
-<<<<<<< HEAD
-years - 년  big tits cougar - 큰가슴 아줌마 샤워  outdoor shower - 야외  
-=======
-
 new align
 big tits cougar - 크 가슴 아줌마  outdoor shower - 야외  
->>>>>>> main
 
 sentece_la1:1 Taull Hostels, 1 available
 sentece_la2: 1 Taull 호스텔, 1 예약 가능
-old align
-<<<<<<< HEAD
-Taull - Taull  Hostels - 호스텔  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:The Central Bank Counterfeit Deterrence Group (CBCDG) is a group of 32 central banks and note printing authorities organized at the request of the Governors of the G10 central banks.
 sentece_la2: XPF CBCDG 소개 중앙은행위조방지그룹(CBCDG)는 G10 중앙은행 총재들의 요청으로 32개의 중앙은행 및 화폐 발행 기관이 조직한 단체이다.
-old align
-<<<<<<< HEAD
-Central Bank Counterfeit Deterrence Group - 중앙은행위조방지그룹  central banks - 중앙은행  authorities - 기관이  organized - 조직한  Governors - 총재들의  G10 - G10  
-=======
-
 new align
 Deterrence - 방지  authorities - 기관  request - 요청  Governors - 총재 들  
->>>>>>> main
 
 sentece_la1:2 days ago 10:16 PornHub small tits , heels , nylon , fetish , orgasm , british , brunette , brunette fingering , brook logan solo , masturbation orgasm
 sentece_la2: 2 일 전 10:16 PornHub 절벽 가슴 , 하이힐 , 나일론 , 페티쉬 , 오르가즘 , 영국편 , 브루넷
-old align
-<<<<<<< HEAD
-days - 일  tits heels - 가슴  nylon - 나일론  orgasm masturbation - 오르가즘  brook orgasm - 브루넷  solo - 영국편  
-=======
-
 new align
 tits - 가슴  brook masturbation orgasm - 오르 브루넷  
->>>>>>> main
 
 sentece_la1:9:26 Nevertheless, they were disobedient, and rebelled against thee, and cast thy law behind their backs, and slew thy prophets who testified against them to turn them to thee, and they wrought great provocations.
 sentece_la2: 9:26 저희가 오히려 순종치 아니하고 주를 거역하며 주의 율법을 등 뒤에 두고 주께로 돌아오기를 권면하는 선지자들을 죽여 크게 설만하게 행하였나이다 9:26 然而他們不順從、竟背叛你、將你的律法、丟在背後、殺害那勸他們歸向你的眾先知、大大惹動你的怒氣。
-old align
-<<<<<<< HEAD
-Nevertheless , they , against thy law backs , slew thy prophets who against them turn to , wrought provocations - 선지자들을 然而他們不順從、竟背叛你、將你的律法、丟在背後、殺害那勸他們歸向你的眾先知、大大惹動你的怒氣  thee - 행하였나이다  
-=======
-
 new align
 disobedient rebelled - 오히려 거역 돌아오  disobedient rebelled - 오히려 거역 돌아오  
->>>>>>> main
 
 sentece_la1:Loading Web Results....
 sentece_la2: 코코넛,팜...
-old align
-<<<<<<< HEAD
-Loading Web - 코코넛 ,  Results - 팜  
-=======
-
 new align
 Loading Web Results - 코코넛 , 파  
->>>>>>> main
 
 sentece_la1:Â KD,Normal or mail order package
 sentece_la2: KD, 보통 또는 우편 주문 패키지
-old align
-<<<<<<< HEAD
-Normal - 보통  mail order - 우편 주문  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:The prophet Isaiah said,
 sentece_la2: 이사야 선지가가 말씀하기를,
-old align
-<<<<<<< HEAD
-Isaiah - 선지가가  
-=======
-
 new align
 prophet Isaiah - 선지 말씀  
->>>>>>> main
 
 sentece_la1:Your ability to foresee and respond to the dynamic preferences of targeted customers is key to remaining and succeeding in business.
 sentece_la2: 대상 고객의 동적 환경에 예측하고 대응하는 능력은 남아있는 비즈니스에 성공의 열쇠입니다.
-old align
-<<<<<<< HEAD
-ability is - 능력은  respond - 대응하는  customers - 고객의  business - 비즈니스에  
-=======
-
 new align
 ability succeeding business - 능력 비즈니스 성공  preferences - 환경  customers - 고객  is key - 의 열쇠 이  remaining - 남  
->>>>>>> main
 
 sentece_la1:TL072MFKB Datasheet(Hoja de datos) 4 Page - Texas Instruments
 sentece_la2: HTML-10pages TL074BCDRE4 데이터시트(Datasheet) 4 Page - Texas Instruments
-old align
-<<<<<<< HEAD
-TL072MFKB - TL074BCDRE4  Hoja datos - 데이터시트  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Exclusive 9.6 58 Shunde Marriott Hotel Foshan Midea Plaza 388 Nanguo Road East, Foshan, China, 528300, show map
 sentece_la2: 선더 메리어트 호텔 포산 시 Midea Plaza 388 Nanguo Road East, 포산 시, 중국, 528300, 지도 보기
-old align
-<<<<<<< HEAD
-Shunde - 선더  Hotel - 호텔  Foshan - 포산 시  Foshan - 포산  China - 중국  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:But I can tell you this much, Kyrell. It's easier than standing by and doing nothing. ", 그래도 이것만은 장담합니다 카이렐 씨
 sentece_la2: 아무것도 안하며 방관하는 것보단 쉽습니다. ""
-old align
-<<<<<<< HEAD
-easier - 쉽습니다  
-=======
-
 new align
 easier - 쉽  그래도 이것만은 - 아무것 도 보다  장담합니다 - 방관 습니다  
->>>>>>> main
 
 sentece_la1:Best Wicklow hostels - showing all hostels in Wicklow. Book a cheap hostel in Wicklow & pay no booking fees. We have a hostel for you in all the major areas of Wicklow - downtown Wicklow hostel, city centre hostels Wicklow & airport hostels.
 sentece_la2: 최고의 Wicklow 호스텔 - Wicklow의 모든 호스텔 보여주기. Wicklow의 저렴한 호스텔을 예약하고 예약 수수료 면제 혜택을 누리세요. Wicklow 모든 주요 지역의 호스텔이 있습니다 - Wicklow 다운타운 호스텔, Wicklow 시티 센터 호스텔 및 공항 호스텔.
-old align
-<<<<<<< HEAD
-hostels - 호스텔  hostels - 호스텔  a in Wicklow - Wicklow의  booking - 예약 면제  fees - 혜택을  areas - 지역의  Wicklow - Wicklow  hostel - 호스텔  centre - 센터  hostels - 호스텔  airport - 공항  
-=======
-
 new align
 booking - 예약 수수료 면제  fees - 혜택  have you - 있 습니다  areas - 지역  
->>>>>>> main
 
 sentece_la1:ADPDC2A24AC Datasheet (PDF) - ITT Industries
 sentece_la2: ADPDF5BB4AC 데이터시트(Datasheet) 2 Page - ITT Industries
-old align
-<<<<<<< HEAD
-ADPDC2A24AC - ADPDF5BB4AC  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Playing at the most mobile betting sites you can communicate with other players across the world while you enjoy playing with your smartphone or mobile devices.
 sentece_la2: 귀하의 스마트 폰이나 모바일 장치와 함께 즐길 동안 전세계 다른 플레이어와 통신 할 수 있습니다 대부분의 모바일 베팅 사이트에서 재생.
-old align
-<<<<<<< HEAD
-other - 다른  players - 플레이어와  across world - 전세계  playing - 즐길  
-=======
-
 new align
 Playing at playing - 귀하 즐기  betting - 베팅  sites - 폰 사이트  
->>>>>>> main
 
 sentece_la1:1 year ago 11:26 YouPorn big cock
 sentece_la2: 1 년 전 11:26 YouPorn 자지 거유
-old align
-<<<<<<< HEAD
-year - 년  YouPorn - YouPorn  cock - 거유  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:F Ostseehotel Dierhagen @ 0.5 miles 3* Hotel
 sentece_la2: F Ostseehotel Dierhagen @ 0,8 km 3* Hotel
-old align
-
-<<<<<<< HEAD
-=======
 new align
 
->>>>>>> main
 
 sentece_la1:Lenovo XClarity Integrator for VMware vCenter - VMware Ready Certified Watch Now
 sentece_la2: VMware vCenter용 Lenovo XClarity Integrator - VMware Ready Certified
-old align
-<<<<<<< HEAD
-Lenovo - Lenovo  XClarity - XClarity  VMware - VMware  VMware - VMware  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:03:58 MILFHUNTER enjoys hot sexy xmas elf dyke action
 sentece_la2: 03:58 Milfhunter enjoys 뜨거운 섹시한 크리스마스 elf 레즈비언 활동
-old align
-<<<<<<< HEAD
-hot - 뜨거운  action - 활동  
-=======
-
 new align
 hot - 뜨겁  action - 활동  
->>>>>>> main
 
 sentece_la1:Fortuna, MO
 sentece_la2: Fortuna , CA 95540 미국
-old align
-
-<<<<<<< HEAD
-=======
 new align
 
->>>>>>> main
 
 sentece_la1:Eastern European (7)
 sentece_la2: 동유럽 요리 (7)
-old align
-<<<<<<< HEAD
-Eastern European - 동유럽  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:1289 Madison Ave, New York, United States 0.7 km to Willard Gallery (Show map ) The central Madison Avenue - 2 Bedroom Penthouse apartment is set in Upper East Side district in proximity to bars and restaurants.
 sentece_la2: 1289 Madison Ave, 뉴욕, 미국 Willard Gallery 까지 0.7 km (지도 보기 ) Madison Avenue - 2 Bedroom Penthouse은 뉴욕에서 가격이 알맞은 숙박 시설을 제공합니다.
-old align
-<<<<<<< HEAD
-New York - 뉴욕  States - 미국  Gallery - Gallery  in Upper in - 뉴욕에서  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:1 month ago 12:47 xHamster jerking , cum in mouth , dirty talk , caught , girlfriend , 18 , catch , bbw jerk me off , xhamster again , amateur girlfriend blowjob HD
 sentece_la2: 1 개월 전 12:47 xHamster 딸딸이 , 정액먹기 , 들킨 , 여친 , 18 , 병신 HD 인기있는 최근 전체 장편
-old align
-<<<<<<< HEAD
-month - 개월  cum - 정액먹기  girlfriend - 여친  
-=======
-
 new align
 cum mouth - 정액  jerk - 인기  amateur blowjob - 병신 전체  
->>>>>>> main
 
 sentece_la1:Offering accommodation in a 10-story building, Ginza Nikko Hotel has been hosting... More...
 sentece_la2: 10 층이 있는 제국 건물에 숙박 시설을 제공하며 호텔은... 더 많이...
-old align
-<<<<<<< HEAD
-accommodation - 시설을  in building - 건물에  Ginza Nikko - 제국  Hotel hosting - 호텔은  
-=======
-
 new align
 Offering accommodation - 숙박 시설 제공  building - 건물  Hotel - 호텔  
->>>>>>> main
 
 sentece_la1:Book Now From US$ 36 Hotel Evsen Hocapasa Mah.
 sentece_la2: 지금 예약하세요 부터 US$ 36
-old align
-<<<<<<< HEAD
-Book From Evsen - 예약하세요  US $ - US$  Hocapasa - 부터  
-=======
-
 new align
 Book Now Evsen Hocapasa - 지금 예약 하 어요  Book Now Evsen Hocapasa - 지금 예약 하 어요  
->>>>>>> main
 
 sentece_la1:Fully loaded with Wi-Fi, Bluetooth, AirPlay and Spotify Connect
 sentece_la2: 또한, 4K 울트라 HD원 와이파이, 블루투스를 지원하고 멀티존 기능은 4개의 존을 제공합니다.
-old align
-<<<<<<< HEAD
-Wi-Fi AirPlay Spotify - 울트라 와이파이 블루투스를  Connect - 기능은  
-=======
-
 new align
 loaded Wi-Fi AirPlay Spotify - 4K HD 지원  Connect - 기능  
->>>>>>> main
 
 sentece_la1:8:6 Set me as a seal upon thine heart, as a seal upon thine arm: for love is strong as death; jealousy is cruel as the grave: the coals thereof are coals of fire, which hath a most vehement flame.
 sentece_la2: 8:6 ○ 너는 나를 인 같이 마음에 품고 도장 같이 팔에 두라 사랑은 죽음 같이 강하고 투기는 음부 같이 잔혹하며 불 같이 일어나니 그 기세가 여호와의 불과 같으니라
-old align
-<<<<<<< HEAD
-love is - 사랑은  death - 죽음  grave - 음부  coals - 불  
-=======
-
 new align
 heart - 마음  arm - 팔  strong grave - 강하  death - 죽음  jealousy - 도장 잔혹  coals fire - 불 일어나 여호와  flame - 기세  
->>>>>>> main
 
 sentece_la1:3 years ago 07:30 Your Lust Portuguese , Fucking , Slut
 sentece_la2: 3 년 전 07:30 Your Lust 포르투갈인 , 성교 , 색녀
-old align
-<<<<<<< HEAD
-years - 년  Fucking - 성교  Slut - 색녀  
-=======
-
 new align
 Slut - 색 녀  
->>>>>>> main
 
 sentece_la1:Content on this site is licensed under a Creative Commons Attribution 3.0 License.
 sentece_la2: 이 사이트에 내용은 아래에 라이센스입니다 크리에이 티브 커먼즈 저작자 3.0 라이센스.
-old align
-<<<<<<< HEAD
-Content is - 내용은  Attribution - 커먼즈 저작자  
-=======
-
 new align
 Content - 내용  site - 사이트  
->>>>>>> main
 
 sentece_la1:2 years ago 27:28 JizzBunker party Pirate booty
 sentece_la2: 2 년 전 27:28 JizzBunker 파티
-old align
-<<<<<<< HEAD
-years - 년  party booty - 파티  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:perpetual creation In the beginning, God created the heaven and the earth.
 sentece_la2: 그들의 여자들도 천사들을 유인하였으므로 마녀가 될 것이다.
-old align
-<<<<<<< HEAD
-heaven and earth - 천사들을 마녀가  
-=======
-
 new align
 perpetual creation , created the the - 그 의 여자 들 도 유인 되  perpetual creation , created the the - 그 의 여자 들 도 유인 되  
->>>>>>> main
 
 sentece_la1:Pawel Orzechowski | July 26, 2018 Verified Download (What's this?)
 sentece_la2: Pawel Orzechowski | 7월 26, 2018 다운로드 확인 (이것은 무엇입니까?)
-old align
-<<<<<<< HEAD
-Orzechowski - Orzechowski  | - |  July - 7월  Verified - 다운로드  Download - 확인  's - 무엇입니까  
-=======
-
 new align
 Download - 확인  
->>>>>>> main
 
 sentece_la1:Steam Community :: FranLegon :: Screenshots Login Store Featured Explore Curators Wishlist News Stats
 sentece_la2: Steam 커뮤니티 :: 그룹 :: Reflect Power Respect 로그인 상점 특집 탐색 큐레이터 찜 목록 뉴스 통계
-old align
-<<<<<<< HEAD
-Community - 커뮤니티  FranLegon - 그룹  Featured - 특집  Explore - Respect  News - 뉴스  Stats - 통계  
-=======
-
 new align
 FranLegon - 그룹  Featured - 특집  Curators - 큐레이터  Wishlist - 찜  Stats - 통계  
->>>>>>> main
 
 sentece_la1:In 1968 he became a university professor at Southern Illinois University and retained this post until he retired in 1975.
 sentece_la2: 그는 1968 년 남부 일리노이 대학에서 대학 교수가 된 그는 1975 년 은퇴하기 전까지 해당 게시물을 유지했다.
-old align
-<<<<<<< HEAD
-university - 대학  professor - 교수가  Southern - 남부  retained - 유지했다  retired in - 은퇴하기  
-=======
-
 new align
 university - 대학  professor - 교수  University - 대학  post - 게시물  
->>>>>>> main
 
 sentece_la1:Distributor Manufacturer P01-06-G-2B Datasheet, PDF
 sentece_la2: 제조업체 P01-12-E-2B 데이터시트, Datasheet, PDF
-old align
-<<<<<<< HEAD
-Distributor Manufacturer - 제조업체  P01-06-G-2B - P01 - 12-E-2B  Datasheet - Datasheet  
-=======
-
 new align
 Distributor - 제조  Manufacturer - 업체  
->>>>>>> main
 
 sentece_la1:Search for the cheapest hotel deal for City Lodge Hotel Bloemfontein in Bloemfontein.
 sentece_la2: 블룸폰테인 시티 로지 호텔 블룸폰테인의 저가 상품을 만나보세요.
-old align
-<<<<<<< HEAD
-hotel Bloemfontein - 블룸폰테인  City - 시티  Lodge Hotel - 로지 호텔  Bloemfontein - 블룸폰테인의  
-=======
-
 new align
 hotel City Bloemfontein Bloemfontein - 블룸폰테인 시티 상품  
->>>>>>> main
 
 sentece_la1:Provided by SEMBO All photos (33)
 sentece_la2: 와이너리 사진 SEMBO 제공 모든 사진 (33)
-old align
-<<<<<<< HEAD
-=======
-
 new align
->>>>>>> main
 photos - 사진  
 
 sentece_la1:8-BIT Datasheet, PDF - Zarlink Semiconductor Inc
 sentece_la2: 9-BIT 데이터시트, Datasheet - STMicroelectronics
-old align
-<<<<<<< HEAD
-Datasheet - Datasheet  Zarlink Semiconductor Inc - STMicroelectronics  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:NB, NBG, NBE, NBGE end-suction close-coupled pumps
 sentece_la2: NB, NBG, NBE, NBGE 제품 검색
-old align
-<<<<<<< HEAD
-end-suction - 제품  pumps - 검색  
-=======
-
 new align
 end-suction - 제품  
->>>>>>> main
 
 sentece_la1:With a stay at Devin Hotel, you'll be centrally located in Bratislava, steps from Slovak National Gallery and within a 5-minute walk of New Bridge (Novy Most).
 sentece_la2: 숙박 시설 위치 브라티슬라바 중심에 자리한 데빈 호텔의 경우 슬로바키아 국립 미술관에서 가까우며 걸어서 5분 이내 거리에 노비모스트(새 다리) 등이 있습니다.
-old align
-<<<<<<< HEAD
-Devin - 데빈  Hotel - 호텔의  centrally - 중심에  Bratislava - 브라티슬라바  Slovak - 슬로바키아  National - 국립  Most - 다리  
-=======
-
 new align
 Hotel - 호텔  centrally in steps - 중심 자리  walk of - 이내 거리 에  Bridge Most - 다리  
->>>>>>> main
 
 sentece_la1:Filipina SW $ 15 totalt00:07:42 Tags: Asiater , Skjult kamera , Filippinsk porno , Interracial sex
 sentece_la2: 필리핀 SW 15달러 총00:07:42 태그: 아시아 , 몰래 카메라 , 필리핀 포르노 , 인종 섹스
-old align
-<<<<<<< HEAD
-Filipina - 필리핀  totalt00:07:42 - 총00:07:42  Tags - 태그  Asiater - 아시아  kamera - 카메라  Filippinsk - 필리핀  porno - 포르노  Interracial - 인종  sex - 섹스  
-=======
-
 new align
 kamera - 카메라  porno - 포르노  
->>>>>>> main
 
 sentece_la1:19 But I saw none of the other apostles except James, the Lord's brother.
 sentece_la2: 19 주의 형제 야고보 외에 다른 사도들을 보지 못하였노라
-old align
-<<<<<<< HEAD
-saw 's - 보지  other - 다른  apostles - 사도들을  James - 야고보  brother - 형제  
-=======
-
 new align
 saw - 보  apostles brother - 형제 사도  
->>>>>>> main
 
 sentece_la1:amateur public 08:10 Real arab jalan perek captured on video
 sentece_la2: 아마추어 공공의 08:10 현실 아라비아 사람 거리 매춘부 captured 에 비디오
-old align
-<<<<<<< HEAD
-public arab - 공공의 아라비아 사람  jalan - 현실  perek - 거리  
-=======
-
 new align
 public arab - 공공 의 사람  Real jalan - 현실 매춘부  perek - 거리  
->>>>>>> main
 
 sentece_la1:1 year ago 06:09 xHamster aunt big tits fat granny mature HD
 sentece_la2: 1 년 전 06:09 xHamster 아줌마 큰가슴 뚱보 할머니 나이든여자 HD
-old align
-<<<<<<< HEAD
-year - 년  aunt - 아줌마  big tits - 큰가슴  
-=======
-
 new align
 aunt big tits fat - 아줌마 크 가슴 뚱보  aunt big tits fat - 아줌마 크 가슴 뚱보  
->>>>>>> main
 
 sentece_la1:Pancreatic function tests
 sentece_la2: 췌장 기능 검사
-old align
-<<<<<<< HEAD
-function - 기능  tests - 검사  
-=======
-
 new align
 Pancreatic function - 췌장 기능  tests - 검사  
->>>>>>> main
 
 sentece_la1:Thousands of cities and provinces have established local NWFZs, and some states (New Zealand) have written their non-nuclear status into their legal system or (The Philippines) into their constitution.
 sentece_la2: 한편 수천개의 도시와 지자체들도 지방 비핵지대를 선포했고, 뉴질랜드 등 일부 국가들은 국내법으로 비핵국가 지위를 명시했으며, 필리핀 등은 헌법에 이를 명시하기도 했다.
-old align
-<<<<<<< HEAD
-states have - 국가들은  New Zealand - 뉴질랜드  status - 지위를  Philippines - 필리핀  into constitution - 헌법에  
-=======
-
 new align
 cities - 도시  NWFZs - 지자체 비 지대  states - 국가  status - 국가 지위  their legal system constitution - 국내법 헌법  
->>>>>>> main
 
 sentece_la1:36:10 These are the names of Esau's sons; Eliphaz the son of Adah the wife of Esau, Reuel the son of Bashemath the wife of Esau.
 sentece_la2: 36:10 그 子孫의 이름은 이러하니라 에서의 아내 아다의 아들은 엘리바스요 에서의 아내 바스맛의 아들은 르우엘이며
-old align
-<<<<<<< HEAD
-names - 이름은  Eliphaz - 이러하니라 엘리바스요  son - 아들은  son - 아들은  
-=======
-
 new align
 names - 이름  son - 아들  of wife - 아내  son - 아들  Bashemath Esau - 바스 맛 우  
->>>>>>> main
 
 sentece_la1:The Website includes an online marketplace for uploading and downloading Works.
 sentece_la2: 웹사이트에는 저작물을 업로드/다운로드하는 온라인 시장이 포함되어 있습니다.
-old align
-<<<<<<< HEAD
-marketplace - 시장이  
-=======
-
 new align
 Website online - 웹사이트 온라인  marketplace - 시장  
->>>>>>> main
 
 sentece_la1:The default language of the website is in English.
 sentece_la2: 웹 사이트의 기본 언어는 영어입니다.
-old align
-<<<<<<< HEAD
-The website - 사이트의  default - 기본  language is - 언어는  
-=======
-
 new align
 default - 기본  language - 언어  website - 웹  
->>>>>>> main
 
 sentece_la1:What is included in this trial version of Acrobat Pro DC?
 sentece_la2: Acrobat Pro DC의 체험판에는 무엇이 포함되어 있습니까?
-old align
-<<<<<<< HEAD
-included - 포함되어  in trial version - 체험판에는  
-=======
-
 new align
 trial - 체험  version - 판  
->>>>>>> main
 
 sentece_la1:LM158AFK Datasheet(Fiches technique) 2 Page - Texas Instruments
 sentece_la2: HTML-1page HTML-10pages LM311PWG4 데이터시트(Datasheet) 2 Page - Texas Instruments
-old align
-<<<<<<< HEAD
-LM158AFK - LM311PWG4  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Â Shandong Luteng Machinery Co., Ltd. is a professional Construction machinery, road machinery, earthwork machinery, engineering machinery manufacturer in China, which was established in 2002 and located in the hometown of Confucius and Mencius -Jining City, Shandong Province.It is one of the machinery manufacturing bases of China .
 sentece_la2: 4 5 산동 Luteng 기계 유한 공사는 2002 년에 설립되었으며 공자와 맹자 - 제녕시, 산 동성의 고향에 위치한 전문 건설 기계, 도로 기계, 토공 기계, 중국의 기계 제조 업체입니다.
-old align
-<<<<<<< HEAD
-Luteng - Luteng  Machinery - 기계  Co. Ltd. is - 공사는  a located - 위치한  Construction machinery - 건설 기계  road - 도로  earthwork - 토공  machinery - 기계  Mencius - 맹자  -Jining City - - 제녕시  Shandong - 산  the China - 중국의  machinery - 기계  manufacturing - 제조  
-=======
-
 new align
 Machinery - 기계  Co. Ltd. - 공사  Construction - 건설  machinery - 기계  machinery machinery - 기계 기계  earthwork - 토공  hometown - 고향  Confucius City Shandong Province.It - 공자 제녕시, 동성  machinery - 기계  manufacturing - 제조  bases - 업체  
->>>>>>> main
 
 sentece_la1:Find out more about the vehicles of Battlefield V here .
 sentece_la2: 이곳에서 Battlefield V 의 탑승장비 에 관해 더 알아보세요.
-old align
-<<<<<<< HEAD
-Find out - 알아보세요  more - 더  vehicles - 탑승장비  here - 이곳에서  
-=======
-
 new align
 Find out here - 이곳 알아보  more - 더  
->>>>>>> main
 
 sentece_la1:^ The Apollo 8 Command Module" ."
 sentece_la2: 구조된 아폴로 8호의 승무원
-old align
-<<<<<<< HEAD
-Apollo - 아폴로  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:He executed all the priests of the high places who were there, on the altars, and burned men's bones on them; and he returned to Jerusalem.
 sentece_la2: 20 그는 그 곳 산당들의 사제들을 모두 제단 위에서 죽여 사람의 해골과 함께 그 제단 위에서 불사르고는 예루살렘으로 돌아 왔다.
-old align
-<<<<<<< HEAD
-executed and - 죽여  priests - 사제들을  there altars - 곳 위에서  there altars - 곳 위에서  men 's - 사람의  
-=======
-
 new align
 He he returned - 그 는 돌  priests altars bones - 사제 위 해골  places - 곳  burned - 죽이  men - 사람  
->>>>>>> main
 
 sentece_la1:34:24 Thus saith Jehovah: Behold, I will bring evil upon this place, and upon the inhabitants thereof, all the curses that are written in the book which they have read before the king of Judah.
 sentece_la2: 34:24 여호와의 말씀이 내가 이곳과 그 거민에게 재앙을 내리되 곧 유다 왕 앞에서 읽은 책에 기록된 모든 저주대로 하리니
-old align
-<<<<<<< HEAD
-Thus - 곧  Behold - 말씀이  upon inhabitants - 거민에게  this place and - 이곳과  curses - 저주대로  written the - 읽은  king - 왕  Judah - 유다  
-=======
-
 new align
 Thus - 곧  saith Jehovah Behold curses the Judah - 여호와 말씀 유다  written read - 읽 기록  book - 책  king - 왕  
->>>>>>> main
 
 sentece_la1:To rent a car, you must have had a valid driver's license for one year, and be at least 20 years old.
 sentece_la2: 차량을 렌트하기 위해서는 유효기간이 1년 남은 운전면허증을 소지하고 만 20세 이상이어야 합니다.
-old align
-<<<<<<< HEAD
-To car - 차량을  rent - 렌트하기  have - 합니다  driver 's license - 운전면허증을  one year - 1년  20 years - 20세  
-=======
-
 new align
 car - 차량  a 's license - 면허증  
->>>>>>> main
 
 sentece_la1:LM4040AIM3-10.0 データシート(8/31 ページ) NSC | Precision Micropower Shunt Voltage Reference
 sentece_la2: LM4040AIM3-10.0/NOPB 데이터시트(PDF) - Texas Instruments 전자부품 데이터시트 검색엔진
-old align
-<<<<<<< HEAD
-データシート - 데이터시트  Shunt Voltage - 데이터시트 검색엔진  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Asian xXx , Free Lesbian Porn
 sentece_la2: 아시아 XXX , 무료 레즈비언 포르노
-old align
-<<<<<<< HEAD
-Lesbian - 레즈비언  
-=======
-
 new align
 Lesbian Porn - 레즈비언 포르노  
->>>>>>> main
 
 sentece_la1:Al Gore has sufficiently responded to these charges, but the charges themselves seem like grasping at straws for retorts to what has become overwhelming evidence for anthropogenic global warming.
 sentece_la2: 앨 고어는 충분히있다 응답 재판에 있지만, 요금 자체가 anthropogenic 지구 온난화에 대한 압도적인 증거가 된 것과 retorts에 대한 헛소리를 추적한 것 같습니다.
-old align
-<<<<<<< HEAD
-Al - 앨  to charges - 재판에  become - 된  evidence - 증거가  anthropogenic - anthropogenic  
-=======
-
 new align
 sufficiently - 충분히  responded these - 있 응답 있  charges charges - 재판  straws retorts - 요금 retorts  to has - 이 가  become - 되  evidence - 증거  
->>>>>>> main
 
 sentece_la1:MCL 600 VAC & MOL 250 VAC Style Fuses Fast Acting 10x38 Midget Fuses, 600 VAC & 250 VAC Class M SHOP NOW »
 sentece_la2: 신제품 MCL 600 VAC & MOL 250 VAC Style Fuses Fast Acting 10x38 Midget Fuses, 600 VAC & 250 VAC Class M 상세정보를 위해 클릭하세요 »
-old align
-<<<<<<< HEAD
-MOL - MOL  » - »  
-=======
-
 new align
 SHOP - 상세 클릭 시  
->>>>>>> main
 
 sentece_la1:27:10 And gave them for the potter's field, as the Lord appointed me.
 sentece_la2: 27:10 토기장이의 밭 값으로 주었으니 이는 주께서 내게 명하신 바와 같으니라 하였더라
-old align
-<<<<<<< HEAD
-field - 밭  appointed - 명하신  
-=======
-
 new align
 field - 밭  Lord - 주 게  appointed - 명하  
->>>>>>> main
 
 sentece_la1:Re-launch QuickTime and play your video file again
 sentece_la2: QuickTime을 다시 시작하고 비디오 파일을 다시 재생하십시오.
-old align
-<<<<<<< HEAD
-QuickTime - QuickTime을  video - 비디오  again - 다시  
-=======
-
 new align
 file - 파일  again - 다시  
->>>>>>> main
 
 sentece_la1:Certainly you know how to change many Firefox configs / preferrences as you want.So we do not guide you at here.Best regards.
 sentece_la2: 물론 당신은 당신이 원하는대로 많은 파이어 폭스 CONFIGS / preferrences를 변경하는 방법을 알고있다. 우리는 여기에서 당신을 안내가 없습니다.
-old align
-<<<<<<< HEAD
-Certainly - 물론  change - 변경하는  many - 많은  Firefox - 파이어  preferrences - preferrences를  
-=======
-
 new align
 Certainly - 물론  to many - 이 많  
->>>>>>> main
 
 sentece_la1:Via Arnaldo Fusinato 4, Milan, Italy (Show map )
 sentece_la2: Via Arnaldo Fusinato 4, 밀라노, 이탈리아 (지도 보기 )
-old align
-<<<<<<< HEAD
-Milan - 밀라노  Italy - 이탈리아  map - 보기  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Art Nouveau Flowers font
 sentece_la2: Art Nouveau Flowers 글꼴
-old align
-
-<<<<<<< HEAD
-=======
 new align
 
->>>>>>> main
 
 sentece_la1:0.7 km to Merlion Park (Show map )
 sentece_la2: 멀라이언 파크 까지 0.7 km (지도 보기 )
-old align
-<<<<<<< HEAD
-Park - 파크  map - 보기  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Under Nigeria's tariff system, electricity prices are reviewed every five years, in order to make for adjustments and ensure cost recovery for the investors.
 sentece_la2: 나이지리아의 관세 시스템에서, 전기 가격은 매 5 년마다 검토, 순서 조정을하고 투자자를위한 비용 회수를 보장하기 위해.
-old align
-<<<<<<< HEAD
-Nigeria 's - 나이지리아의  tariff - 관세  electricity - 전기  prices are - 가격은  reviewed to - 검토 보장하기  cost - 투자자를위한 비용  recovery - 회수를  
-=======
-
 new align
 system - 시스템  electricity - 전기  prices - 가격  adjustments - 조정  cost - 비용  recovery - 회수  the investors - 투자자  
->>>>>>> main
 
 sentece_la1:Lead the Tendency of Modern Science with Airwheel Electric Self-balancing Scooter
 sentece_la2: Airwheel 전기 스쿠터 자체 균형와 현대 과학의 추세를 리드
-old align
-<<<<<<< HEAD
-Tendency - 추세를  of Science - 과학의  Modern - 현대  Electric - 전기  Self-balancing Scooter - 스쿠터 균형와 리드  
-=======
-
 new align
 Tendency - 추세  Electric - 전기  Self-balancing Scooter - 스쿠터 자체 균형 리드  
->>>>>>> main
 
 sentece_la1:The Great Pyramid of Giza is a huge pyramid built by the Ancient Egyptians.
 sentece_la2: 기자의 대 피라미드 는 이집트 기자에 있는 피라미드 중 하나이다.
-old align
-<<<<<<< HEAD
-Great - 대  Pyramid - 피라미드  Giza Egyptians - 이집트  huge - 있는  pyramid - 피라미드  
-=======
-
 new align
 built - 늘 ㄴ  
->>>>>>> main
 
 sentece_la1:Tell a friend
 sentece_la2: 친구에게 전하기
-old align
-<<<<<<< HEAD
-Tell - 전하기  
-=======
-
 new align
 Tell a - 전하  friend - 친구  
->>>>>>> main
 
 sentece_la1:Von Dyck's character and contribution are summed up in as follows:
 sentece_la2: 폰 Dyck의 성격과 기여에 다음과 같이 요약할 수있습니다 :
-old align
-<<<<<<< HEAD
-Von - 폰  contribution are - 기여에  
-=======
-
 new align
 character - 성격  contribution - 기여  
->>>>>>> main
 
 sentece_la1:Looters were allowed to sack Iraq's national museum and library, as the liberators" looked on impassively."
 sentece_la2: 해방군"이 냉랭하게 바라보는 가운데 약탈자들은 이라크 국립박물관과 도서관을 약탈했다."
-old align
-<<<<<<< HEAD
-Looters liberators - 해방군 약탈자들은  sack - 약탈했다  
-=======
-
 new align
 Looters liberators - 해방군 약탈자들  
->>>>>>> main
 
 sentece_la1:This is one of the most booked hotels in Helsinki over the last 60 days.
 sentece_la2: 지난 60일 동안 헬싱키에서 가장 많이 예약된 호텔입니다.
-old align
-<<<<<<< HEAD
-most - 가장  Helsinki - 헬싱키에서  60 days - 60일  
-=======
-
 new align
 This is - 이  most - 가장  hotels - 호텔  
->>>>>>> main
 
 sentece_la1:The instruments of the compEAct series guarantee fast and simple analysis of compressed and liquefied pressurized gases, e.g. LPG, NPG, and hydrocarbons and of liquids, e.g. naphtha, fuels, aliphatic, cyclic and aromatic hydrocarbons, alcohols or organic acids, with compliance to all relevant standards.
 sentece_la2: LPG 가지는 가압 액화 가스의 자동 주입 정밀도를 위해 최적화되어 있습니다. 응용 compEAct 시리즈의 장비는 모든 관련 표준을 준수하는 LPG, NPG 및 탄화수소 및 액체 나프타, 연료, 지방족, 고리형 및 방향족 탄화수소, 알콜 또는 유기산 같은 압축 및 액화 가압 가스의 빠르고 간단한 분석을 보장합니다.
-old align
-<<<<<<< HEAD
-compEAct - compEAct  analysis - 분석을  hydrocarbons - 탄화수소  fuels - 연료  aliphatic alcohols organic - 지방족 알콜  aromatic acids - 방향족 유기산  hydrocarbons - 탄화수소  standards - 표준을  
-=======
-
 new align
 instruments - 장비  guarantee compliance - 은 보장  fast simple - 정밀도 빠르 간단  analysis - 분석  hydrocarbons aromatic acids - 탄화수소 유기산 액화  fuels alcohols organic - 연료 지방 알콜  hydrocarbons - 탄화수소  standards - 표준  
->>>>>>> main
 
 sentece_la1:Ho Chi Minh : of 24 Hotels available 24 Hotels in Ho Chi Minh, Vietnam
 sentece_la2: 호치민 호텔 호치민 : of 24 호텔 available 24 호치민의 호텔, 베트남
-old align
-<<<<<<< HEAD
-Ho Chi Minh - 호치민 호치민  Hotels - 호텔  Hotels - 호텔  Vietnam - 베트남  
-=======
-
 new align
 Hotels Hotels - 호텔 호텔  
->>>>>>> main
 
 sentece_la1:Interactive Microscopy Class with the AirTeach Software
 sentece_la2: AirTeach 소프트웨어를 이용한 대화형 현미경 수업
-old align
-<<<<<<< HEAD
-Class - 수업  Software - 소프트웨어를  
-=======
-
 new align
 Class - 수업  Software - 소프트웨어  
->>>>>>> main
 
 sentece_la1:Superb 9.0 75 The Sandpiper Guest House Torquay Rowdens Rd, Torquay, United Kingdom, TQ2 5AZ, show map
 sentece_la2: The Sandpiper Guest House Torquay Rowdens Rd, 토키, 영국, TQ2 5AZ, 지도 보기
-old align
-<<<<<<< HEAD
-Rd - Rd  Kingdom - 영국  
-=======
-
 new align
 show - 지도 보  
->>>>>>> main
 
 sentece_la1:Super Hotel Hida Takayama
 sentece_la2: 히다 타카야마 파크 시티 호텔
-old align
-<<<<<<< HEAD
-Super - 시티  Hotel - 호텔  Hida - 히다  Takayama - 타카야마  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Themed Hotels in Munich
 sentece_la2: 뮌헨의 스위트 호텔
-old align
-<<<<<<< HEAD
-Hotels - 호텔  Munich - 뮌헨의  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Grangette Entre Chiens Et Loups Guest House L'Anse-Saint-Jean 190 Chemin Perigny, L'Anse-Saint-Jean, Canada, G0V 1J0, show map
 sentece_la2: Grangette Entre Chiens Et Loups Guest House L'Anse-Saint-Jean 190 Chemin Perigny, L'Anse-Saint-Jean, 캐나다, G0V 1J0, 지도 보기
-old align
-<<<<<<< HEAD
-L'Anse-Saint-Jean - L ' -  Canada - 캐나다  
-=======
-
 new align
 show map - 지도 기  
->>>>>>> main
 
 sentece_la1:Included Memory 8x 16GB DDR4 2666MHz
 sentece_la2: 포함된 메모리 8x 16GB DDR4 2666MHz
-old align
-<<<<<<< HEAD
-Memory - 메모리  DDR4 - DDR4  
-=======
-
 new align
 Included - 포함  
->>>>>>> main
 
 sentece_la1:Located right across from Frankfurt Central Train Station, this hotel offers modern spa facilities, soundproof rooms, and free Wi-Fi internet.
 sentece_la2: 프랑크푸르트 중앙역 바로 맞은편에 있는 이 호텔은 현대적인 스파 시설, 방음 시설이 완비된 객실 및 무료 Wi-Fi를 제공합니다.
-old align
-<<<<<<< HEAD
-Located Frankfurt - 프랑크푸르트  Central Station - 중앙역  hotel offers - 호텔은  spa soundproof - 스파 방음  facilities - 시설  rooms - 객실  
-=======
-
 new align
 hotel - 호텔  facilities - 시설  rooms - 객실  
->>>>>>> main
 
 sentece_la1:This article provides more information about this topic.
 sentece_la2: 이 문서는이 주제에 대 한 더 많은 정보를 제공합니다.
-old align
-<<<<<<< HEAD
-article - 문서는이  information - 정보를  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Gumball 3000 set for 11th running with Los Angeles to Miami rally
 sentece_la2: 마이애미에 로스앤젤레스와 함께 제11의 달리기에 맞추게 되는 umball 3000는 다시 모인다
-old align
-<<<<<<< HEAD
-3000 set - 3000는  
-=======
-
 new align
 
->>>>>>> main
 
 sentece_la1:Tightening tips:
 sentece_la2: 조임 관련 팁:
-old align
-<<<<<<< HEAD
-Tightening tips - 조임 관련 팁  
-=======
-
 new align
 Tightening tips - 조 ㅁ 관련 팁  
->>>>>>> main
 
 sentece_la1:Make sure your video is mobile-optimized and consider whether a companion experience" makes sense for your brand. Masao Kakihara"
 sentece_la2: 모바일에서 최적화된 동영상을 만드는 것이 중요하며 '동반자 경험'이 귀사의 브랜드에 적합한지 고려해 보세요.
-old align
-<<<<<<< HEAD
-video - 동영상을  consider - 만드는  companion Masao - 동반자  experience - 경험  sense - 적합한지  for brand - 브랜드에  
-=======
-
 new align
 companion Masao Kakihara - 동반자 귀사  experience - 경험  
->>>>>>> main
 

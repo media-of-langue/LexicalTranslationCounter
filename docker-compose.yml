@@ -29,6 +29,7 @@ services:
             - ./src/alignment:/root/src/alignment
             - ./src/morphological:/root/src/morphological
             - ./src/data/output/:/root/src/data/output/
+            - ./src/test/:/root/src/test/
         # Comment out the following lines if you don't use GPU
         # deploy:
         #     resources:

@@ -49,7 +49,7 @@ class CsvRowReader:
         return next(self.reader)
 
 
-input_reader = CsvRowReader(f"./data/input/corpus_{langs}_test.csv")
+input_reader = CsvRowReader(f"./data/input/corpus_{langs}.csv")
 
 # check if output directory exists
 if not os.path.isdir("./data/output"):
@@ -234,7 +234,7 @@ def count_function_batch(
 
 try:
     batch_size = 10
-    totyu_interval = 1000
+    totyu_interval = 100
 
     for i in range(start_id, input_reader.num_rows, batch_size):
         corpus_rows = []
