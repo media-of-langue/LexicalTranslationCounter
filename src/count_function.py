@@ -98,16 +98,11 @@ for pos_tag in part_of_speach_tag_rev.values():
             not in wordlists[la2 + "_" + pos_tag].keys()
         ):
             flag_la2 = True
-<<<<<<< HEAD
-            max_id_la2=max_id_la2 + 1
-            wordlists_add[la2 + "_" + pos_tag][normalizer_la2(key,part_of_speach_tag_code[pos_tag],"",test=True)] = max_id_la2
-=======
             max_id_la2 = max_id_la2 + 1
             wordlists_add[la2 + "_" + pos_tag][
                 normalizer_la2(key, part_of_speach_tag_code[pos_tag], "", test=True)
             ] = max_id_la2
     print("wordlist_add", wordlists_add)
->>>>>>> 1d5a8e93f957fc7763ec1f70fa9d741203fbf5d6
     wordlists[la1 + "_" + pos_tag].update(wordlists_add[la1 + "_" + pos_tag])
     wordlists[la2 + "_" + pos_tag].update(wordlists_add[la2 + "_" + pos_tag])
     if flag_la1:
@@ -143,14 +138,9 @@ if start_id != 0:
                 if max_id < int(rows[0]):
                     max_id = int(rows[0])
             relations_id[pos_tag] = max_id + 1
-<<<<<<< HEAD
-    print(relations_id)
-    output_corpus_row_num = len([None for l in open(f"./data/output/corpus_{langs}.csv", "r")])
-=======
     output_corpus_row_num = len(
         [None for l in open(f"./data/output/corpus_{langs}.csv", "r")]
     )
->>>>>>> 1d5a8e93f957fc7763ec1f70fa9d741203fbf5d6
 else:
     output_file = open(f"./data/output/corpus_{langs}.csv", "w")
 
@@ -243,11 +233,6 @@ def count_function_batch(
 
 
 try:
-<<<<<<< HEAD
-    for i in range(start_id, input_reader.num_rows):
-        count_function(i,input_reader.read_row(i),relations,relations_id,wordlists,output_corpus_row_num)
-        if i % 5 == 0:
-=======
     batch_size = 10
     totyu_interval = 1000
 
@@ -281,7 +266,6 @@ try:
                     )
 
         if (i // batch_size) % totyu_interval == totyu_interval - 1:
->>>>>>> 1d5a8e93f957fc7763ec1f70fa9d741203fbf5d6
             for pos_tag in part_of_speach_tag_rev.values():
                 with open(
                     f"./data/output/relations_{langs}_{pos_tag}_totyu.csv", "w"
