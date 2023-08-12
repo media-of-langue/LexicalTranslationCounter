@@ -25,4 +25,13 @@ services:
         extra_hosts:
             - "host.docker.internal:host-gateway"
         volumes:
+            - ./src/count_function.py:/root/src/count_function.py
+            - ./src/alignment:/root/src/alignment
+            - ./src/morphological:/root/src/morphological
             - ./src/data/output/:/root/src/data/output/
+        # Comment out the following lines if you don't use GPU
+        # deploy:
+        #     resources:
+        #         reservations:
+        #             devices:
+        #                 - capabilities: [gpu]

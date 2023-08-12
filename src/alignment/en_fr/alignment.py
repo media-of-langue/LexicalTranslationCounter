@@ -12,8 +12,8 @@ path_normalizer = os.path.normpath(os.path.join(base, "../../normalizer/"))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
 
 sys.path.append(path_morphological)
-from en_morphological import en_morphological
-from fr_morphological import fr_morphological
+from en_morphological import en_morphological, en_morphological_batch
+from fr_morphological import fr_morphological, fr_morphological_batch
 
 sys.path.append(path_normalizer)
 from en_normalizer import en_normalizer
@@ -22,11 +22,21 @@ from fr_normalizer import fr_normalizer
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 
 # download model
-config = transformers.BertConfig.from_pretrained("/root/src/model/awesome_model_without_co/config.json")
-model = transformers.BertModel.from_pretrained("/root/src/model/awesome_model_without_co/pytorch_model.bin", config=config)
-tokenizer_config = transformers.BertConfig.from_pretrained("/root/src/model/awesome_model_without_co/tokenizer_config.json")
-tokenizer = transformers.BertTokenizer.from_pretrained("/root/src/model/awesome_model_without_co/", config=tokenizer_config)
+config = transformers.BertConfig.from_pretrained(
+    "/root/src/model/awesome_model_without_co/config.json"
+)
+model = transformers.BertModel.from_pretrained(
+    "/root/src/model/awesome_model_without_co/pytorch_model.bin", config=config
+)
+tokenizer_config = transformers.BertConfig.from_pretrained(
+    "/root/src/model/awesome_model_without_co/tokenizer_config.json"
+)
+tokenizer = transformers.BertTokenizer.from_pretrained(
+    "/root/src/model/awesome_model_without_co/", config=tokenizer_config
+)
 
+device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
+model = model.to(device)
 
 max_word_len = 3
 
@@ -43,16 +53,12 @@ trg_relative_index_except2 = -1
 src_word_sep = " "
 trg_word_sep = " "
 
+# params
+align_layer = 8
+threshold = 1e-3
 
-def awesome_alignment(sentence_src, sentence_trg, src_morphological, trg_morphological):
-    # params
-    align_layer = 8
-    threshold = 1e-3
 
-    sent_src, pos_src = src_morphological(sentence_src)
-    sent_tgt, pos_trg = trg_morphological(sentence_trg)
-
-    # pre-processing
+def awesome_alignment_preprocessing(sent_src, sent_tgt):
     token_src, token_tgt = [tokenizer.tokenize(word) for word in sent_src], [
         tokenizer.tokenize(word) for word in sent_tgt
     ]
@@ -80,24 +86,18 @@ def awesome_alignment(sentence_src, sentence_trg, src_morphological, trg_morphol
     for i, word_list in enumerate(token_tgt):
         sub2word_map_tgt += [i for x in word_list]
 
-    # alignment
-    model.eval()
+    return ids_src, ids_tgt, sub2word_map_src, sub2word_map_tgt
 
-    with torch.no_grad():
-        out_src = model(ids_src.unsqueeze(0), output_hidden_states=True)[2][
-            align_layer
-        ][0, 1:-1]
-        out_tgt = model(ids_tgt.unsqueeze(0), output_hidden_states=True)[2][
-            align_layer
-        ][0, 1:-1]
 
-        dot_prod = torch.matmul(out_src, out_tgt.transpose(-1, -2))
-
-        softmax_srctgt = torch.nn.Softmax(dim=-1)(dot_prod)
-        softmax_tgtsrc = torch.nn.Softmax(dim=-2)(dot_prod)
-
-        softmax_inter = (softmax_srctgt > threshold) * (softmax_tgtsrc > threshold)
-
+def awesome_alignment_postprocessing(
+    softmax_inter,
+    sub2word_map_src,
+    sub2word_map_tgt,
+    pos_src,
+    pos_trg,
+    sent_src,
+    sent_tgt,
+):
     align_subwords = torch.nonzero(softmax_inter, as_tuple=False)
     index_pair_list = []
     for i_tmp, j_tmp in align_subwords:
@@ -341,13 +341,105 @@ def awesome_alignment(sentence_src, sentence_trg, src_morphological, trg_morphol
     return alignmented_l
 
 
-def alignment(corpus_row, wordlist, test=False):
+def awesome_alignment_batch(
+    sentences_srcs, sentences_trgs, src_morphological_batch, trg_morphological_batch
+):
+    # morphological analysis
+    sent_srcs, pos_srcs = src_morphological_batch(sentences_srcs)
+    sent_trgs, pos_trgs = trg_morphological_batch(sentences_trgs)
+
+    # pre-processing
+    ids_srcs, ids_trgs, sub2word_map_srcs, sub2word_map_trgs = zip(
+        *[
+            awesome_alignment_preprocessing(sent_src, sent_trg)
+            for sent_src, sent_trg in zip(sent_srcs, sent_trgs)
+        ]
+    )
+
+    # alignment
+    def padding(ids_list):
+        pad_token_id = tokenizer.pad_token_id
+
+        max_size = max([ids.size(0) for ids in ids_list])
+        ids_list = [
+            torch.cat(
+                [
+                    ids,
+                    torch.tensor(
+                        [pad_token_id] * (max_size - ids.size(0)),
+                        dtype=torch.long,
+                        device=ids.device,
+                    ),
+                ]
+            )
+            for ids in ids_list
+        ]
+
+        return torch.stack(ids_list)
+
+    padded_ids_src_tensor = padding(ids_srcs)
+    padded_ids_trg_tensor = padding(ids_trgs)
+
+    model.eval()
+
+    with torch.no_grad():
+        padded_out_src_tensor = model(
+            padded_ids_src_tensor.to(device), output_hidden_states=True
+        )[2][align_layer].to("cpu")
+        padded_out_trg_tensor = model(
+            padded_ids_trg_tensor.to(device), output_hidden_states=True
+        )[2][align_layer].to("cpu")
+
+    softmax_inter_list = []
+
+    for ids_src, ids_trg, out_src, out_trg in zip(
+        ids_srcs, ids_trgs, padded_out_src_tensor, padded_out_trg_tensor
+    ):
+        out_src = out_src[1 : ids_src.size(0) - 1]
+        out_trg = out_trg[1 : ids_trg.size(0) - 1]
+
+        dot_prod = torch.matmul(out_src, out_trg.transpose(-1, -2))
+
+        softmax_srctrg = torch.nn.Softmax(dim=-1)(dot_prod)
+        softmax_trgsrc = torch.nn.Softmax(dim=-2)(dot_prod)
+
+        softmax_inter = (softmax_srctrg > threshold) * (softmax_trgsrc > threshold)
+
+        softmax_inter_list.append(softmax_inter)
+
+    # post-processing
+    alignmented_ls = [
+        awesome_alignment_postprocessing(
+            softmax_inter,
+            sub2word_map_src,
+            sub2word_map_trg,
+            pos_src,
+            pos_trg,
+            sent_src,
+            sent_trg,
+        )
+        for softmax_inter, sub2word_map_src, sub2word_map_trg, pos_src, pos_trg, sent_src, sent_trg in zip(
+            softmax_inter_list,
+            sub2word_map_srcs,
+            sub2word_map_trgs,
+            pos_srcs,
+            pos_trgs,
+            sent_srcs,
+            sent_trgs,
+        )
+    ]
+
+    return alignmented_ls
+
+
+def alignment_preprocessing(corpus_row):
     corpus_row = list(corpus_row)
     corpus_row[1] = corpus_row[1].replace("@", "")
     corpus_row[2] = corpus_row[2].replace("@", "")
-    alignmented = awesome_alignment(
-        corpus_row[1], corpus_row[2], en_morphological, fr_morphological
-    )
+    return corpus_row
+
+
+def alignment_postprocessing(alignmented, wordlist, test=False):
     output_l = []
     output_l_append = output_l.append
     src_normalized_dict = {}
@@ -437,7 +529,10 @@ def alignment(corpus_row, wordlist, test=False):
             break
         if find_flag_src and find_flag_trg:
             for pos_tag in src_pos_tag_s & trg_pos_tag_s:
-                if [src_normalized_dict[src_word][pos_tag]["word_normalized"],trg_normalized_dict[trg_word][pos_tag]["word_normalized"]] not in exceptions:
+                if [
+                    src_normalized_dict[src_word][pos_tag]["word_normalized"],
+                    trg_normalized_dict[trg_word][pos_tag]["word_normalized"],
+                ] not in exceptions:
                     output_l_append(
                         [
                             pos_tag,
@@ -448,3 +543,31 @@ def alignment(corpus_row, wordlist, test=False):
                         ]
                     )
     return output_l
+
+
+def alignment_batch(corpus_rows, wordlist, test=False):
+    # pre-processing
+    corpus_rows = [alignment_preprocessing(corpus_row) for corpus_row in corpus_rows]
+
+    # morphological analysis and alignment
+    alignmented_ls = awesome_alignment_batch(
+        [corpus_row[1] for corpus_row in corpus_rows],
+        [corpus_row[2] for corpus_row in corpus_rows],
+        en_morphological_batch,
+        fr_morphological_batch,
+    )
+
+    # post-processing
+    assert len(alignmented_ls) == len(corpus_rows)
+
+    output_ls = [
+        alignment_postprocessing(alignmented, wordlist, test)
+        for alignmented in alignmented_ls
+    ]
+
+    return output_ls
+
+
+def alignment(corpus_row, wordlist, test=False):
+    corpus_rows = [corpus_row]
+    return alignment_batch(corpus_rows, wordlist, test)[0]

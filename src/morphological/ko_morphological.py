@@ -25,6 +25,17 @@ def ko_morphological(sentence):
     return tokenized, mrph
 
 
+def ko_morphological_batch(sentences):
+    tokenized = []
+    mrph = []
+    for sentence in sentences:
+        tokenized_sentence, mrph_sentence = ko_morphological(sentence)
+        tokenized.append(tokenized_sentence)
+        mrph.append(mrph_sentence)
+
+    return tokenized, mrph
+
+
 # import spacy
 
 # nlp = spacy.load("ko_core_news_sm")

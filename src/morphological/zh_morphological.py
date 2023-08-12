@@ -11,12 +11,12 @@ pos_code_dict = {
         "ag",
         "al",
     ],
-    "n": ["n", "an","ng", "nl", "vn"],
+    "n": ["n", "an", "ng", "nl", "vn"],
     "v": ["v", "vf", "vg", "vi", "vl", "vshi", "vyou", "vx"],
     "r": ["ad", "d", "dg", "dn", "dl", "vd"],
     "prefix": ["h"],
     "suffix": ["k"],
-    "de":["uj"]
+    "de": ["uj"],
 }
 
 code_dict = {}
@@ -48,4 +48,15 @@ def zh_morphological(sentence):
         else:
             tokenized[-1] += w.word
             pass_pos = mrph[-1]
+    return tokenized, mrph
+
+
+def zh_morphological_batch(sentences):
+    tokenized = []
+    mrph = []
+    for sentence in sentences:
+        tokenized_sentence, mrph_sentence = zh_morphological(sentence)
+        tokenized.append(tokenized_sentence)
+        mrph.append(mrph_sentence)
+
     return tokenized, mrph
