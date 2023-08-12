@@ -3,7 +3,7 @@ ARG LA2
 FROM mediaoflangue/wordlist_${LA1}:latest AS wordlist1
 FROM mediaoflangue/wordlist_${LA2}:latest AS wordlist2
 FROM mediaoflangue/corpus_${LA1}_${LA2}:latest AS corpus
-FROM python:3.9-slim-buster
+FROM nvidia/cuda:11.6.2-base-ubuntu20.04
 COPY --from=wordlist1 /src/data/input/wordlist* /root/src/data/input/
 COPY --from=wordlist2 /src/data/input/wordlist* /root/src/data/input/
 COPY --from=corpus /src/data/input/corpus* /root/src/data/input/
@@ -25,6 +25,7 @@ RUN apt-get update -y && \
     default-jdk && \
     locale-gen ja_JP.UTF-8 && \
     echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc 
+RUN apt-get install -y python3 python3-pip
 RUN pip3 install --upgrade pip
 RUN cd ./basis/ && sh ./install.sh
 RUN cd /${LA1} && sh ./install.sh
