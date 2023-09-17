@@ -4,7 +4,7 @@ import os
 
 args = sys.argv
 la = args[1]
-sentence_la = "好的"
+sentence_la = "そういうこともあります。"
 base = os.path.dirname(os.path.abspath(__file__))
 path_morphological = os.path.normpath(os.path.join(base, "../morphological/"))
 sys.path.append(path_morphological)
