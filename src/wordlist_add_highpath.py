@@ -30,10 +30,8 @@ part_of_speach_tag_code = {"noun": "n", "verb": "v", "adj": "a", "adverb": "r"}
 for pos_tag in wordlists_add_reader_dict:
     tmp_list = []
     for row in wordlists_add_reader_dict[pos_tag]:
-        if int(row[1]) >= highpath_dict[pos_tag]:
-            if pos_tag=="noun" and re.match(r"\d|%|\.|\(|\)|,", row[0]) is not None:
-                continue
-            elif pos_tag=="adj" and (row[0][-1]=="性" or row[0][-2:]=="たい"):
+        if int(row[1]) >= highpath_dict[pos_tag] and re.match(r'\d|!|"|\[|#|\$|%|&|\'|\\|\(|\)|\*|\+|,|\.|:|;|<|=|>|\?|@|^|_|`|\{|\}|~|「|」|〔|〕|“|”|〈|〉|『|』|【|】|＆|＊|・|（|）|。|、|？|！|｀|＋|￥|％|\]', row[0]) is not None:
+            if pos_tag=="adj" and (row[0][-1]=="性" or row[0][-2:]=="たい"):
                 continue
             tmp_list.append(row)
     wordlists_add_writers_dict[pos_tag].writerows(sorted(tmp_list, key=lambda x: x[1]))
