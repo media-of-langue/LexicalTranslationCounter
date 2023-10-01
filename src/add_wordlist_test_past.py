@@ -3,14 +3,13 @@ import sys
 from multiprocessing import Process, Manager
 import os
 import pandas as pd
+import traceback
 import re
 
 csv.field_size_limit(sys.maxsize)
 la = "ja"
 start_id = 0
-la1 = "en"
-la2 = "ja"
-langs = la1 + "_" + la2
+langs = "en_ja"
 base = os.path.dirname(os.path.abspath(__file__))
 path_normalizer = os.path.normpath(os.path.join(base, "./normalizer/"))
 sys.path.append(path_normalizer)
@@ -19,17 +18,8 @@ exec(command)
 
 path_morphological = os.path.normpath(os.path.join(base, "./morphological/"))
 sys.path.append(path_morphological)
-command = "from {}_morphological import {}_morphological as morphological_la1".format(la1,la1)
-exec(command)
-command = "from {}_morphological import {}_morphological as morphological_la2".format(la2,la2)
-exec(command)
-
-highpath_dict = {
-    "adj":10,
-    "noun":30,
-    "verb":10,
-    "adverb":30,
-}
+from en_morphological import en_morphological
+from ja_morphological import ja_morphological
 
 # corpusを一行毎に読み出す
 class CsvRowReader:
@@ -100,12 +90,12 @@ wordlists_add_cnt_dict = {
 cnt = 0
 for i  in range(input_reader.num_rows):
     row = input_reader.read_row(i)
-    if la == la1:
+    if la == "en":
         sentence = row[1].replace("@", "")
-        tokenized,morphs = morphological_la1(sentence)
-    elif la == la2:
+        tokenized,morphs = en_morphological(sentence)
+    elif la == "ja":
         sentence = row[2].replace("@", "")
-        tokenized,morphs = morphological_la2(sentence)
+        tokenized,morphs = ja_morphological(sentence)
     for token,morph in zip(tokenized,morphs):
         if morph != "":
             word_normalized = normalizer_la(token,morph,"",test=True)
@@ -118,21 +108,12 @@ for i  in range(input_reader.num_rows):
     cnt += 1
     if cnt % 100000 == 0:
         print("cnt", cnt)
-wordlist_new_writer_dict = {
-    "adj":csv.writer(open(f"./data/output/wordlist_{la}_adj.csv", "w")),
-    "noun":csv.writer(open(f"./data/output/wordlist_{la}_noun.csv", "w")),
-    "verb":csv.writer(open(f"./data/output/wordlist_{la}_verb.csv", "w")),
-    "adverb":csv.writer(open(f"./data/output/wordlist_{la}_adverb.csv", "w")),
+wordlists_add_writers_dict = {
+    "adj":csv.writer(open(f"./data/output/wordlist_{la}_added_adj.csv", "w")),
+    "noun":csv.writer(open(f"./data/output/wordlist_{la}_added_noun.csv", "w")),
+    "verb":csv.writer(open(f"./data/output/wordlist_{la}_added_verb.csv", "w")),
+    "adverb":csv.writer(open(f"./data/output/wordlist_{la}_added_adverb.csv", "w")),
 }
-for pos_tag in wordlists_add_cnt_dict:
-    words = []
-    id_max = 0
-    for key in wordlists[la+"_"+pos_tag]:
-        words.append(key)
-        id_max = max(id_max,wordlists[la+"_"+pos_tag][key])
-        wordlist_new_writer_dict[pos_tag].writerow([id_max,key])
-    for wordnormlized in wordlists_add_cnt_dict[pos_tag]:
-        if wordnormlized not in words and wordlists_add_cnt_dict[pos_tag][wordnormlized] >= highpath_dict[pos_tag]:
-            id_max += 1
-            words.append(wordnormlized)
-            wordlist_new_writer_dict[pos_tag].writerow([id_max,wordnormlized])
+for pos in wordlists_add_cnt_dict:
+    for word in wordlists_add_cnt_dict[pos]:
+        wordlists_add_writers_dict[pos].writerow([word,wordlists_add_cnt_dict[pos][word]])
