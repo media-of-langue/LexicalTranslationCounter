@@ -1,6 +1,6 @@
 from pyknp import Juman
 
-jumanpp = Juman(timeout=300)
+jumanpp = Juman(timeout=300,jumanpp=True)
 
 ja_nounsetsubi = [
     "症",
@@ -26,13 +26,45 @@ ja_nounsetsubi = [
     "者",
     "制",
     "座",
+    "員",
+    "体",
+    "生",
+    "帯",
+    "量",
+    "分",
+    "数",
+    "作用",
+    "機",
+    "器",
+    "盤",
+    "金",
+    "種",
+    "地",
+    "場",
+    "先",
+    "軍",
+    "業",
+    "物",
+    "中",
+    "者",
+    "権",
+    "室",
+    "線",
+    "教",
+    "丸",
+    "界"
 ]
 indipendent_mrph = ["形容詞", "名詞", "動詞", "副詞"]
 
 
 def ja_morphological(sentence):
     sentence = sentence.replace(" ", "")
-    mrph_l = jumanpp.analysis(sentence).mrph_list()
+    try:
+        mrph_l = jumanpp.analysis(sentence).mrph_list()
+    except Exception as e:
+        print("jumanpp error", e)
+        print("sentence", sentence)
+
     tokenized = []
     mrph_out = []
     tokenized_append = tokenized.append
@@ -43,7 +75,7 @@ def ja_morphological(sentence):
             tokenized_append(mrph.midasi)
             mrph_out_append(mrph.hinsi)
             last_katuyou2 = mrph.katuyou2
-        elif mrph.midasi in ja_nounsetsubi and (
+        elif mrph.midasi in ja_nounsetsubi and tokenized != [] and (
             mrph_out[-1] == "名詞" or last_katuyou2 == "語幹"
         ):
             tokenized[-1] += mrph.midasi
@@ -64,6 +96,12 @@ def ja_morphological(sentence):
         elif mrph.hinsi == "名詞" and mrph_out[-1] == "接頭辞":
             tokenized[-1] += mrph.midasi
             mrph_out[-1] = "名詞"
+            last_katuyou2 = mrph.katuyou2
+        elif mrph.hinsi == "名詞" and tokenized != [] and mrph_out[-1] == "名詞":
+            tokenized[-1] += mrph.midasi
+            last_katuyou2 = mrph.katuyou2
+        elif mrph.hinsi == "動詞" and tokenized != [] and mrph_out[-1] == "動詞":
+            tokenized[-1] += mrph.midasi
             last_katuyou2 = mrph.katuyou2
         else:
             tokenized_append(mrph.midasi)
