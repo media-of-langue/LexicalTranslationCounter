@@ -16,7 +16,6 @@ from en_morphological import en_morphological, en_morphological_batch
 from ja_morphological import ja_morphological, ja_morphological_batch
 
 sys.path.append(path_normalizer)
-sys.path.append("/root/src/normalizer/")
 import time
 
 from en_normalizer import en_normalizer
