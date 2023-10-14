@@ -24,9 +24,18 @@ from zh_normalizer import zh_normalizer
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 
 # download model
-model = transformers.BertModel.from_pretrained("bert-base-multilingual-cased")
-tokenizer = transformers.BertTokenizer.from_pretrained("bert-base-multilingual-cased")
-
+config = transformers.BertConfig.from_pretrained(
+    "/root/src/model/awesome_model_without_co/config.json"
+)
+model = transformers.BertModel.from_pretrained(
+    "/root/src/model/awesome_model_without_co/pytorch_model.bin", config=config
+)
+tokenizer_config = transformers.BertConfig.from_pretrained(
+    "/root/src/model/awesome_model_without_co/tokenizer_config.json"
+)
+tokenizer = transformers.BertTokenizer.from_pretrained(
+    "/root/src/model/awesome_model_without_co/", config=tokenizer_config
+)
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 model = model.to(device)
 
