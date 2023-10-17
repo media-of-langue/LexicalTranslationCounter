@@ -448,7 +448,7 @@ def alignment_postprocessing(alignmented_l, wordlist, test=False):
     output_l_append = output_l.append
     src_normalized_dict = {}
     trg_normalized_dict = {}
-    for word_pair in alignmented:
+    for word_pair in alignmented_l:
         src_pos_l = word_pair[0]
         src_word_l = word_pair[1]
         trg_pos_l = word_pair[2]
