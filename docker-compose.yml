@@ -26,10 +26,7 @@ services:
             - "host.docker.internal:host-gateway"
         volumes:
             - ./src/count_function.py:/root/src/count_function.py
-            - ./src/add_wordlist_test.py:/root/src/add_wordlist_test.py
-            - ./src/add_wordlist_test2.py:/root/src/add_wordlist_test2.py
             - ./src/add_wordlist.py:/root/src/add_wordlist.py
-            - ./src/wordlist_add_highpath.py:/root/src/wordlist_add_highpath.py
             - ./src/alignment:/root/src/alignment
             - ./src/morphological:/root/src/morphological
             - ./src/normalizer:/root/src/normalizer

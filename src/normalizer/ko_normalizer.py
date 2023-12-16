@@ -56,7 +56,6 @@ def ko_normalizer(word, pos_tag, wordlist, test=False):
             if word_normalized != "" and word_normalized[-1] != "다":
                 word_normalized += "다"
         elif pos_tag == "v":
-            print("komoran_morphs", komoran_morphs)
             for morph, tag in komoran_morphs:
                 if tag.startswith("VV") or tag.startswith("VA") or tag.startswith("VX"):
                     word_normalized += morph
