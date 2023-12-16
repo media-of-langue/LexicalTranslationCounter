@@ -6,10 +6,10 @@ import pandas as pd
 import re
 
 csv.field_size_limit(sys.maxsize)
-la = "ja"
+la = "ko"
 start_id = 0
 la1 = "en"
-la2 = "ja"
+la2 = "ko"
 langs = la1 + "_" + la2
 base = os.path.dirname(os.path.abspath(__file__))
 path_normalizer = os.path.normpath(os.path.join(base, "./normalizer/"))
@@ -34,7 +34,7 @@ highpath_dict = {
 # corpusを一行毎に読み出す
 class CsvRowReader:
     def __init__(self, path):
-        f = open(path, "r")
+        f = open(path, "r", encoding="utf_8")
         self.file = f
         self.reader = csv.reader(f)
         self.offset_list = []
@@ -129,10 +129,10 @@ for pos_tag in wordlists_add_cnt_dict:
     id_max = 0
     for key in wordlists[la+"_"+pos_tag]:
         words.append(key)
-        id_max = max(id_max,wordlists[la+"_"+pos_tag][key])
         wordlist_new_writer_dict[pos_tag].writerow([id_max,key])
+        id_max += 1
     for wordnormlized in wordlists_add_cnt_dict[pos_tag]:
         if wordnormlized not in words and wordlists_add_cnt_dict[pos_tag][wordnormlized] >= highpath_dict[pos_tag]:
-            id_max += 1
             words.append(wordnormlized)
             wordlist_new_writer_dict[pos_tag].writerow([id_max,wordnormlized])
+            id_max += 1

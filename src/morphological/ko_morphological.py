@@ -4,7 +4,11 @@ komoran = Komoran()
 
 
 def ko_morphological(sentence):
-    doc = komoran.pos(sentence)
+    try:
+        doc = komoran.pos(sentence)
+    except Exception as e:
+        print(e)
+        return [], []
     mrph = []
     mrph_append = mrph.append
     tokenized = []
