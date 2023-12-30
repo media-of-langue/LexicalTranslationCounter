@@ -6,10 +6,10 @@ import pandas as pd
 import re
 
 csv.field_size_limit(sys.maxsize)
-la = "ko"
+la = "es"
 start_id = 0
 la1 = "en"
-la2 = "ko"
+la2 = "es"
 langs = la1 + "_" + la2
 base = os.path.dirname(os.path.abspath(__file__))
 path_normalizer = os.path.normpath(os.path.join(base, "./normalizer/"))
@@ -70,12 +70,14 @@ wordlists = {}  # {pos_tag:{word:id}}
 process_list = []
 output_corpus_row_num = 0
 for pos_tag in part_of_speach_tag_rev.values():
-    with open("./data/input/wordlist_" + la + "_" + pos_tag + ".csv", mode="r") as inp:
-        reader = list(csv.reader(inp))
-        if not re.fullmatch("[-+]?\d+", reader[0][0]):
-            reader = reader[1:]
-        wordlists[la + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
-        max_id_la1 = max(wordlists[la + "_" + pos_tag].values())
+    # with open("./data/input/wordlist_" + la + "_" + pos_tag + ".csv", mode="r") as inp:
+    #     reader = list(csv.reader(inp))
+    #     if not re.fullmatch("[-+]?\d+", reader[0][0]):
+    #         reader = reader[1:]
+    #     wordlists[la + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
+        # max_id_la1 = max(wordlists[la + "_" + pos_tag].values())
+    wordlists[la + "_" + pos_tag] = {}
+    max_id_la1 = 0
     wordlists_add = {}
     wordlists_add[la + "_" + pos_tag] = {}
     for key, word_id in wordlists[la + "_" + pos_tag].items():
@@ -90,7 +92,7 @@ for pos_tag in part_of_speach_tag_rev.values():
             ] = max_id_la1
     print("wordlist_add", wordlists_add)
     wordlists[la + "_" + pos_tag].update(wordlists_add[la + "_" + pos_tag])
-
+print(wordlists)
 wordlists_add_cnt_dict = {
     "adj":{},
     "noun":{},
@@ -116,7 +118,7 @@ for i  in range(input_reader.num_rows):
                 else:
                     wordlists_add_cnt_dict[pos][word_normalized] = 1
     cnt += 1
-    if cnt % 100000 == 0:
+    if cnt % 10000 == 0:
         print("cnt", cnt)
 wordlist_new_writer_dict = {
     "adj":csv.writer(open(f"./data/output/wordlist_{la}_adj.csv", "w")),

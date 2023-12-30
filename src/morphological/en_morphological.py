@@ -8,8 +8,6 @@ if not os.path.isdir("/root/nltk_data/taggers/averaged_perceptron_tagger"):
     nltk.download("averaged_perceptron_tagger")
 if not os.path.isdir("/root/nltk_data/tokenizers/punkt/"):
     nltk.download("punkt")
-if not os.path.isdir("/root/nltk_data/tokenizers/punkt/"):
-    nltk.download("punkt")
 if not os.path.isfile("/root/nltk_data/corpora/wordnet.zip"):
     nltk.download("wordnet")
 

@@ -28,7 +28,7 @@ pythonenv*
 src/data/output/*
 src/data/input/*
 
-src/local_test/*
+src/local_test/
 src/model/awesome_model_with_co/*
 src/model/awesome_model_without_co/*
 

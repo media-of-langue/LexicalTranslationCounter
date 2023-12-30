@@ -1,0 +1,10 @@
+sentece_la1:Resumption of the session
+sentece_la2:Reanudación del período de sesiones
+new align
+Resumption - Reanudación  session - sesiones  
+
+sentece_la1:I declare resumed the session of the European Parliament adjourned on Friday 17 December 1999, and I would like once again to wish you a happy new year in the hope that you enjoyed a pleasant festive period.
+sentece_la2:Declaro reanudado el período de sesiones del Parlamento Europeo, interrumpido el viernes 17 de diciembre pasado, y reitero a Sus Señorías mi deseo de que hayan tenido unas buenas vacaciones.
+new align
+I declare - Declaro  session - sesiones  European - Europeo  Parliament - Parlamento  Friday - viernes  December - diciembre  wish - reitero  happy pleasant - buenas  hope - deseo  enjoyed - tenido  period - vacaciones  
+
