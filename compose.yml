@@ -9,8 +9,10 @@ services:
             context: .
             dockerfile: ./Dockerfile
             args:
-                LA1: ""
-                LA2: ""
+                LANG_A: ""
+                LANG_B: ""
+                TAG_WORDLIST: ""
+                TAG_CORPUS: ""
         working_dir: /root/
         tty: true
         restart: always
@@ -20,8 +22,8 @@ services:
             - LANG=${LANG}
             - LANGUAGE=${LANGUAGE}
             - LC_ALL=${LC_ALL}
-            - TZ=${TZ}
             - TERM=${TERM}
+            - TZ=${TZ}
         extra_hosts:
             - "host.docker.internal:host-gateway"
         volumes:
@@ -32,6 +34,7 @@ services:
             - ./src/normalizer:/root/src/normalizer
             - ./src/data/output/:/root/src/data/output/
             - ./src/test/:/root/src/test/
+            - ./src/model/:/root/src/model/
         # Comment out the following lines if you don't use GPU
         # deploy:
         #     resources:
