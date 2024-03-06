@@ -18,7 +18,8 @@ sys.path.append(path_normalizer)
 from en_normalizer import en_normalizer
 from ko_normalizer import ko_normalizer
 
-exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
+# TODO: read by pandas
+exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))[1:]
 
 # download model
 model = transformers.BertModel.from_pretrained("bert-base-multilingual-cased")

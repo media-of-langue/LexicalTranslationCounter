@@ -21,7 +21,8 @@ import time
 from en_normalizer import en_normalizer
 from zh_normalizer import zh_normalizer
 
-exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
+# TODO: read by pandas
+exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))[1:]
 
 # download model
 config = transformers.BertConfig.from_pretrained(

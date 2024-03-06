@@ -21,7 +21,8 @@ import time
 from en_normalizer import en_normalizer
 from ja_normalizer import ja_normalizer
 
-exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
+# TODO: read by pandas
+exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))[1:]
 
 jumanpp = Juman(timeout=300, jumanpp=True)
 
