@@ -1,6 +1,6 @@
 from pyknp import Juman
 
-jumanpp = Juman(timeout=300,jumanpp=True)
+jumanpp = Juman(timeout=300, jumanpp=True)
 
 ja_nounsetsubi = [
     "症",
@@ -52,7 +52,7 @@ ja_nounsetsubi = [
     "線",
     "教",
     "丸",
-    "界"
+    "界",
 ]
 indipendent_mrph = ["形容詞", "名詞", "動詞", "副詞"]
 
@@ -64,7 +64,6 @@ def ja_morphological(sentence):
     except Exception as e:
         print("jumanpp error", e)
         print("sentence", sentence)
-
     tokenized = []
     mrph_out = []
     tokenized_append = tokenized.append
@@ -75,12 +74,16 @@ def ja_morphological(sentence):
             tokenized_append(mrph.midasi)
             mrph_out_append(mrph.hinsi)
             last_katuyou2 = mrph.katuyou2
-        elif mrph.midasi in ja_nounsetsubi and tokenized != [] and (
-            mrph_out[-1] == "名詞" or last_katuyou2 == "語幹"
+        elif (
+            mrph.midasi in ja_nounsetsubi
+            and tokenized != []
+            and (mrph_out[-1] == "名詞" or last_katuyou2 == "語幹")
         ):
             tokenized[-1] += mrph.midasi
             last_katuyou2 = ""
-        elif mrph.hinsi == "接尾辞" and tokenized != [] and mrph.bunrui != "動詞性接尾辞":
+        elif (
+            mrph.hinsi == "接尾辞" and tokenized != [] and mrph.bunrui != "動詞性接尾辞"
+        ):
             tokenized[-1] += mrph.midasi
             mrph_out[-1] = mrph.bunrui[:-6]
             last_katuyou2 = ""

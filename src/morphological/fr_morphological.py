@@ -7,13 +7,11 @@ def fr_morphological_batch(sentences):
     docs = list(nlp.pipe(sentences))
     tokenized = []
     mrph = []
-
     for doc in docs:
         tokenized_sentence = [token.text for token in doc]
         mrph_sentence = [get_morphological_tag(token.pos_) for token in doc]
         tokenized.append(tokenized_sentence)
         mrph.append(mrph_sentence)
-
     return tokenized, mrph
 
 

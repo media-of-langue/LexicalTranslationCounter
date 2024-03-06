@@ -1,5 +1,3 @@
-import os
-
 import jieba.posseg as pseg
 
 # 言語コードの参考サイト

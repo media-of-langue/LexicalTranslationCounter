@@ -39,5 +39,4 @@ def en_morphological_batch(sentences):
         tokenized_sentence, mrph_sentence = en_morphological(sentence)
         tokenized.append(tokenized_sentence)
         mrph.append(mrph_sentence)
-
     return tokenized, mrph
