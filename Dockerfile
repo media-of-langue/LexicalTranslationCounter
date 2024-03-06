@@ -2,12 +2,12 @@ ARG LANG_A
 ARG LANG_B
 ARG TAG_WORDLIST
 ARG TAG_CORPUS
-FROM mediaoflangue/wordlist_${LANG_A}:${TAG_WORDLIST} AS wordlist1
-FROM mediaoflangue/wordlist_${LANG_B}:${TAG_WORDLIST} AS wordlist2
+FROM mediaoflangue/wordlist_${LANG_A}:${TAG_WORDLIST} AS wordlist_a
+FROM mediaoflangue/wordlist_${LANG_B}:${TAG_WORDLIST} AS wordlist_b
 FROM mediaoflangue/corpus_${LANG_A}_${LANG_B}:${TAG_CORPUS} AS corpus
 FROM nvidia/cuda:11.6.2-base-ubuntu20.04
-COPY --from=wordlist1 /src/data/input/wordlist* /root/src/data/input/
-COPY --from=wordlist2 /src/data/input/wordlist* /root/src/data/input/
+COPY --from=wordlist_a /src/data/input/wordlist* /root/src/data/input/
+COPY --from=wordlist_b /src/data/input/wordlist* /root/src/data/input/
 COPY --from=corpus /src/data/input/corpus* /root/src/data/input/
 ENV JAVA_HOME /usr/lib/jvm/java-1.7-openjdk/jre
 ARG SRCDIR=/src
@@ -27,7 +27,7 @@ RUN apt-get update -y && \
     g++ \
     default-jdk && \
     locale-gen ja_JP.UTF-8 && \
-    echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc 
+    echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 RUN apt-get install -y python3 python3-pip
 RUN pip3 install --upgrade pip
 RUN cd ./basis/ && sh ./install.sh
