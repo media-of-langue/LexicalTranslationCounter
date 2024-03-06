@@ -1,8 +1,9 @@
-import itertools
-import sys
-import os
-import torch
 import csv
+import itertools
+import os
+import sys
+
+import torch
 import transformers
 from pyknp import Juman
 

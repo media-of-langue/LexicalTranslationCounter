@@ -1,7 +1,7 @@
-import itertools
-import sys
-import os
 import csv
+import itertools
+import os
+import sys
 
 import torch
 import transformers

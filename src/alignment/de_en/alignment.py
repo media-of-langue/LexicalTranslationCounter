@@ -1,9 +1,10 @@
+import csv
 import itertools
-import sys
 import os
+import sys
+
 import torch
 import transformers
-import csv
 
 config = transformers.BertConfig.from_pretrained(
     "/root/src/model/awesome_model_with_co/config.json"
@@ -27,12 +28,12 @@ path_normalizer = os.path.normpath(os.path.join(base, "../../normalizer/"))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
 
 sys.path.append(path_morphological)
-from en_morphological import en_morphological, en_morphological_batch
 from de_morphological import de_morphological, de_morphological_batch
+from en_morphological import en_morphological, en_morphological_batch
 
 sys.path.append(path_normalizer)
-from en_normalizer import en_normalizer
 from de_normalizer import de_normalizer
+from en_normalizer import en_normalizer
 
 # TODO: read by pandas
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))[1:]
