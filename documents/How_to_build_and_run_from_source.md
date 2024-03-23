@@ -58,11 +58,11 @@ Execute count function.
 The results are stored in /root/src/data/output/.
 ```
 cd /root/src/
-python3 count_function.py 0 {lang_a} {lang_b}
+python3 count_function.py {lang_a} {lang_b} 0
 ```
 ex: before running below command, you should prepare model files in /root/src/model/model_without_co. See [Readme.md for en-ja](documents/en-ja/Readme.md) for details.
 ```
-python3 count_function.py 0 en ja
+python3 count_function.py en ja 0
 ```
 
 If you are interrupted by an error on the way, run with the first argument being the value in /root/src/data/output/passed_id.txt plus one.

@@ -1,383 +1,407 @@
-import sys
 import os
-import pandas as pd
+import sys
 import traceback
 
-
-def count_function_post_processing(
-    i, corpus_row, translation, translation_id, output_corpus_row_num, output_l
-):
-    for index, command in enumerate(output_l):
-        pos_tag = part_of_speach_tag_rev[command[0]]
-        if command[1] + "_" + command[3] in translation[pos_tag]:
-            translation[pos_tag][command[1] + "_" + command[3]][1] += 1
-            translation[pos_tag][command[1] + "_" + command[3]][2].append(corpus_row[0])
-            tmp_id = translation[pos_tag][command[1] + "_" + command[3]][0]
-        else:
-            tmp_id = translation_id[pos_tag]
-            translation[pos_tag][command[1] + "_" + command[3]] = [
-                tmp_id,
-                1,
-                [corpus_row[0]],
-                "unknown",
-                False,
-            ]
-            translation_id[pos_tag] += 1
-        output_l[index].insert(1, str(tmp_id))
-    # command_t = "/".join([":".join(output) for output in output_l])
-    if output_corpus_row_num <= i:
-        output_writer.writerow(
-            [
-                corpus_row[0],
-                corpus_row[1].replace("\n", ""),
-                corpus_row[2].replace("\n", ""),
-                "{" + str(output_l)[1:-1].replace('"', "") + "}",
-                False,
-            ]
-        )
-    print("passed_id:", i)
-    print(corpus_row[1], corpus_row[2])
-    print(output_l)
-    print("\n")
+import pandas as pd
 
 
-def count_function(
-    i,
-    corpus_row,
-    translation,
-    translation_id,
-    wordlists,
-    output_corpus_row_num,
-    passed_log_file,
-):
-    if len(corpus_row) == 5:
-        try:
-            output_l = alignment(corpus_row, wordlists)
-        except Exception as e:
-            print(traceback.format_exc())
-            passed_log_file.write(str(i))
-            passed_log_file.write(str(corpus_row))
-            output_l = []
-
-        count_function_post_processing(
-            i, corpus_row, translation, translation_id, output_corpus_row_num, output_l
-        )
+def output_translation(
+    output_translation_filename: str,
+    output_translation_filepath: str,
+    df_translation: pd.DataFrame,
+) -> None:
+    df_translation.to_csv(output_translation_filepath, index=False)
 
 
-def count_function_batch(
-    i_l, corpus_rows, translation, translation_id, wordlists, output_corpus_row_num
-):
-    try:
-        for corpus_row in corpus_rows:
-            if len(corpus_row) != 5:
-                raise Exception("corpus_row length is not 5")
-        output_ls = alignment_batch(corpus_rows, wordlists)
-
-        assert len(output_ls) == len(corpus_rows)
-
-    except Exception as e:
-        print(traceback.format_exc())
-        passed_log_file.write(f"batch ({i_l} ~ {i_l + len(corpus_rows)})\n")
-        raise e
-
-    for i, corpus_row in enumerate(corpus_rows):
-        count_function_post_processing(
-            i_l + i,
-            corpus_row,
-            translation,
-            translation_id,
-            output_corpus_row_num,
-            output_ls[i],
-        )
-
-
-# csv.field_size_limit(sys.maxsize)
-args = sys.argv
-start_id = int(args[1])
-lang_a = args[2]
-lang_b = args[3]
-langs = lang_a + "_" + lang_b
-sys.path.append("/root/src/alignment/" + langs)
-from alignment import alignment, alignment_batch
-
-base = os.path.dirname(os.path.abspath(__file__))
-path_normalizer = os.path.normpath(os.path.join(base, "../normalizer/"))
-sys.path.append(path_normalizer)
-command = "from {}_normalizer import {}_normalizer as normalizer_lang_a".format(
-    lang_a, lang_a
-)
-exec(command)
-command = "from {}_normalizer import {}_normalizer as normalizer_lang_b".format(
-    lang_b, lang_b
-)
-exec(command)
-
-# check if output directory exists
-if not os.path.isdir("./data/output"):
-    os.makedirs("./data/output")
-
-# corpusを一行毎に読み出す
-# class CsvRowReader:
-#     def __init__(self, path):
-#         f = open(path, "r")
-#         self.file = f
-#         self.reader = csv.reader(f)
-#         self.offset_list = []
-#         while True:
-#             self.offset_list.append(f.tell())
-#             line = f.readline()
-#             if line == "":
-#                 break
-#             # if len(self.offset_list) >= 201:
-#             #     break
-#         self.offset_list.pop()  # remove offset at end of file
-#         self.num_rows = len(self.offset_list)
-
-#     def __del__(self):
-#         self.file.close()
-
-#     def read_row(self, idx):
-#         self.file.seek(self.offset_list[idx])
-#         return next(self.reader)
-
-
-# input_reader = CsvRowReader(f"./data/input/corpus_{langs}.csv")
-input_corpus_filepath = f"./data/input/corpus_{langs}.csv"
-df_corpus = pd.read_csv(input_corpus_filepath, header=0)
-
-# pos_list = ["noun", "verb", "adj", "adverb"]
-part_of_speach_tag_rev = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
-part_of_speach_tag_code = {"noun": "n", "verb": "v", "adj": "a", "adverb": "r"}
-
-word_columns = ["id_word", "name"]
-translation_columns = [
-    "id_translation",
-    f"id_{lang_a}",
-    f"id_{lang_b}",
-    "id_corpus_list",
-    "count",
-]
-corpus_columns = [
-    "id_corpus",
-    f"sentence_{lang_a}",
-    f"sentence_{lang_b}",
-    "alignment_info",
-]
-translation = (
-    {}
-)  # {pos_tag:{id_lang_a}_{id_lang_b}:[id,count,example,convert_from,invalid]}
-translation_id = {}  # {pos_tag:id}
-wordlists = {}  # {pos_tag:{word:id}}
-process_list = []
-output_corpus_row_num = 0
-for pos_tag in part_of_speach_tag_rev.values():
-    translation[pos_tag] = {}
-    translation_id[pos_tag] = 0
-    # Get wordlist
-    input_wordlist_filepath = f"./data/input/wordlist_{lang_a}_{pos_tag}.csv"
-    df_wordlist_lang_a = pd.read_csv(input_wordlist_filepath, header=0)
-    wordlists[lang_a + "_" + pos_tag] = {
-        rows[1]: int(rows[0]) for rows in df_wordlist_lang_a.values
-    }
-    # with open("./data/input/wordlist_" + lang_a + "_" + pos_tag + ".csv", mode="r") as inp:
-    #     reader = list(csv.reader(inp))
-    #     if not re.fullmatch("[-+]?\d+", reader[0][0]):
-    #         reader = reader[1:]
-    #     wordlists[lang_a + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
-    #     max_id_lang_a = max(wordlists[lang_a + "_" + pos_tag].values())
-    input_wordlist_filepath = f"./data/input/wordlist_{lang_b}_{pos_tag}.csv"
-    df_wordlist_lang_b = pd.read_csv(input_wordlist_filepath, header=0)
-    wordlists[lang_b + "_" + pos_tag] = {
-        rows[1]: int(rows[0]) for rows in df_wordlist_lang_b.values
-    }
-    # with open("./data/input/wordlist_" + lang_b + "_" + pos_tag + ".csv", mode="r") as inp:
-    #     reader = list(csv.reader(inp))
-    #     if not re.fullmatch("[-+]?\d+", reader[0][0]):
-    #         reader = reader[1:]
-    #     wordlists[lang_b + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
-    #     max_id_lang_b = max(wordlists[lang_b + "_" + pos_tag].values())
-    flag_lang_a = False
-    flag_lang_b = False
-    wordlists_add = {}
-    wordlists_add[lang_a + "_" + pos_tag] = {}
-    wordlists_add[lang_b + "_" + pos_tag] = {}
-    for key, word_id in wordlists[lang_a + "_" + pos_tag].items():
-        if (
-            normalizer_lang_a(key, part_of_speach_tag_code[pos_tag], "", test=True)
-            not in wordlists[lang_a + "_" + pos_tag].keys()
-        ):
-            flag_lang_a = True
-            max_id_lang_a = max_id_lang_a + 1
-            wordlists_add[lang_a + "_" + pos_tag][
-                normalizer_lang_a(key, part_of_speach_tag_code[pos_tag], "", test=True)
-            ] = max_id_lang_a
-    for key, word_id in wordlists[lang_b + "_" + pos_tag].items():
-        if (
-            normalizer_lang_b(key, part_of_speach_tag_code[pos_tag], "", test=True)
-            not in wordlists[lang_b + "_" + pos_tag].keys()
-        ):
-            flag_lang_b = True
-            max_id_lang_b = max_id_lang_b + 1
-            wordlists_add[lang_b + "_" + pos_tag][
-                normalizer_lang_b(key, part_of_speach_tag_code[pos_tag], "", test=True)
-            ] = max_id_lang_b
-    print("wordlist_add", wordlists_add)
-    wordlists[lang_a + "_" + pos_tag].update(wordlists_add[lang_a + "_" + pos_tag])
-    wordlists[lang_b + "_" + pos_tag].update(wordlists_add[lang_b + "_" + pos_tag])
-    # if flag_lang_a:
-    #     writer = csv.writer(
-    #         open("./data/output/wordlist_" + lang_a + "_" + pos_tag + ".csv", "w")
-    #     )
-    #     for key, word_id in wordlists[lang_a + "_" + pos_tag].items():
-    #         writer.writerow([word_id, key, "f"])
-    if flag_lang_a:
-        output_wordlist_filepath = f"./data/output/wordlist_{lang_a}_{pos_tag}.csv"
-        df_wordlist_lang_a = pd.DataFrame(
-            [
-                [word_id, key, "f"]
-                for key, word_id in wordlists[lang_a + "_" + pos_tag].items()
-            ],
-            columns=word_columns,
-        )
-        df_wordlist_lang_a.to_csv(output_wordlist_filepath, index=False)
-    # if flag_lang_b:
-    #     writer = csv.writer(
-    #         open("./data/output/wordlist_" + lang_b + "_" + pos_tag + ".csv", "w")
-    #     )
-    #     for key, word_id in wordlists[lang_b + "_" + pos_tag].items():
-    #         writer.writerow([word_id, key, "f"])
-    if flag_lang_b:
-        output_wordlist_filepath = f"./data/output/wordlist_{lang_b}_{pos_tag}.csv"
-        df_wordlist_lang_b = pd.DataFrame(
-            [
-                [word_id, key, "f"]
-                for key, word_id in wordlists[lang_b + "_" + pos_tag].items()
-            ],
-            columns=word_columns,
-        )
-        df_wordlist_lang_b.to_csv(output_wordlist_filepath, index=False)
-
-# if start_id != 0:
-#     output_file = open(f"./data/output/corpus_{langs}.csv", "a")
-#     for pos_tag in part_of_speach_tag_rev.values():
-#         translation[pos_tag] = {}
-#         max_id = 0
-#         with open(
-#             "./data/output/translation_" + langs + "_" + pos_tag + "_midst.csv", mode="r"
-#         ) as inp:
-#             reader = csv.reader(inp)
-#             for rows in reader:
-#                 translation[pos_tag][rows[1] + "_" + rows[2]] = [
-#                     int(rows[0]),
-#                     int(rows[3]),
-#                     eval(rows[4]),
-#                     rows[5],
-#                     rows[6],
-#                 ]
-#                 if max_id < int(rows[0]):
-#                     max_id = int(rows[0])
-#             translation_id[pos_tag] = max_id + 1
-#     output_corpus_row_num = len(
-#         [None for l in open(f"./data/output/corpus_{langs}.csv", "r")]
-#     )
-# else:
-#     output_file = open(f"./data/output/corpus_{langs}.csv", "w")
-if start_id != 0:
-    output_corpus_filepath = f"./data/output/corpus_{langs}.csv"
-    df_corpus = pd.read_csv(output_corpus_filepath, header=0)
-    output_corpus_row_num = len(df_corpus)
-else:
-    output_corpus_filepath = f"./data/output/corpus_{langs}.csv"
-    df_corpus = pd.DataFrame(columns=["id", "lang_a", "lang_b", "commands", "invalid"])
+def output_corpus(
+    output_corpus_filename: str,
+    output_corpus_filepath: str,
+    df_corpus: pd.DataFrame,
+) -> None:
     df_corpus.to_csv(output_corpus_filepath, index=False)
 
-# if start_id == 0:
-#     passed_log_file = open("./data/output/passed_log.txt", "w")
-# else:
-#     passed_log_file = open("./data/output/passed_log.txt", "a")
-# output_writer = csv.writer(output_file)
-if start_id != 0:
-    output_passed_log_filepath = f"./data/output/passed_log.txt"
-    with open(output_passed_log_filepath, mode="r") as inp:
-        passed_id_list = inp.readlines()
-        passed_id_list = [int(passed_id) for passed_id in passed_id_list]
-else:
-    output_passed_log_filepath = f"./data/output/passed_log.txt"
-    with open(output_passed_log_filepath, mode="w") as inp:
-        pass
+
+def create_translation(
+    index: int,
+    corpus_row: list,
+    translation_dict: dict,
+    translation_id_dict: dict,
+    output_corpus_row_num: int,
+    alignment_info: list,
+) -> dict:
+    for output_index, output_values in enumerate(alignment_info):
+        pos = output_values[0]
+        lang_a = output_values[1]
+        lang_b = output_values[3]
+        lang_pair = lang_a + "_" + lang_b
+        if lang_pair in translation_dict[pos]:
+            translation_dict[pos][lang_pair][1] += 1
+            translation_dict[pos][lang_pair][2].append(corpus_row[0])
+            id_translation = translation_dict[pos][lang_pair][0]
+        else:
+            id_translation = translation_id_dict[pos]
+            translation_dict[pos][lang_pair] = [
+                id_translation,  # id_translation
+                lang_a,  # id_lang_a
+                lang_b,  # id_lang_b
+                1,  # count
+                [corpus_row[0]],  # id_corpus_list
+            ]
+            translation_id_dict[pos] += 1
+        alignment_info[output_index].insert(1, str(id_translation))
+    return translation_dict
+
+
+def create_alignment_info(
+    index: int,
+    corpus_row: list,  # [id_corpus, sentence_lang_a, sentence_lang_b, alignment_info]
+    wordlist_dict: dict,
+    passed_log_filepath: str,
+) -> dict:
+    """ """
+    alignment_info = []
+    if len(corpus_row) == 4:
+        try:
+            alignment_info = alignment(corpus_row, wordlist_dict)
+        except Exception as e:
+            print(traceback.format_exc())
+            with open(passed_log_filepath, mode="a") as passed_log_file:
+                passed_log_file.write(str(index))
+                passed_log_file.write(str(corpus_row))
+    return alignment_info
+
+
+def main(
+    lang_a: str,
+    lang_b: str,
+    lang_pair: str,
+    start_id: int,
+    input_dir: str,
+    output_dir: str,
+) -> None:
+    input_corpus_filename = f"corpus_{lang_pair}.csv"
+    input_corpus_filepath = os.path.join(input_dir, input_corpus_filename)
+    df_corpus = pd.read_csv(input_corpus_filepath, header=0)
+    print(len(df_corpus))
+    pos_list = ["noun", "verb", "adj", "adverb"]
+    word_columns = ["id_word", "name"]
+    translation_columns = [
+        "id_translation",
+        f"id_{lang_a}",
+        f"id_{lang_b}",
+        "id_corpus_list",
+        "count",
+    ]
+    corpus_columns = [
+        "id_corpus",
+        f"sentence_{lang_a}",
+        f"sentence_{lang_b}",
+        "alignment_info",
+    ]
+
+    # {pos:{id_lang_a}_{id_lang_b}:[id_translation,count,example,convert_from]}
+    translation_dict = {}
+    translation_id_dict = {}  # {pos:id}
+    wordlist_dict = {}  # {pos:{word:id}}
+    output_corpus_row_num = 0
+    """
+    品詞ごとに処理を行う。
+    Process for each part of speech.
+    """
+    for pos in pos_list:
+        translation_dict[pos] = {}
+        translation_id_dict[pos] = 0
+        # Get wordlist
+        input_wordlist_filename = f"wordlist_{lang_a}_{pos}.csv"
+        input_wordlist_filepath = os.path.join(input_dir, input_wordlist_filename)
+        df_wordlist_lang_a = pd.read_csv(input_wordlist_filepath, header=0)
+        wordlist_dict[lang_a + "_" + pos] = {
+            int(rows[0]): rows[1] for rows in df_wordlist_lang_a.values
+        }
+        max_id_lang_a = max(wordlist_dict[lang_a + "_" + pos].keys())
+        input_wordlist_filename = f"wordlist_{lang_b}_{pos}.csv"
+        input_wordlist_filepath = os.path.join(input_dir, input_wordlist_filename)
+        df_wordlist_lang_b = pd.read_csv(input_wordlist_filepath, header=0)
+        wordlist_dict[lang_b + "_" + pos] = {
+            int(rows[0]): rows[1] for rows in df_wordlist_lang_b.values
+        }
+        max_id_lang_b = max(wordlist_dict[lang_b + "_" + pos].keys())
+        flag_lang_a = False
+        flag_lang_b = False
+        wordlist_normalized_dict = {}
+        wordlist_normalized_dict[lang_a + "_" + pos] = {}
+        wordlist_normalized_dict[lang_b + "_" + pos] = {}
+        """
+        normalizer_lang_a, normalizer_lang_bを用いて、wordlistに追加する単語を標準化する。
+        Use normalizer_lang_a and normalizer_lang_b to standardize the words to be added to the wordlist.
+        """
+        for id_word, name in wordlist_dict[lang_a + "_" + pos].items():
+            if (
+                normalizer_lang_a(name, pos, "", test=True)
+                not in wordlist_dict[lang_a + "_" + pos]
+            ):
+                flag_lang_a = True
+                max_id_lang_a = max_id_lang_a + 1
+                wordlist_normalized_dict[lang_a + "_" + pos][
+                    normalizer_lang_a(name, pos, "", test=True)
+                ] = max_id_lang_a
+        for id_word, name in wordlist_dict[lang_b + "_" + pos].items():
+            if (
+                normalizer_lang_b(name, pos, "", test=True)
+                not in wordlist_dict[lang_b + "_" + pos]
+            ):
+                flag_lang_b = True
+                max_id_lang_b = max_id_lang_b + 1
+                wordlist_normalized_dict[lang_b + "_" + pos][
+                    normalizer_lang_b(name, pos, "", test=True)
+                ] = max_id_lang_b
+        # print("wordlist_normalized_dict", wordlist_normalized_dict)
+        wordlist_dict[lang_a + "_" + pos].update(
+            wordlist_normalized_dict[lang_a + "_" + pos]
+        )
+        wordlist_dict[lang_b + "_" + pos].update(
+            wordlist_normalized_dict[lang_b + "_" + pos]
+        )
+        if flag_lang_a:
+            output_wordlist_filename = f"wordlist_{lang_a}_{pos}.csv"
+            output_wordlist_filepath = os.path.join(
+                output_dir, output_wordlist_filename
+            )
+            df_wordlist_lang_a = pd.DataFrame(
+                [
+                    [id_word, name]
+                    for id_word, name in wordlist_dict[lang_a + "_" + pos].items()
+                ],
+                columns=word_columns,
+            )
+            df_wordlist_lang_a.to_csv(output_wordlist_filepath, index=False)
+        if flag_lang_b:
+            output_wordlist_filename = f"wordlist_{lang_b}_{pos}.csv"
+            output_wordlist_filepath = os.path.join(
+                output_dir, output_wordlist_filename
+            )
+            df_wordlist_lang_b = pd.DataFrame(
+                [
+                    [id_word, name]
+                    for id_word, name in wordlist_dict[lang_b + "_" + pos].items()
+                ],
+                columns=word_columns,
+            )
+            df_wordlist_lang_b.to_csv(output_wordlist_filepath, index=False)
+
+    # Create corpus data
+    output_corpus_filename = f"corpus_{lang_pair}.csv"
+    output_corpus_filepath = os.path.join(output_dir, output_corpus_filename)
+    # df_corpus = pd.read_csv(output_corpus_filepath, header=0)
+    # output_corpus_row_num = len(df_corpus)
+    # if start_id != 0:
+    #     df_corpus = pd.read_csv(output_corpus_filepath, header=0)
+    #     output_corpus_row_num = len(df_corpus)
+    # else:
+    #     df_corpus = pd.DataFrame(columns=corpus_columns)
+    #     df_corpus.to_csv(output_corpus_filepath, index=False)
+
+    # Get passed_id_list
+    output_passed_log_filename = f"passed_log.txt"
+    output_passed_log_filepath = os.path.join(output_dir, output_passed_log_filename)
     passed_id_list = []
+    # if start_id != 0:
+    #     output_passed_log_filename = f"passed_log.txt"
+    #     output_passed_log_filepath = os.path.join(
+    #         output_dir, output_passed_log_filename
+    #     )
+    #     with open(output_passed_log_filepath, mode="r") as output_passed_log_file:
+    #         passed_id_list = output_passed_log_file.readlines()
+    #         passed_id_list = [int(passed_id) for passed_id in passed_id_list]
+    # else:
+    #     passed_id_list = []
 
-
-try:
+    # Count function
     batch_size = 10
     midst_interval = 100
 
-    for i in range(start_id, input_reader.num_rows, batch_size):
-        corpus_rows = []
-        for j in range(batch_size):
-            if i + j < input_reader.num_rows:
-                corpus_rows.append(input_reader.read_row(i + j))
-
-        i_l = i
-
-        try:
-            count_function_batch(
-                i_l,
-                corpus_rows,
-                translation,
-                translation_id,
-                wordlists,
-                output_corpus_row_num,
-            )
-        except Exception as e:
-            for j in range(batch_size):
-                if i + j < input_reader.num_rows:
-                    count_function(
-                        i + j,
-                        input_reader.read_row(i + j),
-                        translation,
-                        translation_id,
-                        wordlists,
-                        output_corpus_row_num,
-                    )
-
-        if (i // batch_size) % midst_interval == midst_interval - 1:
-            for pos_tag in part_of_speach_tag_rev.values():
-                with open(
-                    f"./data/output/translation_{langs}_{pos_tag}_midst.csv", "w"
-                ) as f:
-                    writer = csv.writer(f)
-                    for key, value in translation[pos_tag].items():
-                        [id_lang_a, id_lang_b] = key.split("_")
-                        writer.writerow(
-                            [
-                                value[0],
-                                id_lang_a,
-                                id_lang_b,
-                                value[1],
-                                value[2],
-                                value[3],
-                                value[4],
-                            ]
-                        )
-            with open(f"./data/output/passed_id.txt", "w") as f:
-                f.write(str(i + batch_size - 1))
-except Exception as e:
-    print(traceback.format_exc())
-finally:
-    for pos_tag, relation in translation.items():
-        with open(f"./data/output/translation_{langs}_{pos_tag}.csv", "w") as f:
-            writer = csv.writer(f)
-            for key, value in relation.items():
-                [id_lang_a, id_lang_b] = key.split("_")
-                writer.writerow(
-                    [
-                        value[0],
-                        id_lang_a,
-                        id_lang_b,
-                        value[1],
-                        "{" + str(value[2])[1:-1] + "}",
-                        value[3],
-                        value[4],
-                    ]
+    for index, corpus_row in df_corpus.iterrows():
+        if index < start_id:
+            continue
+        if index in passed_id_list:
+            continue
+        if index >= start_id + batch_size:
+            break
+        alignment_info = create_alignment_info(
+            index,
+            corpus_row,
+            wordlist_dict,
+            output_passed_log_filepath,
+        )
+        translation_dict = create_translation(
+            index,
+            corpus_row,
+            translation_dict,
+            translation_id_dict,
+            output_corpus_row_num,
+            alignment_info,
+        )
+        output_corpus_row_num += 1
+        if index % midst_interval == midst_interval - 1:
+            for pos in pos_list:
+                output_translation_filename = f"translation_{lang_pair}_{pos}.csv"
+                output_translation_filepath = os.path.join(
+                    output_dir, output_translation_filename
                 )
+                print(f"translation_dict[pos].items(): {translation_dict[pos].items()}")
+                df_translation = pd.DataFrame(
+                    [
+                        [
+                            value[0],
+                            id_lang_a,
+                            id_lang_b,
+                            alignment_info,
+                            value[4],
+                        ]
+                        for key, value in translation_dict[pos].items()
+                        for id_lang_a, id_lang_b in [key.split("_")]
+                    ],
+                    columns=translation_columns,
+                )
+                output_translation(
+                    output_translation_filename,
+                    output_translation_filepath,
+                    df_translation,
+                )
+            output_passed_log_filename = f"passed_log.txt"
+            output_passed_log_filepath = os.path.join(
+                output_dir, output_passed_log_filename
+            )
+            with open(output_passed_log_filepath, mode="w") as output_passed_log_file:
+                for passed_id in passed_id_list:
+                    output_passed_log_file.write(str(passed_id) + "\n")
+
+    # try:
+    #     print("Try")
+    #     for index, corpus_row in df_corpus.iterrows():
+    #         if index in passed_id_list:
+    #             continue
+    #         if index < start_id:
+    #             continue
+    #         if index >= start_id + batch_size:
+    #             break
+    #         alignment_info = create_alignment_info(
+    #             index,
+    #             corpus_row,
+    #             wordlist_dict,
+    #             output_passed_log_filepath,
+    #         )
+    #         translation_dict = create_translation(
+    #             index,
+    #             corpus_row,
+    #             translation_dict,
+    #             translation_id_dict,
+    #             output_corpus_row_num,
+    #             alignment_info,
+    #         )
+    #         output_corpus_row_num += 1
+    #         if index % midst_interval == midst_interval - 1:
+    #             for pos in pos_list:
+    #                 output_translation_filename = f"translation_{lang_pair}_{pos}.csv"
+    #                 output_translation_filepath = os.path.join(
+    #                     output_dir, output_translation_filename
+    #                 )
+    #                 df_translation = pd.DataFrame(
+    #                     [
+    #                         [
+    #                             value[0],
+    #                             id_lang_a,
+    #                             id_lang_b,
+    #                             value[1],
+    #                             "{" + str(value[2])[1:-1] + "}",
+    #                             value[3],
+    #                             value[4],
+    #                         ]
+    #                         for key, value in translation_dict[pos].items()
+    #                         for id_lang_a, id_lang_b in [key.split("_")]
+    #                     ],
+    #                     columns=translation_columns,
+    #                 )
+    #                 output_translation(
+    #                     output_translation_filename,
+    #                     output_translation_filepath,
+    #                     df_translation,
+    #                 )
+    #             output_passed_log_filename = f"passed_log.txt"
+    #             output_passed_log_filepath = os.path.join(
+    #                 output_dir, output_passed_log_filename
+    #             )
+    #             with open(
+    #                 output_passed_log_filepath, mode="w"
+    #             ) as output_passed_log_file:
+    #                 for passed_id in passed_id_list:
+    #                     output_passed_log_file.write(str(passed_id) + "\n")
+    # except Exception as e:
+    #     print(f"Error: {traceback.format_exc()}")
+    # finally:
+    #     print("Finally")
+    #     for pos, translation in translation_dict.items():
+    #         print(f"pos: {pos}, translation: {translation}")
+    #         output_translation_filename = f"translation_{lang_pair}_{pos}.csv"
+    #         output_translation_filepath = os.path.join(
+    #             output_dir, output_translation_filename
+    #         )
+    #         df_translation = pd.DataFrame(
+    #             [
+    #                 [
+    #                     value[0],
+    #                     id_lang_a,
+    #                     id_lang_b,
+    #                     value[1],
+    #                     "{" + str(value[2])[1:-1] + "}",
+    #                     value[3],
+    #                     value[4],
+    #                 ]
+    #                 for key, value in translation.items()
+    #                 for id_lang_a, id_lang_b in [key.split("_")]
+    #             ],
+    #             columns=translation_columns,
+    #         )
+    #         output_translation(
+    #             output_translation_filename, output_translation_filepath, df_translation
+    #         )
+
+
+if __name__ == "__main__":
+    # Get arguments
+    args = sys.argv
+    if len(args) < 3:
+        print("Usage: python count_function.py lang_a lang_b [start_id]")
+        sys.exit(1)
+    lang_a = args[1]
+    lang_b = args[2]
+    if len(args) == 3:
+        start_id = 0
+    else:
+        start_id = int(args[3])
+    lang_pair = lang_a + "_" + lang_b
+
+    # import alignment function
+    path_alignment = "/root/src/alignment/"
+    sys.path.append(os.path.join(path_alignment + lang_pair))
+    from alignment import alignment
+
+    # import normalizer
+    path_normalizer = "/root/src/normalizer/"
+    sys.path.append(path_normalizer)
+
+    # import normalizer
+    command = "from {}_normalizer import {}_normalizer as normalizer_lang_a".format(
+        lang_a, lang_a
+    )
+    exec(command)
+    command = "from {}_normalizer import {}_normalizer as normalizer_lang_b".format(
+        lang_b, lang_b
+    )
+    exec(command)
+
+    input_dir = "./data/input/"
+    output_dir = "./data/output/"
+    os.makedirs(output_dir, exist_ok=True)
+
+    main(lang_a, lang_b, lang_pair, start_id, input_dir, output_dir)

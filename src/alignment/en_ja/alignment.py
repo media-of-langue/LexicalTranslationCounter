@@ -13,16 +13,15 @@ path_normalizer = os.path.normpath(os.path.join(base, "../../normalizer/"))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
 
 sys.path.append(path_morphological)
-from en_morphological import en_morphological, en_morphological_batch
-from ja_morphological import ja_morphological, ja_morphological_batch
+from en_morphological import en_morphological_batch
+from ja_morphological import ja_morphological_batch
 
 sys.path.append(path_normalizer)
-import time
 
 from en_normalizer import en_normalizer
 from ja_normalizer import ja_normalizer
 
-# TODO: read by pandas
+# TODO: Replace with pandas
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))[1:]
 
 jumanpp = Juman(timeout=300, jumanpp=True)
@@ -49,14 +48,13 @@ max_word_len = 3
 part_of_speach_tag = {"noun": "n", "verb": "v", "adj": "a", "adverb": "r"}
 part_of_speach_tag_rev = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
 
-src_except_l = ["not", "n't"]
-trg_except_l = ["ない", "なかろう", "なく", "なかっ", "なければ"]
-be_l = ["is", "are", "was", "were", "am", "be", "been", "being"]
+src_except_list = ["not", "n't"]
+trg_except_list = ["ない", "なかろう", "なく", "なかっ", "なければ"]
+be_list = ["is", "are", "was", "were", "am", "be", "been", "being"]
 src_relative_index_except = 1
 trg_relative_index_except = -1
 
 # ignore be + verb
-
 src_word_sep = " "
 trg_word_sep = ""
 
@@ -134,18 +132,18 @@ def awesome_alignment_postprocessing(
     index_trg_ignore = set()
     alignmented_l = []
     alignmented_l_append = alignmented_l.append
-    for word_src_except in src_except_l:
+    for word_src_except in src_except_list:
         if word_src_except in sent_src:
             for index_src, word_tmp in enumerate(sent_src):
                 if word_tmp == word_src_except:
                     index_src_ignore.add(index_src + src_relative_index_except)
-    for word_trg_except in trg_except_l:
+    for word_trg_except in trg_except_list:
         if word_trg_except in sent_tgt:
             for index_trg, word_tmp in enumerate(sent_tgt):
                 if word_tmp == word_trg_except:
                     index_trg_ignore.add(index_trg + trg_relative_index_except)
     # ここで be + verb を無視する
-    for be in be_l:
+    for be in be_list:
         if be in sent_src:
             for index_src, word_tmp in enumerate(sent_src):
                 if index_src + 1 < len(sent_src):
@@ -416,7 +414,7 @@ def awesome_alignment_batch(
         softmax_inter_list.append(softmax_inter)
 
     # post-processing
-    alignmented_ls = [
+    alignmented_list = [
         awesome_alignment_postprocessing(
             softmax_inter,
             sub2word_map_src,
@@ -437,7 +435,7 @@ def awesome_alignment_batch(
         )
     ]
 
-    return alignmented_ls
+    return alignmented_list
 
 
 def alignment_preprocessing(corpus_row):
@@ -453,100 +451,101 @@ def alignment_postprocessing(alignmented, wordlist, test=False):
     src_normalized_dict = {}
     trg_normalized_dict = {}
     for word_pair in alignmented:
-        src_pos_l = word_pair[0]
-        src_word_l = word_pair[1]
-        trg_pos_l = word_pair[2]
-        trg_word_l = word_pair[3]
+        src_pos_list = word_pair[0]
+        src_word_list = word_pair[1]
+        trg_pos_list = word_pair[2]
+        trg_word_list = word_pair[3]
         independent_index_src = -1
-        for src_index, pos_tag in enumerate(src_pos_l):
-            if pos_tag != "":
+        for src_index, pos in enumerate(src_pos_list):
+            if pos != "":
                 independent_index_src = src_index
         independent_index_trg = -1
-        for trg_index, pos_tag in enumerate(trg_pos_l):
-            if pos_tag != "":
+        for trg_index, pos in enumerate(trg_pos_list):
+            if pos != "":
                 independent_index_trg = trg_index
-        # independent_pos_tag = set(src_pos_l[independent_index_src].split("/")+trg_pos_l[independent_index_trg].split("/"))
-        independent_pos_tag = set(src_pos_l[independent_index_src].split("/")) & set(
-            trg_pos_l[independent_index_trg].split("/")
+        independent_pos = set(src_pos_list[independent_index_src].split("/")) & set(
+            trg_pos_list[independent_index_trg].split("/")
         )
-        independent_pos_tag.discard("")
+        independent_pos.discard("")
         find_flag_src = False
         find_flag_trg = False
-        src_pos_tag_s = set()
-        trg_pos_tag_s = set()
-        for src_len in range(min(len(src_word_l), max_word_len), 0, -1):
-            for src_con in itertools.combinations(range(len(src_word_l)), src_len):
+        src_pos_s = set()
+        trg_pos_s = set()
+        for src_len in range(min(len(src_word_list), max_word_len), 0, -1):
+            for src_con in itertools.combinations(range(len(src_word_list)), src_len):
                 if independent_index_src in src_con:
                     src_word = src_word_sep.join(
-                        [src_word_l[src_index] for src_index in src_con]
+                        [src_word_list[src_index] for src_index in src_con]
                     )
-                    for pos_tag in independent_pos_tag:
+                    for pos in independent_pos:
+                        pos = part_of_speach_tag_rev[pos]
                         if test:
                             src_normalized = en_normalizer(
-                                src_word, pos_tag, wordlist, test
+                                src_word, pos, wordlist, test
                             )
                             src_id = -1
                         else:
                             src_id, src_normalized = en_normalizer(
-                                src_word, pos_tag, wordlist, test
+                                src_word, pos, wordlist, test
                             )
                         if src_id is not None:
                             if src_word not in src_normalized_dict:
                                 src_normalized_dict[src_word] = {}
-                            src_normalized_dict[src_word][pos_tag] = {
+                            src_normalized_dict[src_word][pos] = {
                                 "id": int(src_id),
                                 "word_normalized": src_normalized,
                             }
                             find_flag_src = True
-                            src_pos_tag_s.add(pos_tag)
+                            src_pos_s.add(pos)
                 if find_flag_src:
                     break
             else:
                 continue
             break
 
-        for trg_len in range(min(len(trg_word_l), max_word_len), 0, -1):
-            for trg_con in itertools.combinations(range(len(trg_word_l)), trg_len):
+        for trg_len in range(min(len(trg_word_list), max_word_len), 0, -1):
+            for trg_con in itertools.combinations(range(len(trg_word_list)), trg_len):
                 if independent_index_trg in trg_con:
                     trg_word = trg_word_sep.join(
-                        [trg_word_l[trg_index] for trg_index in trg_con]
+                        [trg_word_list[trg_index] for trg_index in trg_con]
                     )
-                    for pos_tag in independent_pos_tag:
+                    for pos in independent_pos:
+                        pos = part_of_speach_tag_rev[pos]
                         if test:
                             trg_normalized = ja_normalizer(
-                                trg_word, pos_tag, wordlist, test
+                                trg_word, pos, wordlist, test
                             )
                             trg_id = -1
                         else:
                             trg_id, trg_normalized = ja_normalizer(
-                                trg_word, pos_tag, wordlist, test
+                                trg_word, pos, wordlist, test
                             )
                         if trg_id is not None:
                             if trg_word not in trg_normalized_dict:
                                 trg_normalized_dict[trg_word] = {}
-                            trg_normalized_dict[trg_word][pos_tag] = {
+                            trg_normalized_dict[trg_word][pos] = {
                                 "id": int(trg_id),
                                 "word_normalized": trg_normalized,
                             }
                             find_flag_trg = True
-                            trg_pos_tag_s.add(pos_tag)
+                            trg_pos_s.add(pos)
                 if find_flag_trg:
                     break
             else:
                 continue
             break
         if find_flag_src and find_flag_trg:
-            for pos_tag in src_pos_tag_s & trg_pos_tag_s:
+            for pos in src_pos_s & trg_pos_s:
                 if [
-                    src_normalized_dict[src_word][pos_tag]["word_normalized"],
-                    trg_normalized_dict[trg_word][pos_tag]["word_normalized"],
+                    src_normalized_dict[src_word][pos]["word_normalized"],
+                    trg_normalized_dict[trg_word][pos]["word_normalized"],
                 ] not in exceptions:
                     output_l_append(
                         [
-                            pos_tag,
-                            str(src_normalized_dict[src_word][pos_tag]["id"]),
+                            pos,
+                            str(src_normalized_dict[src_word][pos]["id"]),
                             src_word,
-                            str(trg_normalized_dict[trg_word][pos_tag]["id"]),
+                            str(trg_normalized_dict[trg_word][pos]["id"]),
                             trg_word,
                         ]
                     )
@@ -558,7 +557,7 @@ def alignment_batch(corpus_rows, wordlist, test=False):
     corpus_rows = [alignment_preprocessing(corpus_row) for corpus_row in corpus_rows]
 
     # morphological analysis and alignment
-    alignmented_ls = awesome_alignment_batch(
+    alignmented_list = awesome_alignment_batch(
         [corpus_row[1] for corpus_row in corpus_rows],
         [corpus_row[2] for corpus_row in corpus_rows],
         en_morphological_batch,
@@ -566,14 +565,14 @@ def alignment_batch(corpus_rows, wordlist, test=False):
     )
 
     # post-processing
-    assert len(alignmented_ls) == len(corpus_rows)
+    assert len(alignmented_list) == len(corpus_rows)
 
-    output_ls = [
+    output_list = [
         alignment_postprocessing(alignmented, wordlist, test)
-        for alignmented in alignmented_ls
+        for alignmented in alignmented_list
     ]
 
-    return output_ls
+    return output_list
 
 
 def alignment(corpus_row, wordlist, test=False):
