@@ -54,7 +54,7 @@ Execute count function.
 The results are stored in /root/src/data/output/.
 ```
 cd /root/src/
-python3 count_fuction.py 0 {la1} {la2}
+python3 count_function.py 0 {la1} {la2}
 ```
 ```
 ex: 
