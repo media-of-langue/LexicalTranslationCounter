@@ -58,7 +58,7 @@ python3 count_function.py 0 {la1} {la2}
 ```
 ```
 ex: 
-python3 count_fuction.py 0 en fr
+python3 count_function.py 0 en fr
 ```
 
 If you are interrupted by an error on the way, run with the first argument being the value in /root/src/data/output/passed_id.txt plus one.
