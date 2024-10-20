@@ -1,0 +1,4 @@
+nltk
+pyknp
+django-environ
+konlpy
