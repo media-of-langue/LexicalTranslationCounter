@@ -1,8 +1,8 @@
-version: '3'
+#version: '3.12'
 services:
-    ltc:
-        image: ltc
-        container_name: ltc
+    wordlist_it_tmp_3:
+        image: wordlist_it_tmp_3
+        container_name: wordlist_it_tmp_3
         command:
             - /bin/bash
         build:

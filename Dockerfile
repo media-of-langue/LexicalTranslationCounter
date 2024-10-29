@@ -1,9 +1,12 @@
-ARG LA1
-ARG LA2
-FROM mediaoflangue/wordlist_${LA1}:latest AS wordlist1
-FROM mediaoflangue/wordlist_${LA2}:latest AS wordlist2
-FROM mediaoflangue/corpus_${LA1}_${LA2}:latest AS corpus
+ARG LA1=en
+ARG LA2=it
+ARG HOST1=mediaoflangue
+ARG HOST2=aaakmn
+FROM ${HOST1}/wordlist_${LA1}:latest AS wordlist1
+FROM ${HOST2}/wordlist_${LA2}:latest AS wordlist2
+FROM ${HOST2}/corpus_${LA1}_${LA2}:latest AS corpus
 FROM nvidia/cuda:11.6.2-base-ubuntu20.04
+FROM python:3.12
 COPY --from=wordlist1 /src/data/input/wordlist* /root/src/data/input/
 COPY --from=wordlist2 /src/data/input/wordlist* /root/src/data/input/
 COPY --from=corpus /src/data/input/corpus* /root/src/data/input/
@@ -29,8 +32,9 @@ RUN apt-get update -y && \
 RUN apt-get install -y python3 python3-pip
 RUN pip3 install --upgrade pip
 RUN cd ./basis/ && sh ./install.sh
-RUN cd /${LA1} && sh ./install.sh
 RUN cd /${LA2} && sh ./install.sh
+RUN cd /${LA1} && sh ./install.sh
+
 RUN cd /${LA1}-${LA2} && sh ./install.sh
 WORKDIR ${SRCDIR}
 COPY .${SRCDIR} /root/src/

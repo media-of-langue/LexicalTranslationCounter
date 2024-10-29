@@ -71,7 +71,9 @@ def ja_morphological(sentence):
     mrph_out_append = mrph_out.append
     last_katuyou2 = ""
     for mrph in mrph_l:
+        
         if len(mrph_out) == 0 or len(tokenized) == 0:
+            print(mrph.midasi)
             tokenized_append(mrph.midasi)
             mrph_out_append(mrph.hinsi)
             last_katuyou2 = mrph.katuyou2
@@ -130,3 +132,6 @@ def ja_morphological_batch(sentences):
         mrph.append(mrph_sentence)
 
     return tokenized, mrph
+
+if __name__=="__main__":
+    print(ja_morphological("明日は晴れの可能性が高いのだ"))

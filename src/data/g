@@ -1,0 +1,4 @@
+for n in range(1,10):
+    print(f"cat en_it_corpus_00{str(n)}*.csv > ../input/corpus_it_en_{str(n)}.csv" end="")
+    if n!=9:
+        print(" && ")

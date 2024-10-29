@@ -5,17 +5,24 @@ import torch
 import transformers
 import csv
 
+root_src=os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_with_co/config.json"
+     "/root/src/model/awesome_model_with_co/config.json"
+    #f"{root_src}/src/model/awesome_model_with_co/config.json"
 )
 model = transformers.BertModel.from_pretrained(
-    "/root/src/model/awesome_model_with_co/pytorch_model.bin", config=config
+     "/root/src/model/awesome_model_with_co/pytorch_model.bin", config=config
+    #f"{root_src}/src/model/awesome_model_with_co/pytorch_model.bin",
+    config=config,
 )
 tokenizer_config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_with_co/tokenizer_config.json"
+     "/root/src/model/awesome_model_with_co/tokenizer_config.json"
+    #f"{root_src}/src/model/awesome_model_with_co/tokenizer_config.json"
 )
 tokenizer = transformers.BertTokenizer.from_pretrained(
-    "/root/src/model/awesome_model_with_co/", config=tokenizer_config
+     "/root/src/model/awesome_model_with_co/", config=tokenizer_config
+    #f"{root_src}/src/model/awesome_model_with_co/",
+    config=tokenizer_config,
 )
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -33,6 +40,8 @@ from de_morphological import de_morphological, de_morphological_batch
 sys.path.append(path_normalizer)
 from en_normalizer import en_normalizer
 from de_normalizer import de_normalizer
+
+
 
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 
@@ -480,6 +489,10 @@ def alignment_postprocess(alignmented, wordlist, test=False):
                             src_id, src_normalized = de_normalizer(
                                 src_word, pos_tag, wordlist, test
                             )
+                        src_word=src_normalized
+                        
+                        
+                        
                         if src_id is not None:
                             if src_word not in src_normalized_dict:
                                 src_normalized_dict[src_word] = {}

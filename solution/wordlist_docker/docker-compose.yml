@@ -1,0 +1,41 @@
+#version: '3.8'
+services:
+    wordlist_it_tmp_2:
+        image: wordlist_it_tmp_2
+        container_name: wordlist_it_tmp_2
+        command:
+            - /bin/bash
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+            args:
+                LA1: ""
+                LA2: ""
+        working_dir: /root/
+        tty: true
+        restart: always
+        env_file:
+            - ./.env
+        environment:
+            - LANG=${LANG}
+            - LANGUAGE=${LANGUAGE}
+            - LC_ALL=${LC_ALL}
+            - TZ=${TZ}
+            - TERM=${TERM}
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        #volumes:
+        #    - ./src/count_function.py:/root/src/count_function.py
+         #   - ./src/add_wordlist.py:/root/src/add_wordlist.py
+          #  - ./src/alignment:/root/src/alignment
+           # - ./src/morphological:/root/src/morphological
+            #- ./src/normalizer:/root/src/normalizer
+            #- ./src/data/input/:/root/src/data/input/
+            #- ./src/data/output/:/root/src/data/output/
+            #- ./src/test/:/root/src/test/
+        # Comment out the following lines if you don't use GPU
+        # deploy:
+        #     resources:
+        #         reservations:
+        #             devices:
+        #                 - capabilities: [gpu]

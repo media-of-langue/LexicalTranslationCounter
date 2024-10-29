@@ -12,7 +12,15 @@ start_id = int(args[1])
 la1 = args[2]
 la2 = args[3]
 langs = la1 + "_" + la2
-sys.path.append("/root/src/alignment/" + langs)
+#print(langs)
+os.chdir(os.path.dirname(__file__))
+#print()
+sys.path.append("./alignment/" + langs)
+#print("root/src/alignment/" + langs)
+sys.path.append(
+    #"/Users/komuramakoto/MOL/LexicalTranslationCounter_/src/alignmen" + langs
+    "root/src/alignmen" + langs
+)
 from alignment import alignment, alignment_batch
 
 base = os.path.dirname(os.path.abspath(__file__))
@@ -49,11 +57,13 @@ class CsvRowReader:
         return next(self.reader)
 
 
-input_reader = CsvRowReader(f"./data/input/corpus_{langs}.csv")
+src_path = "/root/src"
+src_path ="/Users/komuramakoto/LexicalTranslationCounter/src"
+input_reader = CsvRowReader(f"{src_path}/data/input/corpus_{langs}.csv")
 
 # check if output directory exists
-if not os.path.isdir("./data/output"):
-    os.makedirs("./data/output")
+if not os.path.isdir(f"{src_path}/data/output"):
+    os.makedirs(f"{src_path}/data/output")
 
 part_of_speach_tag_rev = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
 part_of_speach_tag_code = {"noun": "n", "verb": "v", "adj": "a", "adverb": "r"}
@@ -65,15 +75,21 @@ output_corpus_row_num = 0
 for pos_tag in part_of_speach_tag_rev.values():
     relations[pos_tag] = {}
     relations_id[pos_tag] = 0
-    with open("./data/input/wordlist_" + la1 + "_" + pos_tag + ".csv", mode="r") as inp:
+    with open(
+        f"{src_path}/data/input/wordlist_" + la1 + "_" + pos_tag + ".csv", mode="r",encoding="ISO-8859-1"
+    ) as inp:
         reader = list(csv.reader(inp))
-        if not re.fullmatch("[-+]?\d+", reader[0][0]):
+        if not re.fullmatch("[-+]?+", reader[0][0]):
             reader = reader[1:]
+        for k in reader:
+            print(k)
         wordlists[la1 + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
         max_id_la1 = max(wordlists[la1 + "_" + pos_tag].values())
-    with open("./data/input/wordlist_" + la2 + "_" + pos_tag + ".csv", mode="r") as inp:
+    with open(
+        f"{src_path}/data/input/wordlist_" + la2 + "_" + pos_tag + ".csv", mode="r"
+    ) as inp:
         reader = list(csv.reader(inp))
-        if not re.fullmatch("[-+]?\d+", reader[0][0]):
+        if not re.fullmatch("[-+]?+", reader[0][0]):
             reader = reader[1:]
         wordlists[la2 + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
         max_id_la2 = max(wordlists[la2 + "_" + pos_tag].values())
@@ -107,24 +123,29 @@ for pos_tag in part_of_speach_tag_rev.values():
     wordlists[la2 + "_" + pos_tag].update(wordlists_add[la2 + "_" + pos_tag])
     if flag_la1:
         writer = csv.writer(
-            open("./data/output/wordlist_" + la1 + "_" + pos_tag + ".csv", "w")
+            open(
+                f"{src_path}/data/output/wordlist_" + la1 + "_" + pos_tag + ".csv", "w"
+            )
         )
         for key, word_id in wordlists[la1 + "_" + pos_tag].items():
             writer.writerow([word_id, key, "f"])
     if flag_la2:
         writer = csv.writer(
-            open("./data/output/wordlist_" + la2 + "_" + pos_tag + ".csv", "w")
+            open(
+                f"{src_path}/data/output/wordlist_" + la2 + "_" + pos_tag + ".csv", "w"
+            )
         )
         for key, word_id in wordlists[la2 + "_" + pos_tag].items():
             writer.writerow([word_id, key, "f"])
 
 if start_id != 0:
-    output_file = open(f"./data/output/corpus_{langs}.csv", "a")
+    output_file = open(f"{src_path}/data/output/corpus_{langs}.csv", "a")
     for pos_tag in part_of_speach_tag_rev.values():
         relations[pos_tag] = {}
         max_id = 0
         with open(
-            "./data/output/relations_" + langs + "_" + pos_tag + "_totyu.csv", mode="r"
+            f"{src_path}/data/output/relations_" + langs + "_" + pos_tag + "_totyu.csv",
+            mode="r",
         ) as inp:
             reader = csv.reader(inp)
             for rows in reader:
@@ -139,15 +160,15 @@ if start_id != 0:
                     max_id = int(rows[0])
             relations_id[pos_tag] = max_id + 1
     output_corpus_row_num = len(
-        [None for l in open(f"./data/output/corpus_{langs}.csv", "r")]
+        [None for l in open(f"{src_path}/data/output/corpus_{langs}.csv", "r")]
     )
 else:
-    output_file = open(f"./data/output/corpus_{langs}.csv", "w")
+    output_file = open(f"{src_path}/data/output/corpus_{langs}.csv", "w")
 
 if start_id == 0:
-    passed_log_file = open("./data/output/passed_log.txt", "w")
+    passed_log_file = open(f"{src_path}/data/output/passed_log.txt", "w")
 else:
-    passed_log_file = open("./data/output/passed_log.txt", "a")
+    passed_log_file = open(f"{src_path}/data/output/passed_log.txt", "a")
 output_writer = csv.writer(output_file)
 
 
@@ -212,7 +233,10 @@ def count_function_batch(
         for corpus_row in corpus_rows:
             if len(corpus_row) != 5:
                 raise Exception("corpus_row length is not 5")
+
+
         output_ls = alignment_batch(corpus_rows, wordlists)
+        
 
         assert len(output_ls) == len(corpus_rows)
 
@@ -220,7 +244,7 @@ def count_function_batch(
         print(traceback.format_exc())
         passed_log_file.write(f"batch ({i_l} ~ {i_l + len(corpus_rows)})\n")
         raise e
-
+    
     for i, corpus_row in enumerate(corpus_rows):
         count_function_post_processing(
             i_l + i,
@@ -234,7 +258,7 @@ def count_function_batch(
 
 try:
     batch_size = 10
-    totyu_interval = 100
+    totyu_interval = 10
 
     for i in range(start_id, input_reader.num_rows, batch_size):
         corpus_rows = []
@@ -268,7 +292,7 @@ try:
         if (i // batch_size) % totyu_interval == totyu_interval - 1:
             for pos_tag in part_of_speach_tag_rev.values():
                 with open(
-                    f"./data/output/relations_{langs}_{pos_tag}_totyu.csv", "w"
+                    f"{src_path}/data/output/relations_{langs}_{pos_tag}_totyu.csv", "w"
                 ) as f:
                     writer = csv.writer(f)
                     for key, value in relations[pos_tag].items():
@@ -284,13 +308,23 @@ try:
                                 value[4],
                             ]
                         )
-            with open(f"./data/output/passed_id.txt", "w") as f:
+                writer = csv.writer(
+                open(
+                    f"{src_path}/data/output/wordlist_" + la1 + "_" + pos_tag + ".csv", "w"
+                ) )
+                for key, word_id in wordlists[la1 + "_" + pos_tag].items():
+                    writer.writerow([word_id, key, "f"])
+                    #print(word_id)
+                
+
+            with open(f"{src_path}/data/output/passed_id.txt", "w") as f:
                 f.write(str(i + batch_size - 1))
+
 except Exception as e:
     print(traceback.format_exc())
 finally:
     for pos_tag, relation in relations.items():
-        with open(f"./data/output/relations_{langs}_{pos_tag}.csv", "w") as f:
+        with open(f"{src_path}/data/output/relations_{langs}_{pos_tag}.csv", "w") as f:
             writer = csv.writer(f)
             for key, value in relation.items():
                 [id_la1, id_la2] = key.split("_")
