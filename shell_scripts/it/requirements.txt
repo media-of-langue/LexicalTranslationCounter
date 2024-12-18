@@ -1,4 +1,5 @@
-nltk
-pyknp
+spacy
 django-environ
+pyknp
 konlpy
+nltk

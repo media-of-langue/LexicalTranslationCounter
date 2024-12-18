@@ -25,18 +25,21 @@ exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 
 jumanpp = Juman(timeout=300, jumanpp=True)
 
+root_ = "/Users/komuramakoto/MOL/LexicalTranslationCounter"
+src_ = f"{root_}/src"
+model_ = f"{src_}/model"
+without_co_ = f"{model_}/model_without_co"
 # download model
-config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_without_co/config.json"
-)
+config = transformers.BertConfig.from_pretrained(f"{without_co_}/config.json")
 model = transformers.BertModel.from_pretrained(
-    "/root/src/model/awesome_model_without_co/pytorch_model.bin", config=config
+    pretrained_model_name_or_path=f"/Users/komuramakoto/MOL/LexicalTranslationCounter/src/model/model_without_co/pytorch_model.bin",
+    config=config,
 )
 tokenizer_config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_without_co/tokenizer_config.json"
+    f"{without_co_}/tokenizer_config.json"
 )
 tokenizer = transformers.BertTokenizer.from_pretrained(
-    "/root/src/model/awesome_model_without_co/", config=tokenizer_config
+    f"{without_co_}/", config=tokenizer_config
 )
 
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")

@@ -1,8 +1,8 @@
-version: '3'
+
 services:
     ltc:
-        image: ltc
-        container_name: ltc
+        image: tmpltc3
+        container_name: tmpltc4
         command:
             - /bin/bash
         build:
@@ -17,11 +17,10 @@ services:
         env_file:
             - ./.env
         environment:
-            - LANG=${LANG}
-            - LANGUAGE=${LANGUAGE}
-            - LC_ALL=${LC_ALL}
-            - TZ=${TZ}
-            - TERM=${TERM}
+            TZ: "US"
+            LANGUAGE: "en_US.UTF-8"
+            LC_ALL: "C.UTF-8"
+            
         extra_hosts:
             - "host.docker.internal:host-gateway"
         volumes:
