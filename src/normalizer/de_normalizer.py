@@ -36,8 +36,10 @@ def de_normalizer(word, pos_tag, wordlist, test=False):
     if test:
         return word_normalized
     tmp_key = "de_" + pos_tag_rev[pos_tag]
+    #print("wordlist.keys()",wordlist.keys())
     if word_normalized in wordlist[tmp_key]:
         id = wordlist[tmp_key][word_normalized]
     else:
         id = None
+    #print("word_normalized",word_normalized)
     return id, word_normalized

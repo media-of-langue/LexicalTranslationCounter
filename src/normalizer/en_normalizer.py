@@ -1,11 +1,12 @@
 import os
 
 import nltk
-
+base_path=os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+datapath=f"{base_path}/root/src/morphological/nltk_data"
 if not os.path.isdir("/root/nltk_data/tokenizers/punkt/"):
-    nltk.download("punkt")
+    nltk.download("punkt", download_dir=datapath)
 if not os.path.isfile("/root/nltk_data/corpora/wordnet.zip"):
-    nltk.download("wordnet")
+    nltk.download("wordnet", download_dir=datapath)
 import environ
 import pandas as pd
 from nltk.stem import SnowballStemmer

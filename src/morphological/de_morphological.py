@@ -1,6 +1,6 @@
 import spacy
 
-nlp = spacy.load("de_dep_news_trf")
+nlp = spacy.load("de_core_news_sm")
 
 
 def de_morphological(sentence):

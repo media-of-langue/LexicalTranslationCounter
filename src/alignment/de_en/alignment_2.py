@@ -45,6 +45,7 @@ tokenizer = transformers.BertTokenizer.from_pretrained(
 )
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
 model.to(device)
 
 
@@ -453,12 +454,13 @@ def awesome_alignment_batch(
     padded_ids_tensor_save_path=f"./data/output/padded_ids_tensors/{idx}.pickle"
     padded_out_tensor_save_path=f"./data/output/padded_out_tensors/{idx}.pickle"
     moromoro_save_path=f"./data/output/moromoro/{idx}.pickle"
-    if phase_num==3:
+    if phase_num==0:
         sent_srcs, pos_srcs = src_morphological_batch(sentence_srcs)
         sent_tgts, pos_trgs = trg_morphological_batch(sentence_trgs)
-        #pickle_save(path=sent_pos_save_path,data=(sent_srcs, pos_srcs ,sent_tgts, pos_trgs ))
-    #elif phase_num==1:
-        #sent_srcs, pos_srcs ,sent_tgts, pos_trgs=pickle_load(path=sent_pos_save_path)
+        pickle_save(path=sent_pos_save_path,data=(sent_srcs, pos_srcs ,sent_tgts, pos_trgs ))
+        return []
+    elif phase_num==1:
+        sent_srcs, pos_srcs ,sent_tgts, pos_trgs=pickle_load(path=sent_pos_save_path)
         ids_srcs, ids_trgs, sub2word_map_srcs, sub2word_map_trgs=awesome_alignment_preprocessing_wrapper(sent_srcs, sent_tgts)
         loc()
         padded_ids_src_tensor = padding(ids_srcs)
@@ -471,10 +473,10 @@ def awesome_alignment_batch(
         print("loaded")
         padded_out_src_tensor=rechnen(padded_ids_src_tensor,model,device)
         padded_out_trg_tensor=rechnen(padded_ids_trg_tensor,model,device)
-        #pickle_save(path=padded_out_tensor_save_path,data=(padded_out_src_tensor ,padded_out_trg_tensor ))
-        #return []
-    #elif phase_num==3:
-        #padded_out_src_tensor,padded_out_trg_tensor=pickle_load(path=padded_out_tensor_save_path)
+        pickle_save(path=padded_out_tensor_save_path,data=(padded_out_src_tensor ,padded_out_trg_tensor ))
+        return []
+    elif phase_num==3:
+        padded_out_src_tensor,padded_out_trg_tensor=pickle_load(path=padded_out_tensor_save_path)
         ids_srcs, ids_trgs, sub2word_map_srcs,sub2word_map_trgs,pos_srcs,pos_trgs,sent_srcs,sent_tgts=pickle_load(path=moromoro_save_path)
         softmax_inter_list=ids_out(ids_srcs, ids_trgs, padded_out_src_tensor, padded_out_trg_tensor,)
 
