@@ -32,7 +32,7 @@ src/local_test/
 src/model/awesome_model_with_co/*
 src/model/awesome_model_without_co/*
 
-
+src/morphological/nltk_data
 ### JupyterNotebooks ###
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
