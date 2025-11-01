@@ -12,7 +12,8 @@ start_id = int(args[1])
 la1 = args[2]
 la2 = args[3]
 langs = la1 + "_" + la2
-sys.path.append("/root/src/alignment/" + langs)
+ROOT = os.environ.get("ROOT", "/root")
+sys.path.append(f"{ROOT}/src/alignment/" + langs)
 from alignment import alignment, alignment_batch
 
 base = os.path.dirname(os.path.abspath(__file__))
