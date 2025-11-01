@@ -5,17 +5,19 @@ import torch
 import transformers
 import csv
 
+ROOT = os.environ.get("ROOT", "/root")
+
 config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_with_co/config.json"
+    f"{ROOT}/src/model/awesome_model_with_co/config.json"
 )
 model = transformers.BertModel.from_pretrained(
-    "/root/src/model/awesome_model_with_co/pytorch_model.bin", config=config
+    f"{ROOT}/src/model/awesome_model_with_co/pytorch_model.bin", config=config
 )
 tokenizer_config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_with_co/tokenizer_config.json"
+    f"{ROOT}/src/model/awesome_model_with_co/tokenizer_config.json"
 )
 tokenizer = transformers.BertTokenizer.from_pretrained(
-    "/root/src/model/awesome_model_with_co/", config=tokenizer_config
+    f"{ROOT}/src/model/awesome_model_with_co/", config=tokenizer_config
 )
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")

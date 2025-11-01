@@ -2,9 +2,11 @@ import os
 
 import nltk
 
-if not os.path.isdir("/root/nltk_data/tokenizers/punkt/"):
+ROOT = os.environ.get("ROOT", "/root")
+
+if not os.path.isdir(f"{ROOT}/nltk_data/tokenizers/punkt/"):
     nltk.download("punkt")
-if not os.path.isfile("/root/nltk_data/corpora/wordnet.zip"):
+if not os.path.isfile(f"{ROOT}/nltk_data/corpora/wordnet.zip"):
     nltk.download("wordnet")
 import environ
 import pandas as pd

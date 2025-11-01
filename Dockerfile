@@ -18,14 +18,14 @@ COPY ./shell_scripts/${LA1} ./${LA1}/
 COPY ./shell_scripts/${LA2} ./${LA2}/
 COPY ./shell_scripts/${LA1}-${LA2} ./${LA1}-${LA2}
 RUN apt-get update -y && \
-    apt-get upgrade -y && \
-    apt-get install -y \
-    locales \
-    locales-all \
-    g++ \
-    default-jdk && \
-    locale-gen ja_JP.UTF-8 && \
-    echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc 
+  apt-get upgrade -y && \
+  apt-get install -y \
+  locales \
+  locales-all \
+  g++ \
+  default-jdk && \
+  locale-gen ja_JP.UTF-8 && \
+  echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 RUN apt-get install -y python3 python3-pip
 RUN pip3 install --upgrade pip
 RUN cd ./basis/ && sh ./install.sh

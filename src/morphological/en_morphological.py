@@ -2,14 +2,19 @@ import os
 
 import nltk
 
-if not os.path.isfile("/root/nltk_data/corpora/omw-1.4.zip"):
+ROOT = os.environ.get("ROOT", "/root")
+
+if not os.path.isfile(f"{ROOT}/nltk_data/corpora/omw-1.4.zip"):
     nltk.download("omw-1.4")
-if not os.path.isdir("/root/nltk_data/taggers/averaged_perceptron_tagger"):
+if not os.path.isdir(f"{ROOT}/nltk_data/taggers/averaged_perceptron_tagger"):
     nltk.download("averaged_perceptron_tagger")
-if not os.path.isdir("/root/nltk_data/tokenizers/punkt/"):
+if not os.path.isdir(f"{ROOT}/nltk_data/tokenizers/punkt/"):
     nltk.download("punkt")
-if not os.path.isfile("/root/nltk_data/corpora/wordnet.zip"):
+if not os.path.isfile(f"{ROOT}/nltk_data/corpora/wordnet.zip"):
     nltk.download("wordnet")
+
+nltk.download("punkt_tab")
+nltk.download("averaged_perceptron_tagger_eng")
 
 
 def en_morphological(sentence):

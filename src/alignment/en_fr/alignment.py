@@ -6,6 +6,8 @@ import csv
 import torch
 import transformers
 
+ROOT = os.environ.get("ROOT", "/root")
+
 base = os.path.dirname(os.path.abspath(__file__))
 path_morphological = os.path.normpath(os.path.join(base, "../../morphological/"))
 path_normalizer = os.path.normpath(os.path.join(base, "../../normalizer/"))
@@ -23,16 +25,16 @@ exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 
 # download model
 config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_without_co/config.json"
+    f"{ROOT}/src/model/awesome_model_without_co/config.json"
 )
 model = transformers.BertModel.from_pretrained(
-    "/root/src/model/awesome_model_without_co/pytorch_model.bin", config=config
+    f"{ROOT}/src/model/awesome_model_without_co/pytorch_model.bin", config=config
 )
 tokenizer_config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_without_co/tokenizer_config.json"
+    f"{ROOT}/src/model/awesome_model_without_co/tokenizer_config.json"
 )
 tokenizer = transformers.BertTokenizer.from_pretrained(
-    "/root/src/model/awesome_model_without_co/", config=tokenizer_config
+    f"{ROOT}/src/model/awesome_model_without_co/", config=tokenizer_config
 )
 
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")

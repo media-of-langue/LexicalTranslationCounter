@@ -14,8 +14,10 @@ sys.path.append(path_morphological)
 from en_morphological import en_morphological, en_morphological_batch
 from zh_morphological import zh_morphological, zh_morphological_batch
 
+ROOT = os.environ.get("ROOT", "/root")
+
 sys.path.append(path_normalizer)
-sys.path.append("/root/src/normalizer/")
+sys.path.append(f"{ROOT}/src/normalizer/")
 import time
 
 from en_normalizer import en_normalizer
@@ -25,16 +27,16 @@ exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 
 # download model
 config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_without_co/config.json"
+    f"{ROOT}/src/model/awesome_model_without_co/config.json"
 )
 model = transformers.BertModel.from_pretrained(
-    "/root/src/model/awesome_model_without_co/pytorch_model.bin", config=config
+    f"{ROOT}/src/model/awesome_model_without_co/pytorch_model.bin", config=config
 )
 tokenizer_config = transformers.BertConfig.from_pretrained(
-    "/root/src/model/awesome_model_without_co/tokenizer_config.json"
+    f"{ROOT}/src/model/awesome_model_without_co/tokenizer_config.json"
 )
 tokenizer = transformers.BertTokenizer.from_pretrained(
-    "/root/src/model/awesome_model_without_co/", config=tokenizer_config
+    f"{ROOT}/src/model/awesome_model_without_co/", config=tokenizer_config
 )
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 model = model.to(device)
