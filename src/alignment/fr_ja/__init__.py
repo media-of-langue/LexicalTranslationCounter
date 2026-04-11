@@ -1,31 +1,22 @@
 import itertools
 import sys
 import os
-import torch
 import csv
+import torch
 import transformers
-from pyknp import Juman
 
 base = os.path.dirname(os.path.abspath(__file__))
-path_morphological = os.path.normpath(os.path.join(base, "../../morphological/"))
-path_normalizer = os.path.normpath(os.path.join(base, "../../normalizer/"))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
 
-sys.path.append(path_morphological)
-from en_morphological import en_morphological, en_morphological_batch
-from ja_morphological import ja_morphological, ja_morphological_batch
+from morphological.fr_morphological import fr_morphological, fr_morphological_batch
+from morphological.ja_morphological import ja_morphological, ja_morphological_batch
 
-sys.path.append(path_normalizer)
-import time
-
-from en_normalizer import en_normalizer
-from ja_normalizer import ja_normalizer
+from normalizer.fr_normalizer import fr_normalizer
+from normalizer.ja_normalizer import ja_normalizer
 
 ROOT = os.environ.get("ROOT", "/root")
 
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
-
-jumanpp = Juman(timeout=300, jumanpp=True)
 
 # download model
 config = transformers.BertConfig.from_pretrained(
@@ -49,13 +40,12 @@ max_word_len = 3
 part_of_speach_tag = {"noun": "n", "verb": "v", "adj": "a", "adverb": "r"}
 part_of_speach_tag_rev = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
 
-src_except_l = ["not", "n't"]
+src_except_l1 = ["pas"]
+src_except_l2 = ["ne"]
 trg_except_l = ["ない", "なかろう", "なく", "なかっ", "なければ"]
-be_l = ["is", "are", "was", "were", "am", "be", "been", "being"]
-src_relative_index_except = 1
+src_relative_index_except1 = 1
+src_relative_index_except2 = -1
 trg_relative_index_except = -1
-
-# ignore be + verb
 
 src_word_sep = " "
 trg_word_sep = ""
@@ -134,23 +124,22 @@ def awesome_alignment_postprocessing(
     index_trg_ignore = set()
     alignmented_l = []
     alignmented_l_append = alignmented_l.append
-    for word_src_except in src_except_l:
+    for word_src_except in src_except_l1:
         if word_src_except in sent_src:
             for index_src, word_tmp in enumerate(sent_src):
                 if word_tmp == word_src_except:
-                    index_src_ignore.add(index_src + src_relative_index_except)
+                    index_src_ignore.add(index_src + src_relative_index_except1)
+    for word_src_except in src_except_l2:
+        if word_src_except in sent_src:
+            for index_src, word_tmp in enumerate(sent_src):
+                if word_tmp == word_src_except:
+                    index_src_ignore.add(index_src + src_relative_index_except2)
     for word_trg_except in trg_except_l:
         if word_trg_except in sent_tgt:
             for index_trg, word_tmp in enumerate(sent_tgt):
                 if word_tmp == word_trg_except:
                     index_trg_ignore.add(index_trg + trg_relative_index_except)
-    # ここで be + verb を無視する
-    for be in be_l:
-        if be in sent_src:
-            for index_src, word_tmp in enumerate(sent_src):
-                if index_src + 1 < len(sent_src):
-                    if word_tmp == be and pos_src[index_src + 1] == "v":
-                        index_src_ignore.add(index_src)
+
     for index_pair in index_pair_list:
         if index_pair[0].isdisjoint(index_src_ignore) and index_pair[1].isdisjoint(
             index_trg_ignore
@@ -350,11 +339,11 @@ def awesome_alignment_postprocessing(
 
 
 def awesome_alignment_batch(
-    sentence_srcs, sentence_trgs, src_morphological_batch, trg_morphological_batch
+    sentences_srcs, sentences_trgs, src_morphological_batch, trg_morphological_batch
 ):
     # morphological analysis
-    sent_srcs, pos_srcs = src_morphological_batch(sentence_srcs)
-    sent_trgs, pos_trgs = trg_morphological_batch(sentence_trgs)
+    sent_srcs, pos_srcs = src_morphological_batch(sentences_srcs)
+    sent_trgs, pos_trgs = trg_morphological_batch(sentences_trgs)
 
     # pre-processing
     ids_srcs, ids_trgs, sub2word_map_srcs, sub2word_map_trgs = zip(
@@ -465,7 +454,6 @@ def alignment_postprocessing(alignmented, wordlist, test=False):
         for trg_index, pos_tag in enumerate(trg_pos_l):
             if pos_tag != "":
                 independent_index_trg = trg_index
-        # independent_pos_tag = set(src_pos_l[independent_index_src].split("/")+trg_pos_l[independent_index_trg].split("/"))
         independent_pos_tag = set(src_pos_l[independent_index_src].split("/")) & set(
             trg_pos_l[independent_index_trg].split("/")
         )
@@ -482,12 +470,12 @@ def alignment_postprocessing(alignmented, wordlist, test=False):
                     )
                     for pos_tag in independent_pos_tag:
                         if test:
-                            src_normalized = en_normalizer(
+                            src_normalized = fr_normalizer(
                                 src_word, pos_tag, wordlist, test
                             )
                             src_id = -1
                         else:
-                            src_id, src_normalized = en_normalizer(
+                            src_id, src_normalized = fr_normalizer(
                                 src_word, pos_tag, wordlist, test
                             )
                         if src_id is not None:
@@ -561,7 +549,7 @@ def alignment_batch(corpus_rows, wordlist, test=False):
     alignmented_ls = awesome_alignment_batch(
         [corpus_row[1] for corpus_row in corpus_rows],
         [corpus_row[2] for corpus_row in corpus_rows],
-        en_morphological_batch,
+        fr_morphological_batch,
         ja_morphological_batch,
     )
 

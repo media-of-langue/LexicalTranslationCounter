@@ -1,4 +1,5 @@
 import csv
+import importlib
 import sys
 from multiprocessing import Process, Manager
 import os
@@ -12,17 +13,19 @@ start_id = int(args[1])
 la1 = args[2]
 la2 = args[3]
 langs = la1 + "_" + la2
-ROOT = os.environ.get("ROOT", "/root")
-sys.path.append(f"{ROOT}/src/alignment/" + langs)
-from alignment import alignment, alignment_batch
 
-base = os.path.dirname(os.path.abspath(__file__))
-path_normalizer = os.path.normpath(os.path.join(base, "../normalizer/"))
-sys.path.append(path_normalizer)
-command = "from {}_normalizer import {}_normalizer as normalizer_la1".format(la1, la1)
-exec(command)
-command = "from {}_normalizer import {}_normalizer as normalizer_la2".format(la2, la2)
-exec(command)
+_alignment_module = importlib.import_module(f"alignment.{langs}")
+alignment = _alignment_module.alignment
+alignment_batch = _alignment_module.alignment_batch
+
+normalizer_la1 = getattr(
+    importlib.import_module(f"normalizer.{la1}_normalizer"),
+    f"{la1}_normalizer",
+)
+normalizer_la2 = getattr(
+    importlib.import_module(f"normalizer.{la2}_normalizer"),
+    f"{la2}_normalizer",
+)
 
 
 # corpusを一行毎に読み出す

@@ -6,17 +6,13 @@ import torch
 import transformers
 
 base = os.path.dirname(os.path.abspath(__file__))
-path_morphological = os.path.normpath(os.path.join(base, "../../morphological/"))
-path_normalizer = os.path.normpath(os.path.join(base, "../../normalizer/"))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
 
-sys.path.append(path_morphological)
-from en_morphological import en_morphological, en_morphological_batch
-from ko_morphological import ko_morphological, ko_morphological_batch
+from morphological.en_morphological import en_morphological, en_morphological_batch
+from morphological.ko_morphological import ko_morphological, ko_morphological_batch
 
-sys.path.append(path_normalizer)
-from en_normalizer import en_normalizer
-from ko_normalizer import ko_normalizer
+from normalizer.en_normalizer import en_normalizer
+from normalizer.ko_normalizer import ko_normalizer
 
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 

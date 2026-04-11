@@ -1,29 +1,27 @@
 import itertools
 import sys
 import os
-import csv
 import torch
+import csv
 import transformers
+from pyknp import Juman
 
 base = os.path.dirname(os.path.abspath(__file__))
-path_morphological = os.path.normpath(os.path.join(base, "../../morphological/"))
-path_normalizer = os.path.normpath(os.path.join(base, "../../normalizer/"))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
 
-sys.path.append(path_morphological)
-from en_morphological import en_morphological, en_morphological_batch
-from zh_morphological import zh_morphological, zh_morphological_batch
+from morphological.en_morphological import en_morphological, en_morphological_batch
+from morphological.ja_morphological import ja_morphological, ja_morphological_batch
+
+import time
+
+from normalizer.en_normalizer import en_normalizer
+from normalizer.ja_normalizer import ja_normalizer
 
 ROOT = os.environ.get("ROOT", "/root")
 
-sys.path.append(path_normalizer)
-sys.path.append(f"{ROOT}/src/normalizer/")
-import time
-
-from en_normalizer import en_normalizer
-from zh_normalizer import zh_normalizer
-
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
+
+jumanpp = Juman(timeout=300, jumanpp=True)
 
 # download model
 config = transformers.BertConfig.from_pretrained(
@@ -38,6 +36,7 @@ tokenizer_config = transformers.BertConfig.from_pretrained(
 tokenizer = transformers.BertTokenizer.from_pretrained(
     f"{ROOT}/src/model/awesome_model_without_co/", config=tokenizer_config
 )
+
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 model = model.to(device)
 
@@ -47,10 +46,10 @@ part_of_speach_tag = {"noun": "n", "verb": "v", "adj": "a", "adverb": "r"}
 part_of_speach_tag_rev = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
 
 src_except_l = ["not", "n't"]
-trg_except_l = ["不", "没"]
+trg_except_l = ["ない", "なかろう", "なく", "なかっ", "なければ"]
 be_l = ["is", "are", "was", "were", "am", "be", "been", "being"]
 src_relative_index_except = 1
-trg_relative_index_except = 1
+trg_relative_index_except = -1
 
 # ignore be + verb
 
@@ -62,7 +61,7 @@ align_layer = 8
 threshold = 1e-3
 
 
-def awesome_alignment_preprocess(sent_src, sent_tgt):
+def awesome_alignment_preprocessing(sent_src, sent_tgt):
     token_src, token_tgt = [tokenizer.tokenize(word) for word in sent_src], [
         tokenizer.tokenize(word) for word in sent_tgt
     ]
@@ -343,21 +342,20 @@ def awesome_alignment_postprocessing(
             alignmented_l_append(
                 (src_pos_list, src_words_list, trg_pos_list, trg_words_list)
             )
-
     return alignmented_l
 
 
 def awesome_alignment_batch(
-    sentences_srcs, sentences_trgs, src_morphological_batch, trg_morphological_batch
+    sentence_srcs, sentence_trgs, src_morphological_batch, trg_morphological_batch
 ):
     # morphological analysis
-    sent_srcs, pos_srcs = src_morphological_batch(sentences_srcs)
-    sent_trgs, pos_trgs = trg_morphological_batch(sentences_trgs)
+    sent_srcs, pos_srcs = src_morphological_batch(sentence_srcs)
+    sent_trgs, pos_trgs = trg_morphological_batch(sentence_trgs)
 
     # pre-processing
     ids_srcs, ids_trgs, sub2word_map_srcs, sub2word_map_trgs = zip(
         *[
-            awesome_alignment_preprocess(sent_src, sent_trg)
+            awesome_alignment_preprocessing(sent_src, sent_trg)
             for sent_src, sent_trg in zip(sent_srcs, sent_trgs)
         ]
     )
@@ -445,12 +443,12 @@ def alignment_preprocessing(corpus_row):
     return corpus_row
 
 
-def alignment_postprocessing(alignmented_l, wordlist, test=False):
+def alignment_postprocessing(alignmented, wordlist, test=False):
     output_l = []
     output_l_append = output_l.append
     src_normalized_dict = {}
     trg_normalized_dict = {}
-    for word_pair in alignmented_l:
+    for word_pair in alignmented:
         src_pos_l = word_pair[0]
         src_word_l = word_pair[1]
         trg_pos_l = word_pair[2]
@@ -511,12 +509,12 @@ def alignment_postprocessing(alignmented_l, wordlist, test=False):
                     )
                     for pos_tag in independent_pos_tag:
                         if test:
-                            trg_normalized = zh_normalizer(
+                            trg_normalized = ja_normalizer(
                                 trg_word, pos_tag, wordlist, test
                             )
                             trg_id = -1
                         else:
-                            trg_id, trg_normalized = zh_normalizer(
+                            trg_id, trg_normalized = ja_normalizer(
                                 trg_word, pos_tag, wordlist, test
                             )
                         if trg_id is not None:
@@ -560,15 +558,15 @@ def alignment_batch(corpus_rows, wordlist, test=False):
         [corpus_row[1] for corpus_row in corpus_rows],
         [corpus_row[2] for corpus_row in corpus_rows],
         en_morphological_batch,
-        zh_morphological_batch,
+        ja_morphological_batch,
     )
 
     # post-processing
     assert len(alignmented_ls) == len(corpus_rows)
 
     output_ls = [
-        alignment_postprocessing(alignmented_l, wordlist, test)
-        for alignmented_l in alignmented_ls
+        alignment_postprocessing(alignmented, wordlist, test)
+        for alignmented in alignmented_ls
     ]
 
     return output_ls
