@@ -38,3 +38,6 @@ src/model/awesome_model_without_co/*
 */.ipynb_checkpoints/*
 
 *.zip
+
+CLAUDE.md
+.claude/**
