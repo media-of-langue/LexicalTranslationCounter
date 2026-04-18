@@ -122,6 +122,7 @@ def process_corpus_batches(
     process_batch,
     process_single,
     write_checkpoint,
+    progress=None,
 ):
     for batch_start, corpus_rows in iter_corpus_batches(
         input_reader, start_id, batch_size
@@ -142,10 +143,14 @@ def process_corpus_batches(
                 for row_offset, corpus_row in enumerate(corpus_rows):
                     process_single(batch_start + row_offset, corpus_row)
 
+        last_id = batch_start + len(corpus_rows) - 1
+        if progress is not None:
+            progress["last_processed_id"] = last_id
+
         if should_write_checkpoint(
             batch_start, len(corpus_rows), checkpoint_interval_rows
         ):
-            write_checkpoint(batch_start + len(corpus_rows) - 1)
+            write_checkpoint(last_id)
 
 
 def main():
@@ -443,6 +448,7 @@ def main():
                 with open(os.path.join(output_dir, "passed_id.txt"), "w") as f:
                     f.write(str(passed_id))
 
+        progress = {"last_processed_id": None}
         try:
             process_corpus_batches(
                 input_reader,
@@ -452,12 +458,20 @@ def main():
                 process_batch,
                 process_single,
                 write_checkpoint,
+                progress=progress,
             )
         except Exception as e:
             print(traceback.format_exc())
         finally:
             with timed("output.write_final_relations"):
                 write_final_relations(output_dir, langs, relations)
+            with timed("output.write_final_totyu"):
+                write_relations_snapshot(output_dir, langs, relations)
+                if progress["last_processed_id"] is not None:
+                    with open(
+                        os.path.join(output_dir, "passed_id.txt"), "w"
+                    ) as f:
+                        f.write(str(progress["last_processed_id"]))
             TIMER.record("run.total", time.perf_counter() - run_start)
             TIMER.dump_json(os.path.join(output_dir, f"timing_{langs}.json"))
 

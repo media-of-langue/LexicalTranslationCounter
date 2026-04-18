@@ -1,6 +1,7 @@
 import spacy
 
-nlp = spacy.load("de_dep_news_trf")
+spacy.prefer_gpu()
+nlp = spacy.load("de_dep_news_trf", disable=["parser", "lemmatizer"])
 
 
 def _doc_to_tokens_and_tags(doc):
