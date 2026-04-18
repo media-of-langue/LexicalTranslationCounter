@@ -4,8 +4,8 @@ import os
 import torch
 import transformers
 import csv
-root_path="/Users/komuramakoto/LexicalTranslationCounter"
-alignment_data_path=f"{root_path}/src/model/awesome_model_with_co"
+ROOT = os.environ.get("ROOT", "/root")
+alignment_data_path = f"{ROOT}/src/model/awesome_model_with_co"
 config = transformers.BertConfig.from_pretrained(
     #"/root/src/model/awesome_model_with_co/config.json"
     f"{alignment_data_path}/config.json"
