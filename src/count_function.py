@@ -58,9 +58,11 @@ def read_corpus_batch(input_reader, start_idx, batch_size):
     return corpus_rows
 
 
-def iter_corpus_batches(input_reader, start_id, batch_size):
-    for batch_start in range(start_id, input_reader.num_rows, batch_size):
-        corpus_rows = read_corpus_batch(input_reader, batch_start, batch_size)
+def iter_corpus_batches(input_reader, start_id, batch_size, end_id=None):
+    stop = input_reader.num_rows if end_id is None else min(end_id, input_reader.num_rows)
+    for batch_start in range(start_id, stop, batch_size):
+        this_batch = min(batch_size, stop - batch_start)
+        corpus_rows = read_corpus_batch(input_reader, batch_start, this_batch)
         if corpus_rows:
             yield batch_start, corpus_rows
 
@@ -123,9 +125,10 @@ def process_corpus_batches(
     process_single,
     write_checkpoint,
     progress=None,
+    end_id=None,
 ):
     for batch_start, corpus_rows in iter_corpus_batches(
-        input_reader, start_id, batch_size
+        input_reader, start_id, batch_size, end_id=end_id
     ):
         try:
             with timed(
@@ -171,9 +174,23 @@ def main():
     checkpoint_interval_rows = get_positive_int_env(
         "LTC_CHECKPOINT_INTERVAL_ROWS", 1000
     )
+    end_id_env = os.environ.get("LTC_END_ID")
+    end_id = int(end_id_env) if end_id_env else None
+    if end_id is not None and end_id <= start_id:
+        raise ValueError(
+            f"LTC_END_ID ({end_id}) must be greater than start_id ({start_id})"
+        )
+    skip_resume = os.environ.get("LTC_NO_RESUME", "0").lower() in (
+        "1",
+        "true",
+        "yes",
+        "on",
+    )
     TIMER.set_metadata("output_dir", output_dir)
     TIMER.set_metadata("batch_size", batch_size)
     TIMER.set_metadata("checkpoint_interval_rows", checkpoint_interval_rows)
+    TIMER.set_metadata("end_id", end_id)
+    TIMER.set_metadata("skip_resume", skip_resume)
 
     with timed("startup.import_alignment"):
         _alignment_module = importlib.import_module(f"alignment.{langs}")
@@ -294,10 +311,14 @@ def main():
                         for key, word_id in wordlists[la2 + "_" + pos_tag].items():
                             writer.writerow([word_id, key, "f"])
 
-    output_mode = "a" if start_id != 0 else "w"
-    log_mode = "a" if start_id != 0 else "w"
+    # W (write-only, no resume): LTC_NO_RESUME=1 で start_id != 0 でも
+    #   output_dir を新規扱いし、relations は空から開始、corpus/log も 'w' で上書き
+    # A (append/resume): 従来通り start_id != 0 なら output_dir 内の前回 state を読む
+    resume_active = (start_id != 0) and not skip_resume
+    output_mode = "a" if resume_active else "w"
+    log_mode = "a" if resume_active else "w"
 
-    if start_id != 0:
+    if resume_active:
         with timed("resume.load_previous_outputs"):
             for pos_tag in PART_OF_SPEACH_TAG_REV.values():
                 relations[pos_tag] = {}
@@ -463,6 +484,7 @@ def main():
                 process_single,
                 write_checkpoint,
                 progress=progress,
+                end_id=end_id,
             )
         except Exception as e:
             print(traceback.format_exc())
