@@ -3,8 +3,7 @@ import spacy
 nlp = spacy.load("de_dep_news_trf")
 
 
-def de_morphological(sentence):
-    doc = nlp(sentence)
+def _doc_to_tokens_and_tags(doc):
     mrph = []
     mrph_append = mrph.append
     tokenized = []
@@ -28,11 +27,15 @@ def de_morphological(sentence):
     return tokenized, mrph
 
 
+def de_morphological(sentence):
+    return _doc_to_tokens_and_tags(nlp(sentence))
+
+
 def de_morphological_batch(sentences):
     tokenized = []
     mrph = []
-    for sentence in sentences:
-        tokenized_sentence, mrph_sentence = de_morphological(sentence)
+    for doc in nlp.pipe(sentences):
+        tokenized_sentence, mrph_sentence = _doc_to_tokens_and_tags(doc)
         tokenized.append(tokenized_sentence)
         mrph.append(mrph_sentence)
 

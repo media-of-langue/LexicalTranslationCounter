@@ -4,6 +4,9 @@ import os
 import re
 import sys
 import traceback
+import time
+
+from timing_utils import TIMER, timed
 
 
 # corpusを一行毎に読み出す
@@ -33,7 +36,120 @@ PART_OF_SPEACH_TAG_REV = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
 PART_OF_SPEACH_TAG_CODE = {"noun": "n", "verb": "v", "adj": "a", "adverb": "r"}
 
 
+def get_positive_int_env(name, default):
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    try:
+        parsed = int(value)
+    except ValueError as exc:
+        raise ValueError(f"{name} must be an integer: {value!r}") from exc
+    if parsed <= 0:
+        raise ValueError(f"{name} must be positive: {value!r}")
+    return parsed
+
+
+def read_corpus_batch(input_reader, start_idx, batch_size):
+    corpus_rows = []
+    for offset in range(batch_size):
+        row_idx = start_idx + offset
+        if row_idx < input_reader.num_rows:
+            corpus_rows.append(input_reader.read_row(row_idx))
+    return corpus_rows
+
+
+def iter_corpus_batches(input_reader, start_id, batch_size):
+    for batch_start in range(start_id, input_reader.num_rows, batch_size):
+        corpus_rows = read_corpus_batch(input_reader, batch_start, batch_size)
+        if corpus_rows:
+            yield batch_start, corpus_rows
+
+
+def should_write_checkpoint(batch_start, batch_len, checkpoint_interval_rows):
+    if batch_len == 0:
+        return False
+    previous_checkpoint = batch_start // checkpoint_interval_rows
+    current_checkpoint = (batch_start + batch_len) // checkpoint_interval_rows
+    return current_checkpoint > previous_checkpoint
+
+
+def write_relations_snapshot(output_dir, langs, relations):
+    for pos_tag in PART_OF_SPEACH_TAG_REV.values():
+        with open(
+            os.path.join(output_dir, f"relations_{langs}_{pos_tag}_totyu.csv"),
+            "w",
+        ) as f:
+            writer = csv.writer(f)
+            for key, value in relations[pos_tag].items():
+                [id_la1, id_la2] = key.split("_")
+                writer.writerow(
+                    [
+                        value[0],
+                        id_la1,
+                        id_la2,
+                        value[1],
+                        value[2],
+                        value[3],
+                        value[4],
+                    ]
+                )
+
+
+def write_final_relations(output_dir, langs, relations):
+    for pos_tag, relation in relations.items():
+        with open(os.path.join(output_dir, f"relations_{langs}_{pos_tag}.csv"), "w") as f:
+            writer = csv.writer(f)
+            for key, value in relation.items():
+                [id_la1, id_la2] = key.split("_")
+                writer.writerow(
+                    [
+                        value[0],
+                        id_la1,
+                        id_la2,
+                        value[1],
+                        "{" + str(value[2])[1:-1] + "}",
+                        value[3],
+                        value[4],
+                    ]
+                )
+
+
+def process_corpus_batches(
+    input_reader,
+    start_id,
+    batch_size,
+    checkpoint_interval_rows,
+    process_batch,
+    process_single,
+    write_checkpoint,
+):
+    for batch_start, corpus_rows in iter_corpus_batches(
+        input_reader, start_id, batch_size
+    ):
+        try:
+            with timed(
+                "loop.batch_total",
+                items=len(corpus_rows),
+                metadata={"start_id": batch_start, "rows": len(corpus_rows)},
+            ):
+                process_batch(batch_start, corpus_rows)
+        except Exception:
+            with timed(
+                "loop.fallback_single_rows",
+                items=len(corpus_rows),
+                metadata={"start_id": batch_start, "rows": len(corpus_rows)},
+            ):
+                for row_offset, corpus_row in enumerate(corpus_rows):
+                    process_single(batch_start + row_offset, corpus_row)
+
+        if should_write_checkpoint(
+            batch_start, len(corpus_rows), checkpoint_interval_rows
+        ):
+            write_checkpoint(batch_start + len(corpus_rows) - 1)
+
+
 def main():
+    run_start = time.perf_counter()
     csv.field_size_limit(sys.maxsize)
     args = sys.argv
     start_id = int(args[1])
@@ -41,153 +157,203 @@ def main():
     la2 = args[3]
     langs = la1 + "_" + la2
 
-    _alignment_module = importlib.import_module(f"alignment.{langs}")
+    TIMER.set_metadata("language_pair", langs)
+    TIMER.set_metadata("start_id", start_id)
+    TIMER.set_metadata("pid", os.getpid())
+    TIMER.set_metadata("cwd", os.getcwd())
+    output_dir = os.environ.get("LTC_OUTPUT_DIR", "./data/output")
+    batch_size = get_positive_int_env("LTC_BATCH_SIZE", 10)
+    checkpoint_interval_rows = get_positive_int_env(
+        "LTC_CHECKPOINT_INTERVAL_ROWS", 1000
+    )
+    TIMER.set_metadata("output_dir", output_dir)
+    TIMER.set_metadata("batch_size", batch_size)
+    TIMER.set_metadata("checkpoint_interval_rows", checkpoint_interval_rows)
+
+    with timed("startup.import_alignment"):
+        _alignment_module = importlib.import_module(f"alignment.{langs}")
     alignment = _alignment_module.alignment
     alignment_batch = _alignment_module.alignment_batch
 
-    normalizer_la1 = getattr(
-        importlib.import_module(f"normalizer.{la1}_normalizer"),
-        f"{la1}_normalizer",
-    )
-    normalizer_la2 = getattr(
-        importlib.import_module(f"normalizer.{la2}_normalizer"),
-        f"{la2}_normalizer",
-    )
+    with timed("startup.import_normalizers"):
+        normalizer_la1 = getattr(
+            importlib.import_module(f"normalizer.{la1}_normalizer"),
+            f"{la1}_normalizer",
+        )
+        normalizer_la2 = getattr(
+            importlib.import_module(f"normalizer.{la2}_normalizer"),
+            f"{la2}_normalizer",
+        )
 
-    input_reader = CsvRowReader(f"./data/input/corpus_{langs}.csv")
+    with timed("input.index_corpus"):
+        input_reader = CsvRowReader(f"./data/input/corpus_{langs}.csv")
+    TIMER.set_metadata("input_rows", input_reader.num_rows)
 
-    if not os.path.isdir("./data/output"):
-        os.makedirs("./data/output")
+    if not os.path.isdir(output_dir):
+        os.makedirs(output_dir)
 
     relations = {}  # {pos_tag:{id_la1}_{id_la2}:[id,count,example,convert_from,invalid]}
     relations_id = {}  # {pos_tag:id}
     wordlists = {}  # {pos_tag:{word:id}}
     output_corpus_row_num = 0
-    for pos_tag in PART_OF_SPEACH_TAG_REV.values():
-        relations[pos_tag] = {}
-        relations_id[pos_tag] = 0
-        with open(
-            "./data/input/wordlist_" + la1 + "_" + pos_tag + ".csv", mode="r"
-        ) as inp:
-            reader = list(csv.reader(inp))
-            if not re.fullmatch(r"[-+]?\d+", reader[0][0]):
-                reader = reader[1:]
-            wordlists[la1 + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
-            max_id_la1 = max(wordlists[la1 + "_" + pos_tag].values())
-        with open(
-            "./data/input/wordlist_" + la2 + "_" + pos_tag + ".csv", mode="r"
-        ) as inp:
-            reader = list(csv.reader(inp))
-            if not re.fullmatch(r"[-+]?\d+", reader[0][0]):
-                reader = reader[1:]
-            wordlists[la2 + "_" + pos_tag] = {rows[1]: int(rows[0]) for rows in reader}
-            max_id_la2 = max(wordlists[la2 + "_" + pos_tag].values())
-        flag_la1 = False
-        flag_la2 = False
-        wordlists_add = {}
-        wordlists_add[la1 + "_" + pos_tag] = {}
-        wordlists_add[la2 + "_" + pos_tag] = {}
-        for key, word_id in wordlists[la1 + "_" + pos_tag].items():
-            if (
-                normalizer_la1(key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True)
-                not in wordlists[la1 + "_" + pos_tag].keys()
+    with timed("wordlists.total"):
+        for pos_tag in PART_OF_SPEACH_TAG_REV.values():
+            relations[pos_tag] = {}
+            relations_id[pos_tag] = 0
+            with timed(f"wordlists.load.{la1}.{pos_tag}"):
+                with open(
+                    "./data/input/wordlist_" + la1 + "_" + pos_tag + ".csv", mode="r"
+                ) as inp:
+                    reader = list(csv.reader(inp))
+                    if not re.fullmatch(r"[-+]?\d+", reader[0][0]):
+                        reader = reader[1:]
+                    wordlists[la1 + "_" + pos_tag] = {
+                        rows[1]: int(rows[0]) for rows in reader
+                    }
+                    max_id_la1 = max(wordlists[la1 + "_" + pos_tag].values())
+            with timed(f"wordlists.load.{la2}.{pos_tag}"):
+                with open(
+                    "./data/input/wordlist_" + la2 + "_" + pos_tag + ".csv", mode="r"
+                ) as inp:
+                    reader = list(csv.reader(inp))
+                    if not re.fullmatch(r"[-+]?\d+", reader[0][0]):
+                        reader = reader[1:]
+                    wordlists[la2 + "_" + pos_tag] = {
+                        rows[1]: int(rows[0]) for rows in reader
+                    }
+                    max_id_la2 = max(wordlists[la2 + "_" + pos_tag].values())
+            flag_la1 = False
+            flag_la2 = False
+            wordlists_add = {}
+            wordlists_add[la1 + "_" + pos_tag] = {}
+            wordlists_add[la2 + "_" + pos_tag] = {}
+            with timed(
+                f"wordlists.normalize_missing.{la1}.{pos_tag}",
+                items=len(wordlists[la1 + "_" + pos_tag]),
             ):
-                flag_la1 = True
-                max_id_la1 = max_id_la1 + 1
-                wordlists_add[la1 + "_" + pos_tag][
-                    normalizer_la1(key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True)
-                ] = max_id_la1
-        for key, word_id in wordlists[la2 + "_" + pos_tag].items():
-            if (
-                normalizer_la2(key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True)
-                not in wordlists[la2 + "_" + pos_tag].keys()
-            ):
-                flag_la2 = True
-                max_id_la2 = max_id_la2 + 1
-                wordlists_add[la2 + "_" + pos_tag][
-                    normalizer_la2(key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True)
-                ] = max_id_la2
-        print("wordlist_add", wordlists_add)
-        wordlists[la1 + "_" + pos_tag].update(wordlists_add[la1 + "_" + pos_tag])
-        wordlists[la2 + "_" + pos_tag].update(wordlists_add[la2 + "_" + pos_tag])
-        if flag_la1:
-            with open(
-                "./data/output/wordlist_" + la1 + "_" + pos_tag + ".csv", "w"
-            ) as f:
-                writer = csv.writer(f)
                 for key, word_id in wordlists[la1 + "_" + pos_tag].items():
-                    writer.writerow([word_id, key, "f"])
-        if flag_la2:
-            with open(
-                "./data/output/wordlist_" + la2 + "_" + pos_tag + ".csv", "w"
-            ) as f:
-                writer = csv.writer(f)
+                    if (
+                        normalizer_la1(
+                            key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True
+                        )
+                        not in wordlists[la1 + "_" + pos_tag].keys()
+                    ):
+                        flag_la1 = True
+                        max_id_la1 = max_id_la1 + 1
+                        wordlists_add[la1 + "_" + pos_tag][
+                            normalizer_la1(
+                                key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True
+                            )
+                        ] = max_id_la1
+            with timed(
+                f"wordlists.normalize_missing.{la2}.{pos_tag}",
+                items=len(wordlists[la2 + "_" + pos_tag]),
+            ):
                 for key, word_id in wordlists[la2 + "_" + pos_tag].items():
-                    writer.writerow([word_id, key, "f"])
+                    if (
+                        normalizer_la2(
+                            key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True
+                        )
+                        not in wordlists[la2 + "_" + pos_tag].keys()
+                    ):
+                        flag_la2 = True
+                        max_id_la2 = max_id_la2 + 1
+                        wordlists_add[la2 + "_" + pos_tag][
+                            normalizer_la2(
+                                key, PART_OF_SPEACH_TAG_CODE[pos_tag], "", test=True
+                            )
+                        ] = max_id_la2
+            print("wordlist_add", wordlists_add)
+            wordlists[la1 + "_" + pos_tag].update(wordlists_add[la1 + "_" + pos_tag])
+            wordlists[la2 + "_" + pos_tag].update(wordlists_add[la2 + "_" + pos_tag])
+            if flag_la1:
+                with timed(f"wordlists.write_added.{la1}.{pos_tag}"):
+                    with open(
+                        os.path.join(output_dir, "wordlist_" + la1 + "_" + pos_tag + ".csv"),
+                        "w",
+                    ) as f:
+                        writer = csv.writer(f)
+                        for key, word_id in wordlists[la1 + "_" + pos_tag].items():
+                            writer.writerow([word_id, key, "f"])
+            if flag_la2:
+                with timed(f"wordlists.write_added.{la2}.{pos_tag}"):
+                    with open(
+                        os.path.join(output_dir, "wordlist_" + la2 + "_" + pos_tag + ".csv"),
+                        "w",
+                    ) as f:
+                        writer = csv.writer(f)
+                        for key, word_id in wordlists[la2 + "_" + pos_tag].items():
+                            writer.writerow([word_id, key, "f"])
 
     output_mode = "a" if start_id != 0 else "w"
     log_mode = "a" if start_id != 0 else "w"
 
     if start_id != 0:
-        for pos_tag in PART_OF_SPEACH_TAG_REV.values():
-            relations[pos_tag] = {}
-            max_id = 0
-            with open(
-                "./data/output/relations_" + langs + "_" + pos_tag + "_totyu.csv",
-                mode="r",
-            ) as inp:
-                reader = csv.reader(inp)
-                for rows in reader:
-                    relations[pos_tag][rows[1] + "_" + rows[2]] = [
-                        int(rows[0]),
-                        int(rows[3]),
-                        eval(rows[4]),
-                        rows[5],
-                        rows[6],
-                    ]
-                    if max_id < int(rows[0]):
-                        max_id = int(rows[0])
-                relations_id[pos_tag] = max_id + 1
-        with open(f"./data/output/corpus_{langs}.csv", "r") as f:
+        with timed("resume.load_previous_outputs"):
+            for pos_tag in PART_OF_SPEACH_TAG_REV.values():
+                relations[pos_tag] = {}
+                max_id = 0
+                with open(
+                    os.path.join(
+                        output_dir, "relations_" + langs + "_" + pos_tag + "_totyu.csv"
+                    ),
+                    mode="r",
+                ) as inp:
+                    reader = csv.reader(inp)
+                    for rows in reader:
+                        relations[pos_tag][rows[1] + "_" + rows[2]] = [
+                            int(rows[0]),
+                            int(rows[3]),
+                            eval(rows[4]),
+                            rows[5],
+                            rows[6],
+                        ]
+                        if max_id < int(rows[0]):
+                            max_id = int(rows[0])
+                    relations_id[pos_tag] = max_id + 1
+        with open(os.path.join(output_dir, f"corpus_{langs}.csv"), "r") as f:
             output_corpus_row_num = sum(1 for _ in f)
 
-    with open(f"./data/output/corpus_{langs}.csv", output_mode) as output_file, open(
-        "./data/output/passed_log.txt", log_mode
+    with open(
+        os.path.join(output_dir, f"corpus_{langs}.csv"), output_mode
+    ) as output_file, open(
+        os.path.join(output_dir, "passed_log.txt"), log_mode
     ) as passed_log_file:
         output_writer = csv.writer(output_file)
 
         def count_function_post_processing(
             i, corpus_row, relations, relations_id, output_corpus_row_num, output_l
         ):
-            for index, command in enumerate(output_l):
-                pos_tag = PART_OF_SPEACH_TAG_REV[command[0]]
-                if command[1] + "_" + command[3] in relations[pos_tag]:
-                    relations[pos_tag][command[1] + "_" + command[3]][1] += 1
-                    relations[pos_tag][command[1] + "_" + command[3]][2].append(
-                        corpus_row[0]
+            with timed("count.post_processing", metadata={"row_id": corpus_row[0]}):
+                for index, command in enumerate(output_l):
+                    pos_tag = PART_OF_SPEACH_TAG_REV[command[0]]
+                    if command[1] + "_" + command[3] in relations[pos_tag]:
+                        relations[pos_tag][command[1] + "_" + command[3]][1] += 1
+                        relations[pos_tag][command[1] + "_" + command[3]][2].append(
+                            corpus_row[0]
+                        )
+                        tmp_id = relations[pos_tag][command[1] + "_" + command[3]][0]
+                    else:
+                        tmp_id = relations_id[pos_tag]
+                        relations[pos_tag][command[1] + "_" + command[3]] = [
+                            tmp_id,
+                            1,
+                            [corpus_row[0]],
+                            "unknown",
+                            False,
+                        ]
+                        relations_id[pos_tag] += 1
+                    output_l[index].insert(1, str(tmp_id))
+                if output_corpus_row_num <= i:
+                    output_writer.writerow(
+                        [
+                            corpus_row[0],
+                            corpus_row[1].replace("\n", ""),
+                            corpus_row[2].replace("\n", ""),
+                            "{" + str(output_l)[1:-1].replace('"', "") + "}",
+                            False,
+                        ]
                     )
-                    tmp_id = relations[pos_tag][command[1] + "_" + command[3]][0]
-                else:
-                    tmp_id = relations_id[pos_tag]
-                    relations[pos_tag][command[1] + "_" + command[3]] = [
-                        tmp_id,
-                        1,
-                        [corpus_row[0]],
-                        "unknown",
-                        False,
-                    ]
-                    relations_id[pos_tag] += 1
-                output_l[index].insert(1, str(tmp_id))
-            if output_corpus_row_num <= i:
-                output_writer.writerow(
-                    [
-                        corpus_row[0],
-                        corpus_row[1].replace("\n", ""),
-                        corpus_row[2].replace("\n", ""),
-                        "{" + str(output_l)[1:-1].replace('"', "") + "}",
-                        False,
-                    ]
-                )
             print("passed_id:", i)
             print(corpus_row[1], corpus_row[2])
             print(output_l)
@@ -198,7 +364,8 @@ def main():
         ):
             if len(corpus_row) == 5:
                 try:
-                    output_l = alignment(corpus_row, wordlists)
+                    with timed("count.alignment_single", metadata={"row_id": i}):
+                        output_l = alignment(corpus_row, wordlists)
                 except Exception as e:
                     print(traceback.format_exc())
                     passed_log_file.write(str(i))
@@ -226,7 +393,12 @@ def main():
                 for corpus_row in corpus_rows:
                     if len(corpus_row) != 5:
                         raise Exception("corpus_row length is not 5")
-                output_ls = alignment_batch(corpus_rows, wordlists)
+                with timed(
+                    "count.alignment_batch",
+                    items=len(corpus_rows),
+                    metadata={"start_id": i_l, "rows": len(corpus_rows)},
+                ):
+                    output_ls = alignment_batch(corpus_rows, wordlists)
 
                 assert len(output_ls) == len(corpus_rows)
 
@@ -245,81 +417,49 @@ def main():
                     output_ls[i],
                 )
 
+        def process_batch(i_l, corpus_rows):
+            count_function_batch(
+                i_l,
+                corpus_rows,
+                relations,
+                relations_id,
+                wordlists,
+                output_corpus_row_num,
+            )
+
+        def process_single(i, corpus_row):
+            count_function(
+                i,
+                corpus_row,
+                relations,
+                relations_id,
+                wordlists,
+                output_corpus_row_num,
+            )
+
+        def write_checkpoint(passed_id):
+            with timed("checkpoint.write_totyu"):
+                write_relations_snapshot(output_dir, langs, relations)
+                with open(os.path.join(output_dir, "passed_id.txt"), "w") as f:
+                    f.write(str(passed_id))
+
         try:
-            batch_size = 10
-            totyu_interval = 100
-
-            for i in range(start_id, input_reader.num_rows, batch_size):
-                corpus_rows = []
-                for j in range(batch_size):
-                    if i + j < input_reader.num_rows:
-                        corpus_rows.append(input_reader.read_row(i + j))
-
-                i_l = i
-
-                try:
-                    count_function_batch(
-                        i_l,
-                        corpus_rows,
-                        relations,
-                        relations_id,
-                        wordlists,
-                        output_corpus_row_num,
-                    )
-                except Exception as e:
-                    for j in range(batch_size):
-                        if i + j < input_reader.num_rows:
-                            count_function(
-                                i + j,
-                                input_reader.read_row(i + j),
-                                relations,
-                                relations_id,
-                                wordlists,
-                                output_corpus_row_num,
-                            )
-
-                if (i // batch_size) % totyu_interval == totyu_interval - 1:
-                    for pos_tag in PART_OF_SPEACH_TAG_REV.values():
-                        with open(
-                            f"./data/output/relations_{langs}_{pos_tag}_totyu.csv", "w"
-                        ) as f:
-                            writer = csv.writer(f)
-                            for key, value in relations[pos_tag].items():
-                                [id_la1, id_la2] = key.split("_")
-                                writer.writerow(
-                                    [
-                                        value[0],
-                                        id_la1,
-                                        id_la2,
-                                        value[1],
-                                        value[2],
-                                        value[3],
-                                        value[4],
-                                    ]
-                                )
-                    with open(f"./data/output/passed_id.txt", "w") as f:
-                        f.write(str(i + batch_size - 1))
+            process_corpus_batches(
+                input_reader,
+                start_id,
+                batch_size,
+                checkpoint_interval_rows,
+                process_batch,
+                process_single,
+                write_checkpoint,
+            )
         except Exception as e:
             print(traceback.format_exc())
         finally:
-            for pos_tag, relation in relations.items():
-                with open(
-                    f"./data/output/relations_{langs}_{pos_tag}.csv", "w"
-                ) as f:
-                    writer = csv.writer(f)
-                    for key, value in relation.items():
-                        [id_la1, id_la2] = key.split("_")
-                        writer.writerow(
-                            [
-                                value[0],
-                                id_la1,
-                                id_la2,
-                                value[1],
-                                "{" + str(value[2])[1:-1] + "}",
-                                value[3],
-                                value[4],
-                            ]
-                        )
+            with timed("output.write_final_relations"):
+                write_final_relations(output_dir, langs, relations)
+            TIMER.record("run.total", time.perf_counter() - run_start)
+            TIMER.dump_json(os.path.join(output_dir, f"timing_{langs}.json"))
 
 
 if __name__ == "__main__":

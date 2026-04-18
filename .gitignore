@@ -25,6 +25,7 @@ ENV/
 env.bak/
 venv.bak/
 pythonenv*
+nltk_data/
 src/data/output/*
 src/data/input/*
 
