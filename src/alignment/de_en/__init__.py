@@ -21,8 +21,15 @@ with timed("alignment.de_en.load_tokenizer_config"):
     tokenizer_config = transformers.BertConfig.from_pretrained(
         f"{ROOT}/src/model/awesome_model_with_co/tokenizer_config.json"
     )
-with timed("alignment.de_en.load_tokenizer"):
-    tokenizer = transformers.BertTokenizer.from_pretrained(
+if os.environ.get("LTC_FAST_TOKENIZER", "0").lower() in ("1", "true", "yes", "on"):
+    _TOKENIZER_CLS = transformers.BertTokenizerFast
+else:
+    _TOKENIZER_CLS = transformers.BertTokenizer
+with timed(
+    "alignment.de_en.load_tokenizer",
+    metadata={"tokenizer_class": _TOKENIZER_CLS.__name__},
+):
+    tokenizer = _TOKENIZER_CLS.from_pretrained(
         f"{ROOT}/src/model/awesome_model_with_co/", config=tokenizer_config
     )
 
@@ -62,6 +69,14 @@ trg_word_sep = " "
 # params
 align_layer = 8
 threshold = 4e-7
+
+
+if os.environ.get("LTC_BERT_EARLY_STOP", "0").lower() in ("1", "true", "yes", "on"):
+    # layer 9..12 の計算は hidden_states[align_layer] に影響しないので、
+    # encoder.layer を align_layer 分だけに truncate する。
+    # hidden_states[align_layer] は bit-identical な値のまま。
+    with timed("alignment.de_en.bert_early_stop_truncate"):
+        model.encoder.layer = model.encoder.layer[:align_layer]
 
 
 def get_positive_int_env(name, default):

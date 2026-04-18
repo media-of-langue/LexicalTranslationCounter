@@ -190,8 +190,12 @@ def main():
             f"{la2}_normalizer",
         )
 
+    input_path = os.environ.get(
+        "LTC_INPUT_CSV_PATH", f"./data/input/corpus_{langs}.csv"
+    )
+    TIMER.set_metadata("input_path", input_path)
     with timed("input.index_corpus"):
-        input_reader = CsvRowReader(f"./data/input/corpus_{langs}.csv")
+        input_reader = CsvRowReader(input_path)
     TIMER.set_metadata("input_rows", input_reader.num_rows)
 
     if not os.path.isdir(output_dir):
