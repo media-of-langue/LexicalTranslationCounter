@@ -1,14 +1,19 @@
 import sys
 import csv
+import importlib
 import os
+
+# ensure src/ is on sys.path so the normalizer package is importable
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 args = sys.argv
 la = args[1]
 base = os.path.dirname(os.path.abspath(__file__))
-path_normalizer = os.path.normpath(os.path.join(base, "../normalizer/"))
-sys.path.append(path_normalizer)
-command = "from {}_normalizer import {}_normalizer as normalizer".format(la, la)
-exec(command)
+
+normalizer = getattr(
+    importlib.import_module(f"normalizer.{la}_normalizer"),
+    f"{la}_normalizer",
+)
 
 part_of_speach_tag_rev = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
 

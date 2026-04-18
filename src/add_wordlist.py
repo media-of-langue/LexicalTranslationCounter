@@ -1,4 +1,5 @@
 import csv
+import importlib
 import sys
 from multiprocessing import Process, Manager
 import os
@@ -11,18 +12,19 @@ start_id = 0
 la1 = "en"
 la2 = "es"
 langs = la1 + "_" + la2
-base = os.path.dirname(os.path.abspath(__file__))
-path_normalizer = os.path.normpath(os.path.join(base, "./normalizer/"))
-sys.path.append(path_normalizer)
-command = "from {}_normalizer import {}_normalizer as normalizer_la".format(la,la)
-exec(command)
 
-path_morphological = os.path.normpath(os.path.join(base, "./morphological/"))
-sys.path.append(path_morphological)
-command = "from {}_morphological import {}_morphological as morphological_la1".format(la1,la1)
-exec(command)
-command = "from {}_morphological import {}_morphological as morphological_la2".format(la2,la2)
-exec(command)
+normalizer_la = getattr(
+    importlib.import_module(f"normalizer.{la}_normalizer"),
+    f"{la}_normalizer",
+)
+morphological_la1 = getattr(
+    importlib.import_module(f"morphological.{la1}_morphological"),
+    f"{la1}_morphological",
+)
+morphological_la2 = getattr(
+    importlib.import_module(f"morphological.{la2}_morphological"),
+    f"{la2}_morphological",
+)
 
 highpath_dict = {
     "adj":10,

@@ -1,21 +1,24 @@
 import sys
 import csv
+import importlib
 import os
+
+# ensure src/ is on sys.path so the morphological package is importable
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 args = sys.argv
 la1 = args[1]
 la2 = args[2]
 base = os.path.dirname(os.path.abspath(__file__))
-path_morphological = os.path.normpath(os.path.join(base, "../morphological/"))
-sys.path.append(path_morphological)
-command1 = "from {}_morphological import {}_morphological as la1_morphological".format(
-    la1, la1
+
+la1_morphological = getattr(
+    importlib.import_module(f"morphological.{la1}_morphological"),
+    f"{la1}_morphological",
 )
-exec(command1)
-command2 = "from {}_morphological import {}_morphological as la2_morphological".format(
-    la2, la2
+la2_morphological = getattr(
+    importlib.import_module(f"morphological.{la2}_morphological"),
+    f"{la2}_morphological",
 )
-exec(command2)
 
 # setting
 langs = la1 + "_" + la2

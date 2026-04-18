@@ -1,17 +1,19 @@
 import sys
 import csv
+import importlib
 import os
+
+# ensure src/ is on sys.path so the morphological package is importable
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 args = sys.argv
 la = args[1]
 sentence_la = "そういうこともあります。"
-base = os.path.dirname(os.path.abspath(__file__))
-path_morphological = os.path.normpath(os.path.join(base, "../morphological/"))
-sys.path.append(path_morphological)
-command1 = "from {}_morphological import {}_morphological as la_morphological".format(
-    la, la
+
+la_morphological = getattr(
+    importlib.import_module(f"morphological.{la}_morphological"),
+    f"{la}_morphological",
 )
-exec(command1)
 
 
 # setting
