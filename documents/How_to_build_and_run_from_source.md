@@ -61,7 +61,36 @@ ex:
 python3 count_function.py 0 en fr
 ```
 
+For local development, you can limit the number of rows and point to a sample
+input directory:
+```
+python3 count_function.py 0 de en \
+  --input-dir ./data/input \
+  --output-dir ./data/output \
+  --max-rows 1000
+```
+
+At the end of every run, `count_function.py` prints a short timing summary:
+total time, model load/setup time, processing time, processing time per
+sentence, and processed sentence count. The detailed timing JSON is also written
+to `timing_{la1}_{la2}.json` in the output directory.
+
 If you are interrupted by an error on the way, run with the first argument being the value in /root/src/data/output/passed_id.txt plus one.
+
+### Build a local de-en sample package
+
+For maintainers with local de-en source data, the helper below builds a small
+raw input package. It uses full LTC relations only to choose graph-friendly
+corpus rows; the packaged data itself is raw input files under `src/data/input/`.
+
+```
+python3 scripts/build_sample_corpus.py --force
+```
+
+Default output:
+
+- `../de-en/samples/ltc-sample-de-en-small/`
+- `../de-en/samples/ltc-sample-de-en-small.tar.zst`
 
 ### Check the outputs
 You can upload your relations and check the results by uploading your local data from the side menu of [media of langue](http://media-of-langue.org/)

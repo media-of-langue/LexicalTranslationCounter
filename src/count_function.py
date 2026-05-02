@@ -1,3 +1,4 @@
+import argparse
 import csv
 import importlib
 import os
@@ -47,6 +48,71 @@ def get_positive_int_env(name, default):
     if parsed <= 0:
         raise ValueError(f"{name} must be positive: {value!r}")
     return parsed
+
+
+def parse_args(argv):
+    parser = argparse.ArgumentParser(
+        description="Count lexical translation relations for a bilingual corpus."
+    )
+    parser.add_argument("start_id", type=int)
+    parser.add_argument("la1")
+    parser.add_argument("la2")
+    parser.add_argument(
+        "--max-rows",
+        type=int,
+        default=None,
+        help="Process at most this many rows from start_id.",
+    )
+    parser.add_argument(
+        "--end-id",
+        type=int,
+        default=None,
+        help="Stop before this row offset. Overrides LTC_END_ID.",
+    )
+    parser.add_argument(
+        "--input-dir",
+        default=os.environ.get("LTC_INPUT_DIR", "./data/input"),
+        help="Directory containing corpus and wordlist CSV files.",
+    )
+    parser.add_argument(
+        "--input-csv-path",
+        default=os.environ.get("LTC_INPUT_CSV_PATH"),
+        help="Corpus CSV path. Defaults to <input-dir>/corpus_{la1}_{la2}.csv.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=os.environ.get("LTC_OUTPUT_DIR", "./data/output"),
+        help="Directory where output CSV files are written.",
+    )
+    return parser.parse_args(argv[1:])
+
+
+def resolve_end_id(start_id, max_rows, cli_end_id):
+    end_id = cli_end_id
+    if end_id is None:
+        end_id_env = os.environ.get("LTC_END_ID")
+        end_id = int(end_id_env) if end_id_env else None
+    if max_rows is not None:
+        if max_rows <= 0:
+            raise ValueError(f"--max-rows must be positive: {max_rows!r}")
+        max_rows_end = start_id + max_rows
+        end_id = max_rows_end if end_id is None else min(end_id, max_rows_end)
+    if end_id is not None and end_id <= start_id:
+        raise ValueError(
+            f"end_id ({end_id}) must be greater than start_id ({start_id})"
+        )
+    return end_id
+
+
+def print_timing_summary(total_seconds, setup_seconds, processing_seconds, processed_rows):
+    per_sentence = processing_seconds / processed_rows if processed_rows else 0.0
+    print("\nLTC timing summary")
+    print("------------------")
+    print(f"total time: {total_seconds:.3f} sec")
+    print(f"model load/setup time: {setup_seconds:.3f} sec")
+    print(f"processing time: {processing_seconds:.3f} sec")
+    print(f"processing time per sentence: {per_sentence:.6f} sec")
+    print(f"processed sentences: {processed_rows}")
 
 
 def read_corpus_batch(input_reader, start_idx, batch_size):
@@ -149,6 +215,9 @@ def process_corpus_batches(
         last_id = batch_start + len(corpus_rows) - 1
         if progress is not None:
             progress["last_processed_id"] = last_id
+            progress["processed_rows"] = progress.get("processed_rows", 0) + len(
+                corpus_rows
+            )
 
         if should_write_checkpoint(
             batch_start, len(corpus_rows), checkpoint_interval_rows
@@ -159,27 +228,23 @@ def process_corpus_batches(
 def main():
     run_start = time.perf_counter()
     csv.field_size_limit(sys.maxsize)
-    args = sys.argv
-    start_id = int(args[1])
-    la1 = args[2]
-    la2 = args[3]
+    args = parse_args(sys.argv)
+    start_id = args.start_id
+    la1 = args.la1
+    la2 = args.la2
     langs = la1 + "_" + la2
 
     TIMER.set_metadata("language_pair", langs)
     TIMER.set_metadata("start_id", start_id)
     TIMER.set_metadata("pid", os.getpid())
     TIMER.set_metadata("cwd", os.getcwd())
-    output_dir = os.environ.get("LTC_OUTPUT_DIR", "./data/output")
+    output_dir = args.output_dir
+    input_dir = args.input_dir
     batch_size = get_positive_int_env("LTC_BATCH_SIZE", 10)
     checkpoint_interval_rows = get_positive_int_env(
         "LTC_CHECKPOINT_INTERVAL_ROWS", 1000
     )
-    end_id_env = os.environ.get("LTC_END_ID")
-    end_id = int(end_id_env) if end_id_env else None
-    if end_id is not None and end_id <= start_id:
-        raise ValueError(
-            f"LTC_END_ID ({end_id}) must be greater than start_id ({start_id})"
-        )
+    end_id = resolve_end_id(start_id, args.max_rows, args.end_id)
     skip_resume = os.environ.get("LTC_NO_RESUME", "0").lower() in (
         "1",
         "true",
@@ -187,11 +252,13 @@ def main():
         "on",
     )
     TIMER.set_metadata("output_dir", output_dir)
+    TIMER.set_metadata("input_dir", input_dir)
     TIMER.set_metadata("batch_size", batch_size)
     TIMER.set_metadata("checkpoint_interval_rows", checkpoint_interval_rows)
     TIMER.set_metadata("end_id", end_id)
     TIMER.set_metadata("skip_resume", skip_resume)
 
+    setup_start = time.perf_counter()
     with timed("startup.import_alignment"):
         _alignment_module = importlib.import_module(f"alignment.{langs}")
     alignment = _alignment_module.alignment
@@ -207,9 +274,7 @@ def main():
             f"{la2}_normalizer",
         )
 
-    input_path = os.environ.get(
-        "LTC_INPUT_CSV_PATH", f"./data/input/corpus_{langs}.csv"
-    )
+    input_path = args.input_csv_path or os.path.join(input_dir, f"corpus_{langs}.csv")
     TIMER.set_metadata("input_path", input_path)
     with timed("input.index_corpus"):
         input_reader = CsvRowReader(input_path)
@@ -228,7 +293,8 @@ def main():
             relations_id[pos_tag] = 0
             with timed(f"wordlists.load.{la1}.{pos_tag}"):
                 with open(
-                    "./data/input/wordlist_" + la1 + "_" + pos_tag + ".csv", mode="r"
+                    os.path.join(input_dir, f"wordlist_{la1}_{pos_tag}.csv"),
+                    mode="r",
                 ) as inp:
                     reader = list(csv.reader(inp))
                     if not re.fullmatch(r"[-+]?\d+", reader[0][0]):
@@ -239,7 +305,8 @@ def main():
                     max_id_la1 = max(wordlists[la1 + "_" + pos_tag].values())
             with timed(f"wordlists.load.{la2}.{pos_tag}"):
                 with open(
-                    "./data/input/wordlist_" + la2 + "_" + pos_tag + ".csv", mode="r"
+                    os.path.join(input_dir, f"wordlist_{la2}_{pos_tag}.csv"),
+                    mode="r",
                 ) as inp:
                     reader = list(csv.reader(inp))
                     if not re.fullmatch(r"[-+]?\d+", reader[0][0]):
@@ -310,6 +377,8 @@ def main():
                         writer = csv.writer(f)
                         for key, word_id in wordlists[la2 + "_" + pos_tag].items():
                             writer.writerow([word_id, key, "f"])
+    setup_seconds = time.perf_counter() - setup_start
+    TIMER.record("setup.model_load_and_prepare", setup_seconds)
 
     # W (write-only, no resume): LTC_NO_RESUME=1 で start_id != 0 でも
     #   output_dir を新規扱いし、relations は空から開始、corpus/log も 'w' で上書き
@@ -473,7 +542,9 @@ def main():
                 with open(os.path.join(output_dir, "passed_id.txt"), "w") as f:
                     f.write(str(passed_id))
 
-        progress = {"last_processed_id": None}
+        progress = {"last_processed_id": None, "processed_rows": 0}
+        processing_start = time.perf_counter()
+        processing_seconds = 0.0
         try:
             process_corpus_batches(
                 input_reader,
@@ -489,6 +560,12 @@ def main():
         except Exception as e:
             print(traceback.format_exc())
         finally:
+            processing_seconds = time.perf_counter() - processing_start
+            TIMER.record(
+                "processing.total",
+                processing_seconds,
+                items=progress["processed_rows"],
+            )
             with timed("output.write_final_relations"):
                 write_final_relations(output_dir, langs, relations)
             with timed("output.write_final_totyu"):
@@ -500,6 +577,13 @@ def main():
                         f.write(str(progress["last_processed_id"]))
             TIMER.record("run.total", time.perf_counter() - run_start)
             TIMER.dump_json(os.path.join(output_dir, f"timing_{langs}.json"))
+            total_seconds = time.perf_counter() - run_start
+            print_timing_summary(
+                total_seconds,
+                setup_seconds,
+                processing_seconds,
+                progress["processed_rows"],
+            )
 
 
 if __name__ == "__main__":
