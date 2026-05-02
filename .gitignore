@@ -28,6 +28,7 @@ pythonenv*
 nltk_data/
 src/data/output/*
 src/data/input/*
+src/data/samples/
 src/test/result_of_test/
 src/test/hs_err_pid*.log
 src/test/golden/
