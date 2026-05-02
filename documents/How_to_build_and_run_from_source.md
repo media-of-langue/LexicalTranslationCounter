@@ -1,122 +1,151 @@
 # How to build and run from source
 
 ## Prerequisites
-In order to download necessary tools, clone the repository, you need network access.
 
-For Docker-based runs, you'll need the following tools:
-- [GIT](https://git-scm.com/)
+Clone the repository first. The lightweight de-en path does not require Docker.
+
+For lightweight local de-en runs:
+
+- [Git](https://git-scm.com/)
+- Python 3 with `venv`
+- Network access for Python packages, spaCy/NLTK resources, and the sample data
+  Release asset
+- The awesome-align model, downloaded manually as described in
+  [documents/de-en/Readme.md](de-en/Readme.md)
+
+For full Docker runs:
+
 - [Docker](https://www.docker.com/)
 
-For the Release asset path, you can skip Docker if you already have a local
-Python environment with the language-pair dependencies installed.
+The Docker build path pulls the full corpus and wordlist Docker images. Use it
+only when you need the full data.
 
-## Build and Run
-### Getting the sources
+## Getting the sources
+
 First, fork the repository.
+
 ```
 git clone https://github.com/<<<your-github-account>>>/LexicalTranslationCounter.git
+cd LexicalTranslationCounter
 ```
 
 If you want to pull new changes to your fork, execute the command below.
+
 ```
-cd LexicalTranslationCounter
 git checkout main
 git pull https://github.com/media-of-langue/LexicalTranslationCounter.git main
 ```
 
-### Build the container
-Build the development container for the language pair you want to run. You can
-skip this Docker step if you only want to use the Release asset from a local
-Python environment.
-"sudo" is sometimes required.
-`la1` and `la2` are language codes, and their order should be determined
-alphabetically.
+## Lightweight local de-en run
+
+This path is intended for quick operation checks and small alignment
+experiments. It does not build the Docker image and does not pull the full
+corpus Docker image.
+
+### Set up the local runtime
+
+The helper below creates `.venv`, installs the de-en Python dependencies,
+downloads the spaCy/NLTK resources, and checks that the manually downloaded
+awesome-align model is present.
 
 ```
-docker-compose build --build-arg "LA1={la1}" --build-arg "LA2={la2}" && docker compose up -d
-```
-```
-ex:
-docker-compose build --build-arg "LA1=en" --build-arg "LA2=ja" && docker compose up -d
+python3 scripts/setup_local_runtime.py --language-pair de-en
 ```
 
-### Enter Container
-Enter container.
-```
-docker-compose exec ltc bash
-```
-
-### Choose input data
-
-There are three practical input sizes. Choose the smallest one that matches your
-purpose. The tracked test-data and Docker-data examples below are run inside the
-Docker container. The Release asset example is run from the host repository root
-because it is the path that avoids downloading the Docker corpus image.
-
-#### 1. Tracked test data: quick operation check
-
-Use the files committed under `src/test/data/` when you only want to confirm
-that the code path runs. These files are intentionally tiny and are not suitable
-for graph quality checks or alignment experiments.
-
-Example for the tracked `en-fr` fixture:
+If the helper reports missing files under `src/model/awesome_model_with_co/`,
+follow [documents/de-en/Readme.md](de-en/Readme.md), place the model files, and
+run:
 
 ```
-cd /root/src/
-python3 count_function.py 0 en fr \
-  --input-dir ./test/data \
-  --output-dir ./test/result_of_test/count_function_en_fr \
-  --max-rows 20
+python3 scripts/setup_local_runtime.py --language-pair de-en --check-only
 ```
 
-#### 2. Release asset data: small alignment experiment
+### 1. Tracked test data: quick operation check
+
+Use `src/test/data/` when you only want to confirm that the de-en code path
+runs. These files are intentionally tiny and are not suitable for graph quality
+checks.
+
+```
+ROOT=$(pwd) .venv/bin/python src/test/morphological_test.py de en
+ROOT=$(pwd) .venv/bin/python src/test/alignment_test.py de en
+```
+
+The outputs are written under `src/test/result_of_test/`.
+
+### 2. Release asset data: small alignment experiment
 
 Use the de-en sample corpus distributed as a GitHub Release asset when you want
-to do a small but more realistic alignment experiment without downloading the
-full Docker data. The fetch helper installs it under
-`src/data/samples/de_en/`.
-
-Run this from the repository root on the host machine. If you run
-`count_function.py` outside Docker, your local Python environment must have the
-same language-pair dependencies as the Docker image.
+to run `count_function.py` on a small but more realistic input set. The fetch
+helper installs it under `src/data/samples/de_en/`.
 
 ```
 python3 scripts/fetch_sample_data.py --force
 
-cd src
-python3 count_function.py 0 de en \
-  --input-dir ./data/samples/de_en/input \
+ROOT=$(pwd) .venv/bin/python src/count_function.py 0 de en \
+  --input-dir src/data/samples/de_en/input \
+  --output-dir src/data/output/de_en_sample \
   --max-rows 1000
 ```
 
 The asset is useful for local development because it is much larger than the
 tracked test fixture, but still small enough to fetch quickly.
 
-#### 3. Docker data: full run
+At the end of every `count_function.py` run, it prints a short timing summary:
+total time, model load/setup time, processing time, processing time per
+sentence, and processed sentence count. The detailed timing JSON is also written
+to `timing_{la1}_{la2}.json` in the output directory.
 
-Use the default Docker data path for full-scale runs. Prepare the following
-files in `/root/src/data/input/`. If the language pair is already supported,
-the data is pulled during the Docker build.
+## Full Docker run
 
-Check carefully as notes for each language and language-to-language when executing may be found in the language code folder of the document.
+Use this path when you need the full corpus and wordlists. The Docker build
+pulls `mediaoflangue/wordlist_*` and `mediaoflangue/corpus_*` images for the
+requested language pair.
+
+`la1` and `la2` are language codes, and their order should be determined
+alphabetically. `"sudo"` is sometimes required.
+
+```
+docker-compose build --build-arg "LA1={la1}" --build-arg "LA2={la2}" && docker compose up -d
+```
+
+Example:
+
+```
+docker-compose build --build-arg "LA1=en" --build-arg "LA2=ja" && docker compose up -d
+```
+
+Enter the container.
+
+```
+docker-compose exec ltc bash
+```
+
+Prepare the following files in `/root/src/data/input/`. If the language pair is
+already supported, these files are copied from the pulled Docker data images
+during the Docker build.
 
 See [File Reference](File_reference.md) for file contents.
-- corpus_{la1}_{la2}.csv
-- wordlist_{la}_{pos_tag}.csv
 
-Execute count function.
-The results are stored in /root/src/data/output/.
+- `corpus_{la1}_{la2}.csv`
+- `wordlist_{la}_{pos_tag}.csv`
+
+Execute count function. The results are stored in `/root/src/data/output/`.
+
 ```
 cd /root/src/
 python3 count_function.py 0 {la1} {la2}
 ```
+
+Example:
+
 ```
-ex: 
 python3 count_function.py 0 en fr
 ```
 
-For development runs, you can limit the number of rows and point to any input
-directory:
+For development runs inside Docker, you can limit the number of rows and point
+to any input directory:
+
 ```
 python3 count_function.py 0 de en \
   --input-dir ./data/input \
@@ -124,14 +153,10 @@ python3 count_function.py 0 de en \
   --max-rows 1000
 ```
 
-At the end of every run, `count_function.py` prints a short timing summary:
-total time, model load/setup time, processing time, processing time per
-sentence, and processed sentence count. The detailed timing JSON is also written
-to `timing_{la1}_{la2}.json` in the output directory.
+If you are interrupted by an error on the way, run with the first argument being
+the value in `/root/src/data/output/passed_id.txt` plus one.
 
-If you are interrupted by an error on the way, run with the first argument being the value in /root/src/data/output/passed_id.txt plus one.
-
-### Maintainer: build a local de-en sample package
+## Maintainer: build a local de-en sample package
 
 For maintainers with local de-en source data, the helper below builds a small
 raw input package. It uses full LTC relations only to choose graph-friendly
@@ -146,5 +171,7 @@ Default output:
 - `../de-en/samples/ltc-sample-de-en-small/`
 - `../de-en/samples/ltc-sample-de-en-small.tar.zst`
 
-### Check the outputs
-You can upload your relations and check the results by uploading your local data from the side menu of [media of langue](http://media-of-langue.org/)
+## Check the outputs
+
+You can upload your relations and check the results by uploading your local data
+from the side menu of [Media of Langue](http://media-of-langue.org/).

@@ -135,10 +135,12 @@ def main() -> None:
     print(f"installed: {sample_dir}")
     print(f"input_dir: {input_dir}")
     print("try:")
-    print("  cd src")
+    print("  python3 scripts/setup_local_runtime.py --language-pair de-en")
     print(
-        "  python3 count_function.py 0 de en "
-        f"--input-dir {input_dir} --max-rows 1000"
+        "  ROOT=$(pwd) .venv/bin/python src/count_function.py 0 de en "
+        f"--input-dir {input_dir} "
+        "--output-dir src/data/output/de_en_sample "
+        "--max-rows 1000"
     )
 
 
