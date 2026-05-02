@@ -1,26 +1,51 @@
 # How to build and run from source
 
-## Prerequisites
+## Overview
 
-Clone the repository first. The lightweight de-en path does not require Docker.
+Lexical Translation Counter supports multiple language pairs. Each language pair
+can have different Python dependencies, NLP models, and notes. Check the
+language-pair document under `documents/{la1}-{la2}/` when you work on a
+specific pair.
 
-For lightweight local de-en runs:
+There are two runtime paths:
 
-- [Git](https://git-scm.com/)
-- Python 3 with `venv`
-- Network access for Python packages, spaCy/NLTK resources, and the sample data
-  Release asset
-- The awesome-align model, downloaded manually as described in
-  [documents/de-en/Readme.md](de-en/Readme.md)
+- Local Python runtime: useful for quick checks and small experiments. This does
+  not pull the full corpus Docker images.
+- Docker runtime: useful for full runs. The Docker build pulls the full
+  `mediaoflangue/wordlist_*` and `mediaoflangue/corpus_*` images for the
+  selected language pair.
 
-For full Docker runs:
+For a first try, start with the local Python runtime and the smallest useful
+data. Use Docker only when you need the full data.
 
-- [Docker](https://www.docker.com/)
+## Data Options
 
-The Docker build path pulls the full corpus and wordlist Docker images. Use it
-only when you need the full data.
+### 1. Tracked test data
 
-## Getting the sources
+`src/test/data/` contains tiny fixtures committed to Git. Use these files for
+basic operation checks while developing a language pair.
+
+This data is intentionally small. It is not suitable for checking graph quality
+or realistic alignment behavior.
+
+### 2. Release asset sample data
+
+GitHub Release assets can provide small but more realistic sample corpora. These
+assets are intended for local alignment experiments without downloading the full
+Docker corpus image.
+
+Currently, a de-en sample asset is available. More language-pair sample assets
+can be added in the future using the same approach.
+
+### 3. Full Docker data
+
+The full corpus and wordlists are distributed through Docker data images. These
+are copied into `/root/src/data/input/` during the Docker build.
+
+Use this path for full-scale runs. Do not use it as the first operation check,
+because Docker build pulls the full data images.
+
+## Getting the Sources
 
 First, fork the repository.
 
@@ -36,35 +61,41 @@ git checkout main
 git pull https://github.com/media-of-langue/LexicalTranslationCounter.git main
 ```
 
-## Lightweight local de-en run
+## Local Python Runtime
 
-This path is intended for quick operation checks and small alignment
-experiments. It does not build the Docker image and does not pull the full
-corpus Docker image.
+Use this path when you want to avoid pulling the full Docker data images.
 
-### Set up the local runtime
+You need:
 
-The helper below creates `.venv`, installs the de-en Python dependencies,
-downloads the spaCy/NLTK resources, and checks that the manually downloaded
-awesome-align model is present.
+- Python 3 with `venv`
+- Network access for Python packages and NLP resources
+- The language-pair model files described in `documents/{la1}-{la2}/Readme.md`
+
+### Example: de-en
+
+The repository currently includes a setup helper for de-en. It creates `.venv`,
+installs the de-en Python dependencies, downloads spaCy/NLTK resources, and
+checks that the manually downloaded awesome-align model is present.
+
+First, follow [documents/de-en/Readme.md](de-en/Readme.md) and place the model
+under `src/model/awesome_model_with_co/`.
+
+Then run:
 
 ```
 python3 scripts/setup_local_runtime.py --language-pair de-en
 ```
 
-If the helper reports missing files under `src/model/awesome_model_with_co/`,
-follow [documents/de-en/Readme.md](de-en/Readme.md), place the model files, and
-run:
+If you have already installed the dependencies and only want to check the
+environment:
 
 ```
 python3 scripts/setup_local_runtime.py --language-pair de-en --check-only
 ```
 
-### 1. Tracked test data: quick operation check
+### Tracked test data example
 
-Use `src/test/data/` when you only want to confirm that the de-en code path
-runs. These files are intentionally tiny and are not suitable for graph quality
-checks.
+Use the tracked test data when you only want to confirm that the code path runs.
 
 ```
 ROOT=$(pwd) .venv/bin/python src/test/morphological_test.py de en
@@ -73,11 +104,10 @@ ROOT=$(pwd) .venv/bin/python src/test/alignment_test.py de en
 
 The outputs are written under `src/test/result_of_test/`.
 
-### 2. Release asset data: small alignment experiment
+### Release asset example
 
-Use the de-en sample corpus distributed as a GitHub Release asset when you want
-to run `count_function.py` on a small but more realistic input set. The fetch
-helper installs it under `src/data/samples/de_en/`.
+Use the de-en sample asset when you want to run `count_function.py` on a small
+but more realistic input set.
 
 ```
 python3 scripts/fetch_sample_data.py --force
@@ -88,15 +118,12 @@ ROOT=$(pwd) .venv/bin/python src/count_function.py 0 de en \
   --max-rows 1000
 ```
 
-The asset is useful for local development because it is much larger than the
-tracked test fixture, but still small enough to fetch quickly.
-
 At the end of every `count_function.py` run, it prints a short timing summary:
 total time, model load/setup time, processing time, processing time per
 sentence, and processed sentence count. The detailed timing JSON is also written
 to `timing_{la1}_{la2}.json` in the output directory.
 
-## Full Docker run
+## Full Docker Runtime
 
 Use this path when you need the full corpus and wordlists. The Docker build
 pulls `mediaoflangue/wordlist_*` and `mediaoflangue/corpus_*` images for the
@@ -156,11 +183,11 @@ python3 count_function.py 0 de en \
 If you are interrupted by an error on the way, run with the first argument being
 the value in `/root/src/data/output/passed_id.txt` plus one.
 
-## Maintainer: build a local de-en sample package
+## Maintainer: Build a Sample Asset
 
-For maintainers with local de-en source data, the helper below builds a small
-raw input package. It uses full LTC relations only to choose graph-friendly
-corpus rows; the packaged data itself is raw input files under `src/data/input/`.
+The helper below builds the current de-en sample asset from local source data.
+It uses full LTC relations only to choose graph-friendly corpus rows; the
+packaged data itself is raw input files under `src/data/input/`.
 
 ```
 python3 scripts/build_sample_corpus.py --force
@@ -171,7 +198,11 @@ Default output:
 - `../de-en/samples/ltc-sample-de-en-small/`
 - `../de-en/samples/ltc-sample-de-en-small.tar.zst`
 
-## Check the outputs
+Future language-pair sample assets should follow the same separation: keep the
+small raw input package as a Release asset, keep full data in the Docker data
+images, and keep pair-specific runtime notes under `documents/{la1}-{la2}/`.
+
+## Check the Outputs
 
 You can upload your relations and check the results by uploading your local data
 from the side menu of [Media of Langue](http://media-of-langue.org/).
