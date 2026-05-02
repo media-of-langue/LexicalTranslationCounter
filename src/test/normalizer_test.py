@@ -28,6 +28,7 @@ for pos_tag_code, pos_tag in part_of_speach_tag_rev.items():
             base, "./result_of_test/normalizer_test_out_" + la + "_" + pos_tag + ".txt"
         )
     )
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     file = open(output_path, "w")
     for word in wordlist:
         word_normalized = normalizer(word[1], pos_tag_code, "", test=True)

@@ -8,6 +8,8 @@ The number of lines of corpus test data should not exceed 100 lines
 - corpus_{la1}_{la2}.csv
 - wordlist_{la}_{pos_tag}.csv
 
+`src/test/data/` contains the tracked fixtures. Test outputs are generated under `src/test/result_of_test/` and are intentionally not tracked.
+
 ## alignment function
 The result of aligning the corpus of test data is output.
 

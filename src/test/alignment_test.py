@@ -35,7 +35,8 @@ part_of_speach_tag_rev = {"n": "noun", "v": "verb", "a": "adj", "r": "adverb"}
 output_path = os.path.normpath(
     os.path.join(base, "./result_of_test/alignment_test_out_" + langs + ".txt")
 )
-file = open("./result_of_test/alignment_test_out_" + langs + ".txt", "w")
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+file = open(output_path, "w")
 for corpus_row in corpus_rows:
     result = alignment(corpus_row, "", test=True)
     print("sentece_la1", corpus_row[1])

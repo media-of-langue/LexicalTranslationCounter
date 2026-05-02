@@ -30,6 +30,7 @@ corpus_rows = csv.reader(f_in)
 output_path = os.path.normpath(
     os.path.join(base, "./result_of_test/morphological_test_out_" + langs + ".txt")
 )
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
 file = open(output_path, "w")
 
 for corpus_row in corpus_rows:
