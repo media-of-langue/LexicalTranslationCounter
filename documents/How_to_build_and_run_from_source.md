@@ -34,8 +34,8 @@ GitHub Release assets can provide small but more realistic sample corpora. These
 assets are intended for local alignment experiments without downloading the full
 Docker corpus image.
 
-Currently, a de-en sample asset is available. More language-pair sample assets
-can be added in the future using the same approach.
+Currently, de-en and en-ja sample assets are available. More language-pair
+sample assets can be added in the future using the same approach.
 
 ### 3. Full Docker data
 
@@ -73,9 +73,11 @@ You need:
 
 ### Example: de-en
 
-The repository currently includes a setup helper for de-en. It creates `.venv`,
-installs the de-en Python dependencies, downloads spaCy/NLTK resources, and
-checks that the manually downloaded awesome-align model is present.
+The repository includes a setup helper for small local runs. It creates
+`.venv`, installs the requested language-pair Python dependencies, downloads
+NLTK resources, and checks that the manually downloaded awesome-align model is
+present. Some language pairs have extra local tools; for example, en-ja also
+requires `jumanpp` on `PATH`.
 
 First, follow [documents/de-en/Readme.md](de-en/Readme.md) and place the model
 under `src/model/awesome_model_with_co/`.
@@ -106,17 +108,20 @@ The outputs are written under `src/test/result_of_test/`.
 
 ### Release asset example
 
-Use the de-en sample asset when you want to run `count_function.py` on a small
-but more realistic input set.
+Use a sample asset when you want to run `count_function.py` on a small but more
+realistic input set.
 
 ```
-python3 scripts/fetch_sample_data.py --force
+python3 scripts/fetch_sample_data.py --language-pair de-en --force
 
 ROOT=$(pwd) .venv/bin/python src/count_function.py 0 de en \
   --input-dir src/data/samples/de_en/input \
   --output-dir src/data/output/de_en_sample \
   --max-rows 1000
 ```
+
+For en-ja, use `--language-pair en-ja` and follow
+[documents/en-ja/Readme.md](en-ja/Readme.md) for the model and Juman++ setup.
 
 At the end of every `count_function.py` run, it prints a short timing summary:
 total time, model load/setup time, processing time, processing time per
@@ -185,18 +190,27 @@ the value in `/root/src/data/output/passed_id.txt` plus one.
 
 ## Maintainer: Build a Sample Asset
 
-The helper below builds the current de-en sample asset from local source data.
-It uses full LTC relations only to choose graph-friendly corpus rows; the
-packaged data itself is raw input files under `src/data/input/`.
+The helper below builds a sample asset from local source data. It uses full LTC
+relations only to choose graph-friendly corpus rows; the packaged data itself is
+raw input files under `src/data/input/`.
 
 ```
-python3 scripts/build_sample_corpus.py --force
+python3 scripts/build_sample_corpus.py --language-pair de-en --force
 ```
 
-Default output:
+Example de-en output:
 
 - `../de-en/samples/ltc-sample-de-en-small/`
 - `../de-en/samples/ltc-sample-de-en-small.tar.zst`
+
+Example en-ja output:
+
+```
+python3 scripts/build_sample_corpus.py --language-pair en-ja --force
+```
+
+- `../ltc-data/samples/ltc-sample-en-ja-small/`
+- `../ltc-data/samples/ltc-sample-en-ja-small.tar.zst`
 
 Future language-pair sample assets should follow the same separation: keep the
 small raw input package as a Release asset, keep full data in the Docker data

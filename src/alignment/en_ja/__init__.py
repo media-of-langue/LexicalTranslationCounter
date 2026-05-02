@@ -1,6 +1,7 @@
 import itertools
 import sys
 import os
+from pathlib import Path
 import torch
 import csv
 import transformers
@@ -17,24 +18,19 @@ import time
 from normalizer.en_normalizer import en_normalizer
 from normalizer.ja_normalizer import ja_normalizer
 
-ROOT = os.environ.get("ROOT", "/root")
+ROOT = Path(os.environ.get("ROOT", Path(__file__).resolve().parents[3]))
+MODEL_DIR = ROOT / "src" / "model" / "awesome_model_without_co"
 
 exceptions = list(csv.reader(open(path_exception, "r"), delimiter=","))
 
 jumanpp = Juman(timeout=300, jumanpp=True)
 
 # download model
-config = transformers.BertConfig.from_pretrained(
-    f"{ROOT}/src/model/awesome_model_without_co/config.json"
-)
-model = transformers.BertModel.from_pretrained(
-    f"{ROOT}/src/model/awesome_model_without_co/pytorch_model.bin", config=config
-)
-tokenizer_config = transformers.BertConfig.from_pretrained(
-    f"{ROOT}/src/model/awesome_model_without_co/tokenizer_config.json"
-)
+config = transformers.BertConfig.from_pretrained(str(MODEL_DIR))
+model = transformers.BertModel.from_pretrained(str(MODEL_DIR), config=config)
+tokenizer_config = transformers.BertConfig.from_pretrained(str(MODEL_DIR))
 tokenizer = transformers.BertTokenizer.from_pretrained(
-    f"{ROOT}/src/model/awesome_model_without_co/", config=tokenizer_config
+    str(MODEL_DIR), config=tokenizer_config
 )
 
 device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")

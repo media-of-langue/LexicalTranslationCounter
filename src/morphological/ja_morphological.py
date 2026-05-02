@@ -1,5 +1,7 @@
 from pyknp import Juman
 
+from jumanpp_safety import analyze_jumanpp
+
 jumanpp = Juman(timeout=300,jumanpp=True)
 
 ja_nounsetsubi = [
@@ -60,7 +62,7 @@ indipendent_mrph = ["形容詞", "名詞", "動詞", "副詞"]
 def ja_morphological(sentence):
     sentence = sentence.replace(" ", "")
     try:
-        mrph_l = jumanpp.analysis(sentence).mrph_list()
+        mrph_l = analyze_jumanpp(jumanpp, sentence)
     except Exception as e:
         print("jumanpp error", e)
         print("sentence", sentence)

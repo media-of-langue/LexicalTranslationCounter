@@ -3,6 +3,8 @@ import pandas as pd
 from pyknp import Juman
 import os
 
+from jumanpp_safety import analyze_jumanpp
+
 base = os.path.dirname(os.path.abspath(__file__))
 env = environ.Env()
 
@@ -30,7 +32,7 @@ def ja_normalizer(word, pos_tag, wordlist, test=False):
     if word in except_dict:
         word_normalized = except_dict[word]
     else:
-        juman_mrph_l = jumanpp.analysis(word).mrph_list()
+        juman_mrph_l = analyze_jumanpp(jumanpp, word)
         mrph_dict_l = []
         for mrph_item in juman_mrph_l:
             mrph_dict_l.append({
@@ -69,7 +71,7 @@ def ja_normalizer(word, pos_tag, wordlist, test=False):
 
 
 def recheck(word, pos_tag):
-    juman_mrph_l = jumanpp_detail.analysis(word).mrph_list()
+    juman_mrph_l = analyze_jumanpp(jumanpp_detail, word)
     ranking_l = [[],[],[],[],[]]
     for mrph_detail in juman_mrph_l:
         mrph_l = mrph_detail.midasi.split("\t")
