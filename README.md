@@ -77,6 +77,15 @@ Of course, it can be executed in any environment, including local, by following 
 
 See ”How to build and run from source” in the documents directory for details.
 
+## Development And Testing Notes
+
+This repository does not use Poetry, mise, or the Media of Langue DB toolchain. Use the Docker-based environment and the scripts documented in `documents/`.
+
+- Build/run: [How to build and run from source](documents/How_to_build_and_run_from_source.md)
+- Tests: [How to test](documents/How_to_test.md)
+
+Keep this repository open-source friendly. Do not add Media of Langue private DB infrastructure, deployment runbooks, production credentials, or internal data-loading settings here.
+
 ## Acknowledgements
 
 We use the following libraries and datasets. We gratefully respect and acknowledge these projects.
