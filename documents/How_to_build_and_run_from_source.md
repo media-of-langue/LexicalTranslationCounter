@@ -77,6 +77,19 @@ to `timing_{la1}_{la2}.json` in the output directory.
 
 If you are interrupted by an error on the way, run with the first argument being the value in /root/src/data/output/passed_id.txt plus one.
 
+### Fetch the de-en sample package
+
+The de-en sample corpus is distributed as a GitHub Release asset. Fetch and
+install it under `src/data/samples/de_en/`:
+
+```
+python3 scripts/fetch_sample_data.py --force
+cd src
+python3 count_function.py 0 de en \
+  --input-dir ./data/samples/de_en/input \
+  --max-rows 1000
+```
+
 ### Build a local de-en sample package
 
 For maintainers with local de-en source data, the helper below builds a small
