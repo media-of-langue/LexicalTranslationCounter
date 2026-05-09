@@ -11,14 +11,18 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+SRC_DIR = ROOT / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
 
-REQUIRED_AWESOME_MODEL_FILES = (
-    "config.json",
-    "pytorch_model.bin",
-    "special_tokens_map.json",
-    "tokenizer_config.json",
-    "vocab.txt",
+from ltc.backends.alignment.awesome_utils import (
+    canonical_awesome_model_registry_dir_from_root,
+    check_awesome_model_runtime,
+    missing_awesome_model_files,
+    resolve_awesome_model_selection,
 )
+
 NLTK_PACKAGES = (
     "omw-1.4",
     "averaged_perceptron_tagger",
@@ -81,12 +85,12 @@ RUNTIMES = {
             "environ",
             "nltk",
             "pandas",
-            "pyknp",
+            "sudachipy",
             "torch",
             "transformers",
         ),
         model_dir_name="awesome_model_without_co",
-        external_commands=("jumanpp",),
+        extra_pip_packages=("sudachipy", "sudachidict_core", "fugashi[unidic-lite]"),
     ),
 }
 
@@ -176,32 +180,66 @@ def missing_external_commands(root: Path, config: RuntimeConfig) -> list[str]:
     ]
 
 
-def check_awesome_align_model(root: Path, config: RuntimeConfig) -> list[Path]:
-    model_dir = root / "src" / "model" / config.model_dir_name
-    return [
-        model_dir / file_name
-        for file_name in REQUIRED_AWESOME_MODEL_FILES
-        if not (model_dir / file_name).exists()
-    ]
+def check_awesome_align_model(root: Path, config: RuntimeConfig) -> list[str]:
+    model_selection = resolve_awesome_model_selection(
+        root / "src" / "alignment" / config.pair_underscore / "__init__.py",
+        config.model_dir_name,
+        pair_name=config.pair_underscore,
+    )
+    try:
+        check_awesome_model_runtime(
+            model_selection.model_spec,
+            backend_name=f"alignment.{config.pair_underscore}",
+        )
+    except RuntimeError as exc:
+        model_path = Path(model_selection.model_spec).expanduser()
+        if model_path.exists():
+            return [str(path) for path in missing_awesome_model_files(model_path)]
+        return [str(exc)]
+    return []
 
 
 def print_external_command_help(root: Path, config: RuntimeConfig, missing: list[str]) -> None:
     print("\nMissing external runtime commands:")
     for command in missing:
         print(f"- {command}")
-    print("\nFor en-ja, install Juman++ and make `jumanpp` available on PATH.")
-    print("On macOS, Homebrew can install it with `brew install jumanpp`.")
+    print("\nIf you want to compare against the legacy Juman++ path, install Juman++ and")
+    print("make `jumanpp` available on PATH. On macOS, Homebrew can install it with")
+    print("`brew install jumanpp`.")
     print("See:")
     print(f"  {root / 'documents' / config.language_pair / 'Readme.md'}")
 
 
-def print_model_help(root: Path, config: RuntimeConfig, missing_files: list[Path]) -> None:
-    rel_missing = [path.relative_to(root) for path in missing_files]
-    print("\nMissing awesome-align model files:")
-    for path in rel_missing:
-        print(f"- {path}")
-    print(f"\nDownload the {config.language_pair} awesome-align model manually and place it under:")
+def print_model_help(root: Path, config: RuntimeConfig, missing_files: list[str]) -> None:
+    registry_dir = canonical_awesome_model_registry_dir_from_root(
+        root, config.pair_underscore
+    )
+    print("\nAwesome-align runtime check failed:")
+    for item in missing_files:
+        print(f"- {item}")
+    print(
+        f"\nPreferred: register a production model under the canonical registry:\n"
+        f"  {registry_dir}"
+    )
+    print(
+        "Example:\n"
+        f"  PYTHONPATH=src python3 -m ltc.cli.register_awesome_model --pair "
+        f"{config.language_pair} --source /path/to/model --copy-files"
+    )
+    print(
+        "\nStill supported: set LTC_AWESOME_ALIGN_MODEL_<PAIR> or "
+        "LTC_AWESOME_ALIGN_MODEL to a Hugging Face model name or local path."
+    )
+    print(
+        "Legacy local directories under src/model/ are also still supported "
+        "during migration:"
+    )
     print(f"  {root / 'src' / 'model' / config.model_dir_name}")
+    print(
+        "\nAfter registering, check the resolution state with:\n"
+        f"  PYTHONPATH=src python3 -m ltc.cli.awesome_model_status --pair "
+        f"{config.language_pair}"
+    )
     print("See:")
     print(f"  {root / 'documents' / config.language_pair / 'Readme.md'}")
 
@@ -264,11 +302,31 @@ def main() -> int:
         return 3
 
     la1, la2 = config.langs
+    model_selection = resolve_awesome_model_selection(
+        root / "src" / "alignment" / config.pair_underscore / "__init__.py",
+        config.model_dir_name,
+        pair_name=config.pair_underscore,
+    )
+    smoke_input_dir = root / "projects" / "smoke" / config.pair_underscore / "input"
+    example_input_dir = smoke_input_dir if smoke_input_dir.is_dir() else root / "src" / "test" / "data"
+    example_input_dir_display = example_input_dir.relative_to(root)
     print(f"\nLocal {config.language_pair} runtime is ready.")
+    print(
+        "Canonical Awesome registry: "
+        f"{canonical_awesome_model_registry_dir_from_root(root, config.pair_underscore)}"
+    )
+    print(f"Model: {model_selection.note}")
+    if not model_selection.production_ready:
+        print(
+            "Note: this is a smoke/dev model selection. Set "
+            "LTC_REQUIRE_PRODUCTION_MODEL=1 before production runs to fail fast "
+            "if a fine-tuned model has not been configured."
+        )
     print("Example:")
     print(
         f"  ROOT={root} {python_path} src/count_function.py 0 {la1} {la2} "
-        f"--input-dir src/data/samples/{config.pair_underscore}/input --max-rows 1000"
+        f"--input-dir {example_input_dir_display} "
+        f"--output-dir .tmp/{config.pair_underscore}_smoke --max-rows 3"
     )
     return 0
 

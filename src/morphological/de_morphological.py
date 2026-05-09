@@ -2,8 +2,10 @@ import os
 
 import spacy
 
-spacy.prefer_gpu()
-nlp = spacy.load("de_dep_news_trf", disable=["parser", "lemmatizer"])
+DE_SPACY_MODEL = os.environ.get("LTC_DE_SPACY_MODEL", "de_dep_news_trf")
+if os.environ.get("LTC_SPACY_PREFER_GPU", "1").lower() in ("1", "true", "yes", "on"):
+    spacy.prefer_gpu()
+nlp = spacy.load(DE_SPACY_MODEL, disable=["parser", "lemmatizer"])
 
 
 def _parse_pipe_batch_size():
@@ -61,6 +63,17 @@ def _doc_to_tokens_and_tags(doc):
 
 def de_morphological(sentence):
     return _doc_to_tokens_and_tags(nlp(sentence))
+
+
+def runtime_check():
+    next(nlp.pipe(["Smoke test."], **_PIPE_KWARGS))
+
+
+def runtime_metadata():
+    return {
+        "note": f"spaCy model: {DE_SPACY_MODEL}",
+        "spacy_model": DE_SPACY_MODEL,
+    }
 
 
 def _pipe_sorted_by_length(sentences):

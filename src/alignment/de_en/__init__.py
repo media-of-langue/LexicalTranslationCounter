@@ -6,36 +6,27 @@ import transformers
 import csv
 
 from timing_utils import timed
+from ltc.backends.alignment.awesome_utils import (
+    build_awesome_input_ids_and_subword_map,
+    check_awesome_model_runtime,
+    ensure_production_model,
+    load_awesome_model_and_tokenizer,
+    resolve_awesome_model_selection,
+    warn_on_smoke_model,
+)
 
-ROOT = os.environ.get("ROOT", "/root")
-
-with timed("alignment.de_en.load_bert_config"):
-    config = transformers.BertConfig.from_pretrained(
-        f"{ROOT}/src/model/awesome_model_with_co/config.json"
-    )
-with timed("alignment.de_en.load_bert_model"):
-    model = transformers.BertModel.from_pretrained(
-        f"{ROOT}/src/model/awesome_model_with_co/pytorch_model.bin", config=config
-    )
-with timed("alignment.de_en.load_tokenizer_config"):
-    tokenizer_config = transformers.BertConfig.from_pretrained(
-        f"{ROOT}/src/model/awesome_model_with_co/tokenizer_config.json"
-    )
-if os.environ.get("LTC_FAST_TOKENIZER", "0").lower() in ("1", "true", "yes", "on"):
-    _TOKENIZER_CLS = transformers.BertTokenizerFast
-else:
-    _TOKENIZER_CLS = transformers.BertTokenizer
-with timed(
-    "alignment.de_en.load_tokenizer",
-    metadata={"tokenizer_class": _TOKENIZER_CLS.__name__},
-):
-    tokenizer = _TOKENIZER_CLS.from_pretrained(
-        f"{ROOT}/src/model/awesome_model_with_co/", config=tokenizer_config
-    )
+MODEL_SELECTION = resolve_awesome_model_selection(
+    __file__,
+    "awesome_model_with_co",
+    pair_name="de_en",
+)
+MODEL_SPEC = MODEL_SELECTION.model_spec
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-with timed("alignment.de_en.model_to_device", metadata={"device": str(device)}):
-    model.to(device)
+model = None
+tokenizer = None
+_model_profile_warned = False
+_model_early_stopped = False
 
 base = os.path.dirname(os.path.abspath(__file__))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
@@ -72,11 +63,51 @@ threshold = 4e-7
 
 
 if os.environ.get("LTC_BERT_EARLY_STOP", "0").lower() in ("1", "true", "yes", "on"):
-    # layer 9..12 の計算は hidden_states[align_layer] に影響しないので、
-    # encoder.layer を align_layer 分だけに truncate する。
-    # hidden_states[align_layer] は bit-identical な値のまま。
-    with timed("alignment.de_en.bert_early_stop_truncate"):
-        model.encoder.layer = model.encoder.layer[:align_layer]
+    _BERT_EARLY_STOP_ENABLED = True
+else:
+    _BERT_EARLY_STOP_ENABLED = False
+
+
+def get_model_and_tokenizer():
+    global model, tokenizer, _model_profile_warned, _model_early_stopped
+    ensure_production_model(
+        MODEL_SELECTION,
+        backend_name="alignment.de_en",
+        pair_name="de_en",
+    )
+    if not _model_profile_warned:
+        warn_on_smoke_model(MODEL_SELECTION, backend_name="alignment.de_en")
+        _model_profile_warned = True
+    if model is None or tokenizer is None:
+        with timed("alignment.de_en.load_model_bundle"):
+            model_loaded, tokenizer_loaded = load_awesome_model_and_tokenizer(
+                MODEL_SPEC
+            )
+        model = model_loaded.to(device)
+        tokenizer = tokenizer_loaded
+    if _BERT_EARLY_STOP_ENABLED and not _model_early_stopped:
+        # encoder.layer を align_layer 分だけに truncate する。
+        # hidden_states[align_layer] は同じ値のまま。
+        with timed("alignment.de_en.bert_early_stop_truncate"):
+            model.encoder.layer = model.encoder.layer[:align_layer]
+        _model_early_stopped = True
+    return model, tokenizer
+
+
+def runtime_check():
+    check_awesome_model_runtime(MODEL_SELECTION.model_spec, backend_name="alignment.de_en")
+
+
+def runtime_metadata():
+    return {
+        "model_spec": MODEL_SELECTION.model_spec,
+        "resolution_source": MODEL_SELECTION.resolution_source,
+        "model_profile": MODEL_SELECTION.profile,
+        "production_ready": MODEL_SELECTION.production_ready,
+        "registry_dir": MODEL_SELECTION.registry_dir,
+        "model_metadata": MODEL_SELECTION.metadata,
+        "note": MODEL_SELECTION.note,
+    }
 
 
 def get_positive_int_env(name, default):
@@ -98,32 +129,13 @@ def iter_slices(size, chunk_size):
 
 
 def awesome_alignment_preprocessing(sent_src, sent_tgt):
-    token_src, token_tgt = [tokenizer.tokenize(word) for word in sent_src], [
-        tokenizer.tokenize(word) for word in sent_tgt
-    ]
-    wid_src, wid_tgt = [tokenizer.convert_tokens_to_ids(x) for x in token_src], [
-        tokenizer.convert_tokens_to_ids(x) for x in token_tgt
-    ]
-    ids_src, ids_tgt = (
-        tokenizer.prepare_for_model(
-            list(itertools.chain(*wid_src)),
-            return_tensors="pt",
-            model_max_length=tokenizer.model_max_length,
-            truncation=True,
-        )["input_ids"],
-        tokenizer.prepare_for_model(
-            list(itertools.chain(*wid_tgt)),
-            return_tensors="pt",
-            truncation=True,
-            model_max_length=tokenizer.model_max_length,
-        )["input_ids"],
+    _, current_tokenizer = get_model_and_tokenizer()
+    ids_src, sub2word_map_src = build_awesome_input_ids_and_subword_map(
+        current_tokenizer, sent_src
     )
-    sub2word_map_src = []
-    for i, word_list in enumerate(token_src):
-        sub2word_map_src += [i for x in word_list]
-    sub2word_map_tgt = []
-    for i, word_list in enumerate(token_tgt):
-        sub2word_map_tgt += [i for x in word_list]
+    ids_tgt, sub2word_map_tgt = build_awesome_input_ids_and_subword_map(
+        current_tokenizer, sent_tgt
+    )
 
     return ids_src, ids_tgt, sub2word_map_src, sub2word_map_tgt
 
@@ -393,7 +405,8 @@ def awesome_alignment_from_morphs_batch(sent_srcs, pos_srcs, sent_tgts, pos_trgs
 
     # alignment
     def padding(ids_list):
-        pad_token_id = tokenizer.pad_token_id
+        _, current_tokenizer = get_model_and_tokenizer()
+        pad_token_id = current_tokenizer.pad_token_id
 
         max_size = max([ids.size(0) for ids in ids_list])
         ids_list = [
@@ -417,15 +430,16 @@ def awesome_alignment_from_morphs_batch(sent_srcs, pos_srcs, sent_tgts, pos_trgs
     with timed("alignment.de_en.padding_trg_batch", items=batch_size):
         padded_ids_trg_tensor = padding(ids_trgs)
 
-    model.eval()
+    current_model, _ = get_model_and_tokenizer()
+    current_model.eval()
 
     with torch.no_grad():
         with timed("alignment.de_en.model_forward_src_batch", items=batch_size):
-            padded_out_src_tensor = model(
+            padded_out_src_tensor = current_model(
                 padded_ids_src_tensor.to(device), output_hidden_states=True
             )[2][align_layer].to("cpu")
         with timed("alignment.de_en.model_forward_trg_batch", items=batch_size):
-            padded_out_trg_tensor = model(
+            padded_out_trg_tensor = current_model(
                 padded_ids_trg_tensor.to(device), output_hidden_states=True
             )[2][align_layer].to("cpu")
 

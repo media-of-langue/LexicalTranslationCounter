@@ -69,24 +69,31 @@ You need:
 
 - Python 3 with `venv`
 - Network access for Python packages and NLP resources
-- The language-pair model files described in `documents/{la1}-{la2}/Readme.md`
+- The language-pair runtime notes described in `documents/{la1}-{la2}/Readme.md`
 
 ### Example: de-en
 
 The repository includes a setup helper for small local runs. It creates
 `.venv`, installs the requested language-pair Python dependencies, downloads
-NLTK resources, and checks that the manually downloaded awesome-align model is
-present. Some language pairs have extra local tools; for example, en-ja also
-requires `jumanpp` on `PATH`.
+NLTK resources, and checks that pair-specific local tools are available. Some
+language pairs can use a local awesome-align directory, while others can also
+fall back to a Hugging Face model name on the first real run. For example,
+en-ja now uses a Sudachi-based default path, while Juman++ remains available as
+an optional comparison backend.
 
-First, follow [documents/de-en/Readme.md](de-en/Readme.md) and place the model
-under `src/model/awesome_model_with_co/`.
+First, follow [documents/de-en/Readme.md](de-en/Readme.md) if you want to pin a
+production Awesome Align model. The preferred path is now the canonical local
+registry under `models/<pair>/awesome-align/production/`, and the helper CLI
+`ltc.cli.register_awesome_model` can place it there for you.
 
 Then run:
 
 ```
 python3 scripts/setup_local_runtime.py --language-pair de-en
 ```
+
+For the smallest real-backend verification flow, follow
+[projects/smoke/de_en/README.md](../projects/smoke/de_en/README.md).
 
 If you have already installed the dependencies and only want to check the
 environment:
@@ -121,7 +128,9 @@ ROOT=$(pwd) .venv/bin/python src/count_function.py 0 de en \
 ```
 
 For en-ja, use `--language-pair en-ja` and follow
-[documents/en-ja/Readme.md](en-ja/Readme.md) for the model and Juman++ setup.
+[documents/en-ja/Readme.md](en-ja/Readme.md) for the model-resolution order and
+default Sudachi setup. A contributor-friendly tracked-data walkthrough is also
+available at [projects/smoke/en_ja/README.md](../projects/smoke/en_ja/README.md).
 
 At the end of every `count_function.py` run, it prints a short timing summary:
 total time, model load/setup time, processing time, processing time per

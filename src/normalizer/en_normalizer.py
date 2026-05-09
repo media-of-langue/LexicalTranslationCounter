@@ -2,22 +2,32 @@ import os
 
 import nltk
 
-ROOT = os.environ.get("ROOT", "/root")
-
-if not os.path.isdir(f"{ROOT}/nltk_data/tokenizers/punkt/"):
-    nltk.download("punkt")
-if not os.path.isfile(f"{ROOT}/nltk_data/corpora/wordnet.zip"):
-    nltk.download("wordnet")
 import environ
 import pandas as pd
 from nltk.stem import SnowballStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
+
+from ltc.text import normalize_english_text
 
 env = environ.Env()
 base = os.path.dirname(os.path.abspath(__file__))
 
 lem = WordNetLemmatizer()
 word_tokenizer = nltk.word_tokenize
+
+
+def ensure_nltk_resource(resource_paths, download_name):
+    for resource_path in resource_paths:
+        try:
+            nltk.data.find(resource_path)
+            return
+        except LookupError:
+            continue
+    nltk.download(download_name)
+
+
+ensure_nltk_resource(("tokenizers/punkt", "tokenizers/punkt.zip"), "punkt")
+ensure_nltk_resource(("corpora/wordnet", "corpora/wordnet.zip"), "wordnet")
 
 """
 normalizerは言語ごとに存在する
@@ -39,6 +49,7 @@ for pos_tag in pos_tag_rev:
 
 
 def en_normalizer(word, pos_tag, wordlist, test=False):
+    word = normalize_english_text(word)
     except_dict = except_dict_dict[pos_tag]
     if word in except_dict:
         word_normalized = except_dict[word]
@@ -46,7 +57,7 @@ def en_normalizer(word, pos_tag, wordlist, test=False):
         tokenized_l = word_tokenizer(word)
         word_normalized = ""
         for token in tokenized_l:
-            word_normalized += lem.lemmatize(token, pos_tag) + " "
+            word_normalized += lem.lemmatize(token.lower(), pos_tag) + " "
         if word_normalized != "":
             word_normalized = word_normalized[:-1]
     if test:

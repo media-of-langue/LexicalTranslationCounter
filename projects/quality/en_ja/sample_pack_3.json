@@ -1,0 +1,164 @@
+[
+  {
+    "name": "sample3_confirmation_environment_jquery_code",
+    "tier": "core",
+    "source": "I found a solution to this problem, so here’s a note Confirmation Environment jQuery 1.7.2 code First, let’s take a quick look at the code.",
+    "target": "確認環境 jQuery 1.7.2 コード まずはコードをさらっと紹介します。",
+    "required_pairs": [
+      ["n", "confirmation environment", "確認環境"],
+      ["n", "jquery", "jQuery"],
+      ["n", "code", "コード"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 16: product-style heading text with repeated code anchors."
+  },
+  {
+    "name": "sample3_folk_medicine_belief",
+    "tier": "core",
+    "source": "My thoughts on folk medicine When it comes to folk remedies, I believe that there are places where people’s beliefs are more or less included.",
+    "target": "私の民間療法の考え 民間療法というと、人の思い込みの部分が多少なり含む所があると考えています。",
+    "required_pairs": [
+      ["n", "folk medicine", "民間療法"],
+      ["v", "believe", "考える"],
+      ["n", "belief", "思い込み"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 21: a stable belief-thought example with a clean folk-medicine noun phrase."
+  },
+  {
+    "name": "sample3_vitiligo_sun_protection",
+    "tier": "core",
+    "source": "I can’t help but notice the appearance of vitiligo vulgaris, so I think it’s possible to consider it as a sun protection I am.",
+    "target": "どうしても尋常性白斑は見た目が気になりますので、日焼け対策として考えても、アリだと思います。",
+    "required_pairs": [
+      ["n", "vitiligo vulgaris", "尋常性白斑"],
+      ["v", "consider", "考える"],
+      ["n", "sun protection", "日焼け対策"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 24: domain terminology plus a multiword protection phrase."
+  },
+  {
+    "name": "sample3_build_house_install",
+    "tier": "core",
+    "source": "When building a house, it's better to install more electrica...",
+    "target": "家を建てる際コンセントの場所は多めにつけておく方がいいらしい 友達が家を建てたので遊びに行きました。",
+    "required_pairs": [
+      ["v", "build", "建てる"],
+      ["n", "house", "家"],
+      ["v", "install", "つける"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 29: build/install verbs with a straightforward house anchor."
+  },
+  {
+    "name": "sample3_material_awareness",
+    "tier": "core",
+    "source": "To do this, it’s important to be aware of the materials you’re using.",
+    "target": "そのためには、使っている素材を意識することが大切です。",
+    "required_pairs": [
+      ["n", "material", "素材"],
+      ["v", "use", "使う"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 59: simple materials/use anchor pair outside the current main suite."
+  },
+  {
+    "name": "sample3_paper_long_time_information",
+    "tier": "core",
+    "source": "But for a very small portion of the information, there is some information that you want to keep on paper for a long time.",
+    "target": "私も情報の大半はデジタルデータでいいと考えています。 ただごく一部については「紙で長期間残したい」という情報があったりします。",
+    "required_pairs": [
+      ["n", "information", "情報"],
+      ["v", "keep", "残す"],
+      ["n", "paper", "紙"],
+      ["n", "long time", "長期間"]
+    ],
+    "forbidden_pairs": [
+      ["n", "small portion", "大半"],
+      ["v", "want", "考える"]
+    ],
+    "notes": "Fresh sample pack row 61: contrastive quantity sentence. Keep the long-term paper-storage anchors while suppressing the obvious cross-clause noise."
+  },
+  {
+    "name": "sample3_rakuken_register",
+    "tier": "core",
+    "source": "After purchase, you only need to ask the cashier if you want to use “Rakuten” at the register.",
+    "target": "購入後、レジにて「楽券」を使いたいんですけどと、声を掛けるだけです。",
+    "required_pairs": [
+      ["v", "use", "使う"],
+      ["n", "rakuten", "楽券"],
+      ["n", "register", "レジ"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 64: service name plus register anchor with a short transactional instruction."
+  },
+  {
+    "name": "sample3_shortening_time_category",
+    "tier": "core",
+    "source": "I’m going to create a category called “Shortening Time” and write an article about my shortening work. I would like to.",
+    "target": "これから「時短」というカテゴリーを作り、私が行っている時短作業について記事を書いていきたいと思います。",
+    "required_pairs": [
+      ["v", "create", "作る"],
+      ["n", "category", "カテゴリー"],
+      ["n", "shortening time", "時短"],
+      ["v", "write", "書く"],
+      ["n", "article", "記事"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 72: category/article workflow with both phrase and word-level anchors."
+  },
+  {
+    "name": "sample3_classic_editor_gutenberg",
+    "tier": "core",
+    "source": "Classic Editor required, no Gutenberg support. At the time of writing, the Classic Editor plugin is required, and Gutenberg is not supported.",
+    "target": "Classic Editor必須、Gutenberg非対応 執筆時点で、Classic Editorプラグイン必須、Gutenberg非対応となっています。",
+    "required_pairs": [
+      ["n", "gutenberg", "Gutenberg"],
+      ["n", "support", "非対応"],
+      ["n", "editor plugin", "Editorプラグイン"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 74: plugin/support terminology with repeated Gutenberg evidence."
+  },
+  {
+    "name": "sample3_abbreviation_misunderstanding",
+    "tier": "core",
+    "source": "Depending on your industry and the trust you have with the person you’re talking to, abbreviations can easily lead to misunderstandings.",
+    "target": "(参照:hoge.doc) 省略語は控えめに 業界や、相手との信頼関係にもよりますが、省略語は誤解を招くきっかけになりやすいです。",
+    "required_pairs": [
+      ["n", "industry", "業界"],
+      ["n", "trust", "信頼関係"],
+      ["v", "lead", "招く"],
+      ["n", "misunderstanding", "誤解"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 86: contributor-friendly sanity check for trust/misunderstanding wording."
+  },
+  {
+    "name": "sample3_airing_commercial_cost",
+    "tier": "core",
+    "source": "Of course, the cost of airing commercials is probably being paid for out of sight.",
+    "target": "当然、CMを放映している分の費用も見えないところで費用として払わされているでしょう。",
+    "required_pairs": [
+      ["n", "cost", "費用"],
+      ["v", "air", "放映する"],
+      ["n", "commercial", "CM"],
+      ["v", "pay", "払う"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 89: causative/passive payment wording should still normalize back to 払う."
+  },
+  {
+    "name": "sample3_article_blog_site",
+    "tier": "core",
+    "source": "Here’s the article that inspired me to set up this blog site.",
+    "target": "競争力の記事が参考になりすぎる このブログサイトを開設するきっかけになった記事があります。",
+    "required_pairs": [
+      ["n", "article", "記事"],
+      ["n", "blog site", "ブログサイト"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 90: a simple article/blog-site pair from a different tracked-corpus slice."
+  }
+]

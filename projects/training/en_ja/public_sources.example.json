@@ -1,0 +1,43 @@
+{
+  "name": "en-ja-public-mix-v1",
+  "seed": "en-ja-public-mix-v1",
+  "filters": {
+    "min_source_chars": 1,
+    "min_target_chars": 1,
+    "max_source_chars": 400,
+    "max_target_chars": 400,
+    "max_length_ratio": 4.0,
+    "unicode_normalization": "NFKC"
+  },
+  "splits": {
+    "train": 0.98,
+    "dev": 0.01,
+    "test": 0.01
+  },
+  "sources": [
+    {
+      "name": "jparacrawl",
+      "path": "raw/jparacrawl_en_ja.tsv",
+      "format": "paired_tsv",
+      "source_column": 0,
+      "target_column": 1,
+      "delimiter": "\\t"
+    },
+    {
+      "name": "aspec_je",
+      "path": "raw/aspec_je.tsv",
+      "format": "paired_tsv",
+      "source_column": 0,
+      "target_column": 1,
+      "delimiter": "\\t"
+    },
+    {
+      "name": "jesc",
+      "path": "raw/jesc.tsv",
+      "format": "paired_tsv",
+      "source_column": 0,
+      "target_column": 1,
+      "delimiter": "\\t"
+    }
+  ]
+}

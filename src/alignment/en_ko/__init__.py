@@ -4,6 +4,7 @@ import os
 import csv
 import torch
 import transformers
+from ltc.backends.alignment.awesome_utils import build_awesome_input_ids_and_subword_map
 
 base = os.path.dirname(os.path.abspath(__file__))
 path_exception = os.path.normpath(os.path.join(base, "./exceptions.csv"))
@@ -45,32 +46,12 @@ threshold = 4e-7
 
 def mbert_alignment_preprocessing(sent_src, sent_tgt):
     # pre-processing
-    token_src, token_tgt = [tokenizer.tokenize(word) for word in sent_src], [
-        tokenizer.tokenize(word) for word in sent_tgt
-    ]
-    wid_src, wid_tgt = [tokenizer.convert_tokens_to_ids(x) for x in token_src], [
-        tokenizer.convert_tokens_to_ids(x) for x in token_tgt
-    ]
-    ids_src, ids_tgt = (
-        tokenizer.prepare_for_model(
-            list(itertools.chain(*wid_src)),
-            return_tensors="pt",
-            model_max_length=tokenizer.model_max_length,
-            truncation=True,
-        )["input_ids"],
-        tokenizer.prepare_for_model(
-            list(itertools.chain(*wid_tgt)),
-            return_tensors="pt",
-            truncation=True,
-            model_max_length=tokenizer.model_max_length,
-        )["input_ids"],
+    ids_src, sub2word_map_src = build_awesome_input_ids_and_subword_map(
+        tokenizer, sent_src
     )
-    sub2word_map_src = []
-    for i, word_list in enumerate(token_src):
-        sub2word_map_src += [i for x in word_list]
-    sub2word_map_tgt = []
-    for i, word_list in enumerate(token_tgt):
-        sub2word_map_tgt += [i for x in word_list]
+    ids_tgt, sub2word_map_tgt = build_awesome_input_ids_and_subword_map(
+        tokenizer, sent_tgt
+    )
 
     return ids_src, ids_tgt, sub2word_map_src, sub2word_map_tgt
 

@@ -1,0 +1,639 @@
+[
+  {
+    "name": "copula_adjective",
+    "tier": "core",
+    "source": "I am happy.",
+    "target": "私は嬉しい。",
+    "required_pairs": [
+      ["a", "happy", "嬉しい"]
+    ],
+    "forbidden_pairs": [
+      ["v", "be", "嬉しい"]
+    ],
+    "notes": "Auxiliary be should not replace the adjective relation."
+  },
+  {
+    "name": "simple_verb_noun",
+    "tier": "core",
+    "source": "I drink water.",
+    "target": "私は水を飲む。",
+    "required_pairs": [
+      ["v", "drink", "飲む"],
+      ["n", "water", "水"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Basic verb and noun alignment should survive refactors."
+  },
+  {
+    "name": "adverbial_sentence_core_relations",
+    "tier": "core",
+    "source": "I often drink tea.",
+    "target": "私はよくお茶を飲む。",
+    "required_pairs": [
+      ["v", "drink", "飲む"],
+      ["n", "tea", "お茶"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "The core content relations should remain stable even with an adverb."
+  },
+  {
+    "name": "copula_important",
+    "tier": "core",
+    "source": "This is important.",
+    "target": "これは重要です。",
+    "required_pairs": [
+      ["a", "important", "重要"]
+    ],
+    "forbidden_pairs": [
+      ["v", "be", "重要"]
+    ],
+    "notes": "Normalized evaluation should focus on the adjective relation."
+  },
+  {
+    "name": "sentence_adverb_and_noun_side",
+    "tier": "core",
+    "source": "Perhaps I will be on that side of the spectrum.",
+    "target": "もしかしたら私もそちら側の人間になってしまうでしょう。",
+    "required_pairs": [
+      ["r", "perhaps", "もしかしたら"]
+    ],
+    "forbidden_pairs": [
+      ["v", "be", "鳴る"]
+    ],
+    "notes": "The adverb is the stable anchor here; the deictic noun phrase on that side -> そちら側 is still semantically ambiguous under the current content-word abstraction."
+  },
+  {
+    "name": "objective_sentence_core_relations",
+    "tier": "core",
+    "source": "It’s important to be clear on the objective of this is where I hope to get it.",
+    "target": "ここが得られれば良いという目的がはっきりしておくことが大切です。",
+    "required_pairs": [
+      ["a", "important", "大切"],
+      ["n", "objective", "目的"]
+    ],
+    "forbidden_pairs": [
+      ["v", "get", "得はっきりする"],
+      ["v", "get", "はっきりする"]
+    ],
+    "allow_extra_pairs": false,
+    "notes": "Keep the stable adjective and objective noun, and suppress the over-merged get relation."
+  },
+  {
+    "name": "hidden_sentence_suppresses_light_verb_noise",
+    "tier": "core",
+    "source": "Also, it will always be hidden when becoming a premium user .",
+    "target": "また、 プレミアムユーザー になると常に非表示になります。",
+    "required_pairs": [
+      ["r", "also", "又"],
+      ["n", "premium user", "プレミアムユーザー"]
+    ],
+    "forbidden_pairs": [
+      ["v", "hide", "なる"],
+      ["v", "become", "なる"]
+    ],
+    "notes": "Keep the stable adverb and premium-user noun, but suppress the weak hidden->なる noise."
+  },
+  {
+    "name": "stable_sentence_suppresses_get_noise",
+    "tier": "core",
+    "source": "When you’re dealing with a large corporation, it’s easy to get a perception of being “stable”.",
+    "target": "大企業と付き合っていると 、 「 安定」している認識になってしまいがちです。",
+    "required_pairs": [
+      ["v", "deal", "付き合う"],
+      ["n", "large corporation", "大企業"],
+      ["n", "perception", "認識"]
+    ],
+    "forbidden_pairs": [
+      ["v", "get", "鳴る"],
+      ["a", "stable", "しまいがち"]
+    ],
+    "allow_extra_pairs": false,
+    "notes": "Keep the stable content relations and suppress the weak get->なる alignment."
+  },
+  {
+    "name": "sponsored_link_advertisement_display",
+    "tier": "core",
+    "source": "Sponsored link This advertisement is displayed when there is no update for a certain period of time.",
+    "target": "スポンサードリンク この広告は一定期間更新がない場合に表示されます。",
+    "required_pairs": [
+      ["n", "sponsored link", "スポンサードリンク"],
+      ["n", "advertisement", "広告"],
+      ["v", "display", "表示する"],
+      ["n", "update", "更新"]
+    ],
+    "forbidden_pairs": [],
+    "allow_extra_pairs": false,
+    "notes": "The tracked corpus should keep the stable sponsored-link, advertisement, update, and display relations."
+  },
+  {
+    "name": "content_update_return_core_relations",
+    "tier": "core",
+    "source": "It will return to non-display when content update is done.",
+    "target": "コンテンツの更新が行われると非表示に戻ります。",
+    "required_pairs": [
+      ["v", "return", "戻る"],
+      ["n", "content", "コンテンツ"],
+      ["n", "update", "更新"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Even with a passive light-verb construction on the Japanese side, the return/content/update anchors should remain stable."
+  },
+  {
+    "name": "voice_input_write_core_relations",
+    "tier": "core",
+    "source": "2018.11.30 About six months ago, I started using my iPhone and voice input to write blog posts.",
+    "target": "最近、音声入力でブログ記事を書いています。",
+    "required_pairs": [
+      ["n", "voice input", "音声入力"],
+      ["v", "write", "書く"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "This tracked corpus row should keep the voice-input noun and the write relation even when phrase grouping changes."
+  },
+  {
+    "name": "important_get_bored_extended",
+    "tier": "core",
+    "source": "Therefore, it’s important to “get bored” with the game.",
+    "target": "ですから 、 「 飽きさせる」ことが重要です。",
+    "required_pairs": [
+      ["a", "important", "重要"],
+      ["v", "bore", "飽く"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 12: keep the important adjective and the bored relation."
+  },
+  {
+    "name": "safe_assume_peak_extended",
+    "tier": "extended",
+    "source": "In fact, it’s safe to assume that the peak of the game will be over in two to three years.",
+    "target": "むしろ2〜3年で絶頂期は終わってしまうと考えても良いでしょう。",
+    "required_pairs": [
+      ["v", "assume", "考える"],
+      ["n", "peak", "絶頂期"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 15: the stable anchors are assume and peak."
+  },
+  {
+    "name": "stop_specify_decide_extended",
+    "tier": "core",
+    "source": "When we stop, we’ll specify a variable that we’ve decided on with a clearInterval.",
+    "target": "止める時は、決めた変数をclearIntervalで指定する。",
+    "required_pairs": [
+      ["v", "stop", "止める"],
+      ["v", "specify", "指定する"],
+      ["v", "decide", "決める"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 18: keep the three core technical verb relations."
+  },
+  {
+    "name": "aspect_situation_see_extended",
+    "tier": "core",
+    "source": "You should be sincere and care about any person from Kids don’t even see that aspect of the situation.",
+    "target": "子供には、そういった面の事情すら見えていないのです。",
+    "required_pairs": [
+      ["v", "see", "見える"],
+      ["n", "aspect", "面"],
+      ["n", "situation", "事情"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 20: stable relation anchors are see, aspect, and situation."
+  },
+  {
+    "name": "sometimes_stupid_kid_say_extended",
+    "tier": "core",
+    "source": "Sometimes there are some amazingly stupid kids who say they’ll unchannel you if you don’t listen to them.",
+    "target": "時々、言うことを聞かないとチャンネル解除するぞという、びっくりする位頭の悪い子供もいます。",
+    "required_pairs": [
+      ["r", "sometimes", "時々"],
+      ["a", "stupid", "悪い"],
+      ["n", "kid", "子供"],
+      ["v", "say", "言う"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 22: keep the stable adverb, adjective, noun, and say relation."
+  },
+  {
+    "name": "popularity_game_title_extended",
+    "tier": "core",
+    "source": "However, different game titles have different levels of popularity.",
+    "target": "ただし、ゲームタイトルによって人気度は異なります。",
+    "required_pairs": [
+      ["n", "game title", "ゲームタイトル"],
+      ["n", "popularity", "人気度"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 23: keep the game-title phrase and the popularity anchor."
+  },
+  {
+    "name": "stick_game_question_extended",
+    "tier": "extended",
+    "source": "Why don’t I just stick to one game?",
+    "target": "なぜ1つのゲームに固執してはいけないのか ゲーム実況は、自分が楽しくプレイできることが大前提です。",
+    "required_pairs": [
+      ["r", "why", "何故"],
+      ["v", "stick", "固執する"],
+      ["n", "game", "ゲーム"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 27: keep the simple question-word, stick, and game relations."
+  },
+  {
+    "name": "construction_examples_put_more_extended",
+    "tier": "extended",
+    "source": "For example, why don’t we put more examples of construction?",
+    "target": "例えば、施工事例もっと載せませんか?とか、ネットでこういう話題を見つけました、とか。",
+    "required_pairs": [
+      ["v", "put", "載せる"],
+      ["r", "more", "もっと"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 30: the stable anchors here are put and more. The construction/examples -> 施工事例 span is intentionally not asserted yet because it is phrase-level and semantically ambiguous under the current word-level abstraction."
+  },
+  {
+    "name": "automation_describe_extended",
+    "tier": "core",
+    "source": "In this article, we will describe how to automate the process.",
+    "target": "今回は、自動化の方法を記載します。",
+    "required_pairs": [
+      ["v", "describe", "記載する"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 31: keep the describe relation."
+  },
+  {
+    "name": "young_body_extended",
+    "tier": "core",
+    "source": "You may feel young, but your body can’t keep up with it.",
+    "target": "気持ちは若くても身体がそれについてこれない。",
+    "required_pairs": [
+      ["a", "young", "若い"],
+      ["n", "body", "身体"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 32: the stable anchors are young and body."
+  },
+  {
+    "name": "voice_input_blog_write_variant_extended",
+    "tier": "extended",
+    "source": "When I write this blog, these days I write exclusively with “voice input”.",
+    "target": "私がどのように音声入力でブログ記事を書いているのかをご紹介したいと思います。",
+    "required_pairs": [
+      ["n", "blog", "ブログ記事"],
+      ["n", "voice input", "音声入力"],
+      ["v", "write", "書く"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 35: extend the voice-input case with the blog relation."
+  },
+  {
+    "name": "throw_process_boring_difficult_extended",
+    "tier": "extended",
+    "source": "The process of “throwing out” is more boring and difficult than you might think.",
+    "target": "思っている以上に「捨てる」という作業はつまらなく、そして大変です。",
+    "required_pairs": [
+      ["n", "process", "作業"],
+      ["v", "throw", "捨てる"],
+      ["a", "boring", "つまらない"],
+      ["a", "difficult", "大変"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 37: keep the process, throw, boring, and difficult anchors."
+  },
+  {
+    "name": "csrf_know_measure_extended",
+    "tier": "extended",
+    "source": "PHP CSRF measures I knew the term \"CSRF measures\" itself, but I didn't underst...",
+    "target": "PHPのCSRF対策 CSRF対策という言葉自体は知っていたのですが、今まで上手く分かっていませんでした。",
+    "required_pairs": [
+      ["v", "know", "知る"],
+      ["n", "measure", "対策"],
+      ["n", "term", "言葉"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 40: keep the know and measure relations."
+  },
+  {
+    "name": "search_accumulate_report_extended",
+    "tier": "core",
+    "source": "When you have a problem, you can just search the daily report that you have accumulated, so it’s very easy to use.",
+    "target": "困った時は溜め込んだ日報を検索すればいいから非常に楽です。",
+    "required_pairs": [
+      ["v", "search", "検索する"],
+      ["v", "accumulate", "溜め込む"],
+      ["n", "report", "日報"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 41: keep the search, accumulate, and report relations."
+  },
+  {
+    "name": "text_editor_side_extended",
+    "tier": "extended",
+    "source": "It doesn’t work on the text editor side.",
+    "target": "テキストエディタ側ではうんともスンとも言いません。",
+    "required_pairs": [
+      ["n", "text editor side", "テキストエディタ側"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 42: keep the text-editor-side noun relation."
+  },
+  {
+    "name": "ask_set_extended",
+    "tier": "core",
+    "source": "3.You will be asked where you want to save the file, so set it as follows.",
+    "target": "保存先を聞いてきますので、以下のように設定します。",
+    "required_pairs": [
+      ["v", "ask", "聞く"],
+      ["v", "set", "設定する"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 43: keep the ask and set relations."
+  },
+  {
+    "name": "vitiligo_disease_extended",
+    "tier": "extended",
+    "source": "I don’t want to become any other disease, and I don’t want to give up that vitiligo will be cured one day. Yes.",
+    "target": "それ以外の病気にならないよう、そして「尋常性白斑」もいつか治る事を諦めずに行動したいですね。",
+    "required_pairs": [
+      ["n", "disease", "病気"],
+      ["n", "vitiligo", "尋常性白斑"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 45: keep the disease anchor and prefer the more specific vitiligo noun phrase."
+  },
+  {
+    "name": "absolutely_perfect_generally_extended",
+    "tier": "extended",
+    "source": "So I can’t say it’s absolutely perfect, but I’m assuming it’s generally OK.",
+    "target": "だから絶対完璧とは言えませんが概ね大丈夫だろうという事で。",
+    "required_pairs": [
+      ["r", "absolutely", "絶対"],
+      ["a", "perfect", "完璧"],
+      ["r", "generally", "概ね"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 47: keep the three stable modifier/adjective anchors."
+  },
+  {
+    "name": "shave_body_hair_extended",
+    "tier": "extended",
+    "source": "Shaving your body hair is still a pain in the ass, isn’t it?",
+    "target": "体毛を剃るのは、やっぱり面倒なんですよね。",
+    "required_pairs": [
+      ["v", "shave", "剃る"],
+      ["n", "body hair", "体毛"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 50: keep the shave and body-hair relations."
+  },
+  {
+    "name": "rudimentary_note_suppresses_do_okou_extended",
+    "tier": "extended",
+    "source": "It’s rudimentary, but I’ll make a note of it so I don’t forget it.",
+    "target": "初歩レベルの内容ですが、忘れないようにメモしておこうと思います。",
+    "required_pairs": [],
+    "forbidden_pairs": [
+      ["v", "do", "おこう"]
+    ],
+    "notes": "Tracked row 39: suppress the low-value do->おこう fragment."
+  },
+  {
+    "name": "thought_voice_input_blog_suppresses_later_extended",
+    "tier": "extended",
+    "source": "Six months later, I’m writing my thoughts, and I’m personally writing a blog post with voice input for all of you.",
+    "target": "文賢という文章校正Webサービスを実際に使ってみた感想 私は最近ブログの記事を音声入力で書いています。",
+    "required_pairs": [
+      ["n", "thought", "感想"],
+      ["n", "voice input", "音声入力"],
+      ["v", "write", "書く"]
+    ],
+    "forbidden_pairs": [
+      ["r", "later", "最近"]
+    ],
+    "notes": "Tracked row 53: keep the stable content anchors and suppress later->最近."
+  },
+  {
+    "name": "disaster_suppresses_come_toru_extended",
+    "tier": "extended",
+    "source": "Even though I’m a basic digital person, I don’t know when a money-related disaster will come my way.",
+    "target": "基本デジタル人間の自分でも、お金に関する災難はいつやってくるかわからないですし、そういう時に備えて証拠になるものは取っておくといいと思いました。",
+    "required_pairs": [
+      ["n", "disaster", "災難"]
+    ],
+    "forbidden_pairs": [
+      ["v", "come", "取る"]
+    ],
+    "notes": "Tracked row 56: keep the disaster relation and suppress the stray come->取る pair."
+  },
+  {
+    "name": "hassle_shave_suppresses_hand_every_time_extended",
+    "tier": "extended",
+    "source": "So it’s a hassle, but it’s better to shave by hand every time.",
+    "target": "だから面倒ですが、毎回手作業で剃る方がいいでしょう。",
+    "required_pairs": [
+      ["n", "hassle", "面倒"],
+      ["v", "shave", "剃る"]
+    ],
+    "forbidden_pairs": [
+      ["n", "hand every time", "毎回手"]
+    ],
+    "notes": "Tracked row 57: keep the useful relations and suppress the over-merged noun phrase."
+  },
+  {
+    "name": "troublesome_company_extended",
+    "tier": "extended",
+    "source": "However, there are companies that are 10% more troublesome.",
+    "target": "9割が常識のある会社の方たちばかりなのですが、1割面倒な会社さんが存在します。",
+    "required_pairs": [
+      ["n", "company", "会社"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 34: keep the core company relation even when an honorific variant also appears."
+  },
+  {
+    "name": "client_honorific_and_leave_extended",
+    "tier": "extended",
+    "source": "It means that one of my longtime clients has left my company.",
+    "target": "長年のお客様が1社離れて行ったという事なのですが。",
+    "required_pairs": [
+      ["n", "client", "お客様"],
+      ["v", "leave", "離れる"]
+    ],
+    "forbidden_pairs": [
+      ["n", "company", "社"]
+    ],
+    "notes": "Tracked row 36: prefer the client relation and suppress the abbreviated company->社 noise."
+  },
+  {
+    "name": "family_register_official_document_extended",
+    "tier": "extended",
+    "source": "Among official documents, the most important ones that should not be lost later on are family registers and so on.",
+    "target": "公文書のなかでも、後々に紙の上の情報が消滅しては困るものの筆頭が戸籍簿等だろうが、法務局ではピグマの使用を認めている。",
+    "required_pairs": [
+      ["n", "official document", "公文書"],
+      ["n", "family register", "戸籍簿"],
+      ["v", "lose", "消滅する"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 46: preserve the family-register relation after Sudachi noun-like suffix handling."
+  },
+  {
+    "name": "publication_date_suppresses_duplicate_set_noise_extended",
+    "tier": "extended",
+    "source": "If you duplicate, translate, or publish the article, the date is set to the same as the date of publication.",
+    "target": "これがあとあと面倒になるので、手動で日本語記事と同じ日付にすることをおすすめします。",
+    "required_pairs": [
+      ["n", "article", "記事"],
+      ["n", "date", "日付"]
+    ],
+    "forbidden_pairs": [
+      ["v", "duplicate", "なる"],
+      ["v", "set", "すすめし"]
+    ],
+    "notes": "Tracked row 65: keep the article/date anchors and suppress generic duplicate/set noise."
+  },
+  {
+    "name": "vitiligo_shine_sunlight_extended",
+    "tier": "extended",
+    "source": "I think. When I was just starting to get vitiligo, my dermatologist told me that I should shine sunlight on it, and I did it.",
+    "target": "尋常性白斑になりたての頃、皮膚科の先生に「太陽光を当てた方が」いいと言われてやった結果、前より広がってしまう事がありました。",
+    "required_pairs": [
+      ["n", "vitiligo", "尋常性白斑"],
+      ["v", "shine", "当てる"],
+      ["n", "sunlight", "太陽光"],
+      ["v", "tell", "言う"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 76: preserve the more specific vitiligo noun and the recovered shine->当てる verb."
+  },
+  {
+    "name": "related_software_upgrade_suppresses_stop_naru_extended",
+    "tier": "extended",
+    "source": "It suddenly stops working due to various related software upgrades.",
+    "target": "様々な関係ソフトのバージョンアップによって突然動かなくなる。",
+    "required_pairs": [
+      ["a", "various", "様々"],
+      ["n", "related software", "関係ソフト"],
+      ["n", "upgrade", "バージョンアップ"],
+      ["r", "suddenly", "突然"]
+    ],
+    "forbidden_pairs": [
+      ["v", "stop", "なる"]
+    ],
+    "notes": "Tracked row 79: keep the upgrade-side content anchors and suppress stop->なる."
+  },
+  {
+    "name": "rigorous_many_ways_extended",
+    "tier": "extended",
+    "source": "There are many ways to be rigorous, but here are some ways to do it.",
+    "target": "厳密性を考えるといろいろな方法があると思いますが、以下のような方法があったりします。",
+    "required_pairs": [
+      ["a", "rigorous", "厳密性"],
+      ["n", "way", "方法"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 84: preserve the abstract-noun rendering of rigorous while keeping the repeated way->方法 relation."
+  },
+  {
+    "name": "personality_change_break_extended",
+    "tier": "extended",
+    "source": "In the meantime, I’d like to change or break free of my worrying personality.",
+    "target": "とりあえず、心配症な性格を変えたい、もしくは脱却したいですね。",
+    "required_pairs": [
+      ["v", "change", "変える"],
+      ["v", "break", "脱却する"],
+      ["n", "personality", "性格"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 94: preserve the recovered change/break verb relations."
+  },
+  {
+    "name": "hard_time_suppresses_least_noise_extended",
+    "tier": "extended",
+    "source": "At the very least, it’s a hard time for your own children to live through hard times for the rest of their lives.",
+    "target": "少なくともに苦しい時代に自分の子供が大変な思いをして一生生きていくということがかわいそうでならないと思ってしまいます。",
+    "required_pairs": [
+      ["n", "child", "子供"],
+      ["v", "live", "生きる"]
+    ],
+    "forbidden_pairs": [
+      ["a", "least", "少ない"]
+    ],
+    "notes": "Tracked row 70: keep the core child/live anchors and suppress least->少ない."
+  },
+  {
+    "name": "generation_survive_suppresses_case_wake_extended",
+    "tier": "extended",
+    "source": "So the younger generation, which is even younger than us, will have to survive for almost 10 years This is not the case.",
+    "target": "年齢がそこそこ上であるにもかかわらず、苦しいわけです。 となると私達よりもさらに若い世代はさらに苦しい時代を10年近く生き抜いていかなければならないのです。",
+    "required_pairs": [
+      ["a", "young", "若い"],
+      ["n", "generation", "世代"],
+      ["v", "survive", "生き抜く"]
+    ],
+    "forbidden_pairs": [
+      ["n", "case", "わけ"]
+    ],
+    "notes": "Tracked row 66: keep the generation/survive anchors and suppress the low-value case->わけ discourse pair."
+  },
+  {
+    "name": "real_fan_suppresses_puchi_geinoujin_extended",
+    "tier": "extended",
+    "source": "Consider blocking them. Finally, a real fan is a real fan.",
+    "target": "最後に、本当のファンとは YouTubeの配信者は、プチ芸能人と捉えることができるのではないでしょうか。",
+    "required_pairs": [
+      ["n", "fan", "ファン"]
+    ],
+    "forbidden_pairs": [
+      ["n", "real fan", "プチ芸能人"]
+    ],
+    "notes": "Tracked row 71: keep the plain fan relation and suppress the paraphrastic real-fan noun pair."
+  },
+  {
+    "name": "hygienic_small_and_clean_extended",
+    "tier": "extended",
+    "source": "I think it’s more hygienic and it feels smaller and cleaner without it.",
+    "target": "衛生的にもないほうが小綺麗に感じると思います。",
+    "required_pairs": [
+      ["a", "hygienic", "衛生的"],
+      ["a", "small and clean", "小綺麗"],
+      ["v", "feel", "感じる"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Tracked row 91: preserve the recovered hygienic and small-and-clean adjective relations."
+  },
+  {
+    "name": "dramatic_change_suppresses_get_naru_extended",
+    "tier": "extended",
+    "source": "It’s not a dramatic change, but I feel like it’s slowly getting harder and harder to get rid of.",
+    "target": "劇的な変化はないものの、じわりじわりと苦しくなっている気がします。",
+    "required_pairs": [
+      ["a", "dramatic", "劇的"],
+      ["n", "change", "変化"]
+    ],
+    "forbidden_pairs": [
+      ["v", "get", "なる"]
+    ],
+    "notes": "Tracked row 98: keep the dramatic/change anchors and suppress get->なる noise from the progressive construction."
+  },
+  {
+    "name": "age_life_suppresses_get_keika_extended",
+    "tier": "extended",
+    "source": "I’m dented again when I learn of these results. When you get to a certain age, you start to think about the end of your life.",
+    "target": "こういう結果を知ってまた凹むのですがw 年齢もある程度経過してくると、自分の人生の最期について考え出します。",
+    "required_pairs": [
+      ["v", "learn", "知る"],
+      ["n", "result", "結果"],
+      ["n", "age", "年齢"],
+      ["v", "think", "考え出す"],
+      ["n", "end", "最期"],
+      ["n", "life", "人生"]
+    ],
+    "forbidden_pairs": [
+      ["v", "get", "程度経過する"],
+      ["v", "get", "経過する"]
+    ],
+    "notes": "Tracked row 75: keep the age/life reasoning anchors and suppress the light get->経過する relation."
+  }
+]

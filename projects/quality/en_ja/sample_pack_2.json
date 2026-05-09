@@ -1,0 +1,155 @@
+[
+  {
+    "name": "sample2_child_behavior_seriously",
+    "tier": "core",
+    "source": "So it’s important not to take your child’s behavior seriously at every step of the way.",
+    "target": "ですから子供の行動にいちいち真に受けないことが大切です。",
+    "required_pairs": [
+      ["a", "important", "大切"],
+      ["n", "child", "子供"],
+      ["n", "behavior", "行動"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 19: stable adjective and child-behavior noun anchors."
+  },
+  {
+    "name": "sample2_gaming_contract_negotiation",
+    "tier": "core",
+    "source": "Even if you’re only good at gaming, if you can’t negotiate a contract, you’re not going to make it.",
+    "target": "ゲームの腕だけあっても、契約交渉ができなければ、ダメでしょう。",
+    "required_pairs": [
+      ["n", "gaming", "ゲーム"],
+      ["n", "contract", "契約交渉"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 38: keep the gaming and contract-negotiation anchors."
+  },
+  {
+    "name": "sample2_web_compiler_names",
+    "tier": "core",
+    "source": "There are a lot of web compilers out there, like Glup, WebPack, or even Grunt in the old days, and I’m sure there are many more.",
+    "target": "Glup、 WebPack、さらに昔だとGruntなど、たくさんあると思います。",
+    "required_pairs": [
+      ["n", "glup", "Glup"],
+      ["n", "webpack", "WebPack"],
+      ["r", "even", "さらに"],
+      ["n", "grunt", "Grunt"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 55: named entities and the even->さらに modifier should stay stable."
+  },
+  {
+    "name": "sample2_outgoing_incoming_email_process_probe",
+    "tier": "core",
+    "source": "Label outgoing and incoming emails Label your outgoing and incoming emails.",
+    "target": "送信受信メールにラベルをつける 送信メールと受信メールにラベルを付けます。",
+    "required_pairs": [
+      ["n", "email", "メール"],
+      ["n", "incoming email", "受信メール"]
+    ],
+    "forbidden_pairs": [
+      ["n", "outgoing", "送信受信"]
+    ],
+    "notes": "Fresh sample pack row 63: a process-oriented phrase case. The incoming-email phrase should survive while the outgoing side remains useful for staging inspection."
+  },
+  {
+    "name": "sample2_publish_buzz_signs",
+    "tier": "core",
+    "source": "I’ve published it for now, and if I see signs of a buzz, I’ll reiterate the details of the writing.",
+    "target": "とりあえず公開してしまって、もしもバズる兆候が見えたときに、改めて文章の細かいところまで見直していけばいいのです。",
+    "required_pairs": [
+      ["v", "publish", "公開する"],
+      ["n", "sign", "兆候"],
+      ["n", "writing", "文章"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 67: keep the publish and buzz-sign anchors without depending on the broader reiterate paraphrase."
+  },
+  {
+    "name": "sample2_video_scene_separate",
+    "tier": "core",
+    "source": "This is because you have to watch the video and separate the scenes you want and the scenes you don’t want.",
+    "target": "動画を見て、欲しいシーン、いらないシーンを分ける作業があるからです。",
+    "required_pairs": [
+      ["v", "watch", "見る"],
+      ["n", "video", "動画"],
+      ["v", "separate", "分ける"],
+      ["n", "scene", "シーン"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 81: coordinated scene nouns and the separate verb should remain stable."
+  },
+  {
+    "name": "sample2_home_builder_specs",
+    "tier": "core",
+    "source": "If the house is built by a home builder, it’s built to its own specifications (size) from that home builder.",
+    "target": "住宅メーカーで建築した家だと独自仕様(サイズ)になっているため、その住宅メーカーから買うしかなくなります。",
+    "required_pairs": [
+      ["n", "house", "家"],
+      ["v", "build", "建築する"],
+      ["n", "home builder", "住宅メーカー"],
+      ["a", "own", "独自"],
+      ["n", "specification size", "仕様(サイズ)"]
+    ],
+    "forbidden_pairs": [
+      ["n", "specification ( size", "仕様(サイズ)"]
+    ],
+    "notes": "Fresh sample pack row 82: keep the home-builder/build/own anchors and normalize the parenthesized specification-size phrase cleanly."
+  },
+  {
+    "name": "sample2_strong_tone",
+    "tier": "core",
+    "source": "However, you should not use a strong tone of voice.",
+    "target": "ただしその時、強い口調で言ってはいけません。",
+    "required_pairs": [
+      ["a", "strong", "強い"],
+      ["n", "tone", "口調"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 87: strong and tone are a compact sanity check for adjective+noun behavior."
+  },
+  {
+    "name": "sample2_purpose_set",
+    "tier": "core",
+    "source": "However, it’s important not to change from the purpose you’ve set.",
+    "target": "ただし、決めた目的から変わらないようにする事が大切です。",
+    "required_pairs": [
+      ["a", "important", "大切"],
+      ["n", "purpose", "目的"],
+      ["v", "set", "決める"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 92: purpose/set is a good unseen sanity check for the current Sudachi-first path."
+  },
+  {
+    "name": "sample2_especially_toilet_bathroom",
+    "tier": "core",
+    "source": "This may be especially true of toilets, bathrooms and living rooms.",
+    "target": "特にトイレやお風呂場、リビングなどがそれに当たるかもしれません。",
+    "required_pairs": [
+      ["r", "especially", "特に"],
+      ["n", "toilet", "トイレ"],
+      ["n", "bathroom", "お風呂場"],
+      ["n", "living room", "リビング"]
+    ],
+    "forbidden_pairs": [
+      ["n", "living", "リビング"]
+    ],
+    "notes": "Fresh sample pack row 96: keep the clean room anchors and recover the lexicalized living room -> リビング phrase."
+  },
+  {
+    "name": "sample2_live_long_break_parts",
+    "tier": "core",
+    "source": "If you live in a house for a long time, some parts will break.",
+    "target": "長い年月をかけて住めば壊れる箇所も出てきます。",
+    "required_pairs": [
+      ["v", "live", "住む"],
+      ["a", "long", "長い"],
+      ["n", "time", "年月"],
+      ["n", "part", "箇所"],
+      ["v", "break", "壊れる"]
+    ],
+    "forbidden_pairs": [],
+    "notes": "Fresh sample pack row 97: several basic content anchors that were not in the main suite yet."
+  }
+]

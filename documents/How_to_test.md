@@ -129,6 +129,217 @@ ex)
 Resumption:n of:N/A the:N/A session:n 
 ```
 
+## en-ja quality checks
+
+For contributor-friendly `en_ja` quality work, use the curated local checks
+instead of manually editing the old test scripts.
+
+```
+PYTHONPATH=src python3 -m ltc.cli.evaluate_en_ja_quality --fail-on-error
+```
+
+This runs the fast `core` suite.
+
+For a broader local regression pass, run:
+
+```
+PYTHONPATH=src python3 -m ltc.cli.evaluate_en_ja_quality \
+  --suite extended \
+  --fail-on-error
+```
+
+This runs a small gold set stored in:
+
+`projects/quality/en_ja/cases.json`
+
+There is also a second fresh sample pack for checking a different slice of
+tracked-corpus sentences:
+
+`projects/quality/en_ja/sample_pack_2.json`
+
+Run it with:
+
+```bash
+PYTHONPATH=src python3 -m ltc.cli.evaluate_en_ja_quality \
+  --cases projects/quality/en_ja/sample_pack_2.json \
+  --suite core \
+  --fail-on-error
+```
+
+There is also a third fresh pack built from another tracked-corpus slice:
+
+`projects/quality/en_ja/sample_pack_3.json`
+
+```bash
+PYTHONPATH=src python3 -m ltc.cli.evaluate_en_ja_quality \
+  --cases projects/quality/en_ja/sample_pack_3.json \
+  --suite core \
+  --fail-on-error
+```
+
+The checks compare normalized content pairs, so they are closer to the final
+relation tables than a raw surface-form diff.
+
+The suite mixes small hand-curated pairs and tracked corpus rows whose stable
+relations are easy to review.
+
+The `core` suite also prints the surviving surface-level alignment results, so
+the quality command itself shows both the normalized relation check and the
+actual `source_surface -> target_surface` alignments that remained.
+
+The current default Japanese text backend for this workflow is `sudachi_a`.
+Use `LTC_JA_TEXT_BACKEND=jumanpp` only when you explicitly want the legacy
+baseline for comparison.
+
+When one case fails, inspect it with:
+
+```
+PYTHONPATH=src python3 -m ltc.cli.inspect_en_ja --case {case_name}
+```
+
+This prints:
+
+- source tokens and POS tags
+- target tokens and POS tags
+- ignored indices
+- merged alignment groups
+- postprocessed groups
+- top target candidates for each source content token
+- final surface and normalized pairs
+
+For the current `en_ja` reference path, inspect also shows simple confidence
+summaries (`best` / `avg`) for each surviving group. Very weak groups are
+filtered before they become final relations. The default threshold is `0.2`
+and can be overridden with `LTC_EN_JA_MIN_ALIGNMENT_CONFIDENCE`.
+
+Some cases also disallow unexpected extra pairs. This helps catch regressions
+where a model still keeps the old required relation but starts emitting new
+noisy pairs.
+
+This is meant to support component-level triage:
+
+- if the wrong target token is already the top candidate, the alignment model
+  is the main suspect
+- if the candidate list looks reasonable but the final pair is wrong, inspect
+  postprocessing and grouping
+- if the final surface pair is reasonable but the normalized pair is odd,
+  inspect POS tagging and normalization
+
+If you want to compare a smoke model and a pinned production model on exactly
+the same case, use:
+
+```
+PYTHONPATH=src python3 -m ltc.cli.awesome_model_status --pair en-ja
+
+PYTHONPATH=src python3 -m ltc.cli.compare_en_ja_models \
+  --case objective_sentence_core_relations \
+  --left-model bert-base-multilingual-cased \
+  --right-model models/en-ja/awesome-align/production \
+  --left-label smoke \
+  --right-label production
+```
+
+This is useful before deciding whether to change heuristics or switch the
+alignment backend/model itself.
+
+If you have not registered a canonical production model yet, do that first:
+
+```
+PYTHONPATH=src python3 -m ltc.cli.register_awesome_model \
+  --pair en-ja \
+  --source /path/to/model \
+  --copy-files
+```
+
+You can also compare backend choices directly. For example:
+
+```
+PYTHONPATH=src python3 -m ltc.cli.compare_en_ja_models \
+  --case stable_sentence_suppresses_get_noise \
+  --left-backend awesome \
+  --left-model bert-base-multilingual-cased \
+  --right-backend simalign \
+  --right-simalign-method inter \
+  --right-simalign-model bert \
+  --left-label awesome \
+  --right-label simalign-inter
+```
+
+Treat the current SimAlign route as an experimental comparison backend. The
+official SimAlign API is simple, but the downstream filtering here is still LTC
+logic shared with the Awesome-based path.
+
+If the curated suite still feels too small, audit a few tracked corpus rows
+directly:
+
+```
+PYTHONPATH=src python3 -m ltc.cli.audit_en_ja_corpus \
+  --row-id 2 \
+  --row-id 4 \
+  --row-id 10
+```
+
+For a broader smoke-vs-production comparison across the tracked corpus:
+
+```
+PYTHONPATH=src python3 -m ltc.cli.compare_en_ja_corpus_models \
+  --limit 100 \
+  --only-different
+```
+
+To compare the legacy `jumanpp` path against the Sudachi-first path on the same
+tracked-corpus rows, use:
+
+```bash
+PYTHONPATH=src python3 -m ltc.cli.compare_en_ja_corpus_backends \
+  --left-backend jumanpp \
+  --right-backend sudachi_a \
+  --limit 100 \
+  --only-different
+```
+
+For less biased review, switch the tracked-corpus check from `head` rows to a
+reproducible random or stratified sample:
+
+```bash
+PYTHONPATH=src python3 -m ltc.cli.compare_en_ja_corpus_backends \
+  --left-backend jumanpp \
+  --right-backend sudachi_a \
+  --selection random \
+  --seed 17 \
+  --limit 40 \
+  --only-different
+
+PYTHONPATH=src python3 -m ltc.cli.compare_en_ja_corpus_backends \
+  --left-backend jumanpp \
+  --right-backend sudachi_a \
+  --selection stratified \
+  --seed 17 \
+  --limit 40 \
+  --only-different
+```
+
+## en-ja public fine-tuning data preparation
+
+If you are preparing public `en_ja` corpora for alignment fine-tuning, first
+convert raw source files into the repository's canonical TSV shape:
+
+```bash
+PYTHONPATH=src python3 -m ltc.cli.convert_en_ja_public_source \
+  paired-tsv \
+  --source-name jparacrawl \
+  --input-path /path/to/input.tsv \
+  --output-path /path/to/jparacrawl_en_ja.tsv
+```
+
+Then build the source-aware Awesome Align training files:
+
+```bash
+PYTHONPATH=src python3 -m ltc.cli.prepare_en_ja_finetune_data \
+  --config projects/training/en_ja/public_sources.example.json \
+  --output-dir src/data/training/en_ja_public_mix
+```
+
 ## Check the outputs
 you can check the result of test data on console or outputs file in /root/src/result_of_test/
 And checke the acccuracy of the code.

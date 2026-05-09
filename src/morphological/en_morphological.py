@@ -2,22 +2,38 @@ import os
 
 import nltk
 
-ROOT = os.environ.get("ROOT", "/root")
+from ltc.text import normalize_english_text
 
-if not os.path.isfile(f"{ROOT}/nltk_data/corpora/omw-1.4.zip"):
-    nltk.download("omw-1.4")
-if not os.path.isdir(f"{ROOT}/nltk_data/taggers/averaged_perceptron_tagger"):
-    nltk.download("averaged_perceptron_tagger")
-if not os.path.isdir(f"{ROOT}/nltk_data/tokenizers/punkt/"):
-    nltk.download("punkt")
-if not os.path.isfile(f"{ROOT}/nltk_data/corpora/wordnet.zip"):
-    nltk.download("wordnet")
 
-nltk.download("punkt_tab")
-nltk.download("averaged_perceptron_tagger_eng")
+def ensure_nltk_resource(resource_paths, download_name):
+    for resource_path in resource_paths:
+        try:
+            nltk.data.find(resource_path)
+            return
+        except LookupError:
+            continue
+    nltk.download(download_name)
+
+
+ensure_nltk_resource(("corpora/omw-1.4", "corpora/omw-1.4.zip"), "omw-1.4")
+ensure_nltk_resource(
+    ("taggers/averaged_perceptron_tagger", "taggers/averaged_perceptron_tagger.zip"),
+    "averaged_perceptron_tagger",
+)
+ensure_nltk_resource(("tokenizers/punkt", "tokenizers/punkt.zip"), "punkt")
+ensure_nltk_resource(("corpora/wordnet", "corpora/wordnet.zip"), "wordnet")
+ensure_nltk_resource(("tokenizers/punkt_tab", "tokenizers/punkt_tab.zip"), "punkt_tab")
+ensure_nltk_resource(
+    (
+        "taggers/averaged_perceptron_tagger_eng",
+        "taggers/averaged_perceptron_tagger_eng.zip",
+    ),
+    "averaged_perceptron_tagger_eng",
+)
 
 
 def en_morphological(sentence):
+    sentence = normalize_english_text(sentence)
     tokenized = nltk.word_tokenize(sentence)
     pos = nltk.pos_tag(tokenized)
     mrph = []

@@ -1,57 +1,134 @@
-# The development workflow
+# The Development Workflow
 
-## Getting the sourcees
-First, fork the repository.
-```
+This repository now supports a local-first workflow. Start small, use Docker
+only when you truly need the full corpus images, and keep pair-specific changes
+close to pair-specific smoke or quality projects.
+
+## 1. Clone and update
+
+```bash
 git clone https://github.com/<<<your-github-account>>>/LexicalTranslationCounter.git
+cd LexicalTranslationCounter
 ```
 
-If you want to pull new changes to your fork, execute the command below.
-```
-cd LexicalTranslationCounter
+To sync with upstream:
+
+```bash
 git checkout main
 git pull https://github.com/media-of-langue/LexicalTranslationCounter.git main
 ```
 
-## Build
-Build development container using docker.
+## 2. Pick the smallest useful workflow
 
-"sudo" may be required.
+At the moment, `de_en` and `en_ja` are the most up-to-date examples of the
+intended local-first workflow. Some other language pairs still need more manual
+or legacy runtime steps.
 
-la1 and la2 are language codes, and their order should be determined alphabetically.
+### Repository-wide refactors
+
+Start here when you are changing package layout, docs, CLI entry points, or
+shared helpers:
+
+```bash
+python3 -m unittest discover -s tests
 ```
-cd LexicalTranslationCounter
-cp .env.example .env
-cd exec_envs/basis
-docker-compose build --build-arg "LA1={la1}" --build-arg "LA2={la2}" && docker compose up -d
+
+### Pair smoke checks
+
+Use a smoke project when you want to confirm that a language pair still runs:
+
+- [projects/smoke/README.md](../projects/smoke/README.md)
+- [projects/smoke/de_en/README.md](../projects/smoke/de_en/README.md)
+- [projects/smoke/en_ja/README.md](../projects/smoke/en_ja/README.md)
+
+### Pair quality work
+
+Use a quality project when you are actively improving alignment output or
+lexicalization logic:
+
+- [projects/quality/en_ja/README.md](../projects/quality/en_ja/README.md)
+
+### Pair training / data prep
+
+Use a training project when you are preparing public corpora for fine-tuning:
+
+- [projects/training/en_ja/README.md](../projects/training/en_ja/README.md)
+
+## 3. Set up a local pair runtime
+
+The setup helper is the most predictable path:
+
+```bash
+python3 scripts/setup_local_runtime.py --language-pair de-en
+python3 scripts/setup_local_runtime.py --language-pair en-ja
 ```
 
-## Enter Container
-Enter container.
+If you only want to check the environment:
 
+```bash
+python3 scripts/setup_local_runtime.py --language-pair de-en --check-only
 ```
-docker-compose exec cnt_func bash
+
+Some pairs also expose package extras in `pyproject.toml`, for example:
+
+```bash
+python3 -m pip install -e '.[de-en]'
+python3 -m pip install -e '.[en-ja]'
 ```
-## Update or add languages and interlanguage relations
-Check carefully as notes for each language and language-to-language when executing may be found in the language code folder of the document.
 
-Update the functions or add the data.
-Please check 
-- [Add language](Add_language.md)
-- [Add language pair](Add_language_pair.md)
-- [Update or Add functions](Update_or_Add_functions.md)
-- [Update or Add data](Update_or_Add_data.md)
+## 4. Run the common checks
 
-## Test 
-Follow the documentation in [How to test](How_to_test.md) to see how each function works.
-The results of this test will also be included in the pull request and used by reviewers to check its accuracy.
+### Unit tests
 
-## Pull Requests
+```bash
+python3 -m unittest discover -s tests
+```
 
-To enable us to quickly review and accept your pull requests, always create one pull request per issue and link the issue in the pull request. Never merge multiple requests in one unless they have the same root cause.  Avoid pure formatting changes to code that has not been modified otherwise.
+### Backend diagnostics
 
-## Merge main branch
+```bash
+PYTHONPATH=src python3 -m ltc.cli.doctor --group normalizer
+PYTHONPATH=src python3 -m ltc.cli.doctor --group morphological
+PYTHONPATH=src python3 -m ltc.cli.doctor --group alignment
+```
 
-We or the other contributor check your accuracy of your pull requests and merge them to main.
+### Pair-specific smoke
 
-Then, you can feel the change on the web site, [media of langue](http://media-of-langue.org/) after few days.
+Follow the commands in the pair smoke project README.
+
+## 5. Make the change
+
+When editing a pair:
+
+- keep the smoke path working
+- keep the docs for that pair current
+- avoid introducing hidden fixed paths or private infrastructure
+
+When editing shared code:
+
+- prefer `src/ltc/` for new shared logic
+- keep the legacy wrappers thin
+- update root docs and pair docs together when the contributor workflow changes
+
+## 6. Re-run the smallest meaningful verification
+
+Examples:
+
+- repo-wide code move: `python3 -m unittest discover -s tests`
+- `de_en` runtime change: run the `de_en` smoke project
+- `en_ja` quality change: run `core`, then `extended`, then observation/staging
+
+## 7. Open a focused pull request
+
+Keep pull requests small and scoped:
+
+- one root cause per PR
+- include the verification commands you actually ran
+- mention pair-specific limitations honestly if a runtime still needs external
+  models or tools
+
+## 8. Use Docker only when needed
+
+The Docker path is still available for full-data runs. See
+[How to build and run from source](How_to_build_and_run_from_source.md) when you
+need the full corpus and wordlist images.

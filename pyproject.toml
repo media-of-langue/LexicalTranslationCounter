@@ -1,0 +1,113 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lexical-translation-counter"
+version = "0.1.0"
+description = "Lexical translation counting pipeline for bilingual corpora."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Media of Langue contributors" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "black==23.1.0",
+  "isort==5.12.0",
+  "pre-commit>=3.0",
+]
+common = [
+  "django-environ",
+  "pandas",
+]
+awesome = [
+  "torch==2.0.1",
+  "transformers==4.33.3",
+]
+en = [
+  "django-environ",
+  "nltk",
+  "pandas",
+]
+de = [
+  "django-environ",
+  "germalemma",
+  "pandas",
+  "spacy<3.8.0",
+]
+fr = [
+  "django-environ",
+  "nltk",
+  "pandas",
+]
+ja = [
+  "django-environ",
+  "pandas",
+]
+zh = [
+  "django-environ",
+  "jieba",
+  "pandas",
+]
+ko = [
+  "django-environ",
+  "konlpy",
+  "nltk",
+  "pyknp",
+]
+de-en = [
+  "django-environ",
+  "germalemma",
+  "nltk",
+  "pandas",
+  "spacy<3.8.0",
+  "torch==2.0.1",
+  "transformers==4.33.3",
+]
+en-ja = [
+  "django-environ",
+  "nltk",
+  "pandas",
+  "sudachipy",
+  "sudachidict_core",
+  "torch==2.0.1",
+  "transformers==4.33.3",
+]
+ja-sudachi = [
+  "sudachipy",
+  "sudachidict_core",
+]
+ja-fugashi = [
+  "fugashi[unidic-lite]",
+]
+ja-juman = [
+  "pyknp",
+]
+
+[project.scripts]
+ltc-count = "ltc.cli.count:main"
+ltc-doctor = "ltc.cli.doctor:main"
+ltc-eval-en-ja-quality = "ltc.cli.evaluate_en_ja_quality:main"
+ltc-inspect-en-ja = "ltc.cli.inspect_en_ja:main"
+ltc-extract-en-ja-observations = "ltc.cli.extract_en_ja_observations:main"
+ltc-aggregate-en-ja-staging = "ltc.cli.aggregate_en_ja_staging:main"
+ltc-inspect-en-ja-staging = "ltc.cli.inspect_en_ja_staging:main"
+ltc-compare-en-ja-models = "ltc.cli.compare_en_ja_models:main"
+ltc-audit-en-ja-corpus = "ltc.cli.audit_en_ja_corpus:main"
+ltc-compare-en-ja-corpus-models = "ltc.cli.compare_en_ja_corpus_models:main"
+ltc-compare-en-ja-corpus-backends = "ltc.cli.compare_en_ja_corpus_backends:main"
+ltc-prepare-en-ja-finetune-data = "ltc.cli.prepare_en_ja_finetune_data:main"
+ltc-convert-en-ja-public-source = "ltc.cli.convert_en_ja_public_source:main"
+ltc-register-awesome-model = "ltc.cli.register_awesome_model:main"
+ltc-awesome-model-status = "ltc.cli.awesome_model_status:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ltc*"]
