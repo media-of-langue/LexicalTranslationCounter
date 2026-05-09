@@ -17,7 +17,7 @@ language：normalize function, morphological function
 
 interlanguage：alignment function
 
-In addition to the functions, it is also necessary to add a data set. See [Update and Add Data](Update_and_Add_data.md) for more information on this.
+In addition to the functions, it is also necessary to add a data set. See [Update or Add Data](Update_or_Add_data.md) for more information on this.
 
 
 ## Normalize Function
@@ -26,7 +26,7 @@ This function is used to align the notations of words that have multiple notatio
 
 In the production database, all words are passed through the latest version of this function, which is also applied to all counting functions and queries from the front end.
 
-This function exists in '/root/src/normalizer/' for each language.
+This function exists in `src/normalizer/` for each language.
 
 ### Input and Output
 Returns the word that normalize input word and the id of the word on the pos_tag.
@@ -41,21 +41,20 @@ output: 36, play
 ```
 
 ### Test the function
-Run normalize_test.py in '/root/src/test/', specifying the language.
+Run `src/test/normalizer_test.py`, specifying the language.
 
 The result of normalizing wordlist is returned.
 
 By default, the test mode is set to True and the word id is not returned.
 ```
-cd /root/src/test/
-python3 normalizer_test.py {la}
+ROOT=$(pwd) .venv/bin/python src/test/normalizer_test.py {la}
 ```
 ```
 ex)
-python3 normalizer_test.py en
+ROOT=$(pwd) .venv/bin/python src/test/normalizer_test.py en
 ```
 
-The results are output to /root/src/test/result_of_test/ by part-of-speech in the following format.
+The results are output to `src/test/result_of_test/` by part of speech in the following format.
 
 However, this file only outputs the forms and words in the wordlist that change.
 ```
@@ -69,7 +68,7 @@ plays->play
 
 This function is used to align words in the corpus.
 
-This function is located in '/root/src/alignment/' for each language.
+This function is located in `src/alignment/` for each language pair.
 
 ### Input and Output
 Returns the result of alignment.
@@ -85,15 +84,14 @@ output: [["n",30,"you",12,"あなた"],["a",1,"beautiful",2,"美しい"]]
 ```
 
 ### Test the function
-Run alignment_test.py in '/root/src/test/', specifying the language.
+Run `src/test/alignment_test.py`, specifying the language pair.
 
 The result of aligning the corpus of test data will be output.
 
 ```
-cd /root/src/test/
-python3 alignment_test.py {la1} {la2}
+ROOT=$(pwd) .venv/bin/python src/test/alignment_test.py {la1} {la2}
 ```
-The results are output to /root/src/test/result_of_test/ in the following format.
+The results are output to `src/test/result_of_test/` in the following format.
 ```
 sentece_la1:Resumption of the session
 sentece_la2:Reprise de la session
@@ -114,7 +112,7 @@ Resumption - Reprise  session - session
 
 ## Morphological Functions
 
-Morphological Functions exists for each languages and in '/root/src/morphological/'
+Morphological functions exist for each language in `src/morphological/`.
 The purpose of this function is to divide a sentence into words and identify the part of speech of each word in the sentence.
 It is permitted to write this function directly into the alignment function, and although it does not have to be created, it is recommended that it is cut out as a function as it can be shared between multiple languages to reduce man-hours for other developers.
 
@@ -134,21 +132,20 @@ output: ["you","are","beautiful"],["n","v","a"]
 ```
 
 ### Test the function
-Run morphological_test.py in '/root/src/test/' specifying two languages, including the newly created language. In principle, the other language should be English, and the test can be run with the other language only if there is no test corpus available for English.
+Run `src/test/morphological_test.py`, specifying two languages including the newly created language. In principle, the other language should be English; use another language only if no English test corpus is available.
 
 Morphological analysis results of the sentences in the corpus are output.
 
 If you want to try it on a specific sentence, please modify the code directly.
 ```
-cd /root/src/test/
-python3 morphological_test.py {la1} {la2}
+ROOT=$(pwd) .venv/bin/python src/test/morphological_test.py {la1} {la2}
 ```
 
 ```
-ex) python3 morphological_test.py en fr
+ex) ROOT=$(pwd) .venv/bin/python src/test/morphological_test.py en fr
 ```
 
-結果が下記のフォーマットで /root/src/test/result_of_test/ に出力されます。
+The results are output to `src/test/result_of_test/` in the following format.
 ```
 word_la1:pos_tag_la1 word_la1:pos_tag_la1 word_la1:pos_tag_la1 word_la1:pos_tag_la1
 word_la2:pos_tag_la2 word_la2:pos_tag_la2 word_la2:pos_tag_la2 word_la2:pos_tag_la2

@@ -15,3 +15,8 @@ If `ROOT` is not set, the legacy default path is still:
 ```text
 /root/src/model/awesome_model_without_co/
 ```
+
+In other words, for the common local workflow create
+`src/model/awesome_model_without_co/` in this repository and save the extracted
+contents there. Inside the Docker container, the same files are available at
+`/root/src/model/awesome_model_without_co/`.

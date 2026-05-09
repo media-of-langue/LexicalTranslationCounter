@@ -20,19 +20,19 @@ This file is used to run the entire process.
 count_function.py {offset} {la1} {la2}
 
 input file: 
-/root/src/data/input/corput_{la1}_{la2}.csv
-/root/src/data/input/wordlist_{la1}_{pos_tag}.csv
-/root/src/data/input/wordlist_{la2}_{pos_tag}.csv
+src/data/input/corpus_{la1}_{la2}.csv
+src/data/input/wordlist_{la1}_{pos_tag}.csv
+src/data/input/wordlist_{la2}_{pos_tag}.csv
 
 output file:
-/root/src/data/output/relations_{la1}_{la2}_{pos_tag}.csv
-/root/src/data/input/corput_{la1}_{la2}.csv
+src/data/output/relations_{la1}_{la2}_{pos_tag}.csv
+src/data/output/corpus_{la1}_{la2}.csv
 ```
 
 ## alignment.py
 
 Execute corpus alignment.
-It exists in /root/src/alignment/{la1}_{la2}/ for each language.
+It exists in `src/alignment/{la1}_{la2}/` for each language pair.
 This file contains the following functions
 
 ```
@@ -44,7 +44,7 @@ return [[{pos_code},{word_la1_id},{word_la1},{word_la2_id},{word_la2}], ]
 ## normalizer.py
 
 Contains a function that performs normalization of word orthography.
-It exists in /root/src/normalizer/ under the name {la}_normalizer.py.
+It exists in `src/normalizer/` under the name `{la}_normalizer.py`.
 
 ```
 {la}_normalizer(word, pos_tag, wordlist, test=False)
@@ -55,7 +55,7 @@ retuern id, word_normalized
 ## morphological.py
 
 It contains functions for word tokenization and morphological analysis.
-It exists in /root/src/morphological/ under the name {la}_morphological.py.
+It exists in `src/morphological/` under the name `{la}_morphological.py`.
 This function is not necessarily present in all languages and can be located in an alignment file, but it is recommended that it be created so that it can be used commonly across languages.
 
 ```

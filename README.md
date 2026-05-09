@@ -94,6 +94,10 @@ Current reference pairs for the ongoing refactor are `de_en` and `en_ja`.
 Treat those two as the best examples of the intended contributor workflow. Some
 other language pairs still use more legacy runtime assumptions.
 
+This repository does not use Poetry, mise, or the Media of Langue DB toolchain.
+Start with the local Python runtime for small checks, and use Docker only when
+you need the full corpus data images.
+
 - Build/run: [How to build and run from source](documents/How_to_build_and_run_from_source.md)
 - Contributor workflow: [The development workflow](documents/The_dev_workflow.md)
 - Tests: [How to test](documents/How_to_test.md)
