@@ -90,6 +90,153 @@ PYTHONPATH=src python3 -m ltc.cli.inspect_en_ja_staging --input-dir /tmp/en-ja-s
 5. If phrase/component behavior changed, re-run observation extraction and
    staging inspection.
 
+## Interaction protocol
+
+When working with a user on `en_ja` quality, prefer a JSON-first loop that
+keeps the reasoning auditable and makes it easy for a new user to react without
+knowing the codebase.
+
+Use the following stages.
+
+### Stage 1: baseline packet
+
+Before making a risky quality judgment, return a short JSON packet plus a brief
+human summary.
+
+Use this shape:
+
+```json
+{
+  "stage": "baseline",
+  "focus": "one short sentence about the current target",
+  "baseline_checks": {
+    "unit_tests": "pass|fail|not-run",
+    "extended_suite": "pass|fail|not-run",
+    "sample_pack_2": "pass|fail|not-run",
+    "sample_pack_3": "pass|fail|not-run"
+  },
+  "target_cases": [
+    {
+      "case_name": "case or row id",
+      "reason": "why this case is being inspected"
+    }
+  ],
+  "suspected_layers": [
+    "tokenizer_pos|normalization|alignment|postprocessing|lexicalization"
+  ],
+  "next_commands": [
+    "exact command 1",
+    "exact command 2"
+  ]
+}
+```
+
+### Stage 2: review packet
+
+After inspecting one or more cases, return a machine-readable review packet so
+the user can comment on the semantic judgment directly.
+
+Use this shape:
+
+```json
+{
+  "stage": "review",
+  "summary": "short human-readable summary",
+  "cases": [
+    {
+      "case_name": "case name or row id",
+      "source": "source sentence",
+      "target": "target sentence",
+      "current_output": [
+        "normalized relation 1",
+        "normalized relation 2"
+      ],
+      "questionable_relations": [
+        {
+          "relation": "e.g. side -> そちら側",
+          "why_questionable": "short semantic reason"
+        }
+      ],
+      "phrase_observations": [
+        "e.g. that side -> そちら側"
+      ],
+      "candidate_decisions": [
+        {
+          "action": "keep|remove|phrase_only|project_components|needs_review",
+          "target": "relation or phrase",
+          "reason": "short reason"
+        }
+      ],
+      "recommended_decision": "one-line recommendation",
+      "risk_if_wrong": "what might regress if this decision is wrong"
+    }
+  ]
+}
+```
+
+### Stage 3: apply-and-verify packet
+
+After making a change, report the outcome in JSON before giving the prose
+summary.
+
+Use this shape:
+
+```json
+{
+  "stage": "post_change",
+  "change_scope": "what was changed",
+  "verification": {
+    "unit_tests": "pass|fail",
+    "extended_suite": "pass|fail",
+    "sample_pack_2": "pass|fail|not-run",
+    "sample_pack_3": "pass|fail|not-run",
+    "staging_checks": "pass|fail|not-run"
+  },
+  "behavior_change": [
+    {
+      "case_name": "case name",
+      "before": ["relation list before"],
+      "after": ["relation list after"]
+    }
+  ],
+  "remaining_questions": [
+    "any open semantic judgment still worth user input"
+  ]
+}
+```
+
+## How to use user comments
+
+When the user comments on a JSON review packet:
+
+- treat the comment as a semantic decision first, not as a coding task
+- update `candidate_decisions` and `recommended_decision`
+- only then change code or test expectations
+- preserve the raw phrase observation if the user rejects a naive word-level
+  interpretation
+
+Good examples:
+
+- `that side -> そちら側`
+  Prefer `phrase_only` unless there is independent evidence for `side -> 側`
+- `examples of construction -> 施工事例`
+  Often better as `project_components` with
+  `construction -> 施工` and `example -> 事例` kept separate from the phrase
+- `game title -> ゲームタイトル`
+  Often safe to keep as a phrase-level lexical unit and also consider clean
+  component promotion
+
+## Default response style
+
+For new users:
+
+- do not assume they want raw inspect output first
+- show a short prose summary and then a compact JSON block
+- keep the JSON stable enough that the next agent or the same user can continue
+  from it directly
+- when possible, prefer one JSON packet per turn over multiple incompatible
+  mini-formats
+
 ## Things to be careful about
 
 - `that side -> そちら側` and `examples of construction -> 施工事例` are good
