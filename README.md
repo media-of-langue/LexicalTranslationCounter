@@ -59,7 +59,7 @@ If you are interested in fixing issues and contributing directly to the code bas
 - [The development workflow](documents/The_dev_workflow.md)
 - [Add language pair](documents/Add_language_pair.md)
 - [Add language](documents/Add_language.md)
-- [Update or Add Functions](documents/Update_or_Add_funtions.md)
+- [Update or Add Functions](documents/Update_or_Add_functions.md)
 - [Update or Add Database](documents/Update_or_Add_data.md)
 - [How to test](documents/How_to_test.md)
 - [File reference](documents/File_reference.md)
@@ -79,7 +79,7 @@ See ”How to build and run from source” in the documents directory for detail
 
 ## Development And Testing Notes
 
-This repository does not use Poetry, mise, or the Media of Langue DB toolchain. Use the Docker-based environment and the scripts documented in `documents/`.
+This repository does not use Poetry, mise, or the Media of Langue DB toolchain. Start with the local Python runtime for small checks, and use Docker only when you need the full corpus data images.
 
 - Build/run: [How to build and run from source](documents/How_to_build_and_run_from_source.md)
 - Tests: [How to test](documents/How_to_test.md)
